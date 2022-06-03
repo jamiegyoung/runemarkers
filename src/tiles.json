@@ -3,10 +3,7 @@
     "name": "Alchemical Hydra",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Alchemical_Hydra.png/200px-Alchemical_Hydra.png",
     "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
-    "tags": [
-      "slayer",
-      "boss"
-    ],
+    "tags": ["slayer", "boss"],
     "tiles": [
       {
         "regionId": 5536,
@@ -63,13 +60,9 @@
     "name": "Commander Zilyana",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
     "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
-    "tags": [
-      "boss",
-      "godwars",
-      "gwd"
-    ],
+    "tags": ["boss", "godwars", "gwd"],
     "source": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
-    "recommendedGuide": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
+    "recommendedGuideVideoId": "WUa4T1lRNKo",
     "tiles": [
       {
         "regionId": 11602,
@@ -266,11 +259,7 @@
     "name": "Olm",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Great_Olm.png/200px-Great_Olm.png",
     "wiki": "https://oldschool.runescape.wiki/w/Great_Olm",
-    "tags": [
-      "cox",
-      "chambers of xeric",
-      "raids"
-    ],
+    "tags": ["cox", "chambers of xeric", "raids"],
     "tiles": [
       {
         "regionId": 12889,
@@ -350,9 +339,7 @@
     "name": "Sarachnis",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sarachnis.png/200px-Sarachnis.png",
     "wiki": "https://oldschool.runescape.wiki/w/Sarachnis",
-    "tags": [
-      "boss"
-    ],
+    "tags": ["boss"],
     "tiles": [
       {
         "regionId": 7322,
@@ -388,9 +375,7 @@
     "name": "Vorkath (melee)",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vorkath.png/200px-Vorkath.png",
     "wiki": "https://oldschool.runescape.wiki/w/Vorkath",
-    "tags": [
-      "boss"
-    ],
+    "tags": ["boss"],
     "tiles": [
       {
         "regionId": 9023,

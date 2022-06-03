@@ -13,5 +13,5 @@ export type TileEntity = {
   thumbnail: string;
   wiki: string;
   source?: string;
-  recommendedGuide?: string;
+  recommendedGuideVideoId?: string;
 };

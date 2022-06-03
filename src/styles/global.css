@@ -8,6 +8,7 @@ body {
   --color-primary-light: #f1f196;
   --color-background: #262624;
   --color-text: #f5f3f5;
+  --color-subtle-text: #c9c9c9;
   --color-card: #3b3b37;
   background-color: var(--color-background);
   color: var(--color-text);

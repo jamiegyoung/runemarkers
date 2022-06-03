@@ -1,5 +1,4 @@
 import Input from '@/components/atoms/Input';
-// import SearchIcon from "../atoms/SearchIcon";
 
 export default function Search() {
   return (
@@ -11,7 +10,6 @@ export default function Search() {
       }}
     >
       <Input />
-      {/* <SearchIcon /> */}
     </div>
   );
 }

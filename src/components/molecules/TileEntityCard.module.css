@@ -31,7 +31,7 @@
 }
 
 .entityInfo p {
-  color: #c9c9c9;
+  color: var(--color-subtle-text);
   margin: 0;
 }
 

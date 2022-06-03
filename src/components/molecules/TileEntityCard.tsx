@@ -1,5 +1,5 @@
 import Button from '@/components/atoms/Button';
-import InfoButton from '@/components/atoms/InfoButton';
+import InfoButton from '@/components/atoms/InfoLink';
 import { TileEntity } from '@/types';
 import Image from 'next/image';
 import styles from '@/components/molecules/TileEntityCard.module.css';
@@ -7,9 +7,13 @@ import copy from 'copy-to-clipboard';
 
 type TileEntityCardProps = {
   entity: TileEntity;
+  hideInfoButton?: boolean;
 };
 
-export default function TileEntityCard({ entity }: TileEntityCardProps) {
+export default function TileEntityCard({
+  entity,
+  hideInfoButton,
+}: TileEntityCardProps) {
   return (
     <div className={styles.card}>
       <a
@@ -40,7 +44,7 @@ export default function TileEntityCard({ entity }: TileEntityCardProps) {
           >
             Copy
           </Button>
-          <InfoButton />
+          {hideInfoButton ? null : <InfoButton href={`/${entity.name}`} />}
         </div>
       </div>
     </div>

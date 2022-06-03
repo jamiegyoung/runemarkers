@@ -14,11 +14,11 @@ export default function Button(
 
   return (
     <button
-      // {...buttonProps}
+      {...buttonProps}
       className={
         buttonProps.className
           ? [buttonProps.className, styles.button].join(` `)
-          : buttonProps.className
+          : styles.button
       }
       onClick={(e) => {
         if (buttonProps.onClick) {
