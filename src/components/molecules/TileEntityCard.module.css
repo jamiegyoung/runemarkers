@@ -1,0 +1,72 @@
+.card {
+  min-height: 120px;
+  width: 80%;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--color-card);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image {
+  object-fit: contain;
+}
+
+.cardData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.entityInfo {
+  text-align: end;
+}
+
+.entityInfo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.entityInfo p {
+  color: #c9c9c9;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .entityInfo h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.tileInteraction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pictureLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  margin-right: 10;
+  padding: 10px 40px;
+}
+
+@media screen and (max-width: 400px) {
+  .button {
+    margin-right: 5px;
+    padding: 10px 20px;
+  }
+}
