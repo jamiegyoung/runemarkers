@@ -1,0 +1,24 @@
+.button,
+.container {
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button:hover .svg path,
+.container:hover .svg path {
+  fill: var(--color-primary);
+}
+
+.svg {
+  /* height: 40px; */
+  /* width: 40px; */
+  fill: var(--color-text);
+}
+
+.svg path {
+  transition: all 0.2s ease-out;
+}

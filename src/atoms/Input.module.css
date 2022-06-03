@@ -1,0 +1,13 @@
+.input {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #141414;
+  color: var(--color-text);
+  outline: none;
+  margin-right: 10px;
+  text-align: end;
+  width: 140px;
+  transition: all 0.2s ease-out;
+}

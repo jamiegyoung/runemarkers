@@ -1,0 +1,17 @@
+.button {
+  display: inline-block;
+  padding: 10px 10px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-background);
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.button:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}

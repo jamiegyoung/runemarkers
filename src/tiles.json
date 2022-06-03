@@ -1,0 +1,433 @@
+[
+  {
+    "name": "Vorkath (melee)",
+    "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vorkath.png/200px-Vorkath.png",
+    "tags": ["boss"],
+    "tiles": [
+      {
+        "regionId": 9023,
+        "regionX": 32,
+        "regionY": 29,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 34,
+        "regionY": 29,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 30,
+        "regionY": 29,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 30,
+        "regionY": 26,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 31,
+        "regionY": 26,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 32,
+        "regionY": 26,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 33,
+        "regionY": 26,
+        "z": 0,
+        "color": "#FF0090FF"
+      },
+      {
+        "regionId": 9023,
+        "regionX": 34,
+        "regionY": 26,
+        "z": 0,
+        "color": "#FF0090FF"
+      }
+    ]
+  },
+  {
+    "name": "Alchemical Hydra",
+    "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Alchemical_Hydra.png/200px-Alchemical_Hydra.png",
+    "tags": ["slayer", "boss"],
+    "tiles": [
+      {
+        "regionId": 5536,
+        "regionX": 27,
+        "regionY": 38,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 20,
+        "regionY": 31,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 19,
+        "regionY": 30,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 33,
+        "regionY": 23,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 14,
+        "regionY": 38,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 13,
+        "regionY": 32,
+        "z": 0,
+        "color": "#FFFFFF00"
+      },
+      {
+        "regionId": 5536,
+        "regionX": 18,
+        "regionY": 30,
+        "z": 0,
+        "color": "#FF747474"
+      }
+    ]
+  },
+  {
+    "name": "Olm",
+    "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Great_Olm.png/200px-Great_Olm.png",
+    "tags": ["cox", "chambers of xeric", "raids"],
+    "tiles": [
+      {
+        "regionId": 12889,
+        "regionX": 37,
+        "regionY": 50,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 37,
+        "regionY": 38,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 28,
+        "regionY": 38,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 28,
+        "regionY": 50,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 28,
+        "regionY": 47,
+        "z": 0,
+        "color": "#FFFAFF00",
+        "label": "thumb"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 37,
+        "regionY": 41,
+        "z": 0,
+        "color": "#FFFAFF00",
+        "label": "thumb"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 37,
+        "regionY": 45,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 37,
+        "regionY": 43,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 28,
+        "regionY": 43,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 12889,
+        "regionX": 28,
+        "regionY": 45,
+        "z": 0,
+        "color": "#FFFAFF00"
+      }
+    ]
+  },
+  {
+    "name": "Sarachnis",
+    "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sarachnis.png/200px-Sarachnis.png",
+    "tags": ["boss"],
+    "tiles": [
+      {
+        "regionId": 7322,
+        "regionX": 47,
+        "regionY": 43,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 7322,
+        "regionX": 47,
+        "regionY": 48,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 7322,
+        "regionX": 52,
+        "regionY": 48,
+        "z": 0,
+        "color": "#FFFAFF00"
+      },
+      {
+        "regionId": 7322,
+        "regionX": 52,
+        "regionY": 43,
+        "z": 0,
+        "color": "#FFFAFF00"
+      }
+    ]
+  },
+  {
+    "name": "Commander Zilyana",
+    "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
+    "tags": ["boss", "godwars", "gwd"],
+    "source": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
+    "recommendedGuide": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
+    "tiles": [
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 12,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 19,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 18,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 14,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 9,
+        "regionY": 19,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 9,
+        "regionY": 20,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 18,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 19,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 23,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 24,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 17,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 16,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 18,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 27,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 22,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 17,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 11,
+        "regionY": 25,
+        "z": 0,
+        "color": "#63FFFF00"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 9,
+        "regionY": 23,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 9,
+        "regionY": 18,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 9,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 20,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 13,
+        "z": 0,
+        "color": "#63FF0000"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 17,
+        "regionY": 11,
+        "z": 0,
+        "color": "#630000FF"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 26,
+        "regionY": 10,
+        "z": 0,
+        "color": "#6300FFFF"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 27,
+        "regionY": 12,
+        "z": 0,
+        "color": "#6300FFFF"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 27,
+        "regionY": 11,
+        "z": 0,
+        "color": "#63FF00FF"
+      },
+      {
+        "regionId": 11602,
+        "regionX": 15,
+        "regionY": 10,
+        "z": 0,
+        "color": "#63FF0000"
+      }
+    ]
+  }
+]
