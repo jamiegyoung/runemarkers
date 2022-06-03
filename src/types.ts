@@ -11,6 +11,7 @@ export type TileEntity = {
   tags: string[];
   tiles: Tile[];
   thumbnail: string;
+  wiki: string;
   source?: string;
   recommendedGuide?: string;
 };

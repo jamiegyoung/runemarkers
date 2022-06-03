@@ -1,5 +1,5 @@
 .button {
-  display: inline-block;
+  display: block;
   padding: 10px 10px;
   background: var(--color-primary);
   border: none;
@@ -8,10 +8,35 @@
   font-size: 1.2rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
+  height: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
 }
 
 .button:hover {
   background: var(--color-primary-light);
   transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.animBar {
+  position: relative;
+  transform: rotate(25deg) translate(150%, -50px);
+  background-color: #ffffff48;
+  width: 40px;
+  height: 100px;
+}
+
+.animBarActive {
+  animation: sweep 1s ease-in-out normal;
+}
+
+@keyframes sweep {
+  0% {
+    transform: rotate(25deg) translate(150%, -50px);
+  }
+  100% {
+    transform: rotate(25deg) translate(-300%, -50px);
+  }
 }

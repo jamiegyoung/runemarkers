@@ -1,3 +1,4 @@
+import Search from '../molecules/Search';
 import TileEntityCard from "../molecules/TileEntityCard";
 import { TileEntity } from "../types";
 import styles from "./TileEntityList.module.css";
@@ -22,6 +23,7 @@ export default function TileEntityList({ list }: TileEntityListProps) {
         tile markers to your clipboard, right click the world map on runelite
         and then select “import”
       </p>
+      <Search />
       <div className={styles.innerContainer}>
         {list.map((i) => (
           <TileEntityCard key={i.name} entity={i} />

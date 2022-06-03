@@ -2,6 +2,7 @@
   {
     "name": "Vorkath (melee)",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vorkath.png/200px-Vorkath.png",
+    "wiki": "https://oldschool.runescape.wiki/w/Vorkath",
     "tags": ["boss"],
     "tiles": [
       {
@@ -65,6 +66,7 @@
   {
     "name": "Alchemical Hydra",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Alchemical_Hydra.png/200px-Alchemical_Hydra.png",
+    "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
     "tags": ["slayer", "boss"],
     "tiles": [
       {
@@ -121,6 +123,7 @@
   {
     "name": "Olm",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Great_Olm.png/200px-Great_Olm.png",
+    "wiki": "https://oldschool.runescape.wiki/w/Great_Olm",
     "tags": ["cox", "chambers of xeric", "raids"],
     "tiles": [
       {
@@ -200,6 +203,7 @@
   {
     "name": "Sarachnis",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sarachnis.png/200px-Sarachnis.png",
+    "wiki": "https://oldschool.runescape.wiki/w/Sarachnis",
     "tags": ["boss"],
     "tiles": [
       {
@@ -235,6 +239,7 @@
   {
     "name": "Commander Zilyana",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
+    "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
     "tags": ["boss", "godwars", "gwd"],
     "source": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
     "recommendedGuide": "https://www.youtube.com/watch?v=WUa4T1lRNKo",

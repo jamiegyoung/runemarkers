@@ -1,13 +1,15 @@
 .input {
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 5px;
-  background-color: #141414;
-  color: var(--color-text);
+  border-radius: 10px;
+  background-color: #f5f3f5;
+  color: #000;
   outline: none;
   margin-right: 10px;
-  text-align: end;
+  text-align: center;
   width: 140px;
-  transition: all 0.2s ease-out;
+  transition: all .4s cubic-bezier(.35,1.39,.45,.97);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /* border: solid 1px var(--color-card); */
 }
