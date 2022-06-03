@@ -3,4 +3,5 @@
 . "$(dirname "$0")/common.sh"
 
 node bin/format-tiles.js
+git add src/tiles.json
 yarn lint-staged
