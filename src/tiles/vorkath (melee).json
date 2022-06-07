@@ -1,0 +1,64 @@
+{
+  "name": "Vorkath (melee)",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vorkath.png/200px-Vorkath.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Vorkath",
+  "tags": ["boss"],
+  "tiles": [
+    {
+      "regionId": 9023,
+      "regionX": 32,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 34,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 30,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 30,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 31,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 32,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 33,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF0090FF"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 34,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF0090FF"
+    }
+  ]
+}

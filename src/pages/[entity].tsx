@@ -6,11 +6,11 @@ import StripContainer from '@/components/atoms/StripContainer';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
 import RecommendedGuide from '@/components/molecules/RecommendedGuide';
 import CodeBlock from '@/components/atoms/CodeBlock';
-import { tileData } from '@/api/tileJson';
+import { getTileData } from '@/api/tiles';
 
 export async function getStaticPaths() {
   return {
-    paths: tileData.map((e) => {
+    paths: getTileData().map((e) => {
       // Super hacky way to get this working, encode all apart from spaces
       return {
         params: { entity: e.safeURI },
@@ -26,16 +26,9 @@ export async function getStaticProps({
   params: { entity: string };
 }) {
   return {
-    props: tileData.find((e) => {
-      console.log(
-        `params.entity`,
-        params.entity.toLowerCase(),
-        `| e.name`,
-        e.name.toLowerCase(),
-      );
-
-      return e.safeURI.toLowerCase() === params.entity.toLowerCase();
-    }),
+    props: getTileData().find(
+      (e) => e.safeURI.toLowerCase() === params.entity.toLowerCase(),
+    ),
   };
 }
 

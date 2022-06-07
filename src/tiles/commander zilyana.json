@@ -1,0 +1,46 @@
+{
+  "name": "Commander Zilyana",
+  "altName": "Saradomin",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+  "tags": ["boss", "godwars", "gwd", "saradomin"],
+  "recommendedGuideVideoId": "-2WPwh2NRIE",
+  "source": "https://www.youtube.com/watch?v=-2WPwh2NRIE",
+  "tiles": [
+    {
+      "regionId": 11602,
+      "regionX": 27,
+      "regionY": 10,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 27,
+      "regionY": 27,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 27,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 10,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 24,
+      "z": 0,
+      "color": "#FFFAFF00"
+    }
+  ]
+}

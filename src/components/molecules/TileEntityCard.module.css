@@ -30,10 +30,16 @@
   margin: 0;
 }
 
-.entityInfo h2 {
-  font-size: .8rem;
+.altName {
+  font-size: 0.8rem;
   color: #a8a8a8;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .altName {
+    display: none;
+  }
 }
 
 .tileCount {

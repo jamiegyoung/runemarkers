@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from 'react';
 import TileEntityList from '@/components/organisms/TileEntityList';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
-import { tileData } from '@/api/tileJson';
+import { getTileData } from '@/api/tiles';
 
 const fuseOptions = {
   // the keys of the objects to search
@@ -15,23 +15,29 @@ const fuseOptions = {
   threshold: 0.4,
 };
 
-const fuse = new Fuse(tileData, fuseOptions);
+export async function getStaticProps() {
+  const data = getTileData();
+  return {
+    props: { tileData: data },
+  };
+}
 
 export const SearchContext = createContext<
   [string | undefined, React.Dispatch<React.SetStateAction<string>> | undefined]
 >([undefined, undefined]);
 
-export default function Home() {
+export default function Home({ tileData }: { tileData: TileEntity[] }) {
   const [searchVal, setSearchVal] = useState(``);
   const [searchRes, setSearchRes] = useState<TileEntity[]>(tileData);
 
   useEffect(() => {
+    const fuse = new Fuse(tileData, fuseOptions);
     if (searchVal.length > 0) {
       setSearchRes(fuse.search(searchVal).map((res) => res.item));
       return;
     }
     setSearchRes(tileData);
-  }, [searchVal]);
+  }, [searchVal, tileData]);
   return (
     <div>
       <main className={styles.main}>

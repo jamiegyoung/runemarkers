@@ -8,6 +8,14 @@
 - K'ril
 - Hunlef
 
+## Tiles Contribution
+If you wish to contribute to tiles, follow the instructions below.
+
+- Fork the repo
+- Create a new branch with a name like so `tiles/<tile name>` e.g. `tiles/vorkath-melee`
+- 
+
+
 ## Development
 
 To start the project locally, run:
@@ -17,8 +25,6 @@ yarn dev
 ```
 
 Open `http://localhost:3000` with your browser to see the result.
-
-
 
 ### Requirements
 

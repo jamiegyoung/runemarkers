@@ -1,0 +1,52 @@
+{
+  "name": "Abyssal Sire",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Abyssal_Sire.png/200px-Abyssal_Sire.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
+  "tags": ["slayer", "boss"],
+  "recommendedGuideVideoId": "wnZJl9driUs",
+  "source": "https://www.youtube.com/watch?v=wnZJl9driUs",
+  "tiles": [
+    {
+      "regionId": 11850,
+      "regionX": 27,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 25,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 25,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 27,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 27,
+      "regionY": 44,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 25,
+      "regionY": 44,
+      "z": 0,
+      "color": "#FFFAFF00"
+    }
+  ]
+}

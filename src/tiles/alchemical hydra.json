@@ -1,0 +1,59 @@
+{
+  "name": "Alchemical Hydra",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Alchemical_Hydra.png/200px-Alchemical_Hydra.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
+  "tags": ["slayer", "boss"],
+  "recommendedGuideVideoId": "7ehTfsD--gM",
+  "source": "https://www.youtube.com/watch?v=7ehTfsD--gM",
+  "tiles": [
+    {
+      "regionId": 5536,
+      "regionX": 27,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 20,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 19,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 33,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 14,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 13,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 18,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FF747474"
+    }
+  ]
+}
