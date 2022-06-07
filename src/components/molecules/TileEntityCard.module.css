@@ -1,5 +1,4 @@
 .card {
-  min-height: 130px;
   width: 80%;
   margin: 10px;
   border-radius: 10px;
@@ -36,22 +35,11 @@
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .altName {
-    display: none;
-  }
-}
 
 .tileCount {
   color: var(--color-subtle-text);
   margin: 0 0 5px 0;
   text-align: end;
-}
-
-@media (max-width: 500px) {
-  .entityInfo h1 {
-    font-size: 1.2rem;
-  }
 }
 
 .tileInteraction {
@@ -75,6 +63,18 @@
 .button {
   margin-right: 10;
   padding: 10px 40px;
+}
+
+@media (max-width: 500px) {
+  .entityInfo h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .altName {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {
