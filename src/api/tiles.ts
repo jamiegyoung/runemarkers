@@ -8,17 +8,9 @@ export const getTileData: () => TileEntity[] = () =>
       withFileTypes: true,
     })
     .filter((file) => file.isFile() && file.name.endsWith(`.json`))
-    .map(
-      (file) =>
-        ({
-          safeURI: file.name.replace(`.json`, ``),
-          ...JSON.parse(
-            fs.readFileSync(`./src/tiles/${file.name}`, { encoding: `utf-8` }),
-          ),
-        } as TileEntity),
-    );
-
-//  = tileJson.map((e) => ({
-//   safeURI: e.name.replaceAll(`:`, `-`),
-//   ...e,
-// }));
+    .map((file) => ({
+      safeURI: file.name.replace(`.json`, ``),
+      ...JSON.parse(
+        fs.readFileSync(`./src/tiles/${file.name}`, { encoding: `utf-8` }),
+      ),
+    }));

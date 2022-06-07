@@ -11,7 +11,6 @@ import { getTileData } from '@/api/tiles';
 export async function getStaticPaths() {
   return {
     paths: getTileData().map((e) => {
-      // Super hacky way to get this working, encode all apart from spaces
       return {
         params: { entity: e.safeURI },
       };

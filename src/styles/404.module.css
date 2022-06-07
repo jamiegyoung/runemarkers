@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'RuneScape UF';
+  src: url('/fonts/runescape_uf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  font-family: 'RuneScape UF';
+  font-weight: 100;
+  font-size: 1.4rem;
+  color: #ffff00;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  max-width: 270px;
+  max-height: 490px;
+}
+
+.home {
+  font-family: 'RuneScape UF';
+  font-weight: 100;
+  font-size: 1.6rem !important;
+  margin: 0;
+  text-decoration: none;
+}
