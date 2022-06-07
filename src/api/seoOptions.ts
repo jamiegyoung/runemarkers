@@ -2,7 +2,7 @@ import { NextSeoProps } from 'next-seo';
 
 const nextSeoOptions: NextSeoProps = {
   defaultTitle: `RuneMarkers - A Collection of RuneLite Ground Markers`,
-  description: `A collection of ground markers for RuneLite. Find and import ground markers for different Oldschool RuneScape activities.`,
+  description: `A collection of ground (tile) markers for RuneLite. Find and import ground (tile) markers for different Oldschool RuneScape activities.`,
   titleTemplate: `RuneMarkers - %s`,
   canonical: `https://runemarkers.net`,
   openGraph: {

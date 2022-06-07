@@ -1,10 +1,10 @@
 import Fuse from 'fuse.js';
 import { TileEntity } from '@/types';
-import tileJson from '../tiles.json';
 import { createContext, useEffect, useState } from 'react';
 import TileEntityList from '@/components/organisms/TileEntityList';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
+import { tileData } from '@/api/tileJson';
 
 const fuseOptions = {
   // the keys of the objects to search
@@ -14,9 +14,6 @@ const fuseOptions = {
   ],
   threshold: 0.4,
 };
-
-// Assert the structure of the tileJson
-const tileData: TileEntity[] = tileJson;
 
 const fuse = new Fuse(tileData, fuseOptions);
 

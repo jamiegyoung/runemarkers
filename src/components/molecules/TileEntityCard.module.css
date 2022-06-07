@@ -1,5 +1,5 @@
 .card {
-  min-height: 120px;
+  min-height: 130px;
   width: 80%;
   margin: 10px;
   border-radius: 10px;
@@ -26,13 +26,20 @@
 }
 
 .entityInfo h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
-.entityInfo p {
-  color: var(--color-subtle-text);
+.entityInfo h2 {
+  font-size: .8rem;
+  color: #a8a8a8;
   margin: 0;
+}
+
+.tileCount {
+  color: var(--color-subtle-text);
+  margin: 0 0 0 0;
+  text-align: end;
 }
 
 @media (max-width: 500px) {

@@ -7,7 +7,9 @@ export type Tile = {
 };
 
 export type TileEntity = {
+  safeURI: string;
   name: string;
+  altName?: string;
   tags: string[];
   tiles: Tile[];
   thumbnail: string;

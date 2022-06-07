@@ -4,6 +4,7 @@ import { TileEntity } from '@/types';
 import Image from 'next/image';
 import styles from '@/components/molecules/TileEntityCard.module.css';
 import copy from 'copy-to-clipboard';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 type TileEntityCardProps = {
   entity: TileEntity;
@@ -14,6 +15,7 @@ export default function TileEntityCard({
   entity,
   hideInfoButton,
 }: TileEntityCardProps) {
+  const { width } = useWindowDimensions();
   return (
     <div className={styles.card}>
       <a
@@ -33,8 +35,9 @@ export default function TileEntityCard({
       <div className={styles.cardData}>
         <div className={styles.entityInfo}>
           <h1>{entity.name}</h1>
-          <p>{entity.tiles.length} tile markers</p>
+          {entity.altName && width > 500 ? <h2>{entity.altName}</h2> : null}
         </div>
+        <p className={styles.tileCount}>{entity.tiles.length} tile markers</p>
         <div className={styles.tileInteraction}>
           <Button
             className={styles.button}
@@ -44,7 +47,9 @@ export default function TileEntityCard({
           >
             Copy
           </Button>
-          {hideInfoButton ? null : <InfoButton href={`/${entity.name}`} />}
+          {hideInfoButton ? null : (
+            <InfoButton href={`/${encodeURIComponent(entity.safeURI)}`} />
+          )}
         </div>
       </div>
     </div>

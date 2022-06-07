@@ -118,12 +118,14 @@
   },
   {
     "name": "Commander Zilyana",
+    "altName": "Saradomin",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
     "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
     "tags": [
       "boss",
       "godwars",
-      "gwd"
+      "gwd",
+      "saradomin"
     ],
     "recommendedGuideVideoId": "-2WPwh2NRIE",
     "source": "https://www.youtube.com/watch?v=-2WPwh2NRIE",
@@ -167,6 +169,7 @@
   },
   {
     "name": "Commander Zilyana (No Stam)",
+    "altName": "Saradomin (No Stam)",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
     "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
     "tags": [
@@ -370,12 +373,14 @@
   },
   {
     "name": "General Graardor (6:0)",
+    "altName": "Bandos (6:0)",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/200px-General_Graardor.png",
     "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
     "tags": [
       "boss",
       "godwars",
-      "gwd"
+      "gwd",
+      "bandos"
     ],
     "recommendedGuideVideoId": "oIWnXBqebTU",
     "source": "https://www.youtube.com/watch?v=oIWnXBqebTU",
@@ -448,12 +453,14 @@
   },
   {
     "name": "General Graardor (9:0)",
+    "altName": "Bandos (9:0)",
     "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/200px-General_Graardor.png",
     "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
     "tags": [
       "boss",
       "godwars",
-      "gwd"
+      "gwd",
+      "bandos"
     ],
     "recommendedGuideVideoId": "YBKT-_USIQg",
     "source": "https://www.youtube.com/watch?v=YBKT-_USIQg",
