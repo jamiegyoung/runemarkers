@@ -13,8 +13,10 @@ If you wish to contribute to tiles, follow the instructions below.
 
 - Fork the repo
 - Create a new branch with a name like so `tiles/<tile name>` e.g. `tiles/vorkath-melee`
-- 
-
+- Add the tiles to the 'tiles' folder following the format used in other tiles (look at abyssal sire for an example)
+- Commit the changes and push to the repo
+- Open a pull request with a description of the changes
+- Wait for the pull request to be accepted
 
 ## Development
 
