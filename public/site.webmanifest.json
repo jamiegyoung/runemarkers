@@ -1,0 +1,46 @@
+{
+  "name": "RuneMarkers - A Collection of RuneLite Ground Markers",
+  "short_name": "RuneMarkers",
+  "description": "A collection of ground (tile) markers for RuneLite. Find and import ground (tile) markers for different Oldschool RuneScape activities.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#262624",
+  "theme_color": "#e5e53a",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logo1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ]
+}
