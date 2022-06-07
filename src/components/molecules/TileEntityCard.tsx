@@ -37,19 +37,21 @@ export default function TileEntityCard({
             <h2 className={styles.altName}>{entity.altName}</h2>
           ) : null}
         </div>
-        <p className={styles.tileCount}>{entity.tiles.length} tile markers</p>
-        <div className={styles.tileInteraction}>
-          <Button
-            className={styles.button}
-            onClick={() => {
-              copy(JSON.stringify(entity.tiles));
-            }}
-          >
-            Copy
-          </Button>
-          {hideInfoButton ? null : (
-            <InfoButton href={`/${encodeURIComponent(entity.safeURI)}`} />
-          )}
+        <div>
+          <p className={styles.tileCount}>{entity.tiles.length} tile markers</p>
+          <div className={styles.tileInteraction}>
+            <Button
+              className={styles.button}
+              onClick={() => {
+                copy(JSON.stringify(entity.tiles));
+              }}
+            >
+              Copy
+            </Button>
+            {hideInfoButton ? null : (
+              <InfoButton href={`/${encodeURIComponent(entity.safeURI)}`} />
+            )}
+          </div>
         </div>
       </div>
     </div>

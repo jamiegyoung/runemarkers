@@ -36,7 +36,9 @@ export default function Entity(entity: TileEntity) {
     <div>
       <NextSeo
         title={`${entity.name} Ground Markers`}
-        description={`${entity.name} (${entity.altName}) ground markers for RuneLite. Find and import ground markers for different Oldschool RuneScape activities.`}
+        description={`${entity.name}${
+          entity.altName ? `/${entity.altName}` : ``
+        } ground markers for RuneLite. Find and import ground markers for different Oldschool RuneScape activities.`}
       />
       <NavBar />
       <div className={styles.container}>
