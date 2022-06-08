@@ -4,13 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta name="author" content="RuneMarkers" />
-        <meta property="og:site_name" content="RuneMarkers" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://runemarkers.net" />
-        <meta property="og:image" content="/logo1024.png" />
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#262624" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
