@@ -18,20 +18,31 @@ export default function FourOhFour() {
       <div className={styles.container}>
         <h1 className={styles.header}>404</h1>
         <div className={styles.imageContainer}>
-          <Image
-            className={styles.image}
-            src={
-              isAnimating
-                ? `https://thumbs.gfycat.com/DefinitiveLimpArawana.webp`
-                : `https://thumbs.gfycat.com/SecondaryUncommonKestrel.webp`
-            }
-            alt="404 gif"
-            width={270}
-            height={490}
-            layout="intrinsic"
-            objectFit="contain"
-            sizes="50vw"
-          />
+          {isAnimating ? (
+            <Image
+              className={styles.image}
+              src={`https://thumbs.gfycat.com/DefinitiveLimpArawana.webp`}
+              alt="404 gif"
+              width={270}
+              height={490}
+              layout="intrinsic"
+              objectFit="contain"
+              sizes="50vw"
+              priority={true}
+            />
+          ) : (
+            <Image
+              className={styles.image}
+              src={`https://thumbs.gfycat.com/SecondaryUncommonKestrel.webp`}
+              alt="404 gif"
+              width={270}
+              height={490}
+              layout="intrinsic"
+              objectFit="contain"
+              sizes="50vw"
+              priority={true}
+            />
+          )}
         </div>
         <Button
           className={styles.home}
