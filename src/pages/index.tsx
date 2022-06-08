@@ -5,6 +5,7 @@ import TileEntityList from '@/components/organisms/TileEntityList';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
 import { getTileData } from '@/api/tiles';
+import ContributionFooter from '@/components/atoms/GitHubFooter';
 
 const fuseOptions = {
   // the keys of the objects to search
@@ -44,6 +45,7 @@ export default function Home({ tileData }: { tileData: TileEntity[] }) {
         <SearchContext.Provider value={[searchVal, setSearchVal]}>
           <NavBar />
           <TileEntityList list={searchRes} />
+          <ContributionFooter />
         </SearchContext.Provider>
       </main>
     </div>

@@ -1,0 +1,20 @@
+.footer {
+  /* background-color: var(--color-card); */
+  color: var(--color-text);
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0 0 5px 0;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+}

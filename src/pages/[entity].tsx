@@ -6,6 +6,7 @@ import StripContainer from '@/components/atoms/StripContainer';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
 import RecommendedGuide from '@/components/molecules/RecommendedGuide';
 import CodeBlock from '@/components/atoms/CodeBlock';
+import ContributionFooter from '@/components/atoms/GitHubFooter';
 import { getTileData } from '@/api/tiles';
 
 export async function getStaticPaths() {
@@ -33,7 +34,7 @@ export async function getStaticProps({
 
 export default function Entity(entity: TileEntity) {
   return (
-    <div>
+    <>
       <NextSeo
         title={`${entity.name} Ground Markers`}
         description={`${entity.name}${
@@ -55,6 +56,7 @@ export default function Entity(entity: TileEntity) {
           ) : null}
         </StripContainer>
       </div>
-    </div>
+      <ContributionFooter />
+    </>
   );
 }
