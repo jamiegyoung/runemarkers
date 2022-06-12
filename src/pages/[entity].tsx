@@ -48,9 +48,7 @@ export default function Entity(entity: TileEntity) {
           <a
             href={`https://runelite.net/tile/show/#${Buffer.from(
               JSON.stringify(entity.tiles),
-            )
-              .toString(`base64`)
-              .slice(0, -2)}`}
+            ).toString(`base64`)}`}
             className={styles.runeliteLink}
           >
             View Tiles on RuneLite
