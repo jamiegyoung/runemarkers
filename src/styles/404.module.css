@@ -35,6 +35,12 @@
   font-family: 'RuneScape UF';
   font-weight: 100;
   font-size: 1.6rem !important;
-  margin: 0;
+  margin: 20px 0 0 0;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.home:hover {
+  color: var(--color-primary);
 }

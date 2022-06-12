@@ -24,3 +24,7 @@
   font-size: 1.2rem;
   margin: 20px 0 0 0;
 }
+
+.runeliteLink {
+  color: var(--color-primary);
+}

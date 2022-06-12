@@ -4,10 +4,9 @@ import styles from '@/styles/404.module.css';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
 
 export default function FourOhFour() {
-  const [isAnimating, setIsAnimating] = useState(false);
   return (
     <>
       <Head>
@@ -18,43 +17,20 @@ export default function FourOhFour() {
       <div className={styles.container}>
         <h1 className={styles.header}>404</h1>
         <div className={styles.imageContainer}>
-          {isAnimating ? (
-            <Image
-              className={styles.image}
-              src={`https://thumbs.gfycat.com/DefinitiveLimpArawana.webp`}
-              alt="404 gif"
-              width={270}
-              height={490}
-              layout="intrinsic"
-              objectFit="contain"
-              sizes="50vw"
-              priority={true}
-            />
-          ) : (
-            <Image
-              className={styles.image}
-              src={`https://thumbs.gfycat.com/SecondaryUncommonKestrel.webp`}
-              alt="404 gif"
-              width={270}
-              height={490}
-              layout="intrinsic"
-              objectFit="contain"
-              sizes="50vw"
-              priority={true}
-            />
-          )}
+          <Image
+            className={styles.image}
+            src={`https://thumbs.gfycat.com/SecondaryUncommonKestrel.webp`}
+            alt="404 gif"
+            width={270}
+            height={490}
+            layout="intrinsic"
+            objectFit="contain"
+            priority={true}
+          />
         </div>
-        <Button
-          className={styles.home}
-          onClick={() => {
-            setIsAnimating(true);
-            setTimeout(() => {
-              window.location.replace(`/`);
-            }, 1600);
-          }}
-        >
-          Go Home
-        </Button>
+        <Link href="/">
+          <span className={styles.home}>Go Home</span>
+        </Link>
       </div>
     </>
   );

@@ -45,6 +45,14 @@ export default function Entity(entity: TileEntity) {
       <div className={styles.container}>
         <StripContainer>
           <TileEntityCard entity={entity} hideInfoButton />
+          <a
+            href={`https://runelite.net/tile/show/#${Buffer.from(
+              JSON.stringify(entity.tiles),
+            ).toString(`base64`)}`}
+            className={styles.runeliteLink}
+          >
+            View Tiles on RuneLite
+          </a>
           {entity.recommendedGuideVideoId ? (
             <RecommendedGuide videoId={entity.recommendedGuideVideoId} />
           ) : null}
