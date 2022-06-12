@@ -9,44 +9,44 @@
     {
       "regionId": 11850,
       "regionX": 27,
-      "regionY": 34,
-      "z": 0,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 11850,
-      "regionX": 25,
-      "regionY": 34,
-      "z": 0,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 11850,
-      "regionX": 25,
-      "regionY": 36,
-      "z": 0,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 11850,
-      "regionX": 27,
-      "regionY": 36,
-      "z": 0,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 11850,
-      "regionX": 27,
       "regionY": 44,
       "z": 0,
-      "color": "#FFFAFF00"
+      "color": "#FFFFFF00"
     },
     {
       "regionId": 11850,
       "regionX": 25,
       "regionY": 44,
       "z": 0,
-      "color": "#FFFAFF00"
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 27,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 25,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 27,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 11850,
+      "regionX": 25,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFFFF00"
     }
   ]
 }
