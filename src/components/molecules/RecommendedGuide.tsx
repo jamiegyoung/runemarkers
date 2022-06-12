@@ -1,6 +1,12 @@
 import YoutubeEmbed from '../atoms/YouTubeEmbed';
 
-export default function RecommendedGuide({ videoId }: { videoId: string }) {
+export default function RecommendedGuide({
+  videoId,
+  title,
+}: {
+  videoId: string;
+  title: string;
+}) {
   return (
     <div
       style={{
@@ -8,7 +14,7 @@ export default function RecommendedGuide({ videoId }: { videoId: string }) {
       }}
     >
       <h2>Recommended Guide:</h2>
-      <YoutubeEmbed videoId={videoId} />
+      <YoutubeEmbed videoId={videoId} title={title} />
     </div>
   );
 }

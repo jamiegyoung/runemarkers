@@ -1,8 +1,22 @@
 .title {
   font-weight: bold;
   padding: 0 20px;
+  display: flex;
 }
 
-.title span {
+.titleAlt {
   color: var(--color-primary);
+  display: flex;
+}
+
+.title span:not(.titleAlt),
+.titleAlt span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .title span:not(.titleAlt),
+  .titleAlt span {
+    display: flex;
+  }
 }

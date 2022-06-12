@@ -54,7 +54,10 @@ export default function Entity(entity: TileEntity) {
             View Tiles on RuneLite
           </a>
           {entity.recommendedGuideVideoId ? (
-            <RecommendedGuide videoId={entity.recommendedGuideVideoId} />
+            <RecommendedGuide
+              videoId={entity.recommendedGuideVideoId}
+              title={`${entity.name} guide`}
+            />
           ) : null}
           <CodeBlock text={JSON.stringify(entity.tiles)} />
           {entity.source ? (
