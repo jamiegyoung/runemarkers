@@ -11,6 +11,13 @@
 
 .image {
   object-fit: contain;
+  cursor: pointer;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cardData {
@@ -22,19 +29,26 @@
 
 .entityInfo {
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
-.entityInfo h1 {
+.name {
   font-size: 1.4rem;
   margin: 0;
+  color: var(--color-text);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .altName {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #a8a8a8;
   margin: 0;
+  text-decoration: none;
 }
-
 
 .tileCount {
   color: var(--color-subtle-text);
@@ -66,7 +80,7 @@
 }
 
 @media (max-width: 500px) {
-  .entityInfo h1 {
+  .name {
     font-size: 1.2rem;
   }
 }
