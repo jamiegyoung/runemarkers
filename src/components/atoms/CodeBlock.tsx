@@ -20,6 +20,7 @@ export default function CodeBlock({ text }: { text: string }) {
           backgroundColor: `#3b3b37`,
           boxShadow: `0px 0px 10px rgba(0, 0, 0, 0.5)`,
           padding: 20,
+          wordBreak: `break-all`,
         }}
       >
         {text.length > TRUNCATE_LENGTH && !showingAll
