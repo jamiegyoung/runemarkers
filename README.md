@@ -1,7 +1,7 @@
 # RuneMarkers
 
 ## Bosses to add
-- Vorkath (ranged)
+- Vorkath (Ranged)
 - Hallowed Sepulchre
 - Sweaty Kraken
 - General Graardor (7:0)

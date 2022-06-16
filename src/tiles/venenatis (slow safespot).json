@@ -1,0 +1,38 @@
+{
+  "name": "Venenatis (Slow Safespot)",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Venenatis.png/200px-Venenatis.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Venenatis",
+  "tags": ["wilderness", "wildy", "spider"],
+  "recommendedGuideVideoId": "D0wXwq1GYrk",
+  "source": "https://youtu.be/D0wXwq1GYrk?t=1321",
+  "tiles": [
+    {
+      "regionId": 13114,
+      "regionX": 43,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 13114,
+      "regionX": 45,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 13114,
+      "regionX": 43,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 13114,
+      "regionX": 45,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFFFF00"
+    }
+  ]
+}
