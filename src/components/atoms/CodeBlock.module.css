@@ -1,5 +1,8 @@
 .container {
   display: flex;
+  justify-content: center;
+  margin: 0 30px;
+  align-items: center;
   border-radius: 20px;
   color: var(--color-subtle-text);
   flex-direction: column;
