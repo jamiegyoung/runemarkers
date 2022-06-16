@@ -3,6 +3,8 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import styles from './CodeBlock.module.css';
 
+const TRUNCATE_LENGTH = 700;
+
 export default function CodeBlock({ text }: { text: string }) {
   const [showingAll, setShowingAll] = useState(false);
   return (
@@ -20,7 +22,9 @@ export default function CodeBlock({ text }: { text: string }) {
           padding: 20,
         }}
       >
-        {text.length > 1000 && !showingAll ? `${text.slice(0, 1000)}...` : text}
+        {text.length > TRUNCATE_LENGTH && !showingAll
+          ? `${text.slice(0, TRUNCATE_LENGTH)}...`
+          : text}
       </SyntaxHighlighter>
       <code
         style={{
@@ -30,11 +34,14 @@ export default function CodeBlock({ text }: { text: string }) {
           setShowingAll(!showingAll);
         }}
       >
-        {text.length > 1000 && !showingAll
-          ? `
-        Click to view ${text.length - 1000} more characters (may take a while to
+        {text.length > TRUNCATE_LENGTH
+          ? showingAll
+            ? `Show Less`
+            : `Show All (${
+                text.length - TRUNCATE_LENGTH
+              } more characters, this may take a while to
         load)`
-          : `Click to minimize`}
+          : null}
       </code>
     </div>
   );
