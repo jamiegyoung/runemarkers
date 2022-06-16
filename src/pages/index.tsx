@@ -6,6 +6,8 @@ import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
 import { getTileData } from '@/api/tiles';
 import ContributionFooter from '@/components/atoms/GitHubFooter';
+import { NextSeo } from 'next-seo';
+import { defaultImages } from '@/api/seoOptions';
 
 const fuseOptions = {
   // the keys of the objects to search
@@ -40,14 +42,21 @@ export default function Home({ tileData }: { tileData: TileEntity[] }) {
     setSearchRes(tileData);
   }, [searchVal, tileData]);
   return (
-    <div>
-      <main className={styles.main}>
-        <SearchContext.Provider value={[searchVal, setSearchVal]}>
-          <NavBar />
-          <TileEntityList list={searchRes} />
-          <ContributionFooter />
-        </SearchContext.Provider>
-      </main>
-    </div>
+    <>
+      <NextSeo
+        openGraph={{
+          images: defaultImages,
+        }}
+      />
+      <div>
+        <main className={styles.main}>
+          <SearchContext.Provider value={[searchVal, setSearchVal]}>
+            <NavBar />
+            <TileEntityList list={searchRes} />
+            <ContributionFooter />
+          </SearchContext.Provider>
+        </main>
+      </div>
+    </>
   );
 }

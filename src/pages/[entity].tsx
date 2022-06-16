@@ -8,6 +8,7 @@ import RecommendedGuide from '@/components/molecules/RecommendedGuide';
 import CodeBlock from '@/components/atoms/CodeBlock';
 import ContributionFooter from '@/components/atoms/GitHubFooter';
 import { getTileData } from '@/api/tiles';
+import { defaultImages } from '@/api/seoOptions';
 
 export async function getStaticPaths() {
   return {
@@ -40,6 +41,15 @@ export default function Entity(entity: TileEntity) {
         description={`${entity.name}${
           entity.altName ? `/${entity.altName}` : ``
         } ground markers for RuneLite. Find and import ground markers for different Oldschool RuneScape activities.`}
+        openGraph={{
+          images: [
+            {
+              url: entity.thumbnail,
+              alt: `${entity.name} ground markers`,
+            },
+            ...defaultImages,
+          ],
+        }}
       />
       <NavBar />
       <div className={styles.container}>
