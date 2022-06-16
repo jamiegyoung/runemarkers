@@ -21,10 +21,17 @@
 
 .link {
   color: var(--color-primary);
-  font-size: 1.2rem;
-  margin: 20px 0 0 0;
+  font-size: 1rem;
+  margin: 10px 10px 10px 10px;
+  transition: all 0.2s ease-out;
 }
 
-.runeliteLink {
-  color: var(--color-primary);
+.link:hover {
+  color: var(--color-primary-light);
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -45,16 +45,21 @@ export default function Entity(entity: TileEntity) {
       <div className={styles.container}>
         <StripContainer>
           <TileEntityCard entity={entity} hideInfoButton />
-          <a
-            href={`https://runelite.net/tile/show/#${Buffer.from(
-              JSON.stringify(entity.tiles),
-            )
-              .toString(`base64`)
-              .replaceAll(`=`, ``)}`}
-            className={styles.runeliteLink}
-          >
-            View Tiles on RuneLite
-          </a>
+          <div className={styles.linkContainer}>
+            <a
+              href={`https://runelite.net/tile/show/#${Buffer.from(
+                JSON.stringify(entity.tiles),
+              )
+                .toString(`base64`)
+                .replaceAll(`=`, ``)}`}
+              className={styles.link}
+            >
+              View Tiles on RuneLite
+            </a>
+            <a href={entity.wiki} className={styles.link}>
+              Wiki Page
+            </a>
+          </div>
           {entity.recommendedGuideVideoId ? (
             <RecommendedGuide
               videoId={entity.recommendedGuideVideoId}
