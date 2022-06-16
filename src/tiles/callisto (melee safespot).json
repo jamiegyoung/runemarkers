@@ -1,0 +1,50 @@
+{
+  "name": "Callisto (Melee Safespot)",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Callisto.png/200px-Callisto.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Callisto",
+  "tags": ["Wilderness", "Wildy"],
+  "recommendGuideVideoId": "jcORL3xnPGE",
+  "source": "https://www.youtube.com/watch?v=jcORL3xnPGE",
+  "tiles": [
+    {
+      "regionId": 13371,
+      "regionX": 0,
+      "regionY": 61,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "1"
+    },
+    {
+      "regionId": 13371,
+      "regionX": 5,
+      "regionY": 61,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "2"
+    },
+    {
+      "regionId": 13371,
+      "regionX": 9,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "4"
+    },
+    {
+      "regionId": 13371,
+      "regionX": 6,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3"
+    },
+    {
+      "regionId": 13371,
+      "regionX": 8,
+      "regionY": 41,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "5"
+    }
+  ]
+}
