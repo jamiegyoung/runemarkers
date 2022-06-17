@@ -37,15 +37,15 @@ export default function Entity(entity: TileEntity) {
   return (
     <>
       <NextSeo
-        title={`${entity.name} Ground Markers`}
+        title={`${entity.name} Tile Markers`}
         description={`${entity.name}${
-          entity.altName ? `/${entity.altName}` : ``
-        } ground markers for RuneLite. Find and import ground markers for different Oldschool RuneScape activities.`}
+          entity.altName ? ` / ${entity.altName}` : ``
+        } tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.`}
         openGraph={{
           images: [
             {
               url: entity.thumbnail,
-              alt: `${entity.name} ground markers`,
+              alt: `${entity.name} tile markers`,
             },
             ...defaultImages,
           ],

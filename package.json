@@ -1,6 +1,6 @@
 {
   "name": "runemarkers",
-  "description": "Find and import RuneLite ground markers for oldschool runescape. Easily search for ground markers by boss, activity or location.",
+  "description": "Find and import RuneLite tile markers for oldschool runescape. Easily search for tile markers by boss, activity or location.",
   "version": "1.0.0",
   "private": true,
   "author": "Jamie Young",
@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start -p 4911",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
@@ -27,6 +28,7 @@
     "minimist": "^1.2.6",
     "next": "12.1.6",
     "next-seo": "5.4.0",
+    "next-sitemap": "^3.0.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-lite-youtube-embed": "^2.2.2",
