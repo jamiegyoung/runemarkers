@@ -1,0 +1,58 @@
+{
+  "name": "Zurlah",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Zulrah_(serpentine).png/200px-Zulrah_(serpentine).png",
+  "wiki": "https://oldschool.runescape.wiki/w/Zulrah",
+  "tags": ["boss", "snake"],
+  "recommendedGuideVideoId": "Tnv2pGqKBrA",
+  "tiles": [
+    {
+      "regionId": 9007,
+      "regionX": 28,
+      "regionY": 61,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 24,
+      "regionY": 0,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 32,
+      "regionY": 0,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 32,
+      "regionY": 6,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 24,
+      "regionY": 6,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 34,
+      "regionY": 5,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 9008,
+      "regionX": 22,
+      "regionY": 4,
+      "z": 0,
+      "color": "#FFFFFF00"
+    }
+  ]
+}
