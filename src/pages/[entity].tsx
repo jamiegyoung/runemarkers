@@ -40,7 +40,7 @@ export default function Entity(entity: TileEntity) {
         title={`${entity.name} Tile Markers`}
         description={`${entity.name}${
           entity.altName ? ` / ${entity.altName}` : ``
-        } Import tile markers for different Oldschool RuneScape activities.`}
+        } tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.`}
         openGraph={{
           images: [
             {
