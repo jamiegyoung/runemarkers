@@ -1,0 +1,309 @@
+{
+  "name": "Volcanic Mine",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Lava_beast.png/200px-Lava_beast.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Volcanic_Mine",
+  "tags": ["mining", "minigame", "skilling"],
+  "recommendedGuideVideoId": "JVLMN7939H4",
+  "source": "https://pastebin.com/tUuTM2f5",
+  "tiles": [
+    {
+      "regionId": 15262,
+      "regionX": 39,
+      "regionY": 42,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 39,
+      "regionY": 18,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 38,
+      "regionY": 16,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 36,
+      "regionY": 18,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 24,
+      "regionY": 40,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 24,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 27,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 28,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 19,
+      "regionY": 43,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 11,
+      "regionY": 41,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 7,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "A VENT"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 44,
+      "regionY": 45,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 53,
+      "regionY": 42,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "C CHAMBER"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 37,
+      "regionY": 59,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "B CHAMBER"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 11,
+      "regionY": 43,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "A CHAMBER"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 35,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 27,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 28,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 27,
+      "regionY": 19,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 35,
+      "regionY": 41,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 36,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "2"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 36,
+      "regionY": 28,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 35,
+      "regionY": 42,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "3"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 38,
+      "regionY": 18,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "1"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 26,
+      "regionY": 19,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "1"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 35,
+      "regionY": 59,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "4"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 31,
+      "regionY": 7,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "B VENT"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 24,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 36,
+      "regionY": 19,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 37,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15262,
+      "regionX": 36,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 34,
+      "regionY": 13,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 33,
+      "regionY": 18,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 33,
+      "regionY": 22,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 33,
+      "regionY": 23,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 40,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "B VENT"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 46,
+      "regionY": 18,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 52,
+      "regionY": 17,
+      "z": 1,
+      "color": "#FFDDFF00",
+      "label": "C VENT"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 36,
+      "regionY": 4,
+      "z": 1,
+      "color": "#FFDDFF00"
+    },
+    {
+      "regionId": 15263,
+      "regionX": 41,
+      "regionY": 4,
+      "z": 1,
+      "color": "#FFDDFF00"
+    }
+  ]
+}
