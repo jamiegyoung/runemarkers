@@ -5,7 +5,7 @@ export default function StripContainer({
   customRef,
 }: {
   children: React.ReactNode;
-  customRef: React.RefObject<HTMLDivElement>;
+  customRef?: React.RefObject<HTMLDivElement>;
 }) {
   return (
     <div ref={customRef} className={styles.innerContainer}>
