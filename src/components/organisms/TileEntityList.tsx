@@ -13,10 +13,13 @@ export default function TileEntityList({ list }: TileEntityListProps) {
     <div className={styles.container}>
       <p
         style={{
-          padding: `0 20px`,
+          padding: `0`,
           color: `#C7C7C7`,
-          maxWidth: `500px`,
           textAlign: `center`,
+          minWidth: 280,
+          marginBottom: 15,
+          maxWidth: 600,
+          width: `80%`,
         }}
       >
         Make sure the “Gound Markers” plugin is enabled in runelite, copy the
