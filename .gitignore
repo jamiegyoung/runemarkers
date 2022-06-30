@@ -38,3 +38,7 @@ yarn-error.log*
 # vercel
 .vercel
 *.report.html
+
+# sitemaps
+/sitemap.xml
+/sitemap-*.xml
