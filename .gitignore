@@ -40,5 +40,5 @@ yarn-error.log*
 *.report.html
 
 # sitemaps
-/sitemap.xml
-/sitemap-*.xml
+*/sitemap.xml
+*/sitemap-*.xml
