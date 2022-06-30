@@ -13,6 +13,7 @@ const fuseOptions = {
   // the keys of the objects to search
   keys: [
     { name: `name`, weight: 0.7 },
+    { name: `altName`, weight: 0.5 },
     { name: `tags`, weight: 0.3 },
   ],
   threshold: 0.4,
