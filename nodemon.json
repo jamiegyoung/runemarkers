@@ -1,7 +1,0 @@
-{
-  "verbose": true,
-  "watch": [".next"],
-  "ignore": [".next/cache"],
-  "ext": "*",
-  "delay": 30000
-}
