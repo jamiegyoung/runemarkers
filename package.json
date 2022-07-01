@@ -5,6 +5,7 @@
   "private": true,
   "author": "Jamie Young",
   "license": "MIT",
+  "repository": "https://github.com/jamiegyoung/runemarkers",
   "scripts": {
     "dev": "next",
     "build": "next build",
