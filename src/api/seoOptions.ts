@@ -22,6 +22,12 @@ const nextSeoOptions: NextSeoProps = {
 
 export const defaultImages = [
   {
+    url: `/android-chrome-192x192.png`,
+    width: 192,
+    height: 192,
+    alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
+  },
+  {
     url: `/logo1024-background.png`,
     width: 1024,
     height: 1024,
@@ -37,12 +43,6 @@ export const defaultImages = [
     url: `/android-chrome-512x512.png`,
     width: 512,
     height: 512,
-    alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
-  },
-  {
-    url: `/android-chrome-192x192.png`,
-    width: 192,
-    height: 192,
     alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
   },
 ];
