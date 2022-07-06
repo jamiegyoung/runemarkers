@@ -5,7 +5,7 @@ import TileEntityList from '@/components/organisms/TileEntityList';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
 import { getTileData } from '@/api/tiles';
-import ContributionFooter from '@/components/atoms/GitHubFooter';
+import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { NextSeo } from 'next-seo';
 import { defaultImages } from '@/api/seoOptions';
 

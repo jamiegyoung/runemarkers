@@ -6,7 +6,7 @@ import StripContainer from '@/components/atoms/StripContainer';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
 import RecommendedGuide from '@/components/molecules/RecommendedGuide';
 import CodeBlock from '@/components/atoms/CodeBlock';
-import ContributionFooter from '@/components/atoms/GitHubFooter';
+import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
 
