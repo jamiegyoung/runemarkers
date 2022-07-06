@@ -33,7 +33,7 @@ export default function TileEntityList({ list }: TileEntityListProps) {
           width: `80%`,
         }}
       >
-        Make sure the “Gound Markers” plugin is enabled in runelite, copy the
+        Make sure the “Ground Markers” plugin is enabled in runelite, copy the
         tile markers to your clipboard, right click the world map on runelite
         and then select “import”
       </p>
