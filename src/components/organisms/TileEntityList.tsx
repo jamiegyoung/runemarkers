@@ -33,9 +33,9 @@ export default function TileEntityList({ list }: TileEntityListProps) {
           width: `80%`,
         }}
       >
-        Make sure the “Ground Markers” plugin is enabled in runelite, copy the
-        tile markers to your clipboard, right click the world map on runelite
-        and then select “import”
+        Make sure the &quot;Ground Markers&quot; plugin is enabled on RuneLite.
+        Copy the tile markers to your clipboard, right-click the world map
+        in-game and select &quot;import&quot;.
       </p>
       <Search />
       <StripContainer customRef={ref}>

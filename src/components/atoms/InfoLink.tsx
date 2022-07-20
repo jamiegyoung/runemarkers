@@ -1,11 +1,11 @@
 import styles from '@/components/atoms/InfoLink.module.css';
 import Link from 'next/link';
 
-type InfoButtonProps = {
+type InfoLinkProps = {
   href: string;
 };
 
-export default function InfoButton({ href }: InfoButtonProps) {
+export default function InfoLink({ href }: InfoLinkProps) {
   return (
     <Link href={href}>
       {/* https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Asearch%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048 */}

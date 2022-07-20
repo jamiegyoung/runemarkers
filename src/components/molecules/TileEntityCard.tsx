@@ -1,5 +1,5 @@
 import Button from '@/components/atoms/Button';
-import InfoButton from '@/components/atoms/InfoLink';
+import InfoLink from '@/components/atoms/InfoLink';
 import { TileEntity } from '@/types';
 import Image from 'next/image';
 import styles from '@/components/molecules/TileEntityCard.module.css';
@@ -54,7 +54,7 @@ export default function TileEntityCard({
               Copy
             </Button>
             {hideInfoButton ? null : (
-              <InfoButton href={`/${encodeURIComponent(entity.safeURI)}`} />
+              <InfoLink href={`/${encodeURIComponent(entity.safeURI)}`} />
             )}
           </div>
         </div>
