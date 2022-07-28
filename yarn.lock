@@ -3166,10 +3166,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-lite-youtube-embed@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-lite-youtube-embed/-/react-lite-youtube-embed-2.2.2.tgz#d61fce061ef730ac74072b82eb910021b8a9a7d1"
-  integrity sha512-1NqbNDcunRcB/9G9upXM59jyLdEUXy3Xk/XJ+JdIdT04qNTj5Xi8enR1BzMdowLsrDv8yW5qge2ob3gb22Qfnw==
+react-lite-youtube-embed@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-lite-youtube-embed/-/react-lite-youtube-embed-2.3.1.tgz#f5ecb8e178b67e4b38670fccb32f05ccc80f0939"
+  integrity sha512-14YlE6iZPHwqaQqSmwfI614qumdVAICU9PFmk34vcGnOfiixFjaATGkOfUd2TA6pFpVMP8DT2/l9ebu5/aKeag==
 
 react-syntax-highlighter@15.5.0:
   version "15.5.0"
