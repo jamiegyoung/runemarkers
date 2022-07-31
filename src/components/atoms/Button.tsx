@@ -6,6 +6,9 @@ export default function Button(
 ) {
   const [isAnimating, setIsAnimating] = useState(false);
   useEffect(() => {
+    if (!isAnimating) {
+      return;
+    }
     const timeout = setTimeout(() => {
       setIsAnimating(false);
     }, 1100);

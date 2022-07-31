@@ -2,7 +2,7 @@
   /* background-color: var(--color-card); */
   color: var(--color-text);
   width: 100%;
-  margin: 5px 0 0 0;
+  margin: 5px 0;
   padding: 0 0 5px 0;
   position: absolute;
   left: 0;
@@ -11,18 +11,28 @@
   align-items: center;
 }
 
-.footer > a {
+.link {
   margin: 0 10px 0 5px;
   padding: 0;
   color: var(--color-text);
   display: flex;
-  align-items: center;
 }
 
-.footer > p {
+.footerItem > p {
   margin: 0;
+  display: flex;
 }
 
-.footer > a > span {
+.link > span {
   margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footerItem {
+    margin: 10px 0px;
+  }
 }
