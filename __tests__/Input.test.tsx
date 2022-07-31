@@ -2,7 +2,7 @@ import { SearchContext } from '@/pages';
 import '@testing-library/jest-dom';
 import { act, fireEvent, render } from '@testing-library/react';
 import { Dispatch, SetStateAction } from 'react';
-import Input from './Input';
+import Input from '@/components/atoms/Input';
 
 const testInputWithContext = (
   searchVal: string | undefined,

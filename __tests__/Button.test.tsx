@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { act, fireEvent, render } from '@testing-library/react';
-import Button from './Button';
+import Button from '@/components/atoms/Button';
 
 const callback = jest.fn();
 

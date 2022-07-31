@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import Entity, { getStaticPaths, getStaticProps } from './[entity]';
+import Entity, { getStaticPaths, getStaticProps } from '@/pages/[entity]';
 
 const TestEntity = (alt = false, guide = false, source = false) => (
   <Entity

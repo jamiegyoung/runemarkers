@@ -4,3 +4,4 @@
 
 yarn lint-staged
 yarn test
+yarn build

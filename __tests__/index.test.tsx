@@ -1,8 +1,7 @@
 import { getTileData } from '@/api/tiles';
 import '@testing-library/jest-dom';
 import { act, fireEvent, render } from '@testing-library/react';
-
-import Home, { getStaticProps } from './index';
+import Home, { getStaticProps } from '@/pages/index';
 
 describe(`Home`, () => {
   it(`should search correctly`, () => {

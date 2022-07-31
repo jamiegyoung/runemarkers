@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { act, fireEvent, render } from '@testing-library/react';
-import CodeBlock from './CodeBlock';
+import CodeBlock from '@/components/atoms/CodeBlock';
 
 const testText = `123456789`;
 
