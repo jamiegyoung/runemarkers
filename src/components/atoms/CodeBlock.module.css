@@ -16,3 +16,7 @@
 .header {
   margin: 40px 0 10px 30px;
 }
+
+#toggleShowAll {
+  cursor: pointer;
+}

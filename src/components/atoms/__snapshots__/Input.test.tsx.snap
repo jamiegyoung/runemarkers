@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<div>
+  <input
+    class="input"
+    placeholder="type here to search"
+    style="width: 175px; min-width: 50px; max-width: 500px;"
+    type="text"
+  />
+</div>
+`;

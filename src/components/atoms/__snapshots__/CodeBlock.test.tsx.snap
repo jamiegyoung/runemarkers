@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodeBlock should render correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h2
+      class="header"
+    >
+      Tile Data:
+    </h2>
+    <pre
+      style="display: block; overflow-x: auto; background: rgb(29, 31, 33); color: rgb(197, 200, 198); padding: 20px; border-radius: 10px; background-color: rgb(59, 59, 55); box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); word-break: break-all;"
+    >
+      <code
+        class="language-JSON"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            style="color: rgb(222, 147, 95);"
+          >
+            12345
+          </span>
+          <span>
+            ...
+          </span>
+        </span>
+      </code>
+    </pre>
+    <code
+      id="toggleShowAll"
+    >
+      Show All (4 more characters, this may take a while to
+        load)
+    </code>
+  </div>
+</div>
+`;

@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should search correctly 1`] = `
+<div>
+  <div>
+    <main
+      class="main"
+    >
+      <div
+        class="navbar"
+      >
+        <a
+          href="./"
+          style="background: transparent; color: rgb(245, 243, 245); text-decoration: none; display: flex;"
+        >
+          <header
+            class="title"
+            style="font-size: 2rem;"
+          >
+            R
+            <span>
+              une
+            </span>
+            <span
+              class="titleAlt"
+            >
+              M
+              <span>
+                arkers
+              </span>
+            </span>
+          </header>
+        </a>
+      </div>
+      <div
+        class="container"
+      >
+        <p
+          style="padding: 0px; color: rgb(199, 199, 199); text-align: center; min-width: 280px; margin-bottom: 15px; max-width: 600px; width: 80%;"
+        >
+          Make sure the "Ground Markers" plugin is enabled on RuneLite. Copy the tile markers to your clipboard, right-click the world map in-game and select "import".
+        </p>
+        <div
+          style="display: flex; align-items: center; margin-bottom: 20px;"
+        >
+          <input
+            class="input"
+            placeholder="type here to search"
+            style="width: 175px; min-width: 50px; max-width: 500px;"
+            type="text"
+          />
+        </div>
+        <div
+          class="innerContainer"
+        >
+          <div
+            class="card"
+          >
+            <a
+              class="imageContainer"
+              href="/abyssal%20sire"
+            >
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27140%27%20height=%27140%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="Abyssal Sire.png"
+                  class="image"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+                <noscript />
+              </span>
+            </a>
+            <div
+              class="cardData"
+            >
+              <div
+                class="entityInfo"
+              >
+                <a
+                  class="name"
+                  href="/abyssal%20sire"
+                >
+                  Abyssal Sire
+                </a>
+              </div>
+              <div>
+                <p
+                  class="tileCount"
+                >
+                  6
+                   tile markers
+                </p>
+                <div
+                  class="tileInteraction"
+                >
+                  <button
+                    class="button button"
+                  >
+                    Copy
+                    <div
+                      class="animBar "
+                    />
+                  </button>
+                  <a
+                    class="button"
+                    href="/abyssal%20sire"
+                  >
+                    <svg
+                      class="svg"
+                      height="24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11 17H13V11H11ZM12 9Q12.425 9 12.713 8.712Q13 8.425 13 8Q13 7.575 12.713 7.287Q12.425 7 12 7Q11.575 7 11.288 7.287Q11 7.575 11 8Q11 8.425 11.288 8.712Q11.575 9 12 9ZM12 22Q9.925 22 8.1 21.212Q6.275 20.425 4.925 19.075Q3.575 17.725 2.788 15.9Q2 14.075 2 12Q2 9.925 2.788 8.1Q3.575 6.275 4.925 4.925Q6.275 3.575 8.1 2.787Q9.925 2 12 2Q14.075 2 15.9 2.787Q17.725 3.575 19.075 4.925Q20.425 6.275 21.212 8.1Q22 9.925 22 12Q22 14.075 21.212 15.9Q20.425 17.725 19.075 19.075Q17.725 20.425 15.9 21.212Q14.075 22 12 22ZM12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12Q12 12 12 12ZM12 20Q15.325 20 17.663 17.663Q20 15.325 20 12Q20 8.675 17.663 6.337Q15.325 4 12 4Q8.675 4 6.338 6.337Q4 8.675 4 12Q4 15.325 6.338 17.663Q8.675 20 12 20Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="footer"
+      >
+        <div
+          class="footerItem"
+        >
+          <p>
+            Made by
+            <a
+              class="link"
+              href="https://discord.com/users/167850724976361472"
+            >
+              <span
+                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+              >
+                <span
+                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2720%27/%3e"
+                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                  />
+                </span>
+                <img
+                  alt="GitHub"
+                  data-nimg="intrinsic"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+                <noscript />
+              </span>
+              <span>
+                Jam#0001
+              </span>
+            </a>
+          </p>
+        </div>
+        <div
+          class="footerItem"
+        >
+          <a
+            class="link"
+            href="https://github.com/jamiegyoung/runemarkers"
+          >
+            <span
+              style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+            >
+              <span
+                style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2720%27/%3e"
+                  style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+                />
+              </span>
+              <img
+                alt="GitHub"
+                data-nimg="intrinsic"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+              <noscript />
+            </span>
+            <span>
+              contribute code / tiles
+            </span>
+          </a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</div>
+`;

@@ -5,7 +5,13 @@ import styles from './CodeBlock.module.css';
 
 const TRUNCATE_LENGTH = 700;
 
-export default function CodeBlock({ text }: { text: string }) {
+export default function CodeBlock({
+  text,
+  truncateLength = TRUNCATE_LENGTH,
+}: {
+  text: string;
+  truncateLength?: number;
+}) {
   const [showingAll, setShowingAll] = useState(false);
   return (
     <div className={styles.container}>
@@ -23,27 +29,25 @@ export default function CodeBlock({ text }: { text: string }) {
           wordBreak: `break-all`,
         }}
       >
-        {text.length > TRUNCATE_LENGTH && !showingAll
-          ? `${text.slice(0, TRUNCATE_LENGTH)}...`
+        {text.length > truncateLength && !showingAll
+          ? `${text.slice(0, truncateLength)}...`
           : text}
       </SyntaxHighlighter>
-      <code
-        style={{
-          cursor: `pointer`,
-        }}
-        onClick={() => {
-          setShowingAll(!showingAll);
-        }}
-      >
-        {text.length > TRUNCATE_LENGTH
-          ? showingAll
+      {text.length > truncateLength ? (
+        <code
+          id={styles.toggleShowAll}
+          onClick={() => {
+            setShowingAll(!showingAll);
+          }}
+        >
+          {showingAll
             ? `Show Less`
             : `Show All (${
-                text.length - TRUNCATE_LENGTH
+                text.length - truncateLength
               } more characters, this may take a while to
-        load)`
-          : null}
-      </code>
+        load)`}
+        </code>
+      ) : null}
     </div>
   );
 }
