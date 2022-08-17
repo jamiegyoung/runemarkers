@@ -47,7 +47,7 @@ describe(`Entity`, () => {
 
   it(`should generate the correct runelite tiles link`, () => {
     const { getByText } = render(TestEntity());
-    const link = getByText(`View Tiles on RuneLite`);
+    const link = getByText(`View Map on RuneLite`);
     link.hasAttribute(`href`);
 
     expect(link.getAttribute(`href`)).toBe(

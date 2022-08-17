@@ -64,7 +64,7 @@ export default function Entity(entity: TileEntity) {
                 .replaceAll(`=`, ``)}`}
               className={styles.link}
             >
-              View Tiles on RuneLite
+              View Map on RuneLite
             </a>
             <a href={entity.wiki} className={styles.link}>
               Wiki Page
