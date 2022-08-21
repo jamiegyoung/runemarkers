@@ -63,10 +63,17 @@ export default function Entity(entity: TileEntity) {
                 .toString(`base64`)
                 .replaceAll(`=`, ``)}`}
               className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View Map on RuneLite
             </a>
-            <a href={entity.wiki} className={styles.link}>
+            <a
+              href={entity.wiki}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Wiki Page
             </a>
           </div>
@@ -78,7 +85,12 @@ export default function Entity(entity: TileEntity) {
           ) : null}
           <CodeBlock text={JSON.stringify(entity.tiles)} />
           {entity.source ? (
-            <a className={styles.link} href={entity.source}>
+            <a
+              className={styles.link}
+              href={entity.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Tiles Source
             </a>
           ) : null}
