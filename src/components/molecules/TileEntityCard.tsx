@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '@/components/molecules/TileEntityCard.module.css';
 import copy from 'copy-to-clipboard';
 import Link from 'next/link';
+import { useGtagContext } from '@/pages/_app';
 
 type TileEntityCardProps = {
   entity: TileEntity;
@@ -15,6 +16,8 @@ export default function TileEntityCard({
   entity,
   hideInfoButton,
 }: TileEntityCardProps) {
+  const gtag = useGtagContext();
+
   return (
     <div className={styles.card}>
       <Link
@@ -49,6 +52,11 @@ export default function TileEntityCard({
               className={styles.button}
               onClick={() => {
                 copy(JSON.stringify(entity.tiles));
+                if (gtag) {
+                  gtag.current(`event`, `copy_tile_markers`, {
+                    tiles_copied: entity.safeURI,
+                  });
+                }
               }}
             >
               Copy
