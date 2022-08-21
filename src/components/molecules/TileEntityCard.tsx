@@ -52,7 +52,7 @@ export default function TileEntityCard({
               className={styles.button}
               onClick={() => {
                 copy(JSON.stringify(entity.tiles));
-                if (gtag) {
+                if (gtag && gtag.current !== null) {
                   gtag.current(`event`, `copy_tile_markers`, {
                     tiles_copied: entity.safeURI,
                   });
