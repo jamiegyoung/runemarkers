@@ -4,23 +4,8 @@ import '@/styles/global.css';
 import { DefaultSeo } from 'next-seo';
 import nextSeoOptions from '@/api/seoOptions';
 import Script from 'next/script';
-import { createContext, MutableRefObject, useContext, useRef } from 'react';
-
-const GtagContext = createContext<null | MutableRefObject<
-  (
-    type: string,
-    eventName: string,
-    options: {
-      tiles_copied: string;
-    },
-  ) => void
->>(null);
-
-export const useGtagContext = () => useContext(GtagContext);
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const gtagRef = useRef<any>();
-
   return (
     <>
       {process.env.NEXT_PUBLIC_GA_TRACKING_ID ? (
@@ -34,19 +19,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Script
             id="google-analytics-script"
             strategy="afterInteractive"
-            onReady={() => {
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              gtagRef.current = window.gtag;
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
+            `,
             }}
-          >
-            {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
-          `}
-          </Script>
+          />
         </>
       ) : null}
       <DefaultSeo {...nextSeoOptions} />
@@ -57,9 +38,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#262624" />
       </Head>
-      <GtagContext.Provider value={gtagRef}>
-        <Component {...pageProps} />
-      </GtagContext.Provider>
+      <Component {...pageProps} />
     </>
   );
 }
