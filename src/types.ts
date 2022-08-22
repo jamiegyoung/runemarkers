@@ -4,6 +4,7 @@ export type Tile = {
   regionY: number;
   z: number;
   color: string;
+  label?: string;
 };
 
 export type Source = {
