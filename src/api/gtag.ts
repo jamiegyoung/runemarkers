@@ -10,5 +10,7 @@ type Event = {
 };
 
 export const event = (event: Event) => {
-  window.gtag(`event`, event.action, event.params);
+  if (typeof window.gtag === `function`) {
+    window.gtag(`event`, event.action, event.params);
+  }
 };
