@@ -33,9 +33,10 @@ export default function TileEntityList({ list }: TileEntityListProps) {
           width: `80%`,
         }}
       >
-        Make sure the &quot;Ground Markers&quot; plugin is enabled on RuneLite.
-        Copy the tile markers to your clipboard, right-click the world map
-        in-game and select &quot;import&quot;.
+        Make sure the &quot;Ground Markers&quot; plugin is enabled on RuneLite
+        with &quot;Remember color per tile&quot; enabled. Copy the tile markers
+        to your clipboard, right-click the world map in-game and select
+        &quot;import&quot;.
       </p>
       <Search />
       <StripContainer customRef={ref}>
