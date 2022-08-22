@@ -1,0 +1,57 @@
+{
+  "name": "K'ril Tsutsaroth",
+  "altName": "Zammy",
+  "subcategory": "6:0",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/K'ril_Tsutsaroth.png/200px-K'ril_Tsutsaroth.png",
+  "wiki": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+  "tags": ["boss", "godwars", "gwd", "zamorak"],
+  "recommendedGuideVideoId": "FxZKRfc_O0M",
+  "source": {
+    "name": "GeChallengeM - Solo Zamorak GWD with the Bow of Faerdhinen (easy 6:0)",
+    "link": "https://www.youtube.com/watch?v=FxZKRfc_O0M"
+  },
+  "tiles": [
+    {
+      "regionId": 11603,
+      "regionX": 39,
+      "regionY": 15,
+      "z": 2,
+      "color": "#FF00FF00"
+    },
+    {
+      "regionId": 11603,
+      "regionX": 40,
+      "regionY": 7,
+      "z": 2,
+      "color": "#FF00FF00"
+    },
+    {
+      "regionId": 11603,
+      "regionX": 56,
+      "regionY": 17,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11603,
+      "regionX": 40,
+      "regionY": 17,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11603,
+      "regionX": 46,
+      "regionY": 9,
+      "z": 2,
+      "color": "#FF00FF00"
+    },
+    {
+      "regionId": 11603,
+      "regionX": 53,
+      "regionY": 14,
+      "z": 2,
+      "color": "#FF00FF00"
+    }
+  ]
+}
