@@ -4,7 +4,7 @@
   margin: 0 30px;
   align-items: center;
   border-radius: 20px;
-  color: var(--color-subtle-text);
+  color: var(--color-text);
   flex-direction: column;
   padding: 0px;
 }
@@ -14,7 +14,7 @@
 }
 
 .header {
-  margin: 40px 0 10px 30px;
+  margin: 40px 0 10px 0;
 }
 
 #toggleShowAll {
