@@ -2,7 +2,8 @@ export enum EventNames {
   copyTileMarkers = `copy_tile_markers`,
 }
 
-type EventParams = {
+export type EventParams = {
+  [key: string]: string | number | undefined;
   event_category?: string;
   event_label?: string;
   value?: number;

@@ -63,12 +63,12 @@ export default function TileEntityCard({
               className={styles.button}
               onClick={() => {
                 copy(JSON.stringify(entity.tiles));
-                console.log(`tiles copied`);
                 event({
                   action: EventNames.copyTileMarkers,
                   params: {
                     event_category: `engagement`,
-                    event_label: `${entity.safeURI}`,
+                    event_label: entity.safeURI,
+                    tiles_copied: entity.safeURI,
                   },
                 });
               }}

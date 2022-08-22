@@ -1,4 +1,4 @@
-import { EventNames } from '@/api/gtag';
+import { EventNames, EventParams } from '@/api/gtag';
 
 export {};
 
