@@ -3,7 +3,10 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Pestilent_Bloat.png/200px-Pestilent_Bloat.png",
   "wiki": "https://oldschool.runescape.wiki/w/Pestilent_Bloat",
   "tags": ["theatre of blood", "tob", "raids"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 13125,

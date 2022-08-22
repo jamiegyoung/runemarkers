@@ -4,7 +4,10 @@
   "wiki": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre",
   "tags": ["agility", "minigame", "skilling"],
   "recommendedGuideVideoId": "wVim0ZX-GTc",
-  "source": "https://youtu.be/wVim0ZX-GTc",
+  "source": {
+    "name": "Gnomonkey - Hallowed Sepulchre Agility Guide (70-85k XP/HR and 1-2.8M GP/HR) OSRS",
+    "link": "https://youtu.be/wVim0ZX-GTc"
+  },
   "tiles": [
     {
       "regionId": 9052,

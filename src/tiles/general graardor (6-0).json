@@ -1,16 +1,16 @@
 {
-  "name": "General Graardor (6:0)",
-  "altName": "Bandos (6:0)",
+  "name": "General Graardor",
+  "altName": "Bandos",
+  "subcategory": "6:0",
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/200px-General_Graardor.png",
   "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
-  "tags": [
-    "boss",
-    "godwars",
-    "gwd",
-    "bandos"
-  ],
+  "tags": ["boss", "godwars", "gwd", "bandos"],
   "recommendedGuideVideoId": "oIWnXBqebTU",
-  "source": "https://www.youtube.com/watch?v=oIWnXBqebTU",
+  "source": {
+    "name": "NoBankWicked - Bandos 6:0 Method (ranged)",
+    "link": "https://www.youtube.com/watch?v=oIWnXBqebTU",
+    "modified": true
+  },
   "tiles": [
     {
       "regionId": 11347,

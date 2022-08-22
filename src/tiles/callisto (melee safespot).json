@@ -1,10 +1,15 @@
 {
-  "name": "Callisto (Melee Safespot)",
+  "name": "Callisto",
+  "subcategory": "Melee Safespot",
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Callisto.png/200px-Callisto.png",
   "wiki": "https://oldschool.runescape.wiki/w/Callisto",
-  "tags": ["Wilderness", "Wildy"],
+  "tags": ["wilderness", "wildy"],
   "recommendedGuideVideoId": "jcORL3xnPGE",
-  "source": "https://www.youtube.com/watch?v=jcORL3xnPGE",
+  "source": {
+    "name": "AsukaYen OSRS - OSRS Callisto Guide [2021]",
+    "link": "https://www.youtube.com/watch?v=jcORL3xnPGE",
+    "modified": true
+  },
   "tiles": [
     {
       "regionId": 13371,

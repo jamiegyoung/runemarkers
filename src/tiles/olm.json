@@ -3,7 +3,10 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Great_Olm.png/200px-Great_Olm.png",
   "wiki": "https://oldschool.runescape.wiki/w/Great_Olm",
   "tags": ["cox", "chambers of xeric", "raids"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !coxtiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 12889,

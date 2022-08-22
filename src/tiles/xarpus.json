@@ -3,7 +3,10 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Xarpus.png/200px-Xarpus.png",
   "wiki": "https://oldschool.runescape.wiki/w/Xarpus",
   "tags": ["theatre of blood", "tob", "raids"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 12612,

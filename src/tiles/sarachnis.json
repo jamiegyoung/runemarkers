@@ -2,10 +2,7 @@
   "name": "Sarachnis",
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sarachnis.png/200px-Sarachnis.png",
   "wiki": "https://oldschool.runescape.wiki/w/Sarachnis",
-  "tags": [
-    "boss",
-    "spider"
-  ],
+  "tags": ["boss", "spider"],
   "tiles": [
     {
       "regionId": 7322,

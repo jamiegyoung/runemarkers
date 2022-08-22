@@ -35,11 +35,24 @@ export default function TileEntityCard({
       <div className={styles.cardData}>
         <div className={styles.entityInfo}>
           <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
-            <a className={styles.name}>{entity.name}</a>
+            <a className={styles.name}>
+              {entity.name}
+              {entity.subcategory ? (
+                <>
+                  {` `}
+                  <span style={{ whiteSpace: `nowrap` }}>
+                    ({entity.subcategory})
+                  </span>
+                </>
+              ) : null}
+            </a>
           </Link>
           {entity.altName ? (
             <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
-              <a className={styles.altName}>{entity.altName}</a>
+              <a className={styles.altName}>
+                {entity.altName}
+                {entity.subcategory ? ` (${entity.subcategory}) ` : null}
+              </a>
             </Link>
           ) : null}
         </div>

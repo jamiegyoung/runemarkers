@@ -6,14 +6,21 @@ export type Tile = {
   color: string;
 };
 
+export type Source = {
+  link: string;
+  name: string;
+  modified?: boolean;
+};
+
 export type TileEntity = {
   safeURI: string;
   name: string;
+  subcategory?: string;
   altName?: string;
   tags: string[];
   tiles: Tile[];
   thumbnail: string;
   wiki: string;
-  source?: string;
+  source?: Source;
   recommendedGuideVideoId?: string;
 };

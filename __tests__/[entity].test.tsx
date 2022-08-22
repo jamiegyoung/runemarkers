@@ -7,7 +7,14 @@ const TestEntity = (alt = false, guide = false, source = false) => (
     safeURI={`AbyssalSire`}
     name={`Abyssal Sire`}
     altName={alt ? `Abyssal Sire Alt Test` : undefined}
-    source={source ? `https://www.youtube.com/watch?v=wnZJl9driUs` : undefined}
+    source={
+      source
+        ? {
+            name: `AsukaYen OSRS - OSRS Abyssal Sire Guide [2021]`,
+            link: `https://www.youtube.com/watch?v=wnZJl9driUs`,
+          }
+        : undefined
+    }
     tags={[`slayer`, `boss`]}
     recommendedGuideVideoId={guide ? `wnZJl9driUs` : undefined}
     tiles={[

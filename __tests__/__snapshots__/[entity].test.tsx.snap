@@ -106,12 +106,16 @@ exports[`Entity should render correctly 1`] = `
         <a
           class="link"
           href="https://runelite.net/tile/show/#W3sicmVnaW9uSWQiOjExODUwLCJyZWdpb25YIjoyNSwicmVnaW9uWSI6MzQsInoiOjAsImNvbG9yIjoiI0ZGRkZGRjAwIn1d"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           View Map on RuneLite
         </a>
         <a
           class="link"
           href="https://oldschool.runescape.wiki/w/Abyssal_Sire"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Wiki Page
         </a>

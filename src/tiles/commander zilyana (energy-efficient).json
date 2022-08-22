@@ -1,14 +1,14 @@
 {
-  "name": "Commander Zilyana (No Stam)",
-  "altName": "Saradomin (No Stam)",
+  "name": "Commander Zilyana",
+  "altName": "Saradomin",
+  "subcategory": "Energy-efficient",
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/200px-Commander_Zilyana.png",
   "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
-  "tags": [
-    "boss",
-    "godwars",
-    "gwd"
-  ],
-  "source": "https://www.youtube.com/watch?v=WUa4T1lRNKo",
+  "tags": ["boss", "godwars", "gwd"],
+  "source": {
+    "name": "GeChallengeM - Solo Saradomin GWD for Crossbows/Tbow (Energy-efficient)",
+    "link": "https://www.youtube.com/watch?v=WUa4T1lRNKo"
+  },
   "recommendedGuideVideoId": "WUa4T1lRNKo",
   "tiles": [
     {

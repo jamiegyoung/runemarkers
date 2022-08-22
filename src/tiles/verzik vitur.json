@@ -3,7 +3,10 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Verzik_Vitur_%28final_form%29.png/200px-Verzik_Vitur_%28final_form%29.png",
   "wiki": "https://oldschool.runescape.wiki/w/Verzik_Vitur",
   "tags": ["theatre of blood", "tob", "raids"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 12611,

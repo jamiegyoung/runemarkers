@@ -1,0 +1,69 @@
+{
+  "name": "Vorkath",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vorkath.png/200px-Vorkath.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Vorkath",
+  "recommendedGuideVideoId": "53BqQqugOAU",
+  "source": {
+    "name": "RuneLite's Discord, #tile-markers channel",
+    "link": "https://runelite.net/discord"
+  },
+  "tags": ["boss"],
+  "tiles": [
+    {
+      "regionId": 9023,
+      "regionX": 30,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FFFF1E1E"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 32,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FFFF1E1E"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 34,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FFFF1E1E"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 31,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF38FF1E"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 33,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FF38FF1E"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 30,
+      "regionY": 24,
+      "z": 0,
+      "color": "#FFC8E414"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 32,
+      "regionY": 24,
+      "z": 0,
+      "color": "#FFC8E414"
+    },
+    {
+      "regionId": 9023,
+      "regionX": 34,
+      "regionY": 24,
+      "z": 0,
+      "color": "#FFC8E414"
+    }
+  ]
+}

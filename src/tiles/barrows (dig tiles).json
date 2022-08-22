@@ -1,0 +1,183 @@
+{
+  "name": "Barrows",
+  "subcategory": "Dig Tiles",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Dharok_the_Wretched.png/200px-Dharok_the_Wretched.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Barrows",
+  "tags": ["minigame"],
+  "recommendedGuideVideoId": "DjCGv9eFC9M",
+  "source": {
+    "name": "RuneLite's Discord - #tile-markers",
+    "link": "https://runelite.net/discord",
+    "modified": true
+  },
+  "tiles": [
+    {
+      "regionId": 14131,
+      "regionX": 54,
+      "regionY": 16,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 60,
+      "regionY": 16,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 60,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 54,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 52,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 57,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 52,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 57,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 49,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 43,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 49,
+      "regionY": 9,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 43,
+      "regionY": 9,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 47,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 42,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 47,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 42,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 39,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 35,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 35,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 36,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 36,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 32,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF5B5048"
+    },
+    {
+      "regionId": 14131,
+      "regionX": 32,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF5B5048"
+    }
+  ]
+}

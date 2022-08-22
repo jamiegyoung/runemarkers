@@ -4,7 +4,10 @@
   "wiki": "https://oldschool.runescape.wiki/w/Inferno",
   "recommendedGuideVideoId": "HnUr5zcF4fU",
   "tags": ["zuk", "tzkal"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !infernotiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 9043,

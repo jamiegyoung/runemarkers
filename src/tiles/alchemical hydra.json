@@ -4,7 +4,10 @@
   "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
   "tags": ["slayer", "boss"],
   "recommendedGuideVideoId": "7ehTfsD--gM",
-  "source": "https://www.youtube.com/watch?v=7ehTfsD--gM",
+  "source": {
+    "name": "Gnomonkey - Alchemical Hydra Guide 2021 (4-4.5M GP/HR) OSRS",
+    "link": "https://www.youtube.com/watch?v=7ehTfsD--gM"
+  },
   "tiles": [
     {
       "regionId": 5536,

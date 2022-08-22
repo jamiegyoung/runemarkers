@@ -4,7 +4,10 @@
   "wiki": "https://oldschool.runescape.wiki/w/Volcanic_Mine",
   "tags": ["mining", "minigame", "skilling"],
   "recommendedGuideVideoId": "JVLMN7939H4",
-  "source": "https://pastebin.com/tUuTM2f5",
+  "source": {
+    "name": "Gnomonkey's Discord - linked in #resources",
+    "link": "https://pastebin.com/tUuTM2f5"
+  },
   "tiles": [
     {
       "regionId": 15262,

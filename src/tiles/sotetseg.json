@@ -3,7 +3,10 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sotetseg.png/200px-Sotetseg.png",
   "wiki": "https://oldschool.runescape.wiki/w/Sotetseg",
   "tags": ["theatre of blood", "tob", "raids"],
-  "source": "https://discord.gg/wdr",
+  "source": {
+    "name": "WDR Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
   "tiles": [
     {
       "regionId": 13123,

@@ -9,6 +9,7 @@ import CodeBlock from '@/components/atoms/CodeBlock';
 import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
+import TilesSource from '@/components/atoms/TilesSource';
 
 export async function getStaticPaths() {
   return {
@@ -37,7 +38,9 @@ export default function Entity(entity: TileEntity) {
   return (
     <>
       <NextSeo
-        title={`${entity.name} Tile Markers`}
+        title={`${entity.name}${
+          entity.subcategory ? ` (${entity.subcategory}) ` : ` `
+        }Tile Markers`}
         description={`${entity.name}${
           entity.altName ? ` / ${entity.altName}` : ``
         } tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.`}
@@ -84,16 +87,7 @@ export default function Entity(entity: TileEntity) {
             />
           ) : null}
           <CodeBlock text={JSON.stringify(entity.tiles)} />
-          {entity.source ? (
-            <a
-              className={styles.link}
-              href={entity.source}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tiles Source
-            </a>
-          ) : null}
+          {entity.source ? <TilesSource source={entity.source} /> : null}
         </StripContainer>
       </div>
       <ContributionFooter />
