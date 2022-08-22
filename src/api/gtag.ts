@@ -2,11 +2,15 @@ export enum EventNames {
   copyTileMarkers = `copy_tile_markers`,
 }
 
+type EventParams = {
+  event_category?: string;
+  event_label?: string;
+  value?: number;
+};
+
 type Event = {
   action: EventNames;
-  params: {
-    [key: string]: string | number;
-  };
+  params: EventParams;
 };
 
 export const event = (event: Event) => {

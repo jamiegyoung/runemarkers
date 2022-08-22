@@ -42,3 +42,10 @@ yarn-error.log*
 # sitemaps
 */sitemap.xml
 */sitemap-*.xml
+
+# not local env files
+.not.env
+.not.env.local
+.not.env.development.local
+.not.env.test.local
+.not.env.production.local

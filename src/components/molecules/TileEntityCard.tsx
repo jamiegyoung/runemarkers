@@ -67,7 +67,8 @@ export default function TileEntityCard({
                 event({
                   action: EventNames.copyTileMarkers,
                   params: {
-                    tiles_copied: entity.safeURI,
+                    event_category: `engagement`,
+                    event_label: `${entity.safeURI}`,
                   },
                 });
               }}
