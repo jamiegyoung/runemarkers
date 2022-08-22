@@ -41,7 +41,7 @@ export default function TileEntityList({ list }: TileEntityListProps) {
       <Search />
       <StripContainer customRef={ref}>
         {list.map((i) => (
-          <TileEntityCard key={i.name} entity={i} />
+          <TileEntityCard key={i.safeURI} entity={i} />
         ))}
       </StripContainer>
     </div>
