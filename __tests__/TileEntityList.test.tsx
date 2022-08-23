@@ -11,7 +11,10 @@ const testTileData: TileEntity[] = [
     wiki: `https://oldschool.runescape.wiki/w/Abyssal_Sire`,
     tags: [`slayer`, `boss`],
     recommendedGuideVideoId: `wnZJl9driUs`,
-    source: `https://www.youtube.com/watch?v=wnZJl9driUs`,
+    source: {
+      name: `AsukaYen OSRS - OSRS Abyssal Sire Guide [2021]`,
+      link: `https://www.youtube.com/watch?v=wnZJl9driUs`,
+    },
     tiles: [
       {
         regionId: 11850,
@@ -29,7 +32,10 @@ const testTileData: TileEntity[] = [
     wiki: `https://oldschool.runescape.wiki/w/Alchemical_Hydra`,
     tags: [`slayer`, `boss`],
     recommendedGuideVideoId: `7ehTfsD--gM`,
-    source: `https://www.youtube.com/watch?v=7ehTfsD--gM`,
+    source: {
+      name: `AsukaYen OSRS - OSRS Abyssal Sire Guide [2021]`,
+      link: `https://www.youtube.com/watch?v=wnZJl9driUs`,
+    },
     tiles: [
       {
         regionId: 5536,
