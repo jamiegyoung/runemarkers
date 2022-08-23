@@ -1,6 +1,5 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-. "$(dirname "$0")/common.sh"
+chmod ug+x .husky/*
 
 yarn lint-staged
 yarn test
