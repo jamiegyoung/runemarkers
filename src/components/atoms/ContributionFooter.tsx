@@ -11,7 +11,7 @@ export default function ContributionFooter() {
             href="https://discord.com/users/167850724976361472"
             className={styles.link}
           >
-            <Image src="/discord.png" alt="GitHub" width={20} height={20} />
+            <Image src="/discord.png" alt="GitHub" width={21} height={24} />
             <span>Jam#0001</span>
           </a>
         </p>
