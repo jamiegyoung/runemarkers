@@ -2,10 +2,8 @@
 See the live version [here](https://runemarkers.net)
 
 ## Bosses to add
-- Vorkath (Ranged)
 - Sweaty Kraken
 - General Graardor (7:0)
-- K'ril
 - Hunlef
 
 ## Tiles Contribution
