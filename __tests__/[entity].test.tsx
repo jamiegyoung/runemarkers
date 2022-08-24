@@ -2,16 +2,24 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import Entity, { getStaticPaths, getStaticProps } from '@/pages/[entity]';
 
-const TestEntity = (alt = false, guide = false, source = false) => (
+const TestEntity = (
+  alt = false,
+  guide = false,
+  source = false,
+  modified = false,
+  subcategory = false,
+) => (
   <Entity
     safeURI={`AbyssalSire`}
     name={`Abyssal Sire`}
+    subcategory={subcategory ? `boss` : undefined}
     altName={alt ? `Abyssal Sire Alt Test` : undefined}
     source={
       source
         ? {
             name: `AsukaYen OSRS - OSRS Abyssal Sire Guide [2021]`,
             link: `https://www.youtube.com/watch?v=wnZJl9driUs`,
+            modified: modified ? true : false,
           }
         : undefined
     }
@@ -37,6 +45,11 @@ describe(`Entity`, () => {
     expect(container).toMatchSnapshot();
   });
 
+  it(`should render correctly with a subcategory`, () => {
+    const { getByText } = render(TestEntity(false, false, false, false, true));
+    expect(getByText(`(boss)`)).toBeInTheDocument();
+  });
+
   it(`should render an optional alt name`, () => {
     const { getByText } = render(TestEntity(true));
     expect(getByText(`Abyssal Sire Alt Test`)).toBeInTheDocument();
@@ -60,6 +73,11 @@ describe(`Entity`, () => {
     expect(link.getAttribute(`href`)).toBe(
       `https://runelite.net/tile/show/#W3sicmVnaW9uSWQiOjExODUwLCJyZWdpb25YIjoyNSwicmVnaW9uWSI6MzQsInoiOjAsImNvbG9yIjoiI0ZGRkZGRjAwIn1d`,
     );
+  });
+
+  it(`should generate the modified text if the source has been modified`, () => {
+    const { getByText } = render(TestEntity(false, false, true, true));
+    expect(getByText(`(modified)`)).toBeInTheDocument();
   });
 
   it(`should get the correct static props`, async () => {

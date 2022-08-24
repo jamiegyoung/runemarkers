@@ -86,7 +86,7 @@ export default function Entity(entity: TileEntity) {
               title={`${entity.name} guide`}
             />
           ) : null}
-          <CodeBlock text={JSON.stringify(entity.tiles)} />
+          <CodeBlock tiles={entity.tiles} />
           {entity.source ? <TilesSource source={entity.source} /> : null}
         </StripContainer>
       </div>

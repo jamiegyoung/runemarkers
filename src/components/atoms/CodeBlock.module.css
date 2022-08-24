@@ -7,16 +7,53 @@
   color: var(--color-text);
   flex-direction: column;
   padding: 0px;
+  width: 80%;
 }
 
 .container code {
   font-family: monospace;
 }
 
+.code {
+  border-radius: 10px;
+  background-color: #3b3b37;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 0 20px;
+  word-break: break-all;
+  color: #ddd;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .header {
   margin: 40px 0 10px 0;
 }
 
-#toggleShowAll {
+.togglePretty, .toggleShowAll {
   cursor: pointer;
+  user-select: none;
+  color: #eee;
+  transition: .2s ease-out;
+}
+
+.togglePretty {
+  margin-left: auto;
+}
+
+.togglePretty:hover, .toggleShowAll:hover {
+  color: var(--color-primary-light);
+}
+
+.toggleShowAll.active, .togglePretty.active {
+  color: var(--color-primary);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
 }

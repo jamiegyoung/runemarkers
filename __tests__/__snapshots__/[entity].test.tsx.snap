@@ -126,102 +126,23 @@ exports[`Entity should render correctly 1`] = `
         <h2
           class="header"
         >
-          Tile Data:
+          Tile Data
         </h2>
-        <pre
-          style="display: block; overflow-x: auto; background: rgb(29, 31, 33); color: rgb(197, 200, 198); padding: 20px; border-radius: 10px; background-color: rgb(59, 59, 55); box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); word-break: break-all;"
+        <div
+          class="options"
         >
           <code
-            class="language-JSON"
-            style="white-space: pre-wrap;"
+            class="togglePretty "
           >
-            <span>
-              <span>
-                [{
-              </span>
-              <span
-                class="hljs-attr"
-              >
-                "regionId"
-              </span>
-              <span>
-                :
-              </span>
-              <span
-                style="color: rgb(222, 147, 95);"
-              >
-                11850
-              </span>
-              <span>
-                ,
-              </span>
-              <span
-                class="hljs-attr"
-              >
-                "regionX"
-              </span>
-              <span>
-                :
-              </span>
-              <span
-                style="color: rgb(222, 147, 95);"
-              >
-                25
-              </span>
-              <span>
-                ,
-              </span>
-              <span
-                class="hljs-attr"
-              >
-                "regionY"
-              </span>
-              <span>
-                :
-              </span>
-              <span
-                style="color: rgb(222, 147, 95);"
-              >
-                34
-              </span>
-              <span>
-                ,
-              </span>
-              <span
-                class="hljs-attr"
-              >
-                "z"
-              </span>
-              <span>
-                :
-              </span>
-              <span
-                style="color: rgb(222, 147, 95);"
-              >
-                0
-              </span>
-              <span>
-                ,
-              </span>
-              <span
-                class="hljs-attr"
-              >
-                "color"
-              </span>
-              <span>
-                :
-              </span>
-              <span
-                style="color: rgb(181, 189, 104);"
-              >
-                "#FFFFFF00"
-              </span>
-              <span>
-                }]
-              </span>
-            </span>
+            pretty print
           </code>
-        </pre>
+        </div>
+        <code
+          class="code"
+          style="white-space: normal;"
+        >
+          [{"regionId":11850,"regionX":25,"regionY":34,"z":0,"color":"#FFFFFF00"}]
+        </code>
       </div>
     </div>
   </div>

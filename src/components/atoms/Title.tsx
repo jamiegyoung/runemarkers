@@ -1,10 +1,6 @@
 import styles from '@/components/atoms/Title.module.css';
 
-type TitleProps = {
-  size?: number;
-};
-
-export default function Title({ size }: TitleProps) {
+export default function Title() {
   return (
     <a
       href="./"
@@ -18,7 +14,7 @@ export default function Title({ size }: TitleProps) {
     >
       <header
         style={{
-          fontSize: size ? size : `2rem`,
+          fontSize: `2rem`,
         }}
         className={styles.title}
       >
