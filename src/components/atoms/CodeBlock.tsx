@@ -106,7 +106,7 @@ export default function CodeBlock({
           ? `${text.slice(0, truncatedPos)}\n...`
           : text}
       </code>
-      {showingAll ? (
+      {truncated && showingAll ? (
         <code
           className={[styles.toggleShowAll, styles.active].join(` `)}
           onClick={() => {
