@@ -19,7 +19,7 @@ const TestEntity = (
         ? {
             name: `AsukaYen OSRS - OSRS Abyssal Sire Guide [2021]`,
             link: `https://www.youtube.com/watch?v=wnZJl9driUs`,
-            modified: modified ? true : false,
+            modified: modified ? `true` : undefined,
           }
         : undefined
     }

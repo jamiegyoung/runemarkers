@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { TileEntity } from '@/types';
+import { MappedTileEntity, TileEntity } from '@/types';
 import { createContext, useEffect, useState } from 'react';
 import TileEntityList from '@/components/organisms/TileEntityList';
 import NavBar from '@/components/molecules/NavBar';
@@ -12,8 +12,8 @@ import { defaultImages } from '@/api/seoOptions';
 const fuseOptions = {
   // the keys of the objects to search
   keys: [
-    { name: `name`, weight: 0.7 },
-    { name: `altName`, weight: 0.5 },
+    { name: `fullName`, weight: 0.7 },
+    { name: `fullAltName`, weight: 0.5 },
     { name: `tags`, weight: 0.3 },
   ],
   threshold: 0.4,
@@ -21,8 +21,13 @@ const fuseOptions = {
 
 export async function getStaticProps() {
   const data = getTileData();
+  const mappedData: MappedTileEntity[] = data.map((e) => ({
+    ...e,
+    fullName: `${e.name} ${e.subcategory}`,
+    fullAltName: `${e.altName} ${e.subcategory}`,
+  }));
   return {
-    props: { tileData: data },
+    props: { tileData: mappedData },
   };
 }
 
@@ -30,7 +35,7 @@ export const SearchContext = createContext<
   [string | undefined, React.Dispatch<React.SetStateAction<string>> | undefined]
 >([undefined, undefined]);
 
-export default function Home({ tileData }: { tileData: TileEntity[] }) {
+export default function Home({ tileData }: { tileData: MappedTileEntity[] }) {
   const [searchVal, setSearchVal] = useState(``);
   const [searchRes, setSearchRes] = useState<TileEntity[]>(tileData);
 

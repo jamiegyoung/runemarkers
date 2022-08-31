@@ -9,7 +9,7 @@
   "source": {
     "name": "NoBankWicked - Bandos 6:0 Method (ranged)",
     "link": "https://www.youtube.com/watch?v=oIWnXBqebTU",
-    "modified": true
+    "modified": "Added the label \"start\" to the starting tile"
   },
   "tiles": [
     {
@@ -61,20 +61,6 @@
       "z": 2,
       "color": "#FFF8EA09",
       "label": "start"
-    },
-    {
-      "regionId": 11347,
-      "regionX": 50,
-      "regionY": 48,
-      "z": 2,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 11347,
-      "regionX": 52,
-      "regionY": 48,
-      "z": 2,
-      "color": "#FFFF0000"
     }
   ]
 }

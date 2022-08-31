@@ -10,7 +10,7 @@ export type Tile = {
 export type Source = {
   link: string;
   name: string;
-  modified?: boolean;
+  modified?: string;
 };
 
 export type TileEntity = {
@@ -25,3 +25,8 @@ export type TileEntity = {
   source?: Source;
   recommendedGuideVideoId?: string;
 };
+
+export interface MappedTileEntity extends TileEntity {
+  fullName: string;
+  fullAltName: string;
+}

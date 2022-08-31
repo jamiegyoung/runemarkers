@@ -13,10 +13,6 @@
   color: var(--color-primary-light);
 }
 
-.modified {
-  margin: 0;
-}
-
 .tilesSourceContainer {
   display: flex;
   justify-content: center;

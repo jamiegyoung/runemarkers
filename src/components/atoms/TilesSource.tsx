@@ -1,5 +1,6 @@
 import { Source } from '@/types';
 import styles from '@/components/atoms/TilesSource.module.css';
+import Modified from './Modified';
 
 export default function TilesSource({ source }: { source: Source }) {
   return (
@@ -12,7 +13,7 @@ export default function TilesSource({ source }: { source: Source }) {
       >
         {source.name}
       </a>
-      {source.modified ? <p className={styles.modified}>(modified)</p> : null}
+      {source.modified ? <Modified>{source.modified}</Modified> : null}
     </div>
   );
 }
