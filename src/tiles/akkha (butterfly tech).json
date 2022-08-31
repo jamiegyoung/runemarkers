@@ -1,0 +1,430 @@
+{
+  "name": "Akkha",
+  "subcategory": "Butterfly Tech",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Akkha.png/200px-Akkha.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Akkha/",
+  "tags": ["raids 3", "toa", "tombs of amascut"],
+  "recommendedGuideVideoId": "pSBxLCy7-44",
+  "source": {
+    "name": "Gnomonkey - Raids 3 TOA Akkha \"Butterfly Tech\" OSRS",
+    "link": "https://www.youtube.com/watch?v=pSBxLCy7-44"
+  },
+  "tiles": [
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 28,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 27,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 34,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 36,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 34,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 36,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 32,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 33,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 32,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 35,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 34,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 36,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 33,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 24,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 24,
+      "z": 1,
+      "color": "#FF00FF43",
+      "label": "Attack"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 28,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 27,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 30,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 28,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 27,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 30,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 28,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 27,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 38,
+      "regionY": 34,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 30,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 33,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 33,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 30,
+      "z": 1,
+      "color": "#FFFAFF00",
+      "label": "Start"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 27,
+      "regionY": 25,
+      "z": 1,
+      "color": "#FFFF0000",
+      "label": "Start"
+    }
+  ]
+}
