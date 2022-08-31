@@ -16,3 +16,9 @@
 .modified {
   margin: 0;
 }
+
+.tilesSourceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

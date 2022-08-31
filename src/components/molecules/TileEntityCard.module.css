@@ -62,17 +62,6 @@
   justify-content: flex-end;
 }
 
-.pictureLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
 
 .button {
   padding: 10px 40px;

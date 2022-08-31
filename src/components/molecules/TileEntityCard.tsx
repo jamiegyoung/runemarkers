@@ -18,10 +18,7 @@ export default function TileEntityCard({
 }: TileEntityCardProps) {
   return (
     <div className={styles.card}>
-      <Link
-        href={`/${encodeURIComponent(entity.safeURI)}`}
-        className={styles.pictureLink}
-      >
+      <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
         <a className={styles.imageContainer}>
           <Image
             className={styles.image}

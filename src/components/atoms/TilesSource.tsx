@@ -3,8 +3,7 @@ import styles from '@/components/atoms/TilesSource.module.css';
 
 export default function TilesSource({ source }: { source: Source }) {
   return (
-    // <div className={styles.sourceContainer}>
-    <>
+    <div className={styles.tilesSourceContainer}>
       <a
         className={styles.link}
         href={source.link}
@@ -14,6 +13,6 @@ export default function TilesSource({ source }: { source: Source }) {
         {source.name}
       </a>
       {source.modified ? <p className={styles.modified}>(modified)</p> : null}
-    </> // </div>
+    </div>
   );
 }
