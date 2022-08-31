@@ -1,5 +1,5 @@
 import { Tile } from '@/types';
-import { useCallback, useEffect, useState } from 'react';
+import { CSSProperties, useCallback, useEffect, useState } from 'react';
 import styles from './CodeBlock.module.css';
 
 const TRUNCATE_LENGTH = 500;
@@ -35,6 +35,9 @@ export default function CodeBlock({
   );
 
   const [text, setText] = useState<string>(getText());
+  const [delayedStyle, setDelayedStyle] = useState<CSSProperties>({
+    whiteSpace: `normal`,
+  });
 
   const getLength = useCallback(
     () => (pretty ? (text.match(/\n/g) || []).length : text.length),
@@ -62,7 +65,15 @@ export default function CodeBlock({
     setText(getText());
     setTruncatedPos(getTruncatedPos());
     setLength(getLength());
-  }, [getText, getTruncateNum, getLength, checkTruncated, getTruncatedPos]);
+    setDelayedStyle({ whiteSpace: pretty ? `pre` : `normal` });
+  }, [
+    getText,
+    getTruncateNum,
+    getLength,
+    checkTruncated,
+    getTruncatedPos,
+    pretty,
+  ]);
 
   const [showingAll, setShowingAll] = useState(false);
 
@@ -95,12 +106,7 @@ export default function CodeBlock({
           pretty print
         </code>
       </div>
-      <code
-        className={styles.code}
-        style={{
-          whiteSpace: pretty ? `pre` : `normal`,
-        }}
-      >
+      <code className={styles.code} style={delayedStyle}>
         {truncated && !showingAll
           ? `${text.slice(0, truncatedPos)}\n...`
           : text}
