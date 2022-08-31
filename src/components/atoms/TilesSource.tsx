@@ -12,8 +12,8 @@ export default function TilesSource({ source }: { source: Source }) {
         rel="noopener noreferrer"
       >
         {source.name}
+        {source.modified ? <Modified>{source.modified}</Modified> : null}
       </a>
-      {source.modified ? <Modified>{source.modified}</Modified> : null}
     </div>
   );
 }

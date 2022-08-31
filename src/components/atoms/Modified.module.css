@@ -1,13 +1,14 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
   cursor: help;
+  margin-left: .5rem;
+  color: white;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200px;
+  width: 100px;
   background-color: var(--color-card);
   color: white;
   text-align: center;
@@ -17,7 +18,7 @@
   z-index: 1;
   bottom: 150%;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -60px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
