@@ -121,10 +121,10 @@ exports[`Entity should render correctly 1`] = `
         </a>
       </div>
       <div
-        class="container"
+        style="display: flex; flex-direction: column; align-items: center; width: 90%; margin: 10px 0px 10px 0px;"
       >
         <h2
-          class="header"
+          style="margin: 10px 10px 20px 10px; align-self: flex-start;"
         >
           Tile Data
         </h2>

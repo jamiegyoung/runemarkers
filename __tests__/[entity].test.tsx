@@ -57,12 +57,12 @@ describe(`Entity`, () => {
 
   it(`should render an optional guide`, () => {
     const { getByText } = render(TestEntity(false, true));
-    expect(getByText(`Recommended Guide:`)).toBeInTheDocument();
+    expect(getByText(`Recommended Guide`)).toBeInTheDocument();
   });
 
   it(`should render an optional source`, () => {
     const { getByText } = render(TestEntity(false, false, true));
-    expect(getByText(`Tiles Source`)).toBeInTheDocument();
+    expect(getByText(`Source`)).toBeInTheDocument();
   });
 
   it(`should generate the correct runelite tiles link`, () => {

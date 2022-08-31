@@ -7,14 +7,5 @@ export default function RecommendedGuide({
   videoId: string;
   title: string;
 }) {
-  return (
-    <div
-      style={{
-        width: `90%`,
-      }}
-    >
-      <h2>Recommended Guide:</h2>
-      <YoutubeEmbed videoId={videoId} title={title} />
-    </div>
-  );
+  return <YoutubeEmbed videoId={videoId} title={title} />;
 }

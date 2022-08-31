@@ -3,34 +3,25 @@
 exports[`CodeBlock should render correctly 1`] = `
 <div>
   <div
-    class="container"
+    class="options"
   >
-    <h2
-      class="header"
-    >
-      Tile Data
-    </h2>
-    <div
-      class="options"
-    >
-      <code
-        class="toggleShowAll "
-      >
-        show all (276 more characters)
-      </code>
-      <code
-        class="togglePretty "
-      >
-        pretty print
-      </code>
-    </div>
     <code
-      class="code"
-      style="white-space: normal;"
+      class="toggleShowAll "
     >
-      [{"re
-...
+      show all (276 more characters)
+    </code>
+    <code
+      class="togglePretty "
+    >
+      pretty print
     </code>
   </div>
+  <code
+    class="code"
+    style="white-space: normal;"
+  >
+    [{"re
+...
+  </code>
 </div>
 `;

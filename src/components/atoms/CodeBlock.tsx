@@ -67,8 +67,7 @@ export default function CodeBlock({
   const [showingAll, setShowingAll] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.header}>Tile Data</h2>
+    <>
       <div className={styles.options}>
         {truncated ? (
           <code
@@ -116,6 +115,6 @@ export default function CodeBlock({
           show less
         </code>
       ) : null}
-    </div>
+    </>
   );
 }

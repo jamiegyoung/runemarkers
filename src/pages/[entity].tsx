@@ -9,6 +9,7 @@ import CodeBlock from '@/components/atoms/CodeBlock';
 import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
+import StripContainerSection from '@/components/atoms/StripContainerSection';
 import TilesSource from '@/components/atoms/TilesSource';
 
 export async function getStaticPaths() {
@@ -81,13 +82,22 @@ export default function Entity(entity: TileEntity) {
             </a>
           </div>
           {entity.recommendedGuideVideoId ? (
-            <RecommendedGuide
-              videoId={entity.recommendedGuideVideoId}
-              title={`${entity.name} guide`}
-            />
+            <StripContainerSection title="Recommended Guide">
+              <RecommendedGuide
+                videoId={entity.recommendedGuideVideoId}
+                title={`${entity.name} guide`}
+              />
+            </StripContainerSection>
           ) : null}
-          <CodeBlock tiles={entity.tiles} />
-          {entity.source ? <TilesSource source={entity.source} /> : null}
+          <StripContainerSection title="Tile Data">
+            <CodeBlock tiles={entity.tiles} />
+          </StripContainerSection>
+
+          {entity.source ? (
+            <StripContainerSection title="Source">
+              <TilesSource source={entity.source} />
+            </StripContainerSection>
+          ) : null}
         </StripContainer>
       </div>
       <ContributionFooter />

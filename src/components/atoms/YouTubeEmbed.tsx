@@ -10,15 +10,13 @@ type YouTubeEmbedProps = {
 
 export default function YoutubeEmbed({ videoId, title }: YouTubeEmbedProps) {
   return (
-    <>
-      <div className={styles.container}>
-        <LiteYoutubeEmbed
-          id={videoId}
-          title={title}
-          poster="hqdefault"
-          wrapperClass={[`yt-lite`, styles.customYtLite].join(` `)}
-        />
-      </div>
-    </>
+    <div className={styles.container}>
+      <LiteYoutubeEmbed
+        id={videoId}
+        title={title}
+        poster="hqdefault"
+        wrapperClass={[`yt-lite`, styles.customYtLite].join(` `)}
+      />
+    </div>
   );
 }
