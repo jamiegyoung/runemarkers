@@ -4,7 +4,7 @@ import Modified from './Modified';
 
 export default function TilesSource({ source }: { source: Source }) {
   return (
-    <div className={styles.tilesSourceContainer}>
+    <div className={styles.tilesSourceParagraph}>
       <a
         className={styles.link}
         href={source.link}
@@ -12,8 +12,8 @@ export default function TilesSource({ source }: { source: Source }) {
         rel="noopener noreferrer"
       >
         {source.name}
-        {source.modified ? <Modified>{source.modified}</Modified> : null}
       </a>
+      {source.modified ? <Modified>{source.modified}</Modified> : null}
     </div>
   );
 }

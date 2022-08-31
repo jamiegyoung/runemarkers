@@ -4,6 +4,7 @@
   cursor: help;
   margin-left: .5rem;
   color: white;
+  margin: 0;
 }
 
 .tooltip .tooltiptext {

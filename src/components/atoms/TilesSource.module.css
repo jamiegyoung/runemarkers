@@ -1,7 +1,7 @@
 .link {
   color: var(--color-primary);
   font-size: 1rem;
-  margin: 10px 5px 10px 5px;
+  margin: 10px 5px 10px 0;
   transition: all 0.2s ease-out;
 }
 
@@ -13,8 +13,6 @@
   color: var(--color-primary-light);
 }
 
-.tilesSourceContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tilesSourceParagraph {
+  text-align: center;
 }
