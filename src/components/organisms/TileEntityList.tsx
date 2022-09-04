@@ -40,9 +40,11 @@ export default function TileEntityList({ list }: TileEntityListProps) {
       </p>
       <Search />
       <StripContainer customRef={ref}>
-        {list.map((i) => (
-          <TileEntityCard key={i.safeURI} entity={i} />
-        ))}
+        {list.length > 0 ? (
+          list.map((i) => <TileEntityCard key={i.safeURI} entity={i} />)
+        ) : (
+          <p style={{ textAlign: `center` }}>No results found</p>
+        )}
       </StripContainer>
     </div>
   );
