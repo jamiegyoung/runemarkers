@@ -1,6 +1,6 @@
-name: Check PR
+name: Check CI
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   run-ci:
