@@ -1,15 +1,55 @@
 .input {
   font-size: 1.2rem;
-  padding: 0.5rem 1rem;
+  max-width: 165px;
+  min-width: 50px;
+  padding: 0.5rem 30px 0.5rem 30px;
   border: none;
+  width: 90%;
   border-radius: 10px;
   background-color: #f5f3f5;
   color: #000;
   outline: none;
   margin-right: 10px;
   text-align: center;
-  width: 140px;
-  transition: all .4s cubic-bezier(.35,1.39,.45,.97);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.4s cubic-bezier(0.35, 1.39, 0.45, 0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   /* border: solid 1px var(--color-card); */
+  display: inline-block;
+  position: relative;
+  transform: translateX(20px);
+}
+
+.input.active {
+  max-width: 225px;
+}
+
+@media (max-width: 270px) {
+  .input::placeholder {
+    content: '';
+    opacity: 0;
+  }
+}
+
+.clearButton {
+  visibility: hidden;
+  height: 40px;
+  position: relative;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  transition: 0.1s ease-out;
+  margin: 0;
+  border-radius: 0px 10px 10px 0px;
+  opacity: 0;
+  transform: scale(0);
+  cursor: pointer;
+}
+
+.clearButton.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }

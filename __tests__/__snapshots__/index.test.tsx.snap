@@ -41,14 +41,27 @@ exports[`Home should search correctly 1`] = `
           Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile" enabled. Copy the tile markers to your clipboard, right-click the world map in-game and select "import".
         </p>
         <div
-          style="display: flex; align-items: center; margin-bottom: 20px;"
+          style="display: flex; align-items: center; margin-bottom: 20px; width: 100%; justify-content: center;"
         >
           <input
-            class="input"
+            class="input "
             placeholder="type here to search"
-            style="width: 175px; min-width: 50px; max-width: 500px;"
             type="text"
+            value="abyssal sire"
           />
+          <button
+            class="clearButton "
+          >
+            <svg
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.4 19.45 4.55 17.6l5.6-5.6-5.6-5.6L6.4 4.55l5.6 5.6 5.6-5.6 1.85 1.85-5.6 5.6 5.6 5.6-1.85 1.85-5.6-5.6Z"
+              />
+            </svg>
+          </button>
         </div>
         <div
           class="innerContainer"

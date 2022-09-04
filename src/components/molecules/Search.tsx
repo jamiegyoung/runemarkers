@@ -7,6 +7,8 @@ export default function Search() {
         display: `flex`,
         alignItems: `center`,
         marginBottom: 20,
+        width: `100%`,
+        justifyContent: `center`,
       }}
     >
       <Input />
