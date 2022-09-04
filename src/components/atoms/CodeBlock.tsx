@@ -89,6 +89,8 @@ export default function CodeBlock({
             onClick={() => {
               setShowingAll(!showingAll);
             }}
+            role="button"
+            aria-pressed={showingAll}
           >
             {showingAll
               ? `show less`
@@ -101,6 +103,8 @@ export default function CodeBlock({
           className={[styles.togglePretty, pretty ? styles.active : ``].join(
             ` `,
           )}
+          role="button"
+          aria-pressed={pretty}
           onClick={() => setPretty(!pretty)}
         >
           pretty print

@@ -132,7 +132,9 @@ exports[`Entity should render correctly 1`] = `
           class="options"
         >
           <code
+            aria-pressed="false"
             class="togglePretty "
+            role="button"
           >
             pretty print
           </code>
