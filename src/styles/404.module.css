@@ -8,7 +8,7 @@
 .header {
   font-family: 'RuneScape UF';
   font-weight: 100;
-  font-size: 1.4rem;
+  font-size: 5rem;
   color: #ffff00;
   margin: 0;
 }
@@ -22,43 +22,36 @@
   object-fit: cover;
 }
 
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  width: 50vw;
-  height: 50vh;
-  max-width: 270px;
-  max-height: 490px;
-}
-
 .home {
   font-family: 'RuneScape UF';
   font-weight: 100;
   font-size: 1.6rem !important;
-  margin: 20px 0 0 0;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  background-color: var(--color-primary);
+  color: black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .home:hover {
-  color: var(--color-primary);
+  transform: scale(1.1);
+  background-color: var(--color-primary-light);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .imageContainer {
-    display: none;
-  }
-
-  .header {
-    font-size: 5rem;
-  }
-
   .home {
     transition: none;
   }
 
   .home:hover {
-    color: var(--color-text);
+    color: black;
+    transform: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primary);
+
   }
 }
