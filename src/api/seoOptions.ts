@@ -4,7 +4,6 @@ const nextSeoOptions: NextSeoProps = {
   defaultTitle: `RuneMarkers - A Collection of RuneLite Tile Markers`,
   description: `A collection of tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.`,
   titleTemplate: `RuneMarkers - %s`,
-  canonical: `https://runemarkers.net`,
   openGraph: {
     type: `website`,
     locale: `en_US`,
