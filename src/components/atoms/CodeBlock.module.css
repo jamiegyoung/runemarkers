@@ -16,7 +16,6 @@
   cursor: pointer;
   user-select: none;
   color: #eee;
-  transition: 0.2s ease-out;
 }
 
 .togglePretty {

@@ -44,3 +44,21 @@
 .home:hover {
   color: var(--color-primary);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .imageContainer {
+    display: none;
+  }
+
+  .header {
+    font-size: 5rem;
+  }
+
+  .home {
+    transition: none;
+  }
+
+  .home:hover {
+    color: var(--color-text);
+  }
+}

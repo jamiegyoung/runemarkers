@@ -18,12 +18,22 @@
 }
 
 .svg {
-  /* height: 40px; */
-  /* width: 40px; */
   fill: var(--color-text);
 }
 
 .svg path {
   transition: all 0.2s ease-out;
   filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svg path {
+    transition: none;
+  }
+
+  .button:hover .svg path,
+  .container:hover .svg path {
+    filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5));
+    fill: var(--color-text);
+  }
 }

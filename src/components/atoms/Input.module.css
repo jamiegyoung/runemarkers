@@ -13,7 +13,6 @@
   text-align: center;
   transition: all 0.4s cubic-bezier(0.35, 1.39, 0.45, 0.97);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  /* border: solid 1px var(--color-card); */
   display: inline-block;
   position: relative;
   transform: translateX(20px);
@@ -52,4 +51,18 @@
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .input {
+    transition: none;
+    max-width: 225px;
+  }
+
+  .clearButton {
+    transition: none;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
 }

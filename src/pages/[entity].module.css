@@ -23,7 +23,6 @@
   color: var(--color-primary);
   font-size: 1rem;
   margin: 10px 10px 10px 10px;
-  transition: all 0.2s ease-out;
 }
 
 .link:hover {
