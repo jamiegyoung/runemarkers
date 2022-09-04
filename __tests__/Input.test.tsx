@@ -87,4 +87,35 @@ describe(`Input`, () => {
     expect(mockSetSearchVal).toHaveBeenCalledTimes(1);
     expect(mockSetSearchVal).toHaveBeenCalledWith(`test`);
   });
+
+  it(`should clear the search value when the clear button is clicked`, () => {
+    const mockSetSearchVal = jest.fn();
+
+    jest.mock(`react`, () => ({
+      useState: (initial: string) => [initial, mockSetSearchVal],
+    }));
+
+    const { container } = render(testInputWithContext(``, mockSetSearchVal));
+
+    const input = container.querySelector(`input`);
+    if (!input) {
+      throw new Error(`No input found`);
+    }
+
+    act(() => {
+      fireEvent.change(input, { target: { value: `test` } });
+    });
+
+    expect(mockSetSearchVal).toHaveBeenCalledTimes(1);
+    expect(mockSetSearchVal).toHaveBeenCalledWith(`test`);
+    const clearButton = container.querySelector(`.clearButton`);
+    if (!clearButton) {
+      throw new Error(`No clear button found`);
+    }
+    act(() => {
+      fireEvent.click(clearButton);
+    });
+    expect(mockSetSearchVal).toHaveBeenCalledTimes(2);
+    expect(mockSetSearchVal).toHaveBeenCalledWith(``);
+  });
 });
