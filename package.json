@@ -48,7 +48,7 @@
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@types/react-syntax-highlighter": "15.5.5",
-    "@typescript-eslint/eslint-plugin": "5.35.1",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
     "@typescript-eslint/parser": "5.35.1",
     "commitizen": "4.2.5",
     "cz-conventional-changelog": "3.3.0",
