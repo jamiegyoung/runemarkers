@@ -129,6 +129,7 @@ exports[`Home should search correctly 1`] = `
                     />
                   </button>
                   <a
+                    aria-label="Open Info Page for Abyssal Sire"
                     class="button"
                     href="/abyssal%20sire"
                   >

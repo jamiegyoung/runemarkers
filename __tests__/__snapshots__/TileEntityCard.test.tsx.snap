@@ -65,6 +65,7 @@ exports[`TileEntityCard should render entity correctly 1`] = `
             />
           </button>
           <a
+            aria-label="Open Info Page for Abyssal Sire"
             class="button"
             href="/AbyssalSire"
           >
