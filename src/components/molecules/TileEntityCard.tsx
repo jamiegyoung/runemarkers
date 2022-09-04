@@ -73,7 +73,10 @@ export default function TileEntityCard({
               Copy
             </Button>
             {hideInfoButton ? null : (
-              <InfoLink href={`/${encodeURIComponent(entity.safeURI)}`} />
+              <InfoLink
+                href={`/${encodeURIComponent(entity.safeURI)}`}
+                name={entity.name}
+              />
             )}
           </div>
         </div>

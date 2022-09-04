@@ -3,13 +3,14 @@ import Link from 'next/link';
 
 type InfoLinkProps = {
   href: string;
+  name: string;
 };
 
-export default function InfoLink({ href }: InfoLinkProps) {
+export default function InfoLink({ href, name }: InfoLinkProps) {
   return (
     <Link href={href}>
       {/* https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Asearch%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048 */}
-      <a className={styles.button}>
+      <a className={styles.button} aria-label={`Open Info Page for ${name}`}>
         <svg
           className={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
