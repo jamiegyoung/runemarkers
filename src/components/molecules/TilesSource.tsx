@@ -1,6 +1,6 @@
 import { Source } from '@/types';
-import styles from '@/components/atoms/TilesSource.module.css';
-import Modified from './Modified';
+import styles from '@/components/molecules/TilesSource.module.css';
+import Modified from '@/components/atoms/Modified';
 
 export default function TilesSource({ source }: { source: Source }) {
   return (

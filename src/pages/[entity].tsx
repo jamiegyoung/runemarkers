@@ -4,13 +4,13 @@ import NavBar from '@/components/molecules/NavBar';
 import styles from '@/pages/[entity].module.css';
 import StripContainer from '@/components/atoms/StripContainer';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
-import RecommendedGuide from '@/components/molecules/RecommendedGuide';
+import YoutubeEmbed from '@/components/atoms/YouTubeEmbed';
 import CodeBlock from '@/components/atoms/CodeBlock';
 import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
-import StripContainerSection from '@/components/atoms/StripContainerSection';
-import TilesSource from '@/components/atoms/TilesSource';
+import StripContainerSection from '@/components/molecules/StripContainerSection';
+import TilesSource from '@/components/molecules/TilesSource';
 
 export async function getStaticPaths() {
   return {
@@ -83,7 +83,7 @@ export default function Entity(entity: TileEntity) {
           </div>
           {entity.recommendedGuideVideoId ? (
             <StripContainerSection title="Recommended Guide">
-              <RecommendedGuide
+              <YoutubeEmbed
                 videoId={entity.recommendedGuideVideoId}
                 title={`${entity.name} guide`}
               />

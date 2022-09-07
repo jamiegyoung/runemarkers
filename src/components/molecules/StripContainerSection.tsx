@@ -1,4 +1,4 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from '@/components/atoms/SectionHeader';
 
 type SectionHeaderProps = {
   title: string;

@@ -1,8 +1,8 @@
-import Search from '../molecules/Search';
+import Search from '@/components/molecules/Search';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
 import { TileEntity } from '@/types';
 import styles from '@/components/organisms/TileEntityList.module.css';
-import StripContainer from '../atoms/StripContainer';
+import StripContainer from '@/components/atoms/StripContainer';
 import { useContext, useEffect, useRef } from 'react';
 import { SearchContext } from '@/pages';
 
