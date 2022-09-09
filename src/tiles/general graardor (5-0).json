@@ -1,0 +1,78 @@
+{
+  "name": "General Graardor",
+  "altName": "Bandos",
+  "subcategory": "5:0",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/200px-General_Graardor.png",
+  "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
+  "tags": ["boss", "godwars", "gwd"],
+  "recommendedGuideVideoId": "6pnQRZi5LMg",
+  "source": {
+    "name": "GeChallengeM - Solo Bandos GWD with the Shadow/Crossbows (No Tickloss 5:0)",
+    "link": "https://www.youtube.com/watch?v=6pnQRZi5LMg"
+  },
+  "tiles": [
+    {
+      "regionId": 11347,
+      "regionX": 52,
+      "regionY": 39,
+      "z": 2,
+      "color": "#FF00FF00"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 49,
+      "regionY": 51,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 56,
+      "regionY": 54,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 59,
+      "regionY": 48,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 54,
+      "regionY": 44,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 51,
+      "regionY": 40,
+      "z": 2,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 57,
+      "regionY": 53,
+      "z": 2,
+      "color": "#FFFF7F00"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 55,
+      "regionY": 43,
+      "z": 2,
+      "color": "#FFFF7F00"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 55,
+      "regionY": 42,
+      "z": 2,
+      "color": "#FFFF7F00"
+    }
+  ]
+}
