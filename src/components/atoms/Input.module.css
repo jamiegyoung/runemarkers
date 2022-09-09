@@ -11,7 +11,7 @@
   outline: none;
   margin-right: 10px;
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.35, 1.39, 0.45, 0.97);
+  transition: all 0.1s ease-out;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   display: inline-block;
   position: relative;
