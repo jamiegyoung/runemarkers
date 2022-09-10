@@ -3,4 +3,5 @@ module.exports = {
   images: {
     domains: ['oldschool.runescape.wiki'],
   },
+  swcMinify: true,
 };
