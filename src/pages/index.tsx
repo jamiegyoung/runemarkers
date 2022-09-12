@@ -47,6 +47,22 @@ export default function Home({ tileData }: { tileData: MappedTileEntity[] }) {
     }
     setSearchRes(tileData);
   }, [searchVal, tileData]);
+  console.log(
+    `
+P########B5?:      ?BBB5              .PBBB~
+&@@@#BBB#&@@@&!    5&&&&B.           :&&&&&7
+&@@@:     ^&@@@^   5&&&&&#.         ^&&&&&&7
+&@@@:      5@@@7   5&&#5&&&^       !&&&Y&&&7
+&@@@:     !@@@#    5&&& 7&&&~     7&&&^.&&&7
+&@@@#BBB#&@@#?     5&&&  !&&&7   J&&&^ .&&&7 
+&@@@#GB@@@@J       5&&&   ^&&&J 5&&#.  .&&&7
+&@@@:  .G@@@P      5&&&    :&&&B&&#.   .&&&7
+&@@@:    ?@@@&^    5&&&     .#&&&B     .&&&7
+&@@@^     :&@@@Y   5&&&       7J7      .&&&7
+G&#&:       5##&5  ?##G                .BB#~
+
+Made with \u2764 by jamgyo`,
+  );
   return (
     <>
       <NextSeo
