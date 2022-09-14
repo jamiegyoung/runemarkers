@@ -4,4 +4,5 @@ module.exports = {
     domains: ['oldschool.runescape.wiki'],
   },
   swcMinify: true,
+  output: 'standalone',
 };

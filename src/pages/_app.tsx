@@ -29,7 +29,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             }}
           />
         </>
-      ) : null}
+      ) : (
+        console.log(`dotenv not loaded`)
+      )}
       <DefaultSeo {...nextSeoOptions} />
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
