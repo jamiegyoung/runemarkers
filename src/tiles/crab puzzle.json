@@ -1,0 +1,138 @@
+{
+  "name": "Crab Puzzle",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Jewelled_Crab.png/800px-Jewelled_Crab.png?5c8ba",
+  "wiki": "https://oldschool.runescape.wiki/w/Jewelled_Crab",
+  "tags": ["cox", "chambers of xeric", "raids"],
+  "recommendedGuideVideoId": "YplIdCg1qJs",
+  "source": {
+    "name": "Chymistry - How to Do the Crab Room Puzzle",
+    "link": "https://www.youtube.com/watch?v=YplIdCg1qJs"
+  },
+  "tiles": [
+    {
+      "regionId": 13395,
+      "regionX": 7,
+      "regionY": 46,
+      "z": 2,
+      "color": "#FF000000",
+      "label":"Anchor"
+    },
+    {
+      "regionId":13395,
+      "regionX":8,
+      "regionY":48,
+      "z":2,
+      "color":"#FF000000",
+      "label":"Anchor"
+    },
+    {
+      "regionId":13395,
+      "regionX":14,
+      "regionY":47,
+      "z":2,
+      "color":"#FFFFFFFF"
+    },
+    {
+      "regionId":13395,
+      "regionX":11,
+      "regionY":56,
+      "z":2,
+      "color":"#FFFF0000"
+    },
+    {
+      "regionId":13395,
+      "regionX":11,
+      "regionY":46,
+      "z":2,
+      "color":"#FF1FA347"
+    },
+    {
+      "regionId":13395,
+      "regionX":10,
+      "regionY":46,
+      "z":2,
+      "color":"#FFFF0000"
+    },
+    {
+      "regionId":13395,
+      "regionX":10,
+      "regionY":47,
+      "z":2,
+      "color":"#FF001DFF"
+    },
+    {
+      "regionId":13139,
+      "regionX":14,
+      "regionY":40,
+      "z":2,
+      "color":"#FF001DFF"
+    },
+    {
+      "regionId":13139,
+      "regionX":17,
+      "regionY":40,
+      "z":2,
+      "color":"#FF1FA347"
+    },
+    {
+      "regionId":13139,
+      "regionX":18,
+      "regionY":40,
+      "z":2,
+      "color":"#FFFFFFFF"
+    },
+    {
+      "regionId":13139,
+      "regionX":22,
+      "regionY":40,
+      "z":2,
+      "color":"#FFFF0000"
+    },
+    {
+      "regionId":13139,
+      "regionX":25,
+      "regionY":41,
+      "z":2,
+      "color":"#FF000000",
+      "label":"Anchor"
+    },
+    {
+      "regionId":13139,
+      "regionX":24,
+      "regionY":39,
+      "z":2,
+      "color":"#FF000000",
+      "label":"Anchor"
+    }
+  ]
+} 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
