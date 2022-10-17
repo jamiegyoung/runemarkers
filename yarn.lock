@@ -4213,10 +4213,10 @@ next-seo@5.5.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.5.0.tgz#12bdfce60a6ae098f49617357a166c2d44dbc29e"
   integrity sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==
 
-next-sitemap@^3.1.23:
-  version "3.1.23"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.23.tgz#df696e0a0f5da643d624ec141ac0680401bd8af4"
-  integrity sha512-szQ5uvxn4/7P01U/rvzEccOcYk0Nm+kI3BGzHheREV+HDcj+IilrhXCuNqv4dBWy49eqsgCmjHuEDINx3/teMQ==
+next-sitemap@^3.1.28:
+  version "3.1.28"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.28.tgz#b151224f50979a0cfef2551eefa53c00f165e7ca"
+  integrity sha512-4G1lhbvhBTfZbZcvPoIETlI9gcOIEUZCpHINjKbr7oO/Eg6zBc8QOs8XAg4/6GM1Xy64ieCHuVRvzN8uHXZ10A==
   dependencies:
     "@corex/deepmerge" "^4.0.29"
     minimist "^1.2.6"
