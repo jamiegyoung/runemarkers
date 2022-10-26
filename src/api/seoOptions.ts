@@ -33,6 +33,18 @@ export const defaultImages = [
     alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
   },
   {
+    url: `/logo256-background.png`,
+    width: 256,
+    height: 256,
+    alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
+  },
+  {
+    url: `/logo128-background.png`,
+    width: 128,
+    height: 128,
+    alt: `RuneMarkers - A Collection of RuneLite Tile Markers`,
+  },
+  {
     url: `/android-chrome-192x192.png`,
     width: 192,
     height: 192,

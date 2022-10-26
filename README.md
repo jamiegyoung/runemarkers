@@ -1,12 +1,14 @@
-# RuneMarkers
-See the live version [here](https://runemarkers.net)
-
-## Bosses to add
-- Sweaty Kraken
-- General Graardor (7:0)
-- Hunlef
+<p align="center">
+  <a href="https://runemarkers.net">
+    <picture>
+      <img src="./public/logo-128-background.png" height="128">
+    </picture>
+    <h1 align="center">RuneMarkers.net</h1>
+  </a>
+</p>
 
 ## Tiles Contribution
+
 If you wish to contribute to tiles, follow the instructions below.
 
 - Fork the repo
