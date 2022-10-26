@@ -10,6 +10,8 @@ export default function ContributionFooter() {
           <a
             href="https://discord.com/users/167850724976361472"
             className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Image src="/discord.png" alt="GitHub" width={21} height={24} />
             <span>Jam#0001</span>
@@ -20,6 +22,8 @@ export default function ContributionFooter() {
         <a
           href="https://github.com/jamiegyoung/runemarkers"
           className={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Image src="/github.png" alt="GitHub" width={20} height={20} />
           <span>contribute code / tiles</span>
