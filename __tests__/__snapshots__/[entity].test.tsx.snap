@@ -41,29 +41,18 @@ exports[`Entity should render correctly 1`] = `
           class="imageContainer"
           href="/AbyssalSire"
         >
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27140%27%20height=%27140%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="Abyssal Sire.png"
-              class="image"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-            <noscript />
-          </span>
+          <img
+            alt="Abyssal Sire.png"
+            class="image"
+            data-nimg="1"
+            decoding="async"
+            height="140"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=384&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=384&q=75 2x"
+            style="color: transparent;"
+            width="140"
+          />
         </a>
         <div
           class="cardData"
@@ -160,28 +149,17 @@ exports[`Entity should render correctly 1`] = `
           class="link"
           href="https://discord.com/users/167850724976361472"
         >
-          <span
-            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-          >
-            <span
-              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-            >
-              <img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2721%27%20height=%2724%27/%3e"
-                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-              />
-            </span>
-            <img
-              alt="GitHub"
-              data-nimg="intrinsic"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-            <noscript />
-          </span>
+          <img
+            alt="GitHub"
+            data-nimg="1"
+            decoding="async"
+            height="24"
+            loading="lazy"
+            src="/_next/image?url=%2Fdiscord.png&w=48&q=75"
+            srcset="/_next/image?url=%2Fdiscord.png&w=32&q=75 1x, /_next/image?url=%2Fdiscord.png&w=48&q=75 2x"
+            style="color: transparent;"
+            width="21"
+          />
           <span>
             Jam#0001
           </span>
@@ -195,28 +173,17 @@ exports[`Entity should render correctly 1`] = `
         class="link"
         href="https://github.com/jamiegyoung/runemarkers"
       >
-        <span
-          style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-        >
-          <span
-            style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-          >
-            <img
-              alt=""
-              aria-hidden="true"
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2720%27%20height=%2720%27/%3e"
-              style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-            />
-          </span>
-          <img
-            alt="GitHub"
-            data-nimg="intrinsic"
-            decoding="async"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-          />
-          <noscript />
-        </span>
+        <img
+          alt="GitHub"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/_next/image?url=%2Fgithub.png&w=48&q=75"
+          srcset="/_next/image?url=%2Fgithub.png&w=32&q=75 1x, /_next/image?url=%2Fgithub.png&w=48&q=75 2x"
+          style="color: transparent;"
+          width="20"
+        />
         <span>
           contribute code / tiles
         </span>

@@ -18,38 +18,41 @@ export default function TileEntityCard({
 }: TileEntityCardProps) {
   return (
     <div className={styles.card}>
-      <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
-        <a className={styles.imageContainer}>
-          <Image
-            className={styles.image}
-            width={140}
-            height={140}
-            src={entity.thumbnail}
-            alt={`${entity.name}.png`}
-          />
-        </a>
+      <Link
+        className={styles.imageContainer}
+        href={`/${encodeURIComponent(entity.safeURI)}`}
+      >
+        <Image
+          className={styles.image}
+          width={140}
+          height={140}
+          src={entity.thumbnail}
+          alt={`${entity.name}.png`}
+        />
       </Link>
       <div className={styles.cardData}>
         <div className={styles.entityInfo}>
-          <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
-            <a className={styles.name}>
-              {entity.name}
-              {entity.subcategory ? (
-                <>
-                  {` `}
-                  <span style={{ whiteSpace: `nowrap` }}>
-                    ({entity.subcategory})
-                  </span>
-                </>
-              ) : null}
-            </a>
+          <Link
+            className={styles.name}
+            href={`/${encodeURIComponent(entity.safeURI)}`}
+          >
+            {entity.name}
+            {entity.subcategory ? (
+              <>
+                {` `}
+                <span style={{ whiteSpace: `nowrap` }}>
+                  ({entity.subcategory})
+                </span>
+              </>
+            ) : null}
           </Link>
           {entity.altName ? (
-            <Link href={`/${encodeURIComponent(entity.safeURI)}`}>
-              <a className={styles.altName}>
-                {entity.altName}
-                {entity.subcategory ? ` (${entity.subcategory}) ` : null}
-              </a>
+            <Link
+              className={styles.altName}
+              href={`/${encodeURIComponent(entity.safeURI)}`}
+            >
+              {entity.altName}
+              {entity.subcategory ? ` (${entity.subcategory}) ` : null}
             </Link>
           ) : null}
         </div>
