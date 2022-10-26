@@ -3,7 +3,9 @@
     <picture>
       <img src="./public/logo-128-background.png" height="128">
     </picture>
-    <h1 align="center">RuneMarkers.net</h1>
+    <a href="https://runemarkers.net">
+      <h1 align="center">RuneMarkers.net</h1>
+    </a>
   </a>
 </p>
 
