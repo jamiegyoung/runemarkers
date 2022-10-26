@@ -33,6 +33,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   padding-left: 20px;
+  margin: 0 0 0 auto;
 }
 
 .name {
@@ -52,7 +53,7 @@
 
 .tileCount {
   color: var(--color-subtle-text);
-  margin: 0 0 5px 0;
+  margin: 20px 0 5px 0;
   text-align: end;
 }
 

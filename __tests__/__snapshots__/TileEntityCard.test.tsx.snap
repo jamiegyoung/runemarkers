@@ -14,12 +14,12 @@ exports[`TileEntityCard should render entity correctly 1`] = `
         class="image"
         data-nimg="1"
         decoding="async"
-        height="140"
+        height="100"
         loading="lazy"
-        src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=384&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=384&q=75 2x"
+        src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75 2x"
         style="color: transparent;"
-        width="140"
+        width="100"
       />
     </a>
     <div

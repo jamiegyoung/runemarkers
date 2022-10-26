@@ -24,8 +24,8 @@ export default function TileEntityCard({
       >
         <Image
           className={styles.image}
-          width={140}
-          height={140}
+          width={100}
+          height={100}
           src={entity.thumbnail}
           alt={`${entity.name}.png`}
         />
