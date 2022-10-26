@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://runemarkers.net">
-    <picture>
-      <img src="./public/logo-128-background.png" height="128">
-    </picture>
-    <a href="https://runemarkers.net">
-      <h1 align="center">RuneMarkers.net</h1>
-    </a>
+    <img src="./public/logo-256-background.png" height="128">
   </a>
+  <h1 align="center">RuneMarkers</h1>
+</p>
+
+<p align="center">
+<a href="https://runemarkers.net">https://runemarkers.net</a>
 </p>
 
 ## Tiles Contribution
@@ -48,3 +48,11 @@ Open `http://localhost:3000` with your browser to see the result.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
+
+## Contributors
+
+<a href="https://github.com/jamiegyoung/runemarkers/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jamiegyoung/runemarkers" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
