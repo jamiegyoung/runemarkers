@@ -148,6 +148,8 @@ exports[`Entity should render correctly 1`] = `
         <a
           class="link"
           href="https://discord.com/users/167850724976361472"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <img
             alt="GitHub"
@@ -172,6 +174,8 @@ exports[`Entity should render correctly 1`] = `
       <a
         class="link"
         href="https://github.com/jamiegyoung/runemarkers"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <img
           alt="GitHub"
