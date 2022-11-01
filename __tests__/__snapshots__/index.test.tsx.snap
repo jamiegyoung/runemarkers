@@ -38,7 +38,7 @@ exports[`Home should search correctly 1`] = `
         <p
           style="padding: 0px; color: rgb(199, 199, 199); text-align: center; min-width: 280px; margin-bottom: 15px; max-width: 600px; width: 80%;"
         >
-          Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile" enabled. Copy the tile markers to your clipboard, right-click the world map in-game and select "import".
+          Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile" enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".
         </p>
         <div
           style="display: flex; align-items: center; margin-bottom: 20px; width: 100%; justify-content: center;"

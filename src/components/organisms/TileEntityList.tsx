@@ -35,7 +35,7 @@ export default function TileEntityList({ list }: TileEntityListProps) {
       >
         Make sure the &quot;Ground Markers&quot; plugin is enabled on RuneLite
         with &quot;Remember color per tile&quot; enabled. Copy the tile markers
-        to your clipboard, right-click the world map in-game and select
+        to your clipboard, right-click the world map button in-game and select
         &quot;import&quot;.
       </p>
       <Search />
