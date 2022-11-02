@@ -36,6 +36,8 @@ const TestEntity = (
     ]}
     thumbnail={`https://oldschool.runescape.wiki/images/thumb/Abyssal_Sire.png/200px-Abyssal_Sire.png`}
     wiki={`https://oldschool.runescape.wiki/w/Abyssal_Sire`}
+    fullName={`Abyssal Sire`}
+    fullAltName={alt ? `Abyssal Sire Alt Test` : ``}
   />
 );
 

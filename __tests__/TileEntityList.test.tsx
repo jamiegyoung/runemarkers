@@ -24,6 +24,8 @@ const testTileData: TileEntity[] = [
         color: `#FFFFFF00`,
       },
     ],
+    fullName: `Abyssal Sire`,
+    fullAltName: ``,
   },
   {
     name: `Alchemical Hydra`,
@@ -52,6 +54,8 @@ const testTileData: TileEntity[] = [
         color: `#FFFFFF00`,
       },
     ],
+    fullName: `Alchemical Hydra`,
+    fullAltName: ``,
   },
 ];
 
@@ -64,5 +68,8 @@ describe(`TileEntityList`, () => {
     expect(getByText(`2 tile markers`)).toBeInTheDocument();
   });
 
-  // it(`should scroll to the top on search`, () => {});
+  it(`should display a message if no entities are found`, () => {
+    const { getByText } = render(<TileEntityList list={[]} />);
+    expect(getByText(`No results found`)).toBeInTheDocument();
+  });
 });

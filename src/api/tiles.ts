@@ -13,4 +13,9 @@ export const getTileData: () => TileEntity[] = () =>
       ...JSON.parse(
         fs.readFileSync(`./src/tiles/${file.name}`, { encoding: `utf-8` }),
       ),
+    }))
+    .map((tile) => ({
+      ...tile,
+      fullName: `${tile.name} ${tile.subcategory}`,
+      fullAltName: `${tile.altName} ${tile.subcategory}`,
     }));

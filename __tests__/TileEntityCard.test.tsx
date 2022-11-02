@@ -23,6 +23,8 @@ const entity: TileEntity = {
       color: `#FFFFFF00`,
     },
   ],
+  fullName: `Abyssal Sire`,
+  fullAltName: ``,
 };
 
 const TestTileEntityCard = () => <TileEntityCard entity={entity} />;
@@ -51,5 +53,26 @@ describe(`TileEntityCard`, () => {
     }
     expect(animBar).toBeInTheDocument();
     expect(window.prompt).toHaveBeenCalledTimes(1);
+  });
+
+  it(`should call onload for the image correctly`, async () => {
+    const callback = jest.fn();
+    const { container } = render(<TestTileEntityCard />);
+    const image = container.querySelector(`img`);
+    if (!image) {
+      throw new Error(`Image not found`);
+    }
+    image.src = ``;
+    await act(async () => {
+      expect(image.style.opacity).toBe(`0`);
+      image.onload = callback;
+      image.src = entity.thumbnail;
+      fireEvent.load(image);
+      expect(callback).toHaveBeenCalledTimes(1);
+      // wait for the animation to finish
+      setTimeout(() => {
+        expect(image.style.opacity).toBe(`1`);
+      }, 1000);
+    });
   });
 });

@@ -24,9 +24,6 @@ export type TileEntity = {
   wiki: string;
   source?: Source;
   recommendedGuideVideoId?: string;
-};
-
-export interface MappedTileEntity extends TileEntity {
   fullName: string;
   fullAltName: string;
-}
+};
