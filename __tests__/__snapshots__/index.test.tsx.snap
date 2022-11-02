@@ -74,7 +74,7 @@ exports[`Home should search correctly 1`] = `
               href="/abyssal%20sire"
             >
               <img
-                alt="Abyssal Sire.png"
+                alt="Abyssal Sire image"
                 class="image"
                 data-nimg="1"
                 decoding="async"
@@ -82,7 +82,7 @@ exports[`Home should search correctly 1`] = `
                 loading="lazy"
                 src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F100px-Abyssal_Sire.png&w=256&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F100px-Abyssal_Sire.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F100px-Abyssal_Sire.png&w=256&q=75 2x"
-                style="color: transparent;"
+                style="color: transparent; opacity: 0;"
                 width="100"
               />
             </a>

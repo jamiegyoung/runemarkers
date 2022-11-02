@@ -6,6 +6,7 @@ import styles from '@/components/molecules/TileEntityCard.module.css';
 import copy from 'copy-to-clipboard';
 import Link from 'next/link';
 import { event, EventNames } from '@/api/gtag';
+import { useState } from 'react';
 
 type TileEntityCardProps = {
   entity: TileEntity;
@@ -16,6 +17,8 @@ export default function TileEntityCard({
   entity,
   hideInfoButton,
 }: TileEntityCardProps) {
+  const [imageHidden, setImageHidden] = useState(true);
+
   return (
     <div className={styles.card}>
       <Link
@@ -23,11 +26,13 @@ export default function TileEntityCard({
         href={`/${encodeURIComponent(entity.safeURI)}`}
       >
         <Image
+          onLoad={() => setImageHidden(false)}
           className={styles.image}
+          style={{ opacity: imageHidden ? 0 : 1 }}
           width={100}
           height={100}
           src={entity.thumbnail}
-          alt={`${entity.name}.png`}
+          alt={`${entity.name} image`}
         />
       </Link>
       <div className={styles.cardData}>
