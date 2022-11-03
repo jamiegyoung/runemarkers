@@ -138,6 +138,9 @@ export default function TileEntities({ list }: TileEntitiesProps) {
       {viewFormat === ViewFormat.Grid
         ? entityContainer(GridContainer, TileEntityCardCompact)
         : null}
+      {viewFormat === undefined ? (
+        <p style={{ textAlign: `center` }}>Loading...</p>
+      ) : null}
     </div>
   );
 }
