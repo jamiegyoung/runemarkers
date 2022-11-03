@@ -15,6 +15,12 @@
   transition: all 0.3s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+}
+
 .imageContainer {
   display: flex;
   justify-content: center;
