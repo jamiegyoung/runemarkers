@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TileEntityCard should render entity correctly 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <a
+      class="imageContainer"
+      href="/AbyssalSire"
+    >
+      <img
+        alt="Abyssal Sire image"
+        class="image"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75 2x"
+        style="color: transparent; opacity: 0;"
+        width="120"
+      />
+    </a>
+    <div
+      class="cardData"
+    >
+      <div
+        class="entityInfo"
+      >
+        <a
+          class="name"
+          href="/AbyssalSire"
+        >
+          Abyssal Sire
+        </a>
+      </div>
+      <div
+        class="tileInteraction"
+      >
+        <p
+          class="tileCount"
+        >
+          1
+           tile markers
+        </p>
+        <button
+          class="button button"
+        >
+          Copy
+          <div
+            class="animBar "
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TileEntityCard should render subcategory correctly 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <a
+      class="imageContainer"
+      href="/AbyssalSire"
+    >
+      <img
+        alt="Abyssal Sire image"
+        class="image"
+        data-nimg="1"
+        decoding="async"
+        height="120"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Foldschool.runescape.wiki%2Fimages%2Fthumb%2FAbyssal_Sire.png%2F200px-Abyssal_Sire.png&w=256&q=75 2x"
+        style="color: transparent; opacity: 0;"
+        width="120"
+      />
+    </a>
+    <div
+      class="cardData"
+    >
+      <div
+        class="entityInfo"
+      >
+        <a
+          class="name"
+          href="/AbyssalSire"
+        >
+          Abyssal Sire
+           
+          <span
+            style="white-space: nowrap;"
+          >
+            (
+            Test Subcategory
+            )
+          </span>
+        </a>
+      </div>
+      <div
+        class="tileInteraction"
+      >
+        <p
+          class="tileCount"
+        >
+          1
+           tile markers
+        </p>
+        <button
+          class="button button"
+        >
+          Copy
+          <div
+            class="animBar "
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

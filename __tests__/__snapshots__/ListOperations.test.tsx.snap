@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOperations should render correctly with the grid format 1`] = `
+<div>
+  <div
+    class="listOperationsContainer grid"
+  >
+    <div
+      style="display: flex; align-items: center; position: absolute; left: 50%; width: 100%; transform: translateX(-50%); justify-content: center;"
+    >
+      <input
+        class="input "
+        placeholder="type here to search"
+        type="text"
+        value=""
+      />
+      <button
+        class="clearButton "
+      >
+        <svg
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.4 19.45 4.55 17.6l5.6-5.6-5.6-5.6L6.4 4.55l5.6 5.6 5.6-5.6 1.85 1.85-5.6 5.6 5.6 5.6-1.85 1.85-5.6-5.6Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <button
+      aria-label="Change layout"
+      class="button"
+      title="Change layout"
+      type="button"
+    >
+      <div
+        class="innerButton"
+      >
+        <div
+          class="buttonSection grid"
+        />
+        <div
+          class="buttonSection grid"
+        />
+        <div
+          class="buttonSection grid"
+        />
+        <div
+          class="buttonSection grid"
+        />
+        <div
+          class="buttonSection grid"
+        />
+        <div
+          class="buttonSection grid"
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ListOperations should render correctly with the list format 1`] = `
+<div>
+  <div
+    class="listOperationsContainer list"
+  >
+    <div
+      style="display: flex; align-items: center; position: absolute; left: 50%; width: 100%; transform: translateX(-50%); justify-content: center;"
+    >
+      <input
+        class="input "
+        placeholder="type here to search"
+        type="text"
+        value=""
+      />
+      <button
+        class="clearButton "
+      >
+        <svg
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.4 19.45 4.55 17.6l5.6-5.6-5.6-5.6L6.4 4.55l5.6 5.6 5.6-5.6 1.85 1.85-5.6 5.6 5.6 5.6-1.85 1.85-5.6-5.6Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <button
+      aria-label="Change layout"
+      class="button"
+      title="Change layout"
+      type="button"
+    >
+      <div
+        class="innerButton"
+      >
+        <div
+          class="buttonSection list"
+        />
+        <div
+          class="buttonSection list"
+        />
+        <div
+          class="buttonSection list"
+        />
+        <div
+          class="buttonSection list"
+        />
+        <div
+          class="buttonSection list"
+        />
+        <div
+          class="buttonSection list"
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;

@@ -10,6 +10,7 @@ body {
   --color-text: #f5f3f5;
   --color-subtle-text: #c9c9c9;
   --color-card: #3b3b37;
+  --color-card-hover: #42423e;
   background-color: var(--color-background);
   color: var(--color-text);
 }

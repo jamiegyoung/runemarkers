@@ -2,14 +2,14 @@ import { TileEntity } from '@/types';
 import { NextSeo } from 'next-seo';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/pages/[entity].module.css';
-import StripContainer from '@/components/atoms/StripContainer';
+import ListContainer from '@/components/atoms/ListContainer';
 import TileEntityCard from '@/components/molecules/TileEntityCard';
 import YoutubeEmbed from '@/components/atoms/YouTubeEmbed';
 import CodeBlock from '@/components/atoms/CodeBlock';
 import ContributionFooter from '@/components/atoms/ContributionFooter';
 import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
-import StripContainerSection from '@/components/molecules/StripContainerSection';
+import ListContainerSection from '@/components/molecules/ListContainerSection';
 import TilesSource from '@/components/molecules/TilesSource';
 
 export async function getStaticPaths() {
@@ -57,7 +57,7 @@ export default function Entity(entity: TileEntity) {
       />
       <NavBar />
       <div className={styles.container}>
-        <StripContainer>
+        <ListContainer>
           <TileEntityCard entity={entity} hideInfoButton />
           <div className={styles.linkContainer}>
             <a
@@ -82,23 +82,23 @@ export default function Entity(entity: TileEntity) {
             </a>
           </div>
           {entity.recommendedGuideVideoId ? (
-            <StripContainerSection title="Recommended Guide">
+            <ListContainerSection title="Recommended Guide">
               <YoutubeEmbed
                 videoId={entity.recommendedGuideVideoId}
                 title={`${entity.name} guide`}
               />
-            </StripContainerSection>
+            </ListContainerSection>
           ) : null}
-          <StripContainerSection title="Tile Data">
+          <ListContainerSection title="Tile Data">
             <CodeBlock tiles={entity.tiles} />
-          </StripContainerSection>
+          </ListContainerSection>
 
           {entity.source ? (
-            <StripContainerSection title="Source">
+            <ListContainerSection title="Source">
               <TilesSource source={entity.source} />
-            </StripContainerSection>
+            </ListContainerSection>
           ) : null}
-        </StripContainer>
+        </ListContainer>
       </div>
       <ContributionFooter />
     </>

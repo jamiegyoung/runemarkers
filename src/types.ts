@@ -27,3 +27,16 @@ export type TileEntity = {
   fullName: string;
   fullAltName: string;
 };
+
+export type HeightScrollTop = {
+  height: number;
+  scrollTop: number;
+};
+
+export interface TileEntityCardCompactProps {
+  entity: TileEntity;
+}
+
+export interface TileEntityCardProps extends TileEntityCardCompactProps {
+  hideInfoButton?: boolean;
+}

@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { TileEntity } from '@/types';
 import { createContext, useEffect, useState } from 'react';
-import TileEntityList from '@/components/organisms/TileEntityList';
+import TileEntities from '@/components/organisms/TileEntities';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
 import { getTileData } from '@/api/tiles';
@@ -68,7 +68,7 @@ Made with \u2764 by jamgyo`,
         <main className={styles.main}>
           <SearchContext.Provider value={[searchVal, setSearchVal]}>
             <NavBar />
-            <TileEntityList list={searchRes} />
+            <TileEntities list={searchRes} />
             <ContributionFooter />
           </SearchContext.Provider>
         </main>

@@ -1,12 +1,21 @@
 .card {
-  width: 80%;
+  width: 185px;
+  min-width: 150px;
+  /* max-width: 300px; */
+  height: 250px;
   margin: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  flex-direction: column;
   background-color: var(--color-card);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: .2s ease-out;
+}
+
+.card:hover {
+  background-color: var(--color-card-hover);
 }
 
 .image {
@@ -19,74 +28,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .cardData {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .entityInfo {
-  text-align: end;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  margin: 0 0 0 auto;
+  margin-bottom: 5px;
 }
 
 .name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
   color: var(--color-text);
   font-weight: bold;
   text-decoration: none;
 }
 
-.altName {
-  font-size: 1rem;
-  color: #a8a8a8;
-  margin: 0;
-  text-decoration: none;
-}
-
-.tileCount {
-  color: var(--color-subtle-text);
-  margin: 20px 0 5px 0;
-  text-align: end;
-}
-
 .tileInteraction {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-direction: column;
 }
 
 .button {
   padding: 10px 40px;
+  width: 122px;
 }
 
-@media (max-width: 500px) {
-  .name {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .altName {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .button {
-    margin-right: 5px;
-    padding: 10px 20px;
-  }
-
-  .name {
-    font-size: 1rem;
-  }
+.tileCount {
+  color: var(--color-subtle-text);
+  margin: 0 0 5px 0;
+  text-align: end;
+  font-size: .9rem;
 }

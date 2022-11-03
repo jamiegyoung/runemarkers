@@ -1,0 +1,9 @@
+.listOperationsContainer {
+  margin-top: 0;
+  margin-bottom: 21px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  transition: all .2s ease-out;
+  z-index: 1
+}

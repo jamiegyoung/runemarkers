@@ -6,7 +6,7 @@ type SectionHeaderProps = {
   children?: JSX.Element | JSX.Element[];
 };
 
-export default function StripContainerSection({
+export default function ListContainerSection({
   children,
   title,
 }: SectionHeaderProps) {

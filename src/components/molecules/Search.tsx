@@ -6,8 +6,10 @@ export default function Search() {
       style={{
         display: `flex`,
         alignItems: `center`,
-        marginBottom: 20,
+        position: `absolute`,
+        left: `50%`,
         width: `100%`,
+        transform: `translateX(-50%)`,
         justifyContent: `center`,
       }}
     >

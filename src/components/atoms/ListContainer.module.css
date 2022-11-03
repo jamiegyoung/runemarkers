@@ -1,4 +1,4 @@
-.innerContainer {
+.innerListContainer {
   min-width: 280px;
   margin-bottom: 5px;
   max-width: 600px;
@@ -16,27 +16,27 @@
 }
 
 @media (max-width: 900px) {
-  .innerContainer {
+  .innerListContainer {
     width: 85%;
     height: auto;
   }
 }
 
-.innerContainer::-webkit-scrollbar {
+.innerListContainer::-webkit-scrollbar {
   width: 5px;
   border-radius: 4px;
 }
 
-.innerContainer::-webkit-scrollbar-track {
+.innerListContainer::-webkit-scrollbar-track {
   background: var(--color-card);
   border-radius: 5px;
 }
 
-.innerContainer::-webkit-scrollbar-thumb {
+.innerListContainer::-webkit-scrollbar-thumb {
   background: #757575;
   border-radius: 5px;
 }
 
-.innerContainer::-webkit-scrollbar-thumb:hover {
+.innerListContainer::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary-light);
 }

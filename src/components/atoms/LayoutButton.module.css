@@ -1,0 +1,116 @@
+.button {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px;
+  width: 40px;
+  height: 39px;
+  background-color: var(--color-card);
+  border: 2px solid var(--color-card-hover);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  transition: all 0.2s ease-out;
+}
+
+.button:hover {
+  background-color: var(--color-card-hover);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 600px) {
+  .button {
+    display: none;
+  }
+}
+
+.innerButton {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.1s ease-out;
+}
+
+.buttonSection {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: var(--color-primary);
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+}
+
+.buttonSection:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.buttonSection:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.buttonSection:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.buttonSection:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.buttonSection:nth-child(5) {
+  bottom: 10px;
+  width: 18px;
+  left: 0;
+}
+
+.buttonSection:nth-child(6) {
+  bottom: 10px;
+  width: 17px;
+  right: 0;
+}
+
+.buttonSection.grid:nth-child(5),
+.buttonSection.grid:nth-child(6) {
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+}
+
+.buttonSection.list {
+  height: 5px
+}
+
+.buttonSection.list:nth-child(1) {
+  width: 5px;
+}
+
+.buttonSection.list:nth-child(2) {
+  width: 18px;
+}
+
+.buttonSection.list:nth-child(3) {
+  width: 5px;
+}
+
+.buttonSection.list:nth-child(4) {
+  width: 18px;
+}
+
+.buttonSection.list:nth-child(5) {
+  width: 5px;
+}
+
+.buttonSection.list:nth-child(6) {
+  width: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .innerButton,
+  .buttonSection {
+    transition: none;
+  }
+}

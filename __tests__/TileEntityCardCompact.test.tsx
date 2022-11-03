@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { act, fireEvent, render } from '@testing-library/react';
-import TileEntityCard from '@/components/molecules/TileEntityCard';
 import { TileEntity } from '@/types';
+import TileEntityCardCompact from '@/components/molecules/TileEntityCardCompact';
 
 const entity: TileEntity = {
   name: `Abyssal Sire`,
@@ -27,10 +27,12 @@ const entity: TileEntity = {
   fullAltName: ``,
 };
 
-const TestTileEntityCard = () => <TileEntityCard entity={entity} />;
+const TestTileEntityCard = () => <TileEntityCardCompact entity={entity} />;
 
 const TestTileEntityCardSubcategory = () => (
-  <TileEntityCard entity={{ ...entity, subcategory: `Test Subcategory` }} />
+  <TileEntityCardCompact
+    entity={{ ...entity, subcategory: `Test Subcategory` }}
+  />
 );
 
 window.prompt = jest.fn();
