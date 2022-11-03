@@ -2,8 +2,8 @@
   background-color: transparent;
   border-radius: 5px;
   padding: 5px;
-  width: 40px;
-  height: 39px;
+  width: 42px;
+  height: 42px;
   background-color: var(--color-card);
   border: 2px solid var(--color-card-hover);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -61,13 +61,13 @@
 }
 
 .buttonSection:nth-child(5) {
-  bottom: 10px;
+  bottom: 11px;
   width: 18px;
   left: 0;
 }
 
 .buttonSection:nth-child(6) {
-  bottom: 10px;
+  bottom: 11px;
   width: 17px;
   right: 0;
 }
