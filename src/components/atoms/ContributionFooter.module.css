@@ -1,9 +1,9 @@
 .footer {
-  /* background-color: var(--color-card); */
   color: var(--color-text);
   width: 100%;
-  margin: 5px 0;
+  margin-top: auto;
   padding: 0 0 5px 0;
+  bottom: 0;
   position: absolute;
   left: 0;
   display: flex;
