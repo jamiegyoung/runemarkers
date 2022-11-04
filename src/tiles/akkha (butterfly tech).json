@@ -4,427 +4,267 @@
   "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Akkha.png/120px-Akkha.png",
   "wiki": "https://oldschool.runescape.wiki/w/Akkha/",
   "tags": ["raids 3", "toa", "tombs of amascut"],
-  "recommendedGuideVideoId": "pSBxLCy7-44",
+  "recommendedGuideVideoId": "dXg9T1PkP6Y",
   "source": {
-    "name": "Gnomonkey - Raids 3 TOA Akkha \"Butterfly Tech\" OSRS",
-    "link": "https://www.youtube.com/watch?v=pSBxLCy7-44"
+    "name": "Molgoatkirby - How I do the Butterfly Method (quick guide)",
+    "link": "https://www.youtube.com/watch?v=dXg9T1PkP6Y"
   },
   "tiles": [
     {
       "regionId": 14676,
-      "regionX": 39,
-      "regionY": 36,
+      "regionX": 36,
+      "regionY": 32,
       "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 32,
-      "regionY": 35,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 31,
-      "regionY": 37,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 33,
-      "regionY": 28,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 26,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 29,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 26,
-      "regionY": 27,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 37,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 33,
-      "regionY": 35,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 34,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 33,
-      "regionY": 36,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 39,
-      "regionY": 35,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 34,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 26,
-      "regionY": 36,
-      "z": 1,
-      "color": "#FFFAFF00"
+      "color": "#FFFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 36,
       "regionY": 39,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 36,
-      "regionY": 32,
-      "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 37,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 33,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 38,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
+      "color": "#FFFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 29,
       "regionY": 39,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
+      "color": "#FFFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 29,
       "regionY": 32,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
+      "color": "#FFFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 27,
-      "regionY": 37,
+      "regionX": 29,
+      "regionY": 31,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#FFFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 26,
-      "regionY": 35,
+      "regionX": 29,
+      "regionY": 24,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 24,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 22,
+      "z": 1,
+      "color": "#968D8D8D"
     },
     {
       "regionId": 14676,
       "regionX": 31,
-      "regionY": 34,
+      "regionY": 22,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#968D8D8D"
     },
     {
       "regionId": 14676,
-      "regionX": 32,
-      "regionY": 36,
+      "regionX": 42,
+      "regionY": 30,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#968D8D8D"
     },
     {
       "regionId": 14676,
-      "regionX": 31,
-      "regionY": 38,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 31,
+      "regionX": 42,
       "regionY": 33,
       "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
+      "color": "#968D8D8D"
     },
     {
       "regionId": 14676,
-      "regionX": 36,
-      "regionY": 31,
+      "regionX": 34,
+      "regionY": 41,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 41,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 23,
+      "regionY": 33,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 23,
+      "regionY": 30,
+      "z": 1,
+      "color": "#968D8D8D"
     },
     {
       "regionId": 14676,
       "regionX": 29,
-      "regionY": 31,
+      "regionY": 28,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 29,
-      "regionY": 24,
-      "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
+      "color": "#32FFFFFF",
+      "label": "lol"
     },
     {
       "regionId": 14676,
       "regionX": 36,
-      "regionY": 24,
+      "regionY": 28,
       "z": 1,
-      "color": "#FF00FF43",
-      "label": "Attack"
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 35,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 35,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 27,
+      "z": 1,
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 39,
       "regionY": 28,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 34,
-      "regionY": 29,
+      "regionX": 33,
+      "regionY": 28,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 33,
       "regionY": 27,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 38,
-      "regionY": 26,
+      "regionX": 32,
+      "regionY": 28,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 31,
-      "regionY": 26,
+      "regionX": 32,
+      "regionY": 27,
       "z": 1,
-      "color": "#FFFF0000"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 31,
-      "regionY": 30,
+      "regionX": 33,
+      "regionY": 35,
       "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 31,
-      "regionY": 25,
+      "regionX": 33,
+      "regionY": 36,
       "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
       "regionX": 26,
       "regionY": 28,
       "z": 1,
-      "color": "#FFFAFF00"
+      "color": "#ABFFFFFF"
     },
     {
       "regionId": 14676,
-      "regionX": 27,
-      "regionY": 26,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 29,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 39,
+      "regionX": 26,
       "regionY": 27,
       "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 25,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 30,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 32,
-      "regionY": 28,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 32,
-      "regionY": 27,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 31,
-      "regionY": 29,
-      "z": 1,
-      "color": "#FFFAFF00"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 38,
-      "regionY": 34,
-      "z": 1,
-      "color": "#FFFF0000"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 30,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 25,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 33,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 34,
-      "regionY": 38,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 38,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 33,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 30,
-      "z": 1,
-      "color": "#FFFAFF00",
-      "label": "Start"
-    },
-    {
-      "regionId": 14676,
-      "regionX": 27,
-      "regionY": 25,
-      "z": 1,
-      "color": "#FFFF0000",
-      "label": "Start"
+      "color": "#ABFFFFFF"
     }
   ]
 }
