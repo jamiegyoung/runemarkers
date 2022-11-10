@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { ButtonHTMLAttributes, useEffect, useState } from 'react';
 import styles from '@/components/atoms/Button.module.css';
 
 export default function Button(
-  buttonProps: React.ButtonHTMLAttributes<HTMLButtonElement>,
+  buttonProps: ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   const [isAnimating, setIsAnimating] = useState(false);
   useEffect(() => {

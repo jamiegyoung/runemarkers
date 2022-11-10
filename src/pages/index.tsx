@@ -1,6 +1,12 @@
 import Fuse from 'fuse.js';
 import { TileEntity } from '@/types';
-import { createContext, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useEffect,
+  useState,
+} from 'react';
 import TileEntities from '@/components/organisms/TileEntities';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
@@ -26,7 +32,7 @@ export function getStaticProps() {
 }
 
 export const SearchContext = createContext<
-  [string | undefined, React.Dispatch<React.SetStateAction<string>> | undefined]
+  [string | undefined, Dispatch<SetStateAction<string>> | undefined]
 >([undefined, undefined]);
 
 export default function Home({ tileData }: { tileData: TileEntity[] }) {
@@ -48,7 +54,7 @@ P########B5?:      ?BBB5              .PBBB~
 &@@@:     ^&@@@^   5&&&&&#.         ^&&&&&&7
 &@@@:      5@@@7   5&&#5&&&^       !&&&Y&&&7
 &@@@:     !@@@#    5&&& 7&&&~     7&&&^.&&&7
-&@@@#BBB#&@@#?     5&&&  !&&&7   J&&&^ .&&&7 
+&@@@#BBB#&@@#?     5&&&  !&&&7   J&&&^ .&&&7
 &@@@#GB@@@@J       5&&&   ^&&&J 5&&#.  .&&&7
 &@@@:  .G@@@P      5&&&    :&&&B&&#.   .&&&7
 &@@@:    ?@@@&^    5&&&     .#&&&B     .&&&7
