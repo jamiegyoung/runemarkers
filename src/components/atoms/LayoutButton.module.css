@@ -1,5 +1,4 @@
 .button {
-  background-color: transparent;
   border-radius: 5px;
   padding: 5px;
   width: 42px;
@@ -76,7 +75,7 @@
 .buttonSection.grid:nth-child(6) {
   opacity: 0;
   visibility: hidden;
-  width: 0px;
+  width: 0;
 }
 
 .buttonSection.list {
