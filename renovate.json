@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "semanticCommits": true,
+  "semanticCommits": "enabled",
   "stabilityDays": 3,
   "prCreation": "not-pending",
   "labels": ["type: dependencies"],
