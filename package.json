@@ -1,6 +1,6 @@
 {
   "name": "runemarkers",
-  "description": "Find and import RuneLite tile markers for oldschool runescape. Easily search for tile markers by boss, activity or location.",
+  "description": "Find and import RuneLite tile markers for Old School RuneScape. Easily search for tile markers by boss, activity or location.",
   "version": "1.0.0",
   "private": true,
   "author": "Jamie Young",
