@@ -21,13 +21,17 @@ describe(`Input`, () => {
     expect(container).toMatchSnapshot();
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const mockSetSearchVal = jest.fn();
+
+  jest.mock(`react`, () => ({
+    useState: (initial: string) => [initial, mockSetSearchVal],
+  }));
+
   it(`should expand on focus`, () => {
-    const mockSetSearchVal = jest.fn();
-
-    jest.mock(`react`, () => ({
-      useState: (initial: string) => [initial, mockSetSearchVal],
-    }));
-
     const { container } = render(testInputWithContext(``, mockSetSearchVal));
 
     const input = container.querySelector(`input`);
@@ -41,12 +45,6 @@ describe(`Input`, () => {
   });
 
   it(`should shrink on blur`, () => {
-    const mockSetSearchVal = jest.fn();
-
-    jest.mock(`react`, () => ({
-      useState: (initial: string) => [initial, mockSetSearchVal],
-    }));
-
     const { container } = render(testInputWithContext(``, mockSetSearchVal));
 
     const input = container.querySelector(`input`);
@@ -65,12 +63,6 @@ describe(`Input`, () => {
   });
 
   it(`should update the search value on change`, () => {
-    const mockSetSearchVal = jest.fn();
-
-    jest.mock(`react`, () => ({
-      useState: (initial: string) => [initial, mockSetSearchVal],
-    }));
-
     const { container } = render(testInputWithContext(``, mockSetSearchVal));
 
     const input = container.querySelector(`input`);
@@ -89,12 +81,6 @@ describe(`Input`, () => {
   });
 
   it(`should clear the search value when the clear button is clicked`, () => {
-    const mockSetSearchVal = jest.fn();
-
-    jest.mock(`react`, () => ({
-      useState: (initial: string) => [initial, mockSetSearchVal],
-    }));
-
     const { container } = render(testInputWithContext(``, mockSetSearchVal));
 
     const input = container.querySelector(`input`);

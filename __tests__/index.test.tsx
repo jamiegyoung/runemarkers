@@ -16,9 +16,9 @@ describe(`Home`, () => {
     expect(container).toMatchSnapshot();
   });
 
-  it(`should generate static props`, async () => {
+  it(`should generate static props`, () => {
     const tileData = getTileData();
-    const { props } = await getStaticProps();
+    const { props } = getStaticProps();
     expect(props.tileData).toEqual(tileData);
   });
 });
