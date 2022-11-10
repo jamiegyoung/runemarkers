@@ -14,7 +14,7 @@
 .button:hover .svg path,
 .container:hover .svg path {
   fill: var(--color-primary);
-  filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 .svg {
@@ -23,7 +23,7 @@
 
 .svg path {
   transition: all 0.2s ease-out;
-  filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -33,7 +33,7 @@
 
   .button:hover .svg path,
   .container:hover .svg path {
-    filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
     fill: var(--color-text);
   }
 }

@@ -6,7 +6,7 @@
 }
 
 .header {
-  font-family: 'RuneScape UF';
+  font-family: 'RuneScape UF', sans-serif;
   font-weight: 100;
   font-size: 5rem;
   color: #ffff00;
@@ -23,7 +23,7 @@
 }
 
 .home {
-  font-family: 'RuneScape UF';
+  font-family: 'RuneScape UF', sans-serif;
   font-weight: 100;
   font-size: 1.6rem !important;
   text-decoration: none;
