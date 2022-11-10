@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { act, prettyDOM, render } from '@testing-library/react';
+import { act, render } from '@testing-library/react';
 import { TileEntity } from '@/types';
 import TileEntities, { ViewFormat } from '@/components/organisms/TileEntities';
 
