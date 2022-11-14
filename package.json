@@ -32,7 +32,7 @@
     "minimist": "^1.2.6",
     "next": "13.0.2",
     "next-seo": "5.14.0",
-    "next-sitemap": "^3.1.30",
+    "next-sitemap": "^3.1.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lite-youtube-embed": "^2.3.52",
