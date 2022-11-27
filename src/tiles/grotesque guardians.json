@@ -1,0 +1,37 @@
+{
+  "name": "Grotesque Guardians",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Dusk_(2nd_form).png/120px-Dusk_(2nd_form).png",
+  "wiki": "https://oldschool.runescape.wiki/w/Grotesque_Guardians",
+  "tags": ["slayer", "boss"],
+  "recommendedGuideVideoId": "Hsp-o5WDtjQ",
+  "source": {
+    "name": "QuickOSRS - Grotesque Guardians Guide | OSRS",
+    "link": "https://www.youtube.com/watch?v=Hsp-o5WDtjQ"
+  },
+  "tiles": [
+    {
+      "regionId": 6727,
+      "regionX": 37,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFF0000",
+      "label": "3"
+    },
+    {
+      "regionId": 6727,
+      "regionX": 37,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFFF0000",
+      "label": "2"
+    },
+    {
+      "regionId": 6727,
+      "regionX": 40,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFFF0000",
+      "label": "1"
+    }
+  ]
+}
