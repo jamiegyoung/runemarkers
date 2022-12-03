@@ -1,0 +1,175 @@
+{
+  "name": "Tumeken's Warden",
+  "subcategory": "Advanced Tactics",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Tumeken's_Warden_(level-544).png/120px-Tumeken's_Warden_(level-544).png",
+  "wiki": "https://oldschool.runescape.wiki/w/Tumeken%27s_Warden#Phase_3",
+  "tags": ["raids 3", "toa", "tombs of amascut"],
+  "recommendedGuideVideoId": "q3D2jeguGz8",
+  "source": {
+    "name": "Gnomonkey - TOA Advanced Tactics (24M GP/HR) OSRS",
+    "link": "https://www.youtube.com/watch?v=q3D2jeguGz8"
+  },
+  "tiles": [
+    {
+      "regionId": 15184,
+      "regionX": 27,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15184,
+      "regionX": 29,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15184,
+      "regionX": 29,
+      "regionY": 29,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 15184,
+      "regionX": 27,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 32,
+      "regionY": 37,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 32,
+      "regionY": 38,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 32,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 32,
+      "regionY": 40,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 32,
+      "regionY": 41,
+      "z": 1,
+      "color": "#FF084C08"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 42,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 42,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 41,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 41,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 40,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 40,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 43,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 43,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 44,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 26,
+      "regionY": 45,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 44,
+      "z": 1,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 15696,
+      "regionX": 38,
+      "regionY": 45,
+      "z": 1,
+      "color": "#FFFF0000"
+    }
+  ]
+}
