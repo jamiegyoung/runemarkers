@@ -61,9 +61,10 @@
     {
       "regionId": 9043,
       "regionX": 31,
-      "regionY": 46,
+      "regionY": 45,
       "z": 0,
-      "color": "#FFDF3C3C"
+      "color": "#FFDF3C3C",
+      "label": "MIDDLE TILE IS NOT SAFE"
     },
     {
       "regionId": 9043,
