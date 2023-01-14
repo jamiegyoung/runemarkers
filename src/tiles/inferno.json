@@ -6,7 +6,8 @@
   "tags": ["zuk", "tzkal"],
   "source": {
     "name": "WDR Discord - #bot-commands !infernotiles",
-    "link": "https://discord.gg/wdr"
+    "link": "https://discord.gg/wdr",
+    "modified": "Unsafe tile label added courtesy of Brew Time"
   },
   "tiles": [
     {
@@ -64,7 +65,7 @@
       "regionY": 45,
       "z": 0,
       "color": "#FFDF3C3C",
-      "label": "MIDDLE TILE IS NOT SAFE"
+      "label": "UNSAFE"
     },
     {
       "regionId": 9043,
