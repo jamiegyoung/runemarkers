@@ -30,7 +30,7 @@
     "copy-to-clipboard": "3.3.3",
     "fuse.js": "6.6.2",
     "minimist": "^1.2.6",
-    "next": "13.1.1",
+    "next": "13.1.5",
     "next-seo": "5.15.0",
     "next-sitemap": "^3.1.45",
     "react": "18.2.0",
