@@ -6,12 +6,13 @@ exports[`Entity should render correctly 1`] = `
     class="navbar"
   >
     <a
-      href="./"
-      style="background: transparent; color: rgb(245, 243, 245); text-decoration: none; display: flex;"
+      class="link titleLink"
+      href="/"
+      rel=""
+      target="_self"
     >
       <header
         class="title"
-        style="font-size: 2rem;"
       >
         R
         <span>
@@ -93,7 +94,7 @@ exports[`Entity should render correctly 1`] = `
         class="linkContainer"
       >
         <a
-          class="link"
+          class="link entityLink"
           href="https://runelite.net/tile/show/#W3sicmVnaW9uSWQiOjExODUwLCJyZWdpb25YIjoyNSwicmVnaW9uWSI6MzQsInoiOjAsImNvbG9yIjoiI0ZGRkZGRjAwIn1d"
           rel="noopener noreferrer"
           target="_blank"
@@ -101,7 +102,7 @@ exports[`Entity should render correctly 1`] = `
           View Map on RuneLite
         </a>
         <a
-          class="link"
+          class="link entityLink"
           href="https://oldschool.runescape.wiki/w/Abyssal_Sire"
           rel="noopener noreferrer"
           target="_blank"
@@ -146,7 +147,7 @@ exports[`Entity should render correctly 1`] = `
       <p>
         Made by
         <a
-          class="link"
+          class="link "
           href="https://discord.com/users/167850724976361472"
           rel="noopener noreferrer"
           target="_blank"
@@ -174,7 +175,7 @@ exports[`Entity should render correctly 1`] = `
       class="footerItem"
     >
       <a
-        class="link"
+        class="link "
         href="https://github.com/jamiegyoung/runemarkers"
         rel="noopener noreferrer"
         target="_blank"

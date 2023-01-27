@@ -10,12 +10,13 @@ exports[`Home should search correctly 1`] = `
         class="navbar"
       >
         <a
-          href="./"
-          style="background: transparent; color: rgb(245, 243, 245); text-decoration: none; display: flex;"
+          class="link titleLink"
+          href="/"
+          rel=""
+          target="_self"
         >
           <header
             class="title"
-            style="font-size: 2rem;"
           >
             R
             <span>
@@ -181,7 +182,7 @@ exports[`Home should search correctly 1`] = `
           <p>
             Made by
             <a
-              class="link"
+              class="link "
               href="https://discord.com/users/167850724976361472"
               rel="noopener noreferrer"
               target="_blank"
@@ -209,7 +210,7 @@ exports[`Home should search correctly 1`] = `
           class="footerItem"
         >
           <a
-            class="link"
+            class="link "
             href="https://github.com/jamiegyoung/runemarkers"
             rel="noopener noreferrer"
             target="_blank"

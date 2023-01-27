@@ -2,6 +2,13 @@
   font-weight: bold;
   padding: 0 20px;
   display: flex;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.titleLink {
+  text-decoration: none;
 }
 
 .titleAlt {

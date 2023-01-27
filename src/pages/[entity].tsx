@@ -11,6 +11,7 @@ import { getTileData } from '@/api/tiles';
 import { defaultImages } from '@/api/seoOptions';
 import ListContainerSection from '@/components/molecules/ListContainerSection';
 import TilesSource from '@/components/molecules/TilesSource';
+import Link from '@/components/atoms/Link';
 
 export async function getStaticPaths() {
   return {
@@ -60,26 +61,20 @@ export default function Entity(entity: TileEntity) {
         <ListContainer>
           <TileEntityCard entity={entity} hideInfoButton />
           <div className={styles.linkContainer}>
-            <a
+            <Link
               href={`https://runelite.net/tile/show/#${Buffer.from(
                 JSON.stringify(entity.tiles),
               )
                 .toString(`base64`)
                 .replaceAll(`=`, ``)}`}
-              className={styles.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              className={styles.entityLink}
+              newTab
             >
               View Map on RuneLite
-            </a>
-            <a
-              href={entity.wiki}
-              className={styles.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            </Link>
+            <Link href={entity.wiki} className={styles.entityLink} newTab>
               Wiki Page
-            </a>
+            </Link>
           </div>
           {entity.recommendedGuideVideoId ? (
             <ListContainerSection title="Recommended Guide">

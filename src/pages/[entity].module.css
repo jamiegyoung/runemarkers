@@ -19,13 +19,13 @@
   }
 }
 
-.link {
+.entityLink {
   color: var(--color-primary);
   font-size: 1rem;
   margin: 10px 10px 10px 10px;
 }
 
-.link:hover {
+.entityLink:hover {
   color: var(--color-primary-light);
 }
 

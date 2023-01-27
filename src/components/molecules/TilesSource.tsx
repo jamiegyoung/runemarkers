@@ -1,19 +1,15 @@
 import { Source } from '@/types';
 import styles from '@/components/molecules/TilesSource.module.css';
 import Modified from '@/components/atoms/Modified';
+import Link from '../atoms/Link';
 
 export default function TilesSource({ source }: { source: Source }) {
   return (
-    <div className={styles.tilesSourceParagraph}>
-      <a
-        className={styles.link}
-        href={source.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+    <p className={styles.tilesSourceParagraph}>
+      <Link className={styles.link} href={source.link} newTab>
         {source.name}
-      </a>
+      </Link>
       {source.modified ? <Modified>{source.modified}</Modified> : null}
-    </div>
+    </p>
   );
 }

@@ -4,13 +4,22 @@ type LinkProps = {
   href: string;
   children: React.ReactNode;
   newTab?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
-export default function Link({ href, children, newTab }: LinkProps) {
+export default function Link({
+  href,
+  children,
+  newTab,
+  className = ``,
+  style = {},
+}: LinkProps) {
   return (
     <a
       href={href}
-      className={styles.link}
+      className={`${styles.link} ${className}`}
+      style={style}
       target={newTab ? `_blank` : `_self`}
       rel={newTab ? `noopener noreferrer` : ``}
     >

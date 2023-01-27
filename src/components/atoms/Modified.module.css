@@ -3,12 +3,12 @@
   display: inline-block;
   cursor: help;
   color: white;
-  margin: 0 0 0 .5rem;
+  margin: 0;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 100px;
+  width: 200px;
   background-color: var(--color-card);
   color: white;
   text-align: center;
@@ -17,8 +17,8 @@
   position: absolute;
   z-index: 1;
   bottom: 150%;
-  left: 50%;
-  margin-left: -60px;
+  left: 0%;
+  margin-left: -80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
