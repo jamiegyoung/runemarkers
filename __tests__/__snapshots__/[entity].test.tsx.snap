@@ -155,14 +155,16 @@ exports[`Entity should render correctly 1`] = `
             alt="GitHub"
             data-nimg="1"
             decoding="async"
-            height="24"
+            height="17"
             loading="lazy"
             src="/_next/image?url=%2Fdiscord.png&w=48&q=75"
             srcset="/_next/image?url=%2Fdiscord.png&w=32&q=75 1x, /_next/image?url=%2Fdiscord.png&w=48&q=75 2x"
             style="color: transparent;"
-            width="21"
+            width="20"
           />
-          <span>
+          <span
+            class="linkText"
+          >
             Jam#0001
           </span>
         </a>
@@ -188,7 +190,9 @@ exports[`Entity should render correctly 1`] = `
           style="color: transparent;"
           width="20"
         />
-        <span>
+        <span
+          class="linkText"
+        >
           contribute code / tiles
         </span>
       </a>

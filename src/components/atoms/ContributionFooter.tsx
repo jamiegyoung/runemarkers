@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '@/components/atoms/ContributionFooter.module.css';
+import Link from './Link';
 
 export default function ContributionFooter() {
   return (
@@ -7,27 +8,17 @@ export default function ContributionFooter() {
       <div className={styles.footerItem}>
         <p>
           Made by
-          <a
-            href="https://discord.com/users/167850724976361472"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src="/discord.png" alt="GitHub" width={21} height={24} />
-            <span>Jam#0001</span>
-          </a>
+          <Link href="https://discord.com/users/167850724976361472" newTab>
+            <Image src="/discord.png" alt="GitHub" width={20} height={17} />
+            <span className={styles.linkText}>Jam#0001</span>
+          </Link>
         </p>
       </div>
       <div className={styles.footerItem}>
-        <a
-          href="https://github.com/jamiegyoung/runemarkers"
-          className={styles.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://github.com/jamiegyoung/runemarkers" newTab>
           <Image src="/github.png" alt="GitHub" width={20} height={20} />
-          <span>contribute code / tiles</span>
-        </a>
+          <span className={styles.linkText}>contribute code / tiles</span>
+        </Link>
       </div>
     </footer>
   );

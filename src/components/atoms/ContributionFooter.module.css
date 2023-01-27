@@ -10,16 +10,15 @@
   align-items: center;
 }
 
-.link {
-  margin: 0 10px 0 5px;
-  padding: 0;
-  color: var(--color-text);
-  display: flex;
+.linkText {
+  margin: 0 5px;
 }
 
 .footerItem > p {
   margin: 0;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .link > span {
