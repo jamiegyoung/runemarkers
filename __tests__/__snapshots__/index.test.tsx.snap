@@ -137,7 +137,7 @@ exports[`Home should search correctly 1`] = `
                 <p
                   class="tileCount"
                 >
-                  6
+                  24
                    tile markers
                 </p>
                 <div
