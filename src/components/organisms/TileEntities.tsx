@@ -70,17 +70,15 @@ export default function TileEntities({ list }: TileEntitiesProps) {
   useEffect(() => {
     if (width < 600) {
       setViewFormat(ViewFormat.List);
+      return;
     }
-  }, [setViewFormat, width]);
-
-  useEffect(() => {
     const viewFormat = localStorage.getItem(`viewFormat`);
     if (viewFormat != null) {
       setViewFormat(Number(viewFormat));
       return;
     }
-    setViewFormat(ViewFormat.List);
-  }, [setViewFormat]);
+    setViewFormat(ViewFormat.Grid);
+  }, [width, setViewFormat]);
 
   useEffect(() => {
     if (ref.current) {

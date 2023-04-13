@@ -61,7 +61,13 @@ const testTileData: TileEntity[] = [
 
 describe(`TileEntites`, () => {
   beforeEach(() => {
+    // Default to checking over 600px
+    Object.defineProperty(window, `innerWidth`, { writable: true, value: 900 });
     window.localStorage.clear();
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   it(`should map entities correctly`, () => {
@@ -77,59 +83,39 @@ describe(`TileEntites`, () => {
     expect(getByText(`No results found`)).toBeInTheDocument();
   });
 
-  it(`should be able to switch between list and grid view`, () => {
+  it(`should be able to switch between grid and list view`, () => {
     const { container } = render(<TileEntities list={testTileData} />);
-    const listContainer = container.querySelector(`.innerListContainer`);
+    const gridContainer = container.querySelector(`.innerGridContainer`);
 
-    expect(listContainer).toBeInTheDocument();
-    const gridButton = container.querySelector(`.button`) as HTMLButtonElement;
-    if (!gridButton) {
+    expect(gridContainer).toBeInTheDocument();
+    const layoutButton = container.querySelector(
+      `.button`,
+    ) as HTMLButtonElement;
+    if (!layoutButton) {
       throw new Error(`No button found`);
     }
 
     act(() => {
-      gridButton.click();
+      layoutButton.click();
     });
 
-    const gridContainer = container.querySelector(`.innerGridContainer`);
-    expect(gridContainer).toBeInTheDocument();
-    expect(listContainer).not.toBeInTheDocument();
-  });
-
-  it(`should set the view to a list by default`, () => {
-    const { container } = render(<TileEntities list={testTileData} />);
-    // wait for the list to render
     const listContainer = container.querySelector(`.innerListContainer`);
     expect(listContainer).toBeInTheDocument();
+    expect(gridContainer).not.toBeInTheDocument();
+  });
+
+  it(`should set the view to a grid by default`, () => {
+    const { container } = render(<TileEntities list={testTileData} />);
+    // wait for the grid to render
+    const gridContainer = container.querySelector(`.innerGridContainer`);
+    expect(gridContainer).toBeInTheDocument();
     // output render
   });
 
   it(`should set the view to a list if the window is smaller than 600px`, () => {
+    Object.defineProperty(window, `innerWidth`, { writable: true, value: 500 });
     const { container } = render(<TileEntities list={testTileData} />);
-    const button = container.querySelector(`.button`) as HTMLButtonElement;
-    if (!button) {
-      throw new Error(`No button found`);
-    }
-
-    act(() => {
-      button.click();
-    });
-
-    const gridContainer = container.querySelector(`.innerGridContainer`);
-    expect(gridContainer).toBeInTheDocument();
-
-    Object.defineProperty(window, `innerWidth`, {
-      writable: true,
-      configurable: true,
-      value: 400,
-    });
-
-    act(() => {
-      window.dispatchEvent(new Event(`resize`));
-    });
     const listContainer = container.querySelector(`.innerListContainer`);
-
-    expect(gridContainer).not.toBeInTheDocument();
     expect(listContainer).toBeInTheDocument();
   });
 
@@ -141,16 +127,18 @@ describe(`TileEntites`, () => {
     Storage.prototype.setItem = jest.fn();
 
     const { container } = render(<TileEntities list={testTileData} />);
-    const gridButton = container.querySelector(`.button`) as HTMLButtonElement;
-    if (!gridButton) {
+    const layoutButton = container.querySelector(
+      `.button`,
+    ) as HTMLButtonElement;
+    if (!layoutButton) {
       throw new Error(`No button found`);
     }
     act(() => {
-      gridButton.click();
+      layoutButton.click();
     });
     expect(localStorage.setItem).toBeCalledWith(
       `viewFormat`,
-      `${ViewFormat.Grid}`,
+      `${ViewFormat.List}`,
     );
   });
 

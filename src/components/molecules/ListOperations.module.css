@@ -1,9 +1,13 @@
 .listOperationsContainer {
   margin-top: 0;
-  margin-bottom: 21px;
+  margin-bottom: -20px;
+  min-height: 45px;
   width: 80%;
   max-width: 400px;
   position: relative;
   transition: all .2s ease-out;
-  z-index: 1
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
