@@ -75,7 +75,7 @@ export default function TileEntities({ list }: TileEntitiesProps) {
 
   useEffect(() => {
     const viewFormat = localStorage.getItem(`viewFormat`);
-    if (viewFormat !== undefined) {
+    if (viewFormat != null) {
       setViewFormat(Number(viewFormat));
       return;
     }
