@@ -35,3 +35,6 @@ jobs:
 
       - name: Check commits messages
         uses: wagoid/commitlint-github-action@v4
+
+      - name: Update coveralls coverage
+        run: yarn coverage:coveralls

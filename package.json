@@ -18,7 +18,8 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "coverage:coveralls": "jest --coverage && COVERALLS_SERVICE_NAME=jest COVERALLS_GIT_BRANCH=main yarn coveralls < coverage/lcov.info"
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
@@ -51,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
     "commitizen": "4.3.0",
+    "coveralls": "^3.1.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",

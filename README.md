@@ -9,6 +9,9 @@
 <a href="https://runemarkers.net">https://runemarkers.net</a>
 </p>
 
+[![Check CI](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml/badge.svg)](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/jamiegyoung/runemarkers/badge.svg?branch=main)](https://coveralls.io/github/jamiegyoung/runemarkers?branch=main)
+
 ## Tiles Contribution
 
 If you wish to contribute to tiles, follow the instructions below.
