@@ -1,0 +1,111 @@
+{
+  "name": "Galvek",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Galvek.png/120px-Galvek.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Galvek",
+  "tags": ["quest", "boss", "dragon", "ds2"],
+  "recommendedGuideVideoId": "NNlyCxttDiA",
+  "source": {
+    "name": "Nayronics - Practically Guaranteed - Galvek",
+    "link": "https://www.youtube.com/watch?v=NNlyCxttDiA"
+  },
+  "tiles": [
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 35,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 34,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 33,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 32,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 29,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 30,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 28,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 27,
+      "regionY": 36,
+      "z": 2,
+      "color": "#64F26A6A"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 35,
+      "z": 2,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 34,
+      "z": 2,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 33,
+      "z": 2,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 32,
+      "z": 2,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 6489,
+      "regionX": 31,
+      "regionY": 31,
+      "z": 2,
+      "color": "#64FFFFFF"
+    }
+  ]
+}
