@@ -1,13 +1,19 @@
-name: Check CI
+name: Update Coveralls
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   run-ci:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: Run Type Check, Linters & Tests
+    name: Update Coveralls
     runs-on: ubuntu-latest
 
     steps:
@@ -24,14 +30,7 @@ jobs:
       - name: Install dependencies (with cache)
         uses: bahmutov/npm-install@v1
 
-      - name: Check types
-        run: yarn type-check
-
-      - name: Check linting
-        run: yarn lint
-
-      - name: Check tests
-        run: yarn test
-
-      - name: Check commits messages
-        uses: wagoid/commitlint-github-action@v4
+      - name: Update coveralls coverage
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: yarn coverage:coveralls
