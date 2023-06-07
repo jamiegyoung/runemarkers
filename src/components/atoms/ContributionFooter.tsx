@@ -10,7 +10,7 @@ export default function ContributionFooter() {
           Made by
           <Link href="https://discord.com/users/167850724976361472" newTab>
             <Image src="/discord.png" alt="GitHub" width={20} height={17} />
-            <span className={styles.linkText}>Jam#0001</span>
+            <span className={styles.linkText}>jamgyo</span>
           </Link>
         </p>
       </div>
