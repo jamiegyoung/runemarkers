@@ -24,6 +24,69 @@
       "regionY": 24,
       "z": 0,
       "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 41,
+      "regionY": 31,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 43,
+      "regionY": 30,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 39,
+      "regionY": 30,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 45,
+      "regionY": 28,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 45,
+      "regionY": 24,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 46,
+      "regionY": 26,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 39,
+      "regionY": 22,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 43,
+      "regionY": 22,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 41,
+      "regionY": 21,
+      "z": 0,
+      "color": "#64FFFFFF"
     }
   ]
 }
