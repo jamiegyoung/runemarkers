@@ -1,0 +1,92 @@
+{
+  "name": "Duke Sucellus",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Duke_Sucellus.png/120px-Duke_Sucellus.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Duke_Sucellus",
+  "tags": ["dt2", "desert treasure", "boss"],
+  "tiles": [
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 41,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 43,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 45,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 47,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 49,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 22,
+      "regionY": 51,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 41,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 43,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 45,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 47,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 49,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 12132,
+      "regionX": 40,
+      "regionY": 51,
+      "z": 0,
+      "color": "#64FFFFFF"
+    }
+  ]
+}
