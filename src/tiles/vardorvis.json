@@ -6,63 +6,35 @@
   "tiles": [
     {
       "regionId": 4405,
-      "regionX": 36,
+      "regionX": 44,
       "regionY": 26,
       "z": 0,
       "color": "#64FFFFFF"
     },
     {
       "regionId": 4405,
-      "regionX": 37,
+      "regionX": 43,
       "regionY": 28,
-      "z": 0,
-      "color": "#64FFFFFF"
-    },
-    {
-      "regionId": 4405,
-      "regionX": 37,
-      "regionY": 24,
       "z": 0,
       "color": "#64FFFFFF"
     },
     {
       "regionId": 4405,
       "regionX": 41,
-      "regionY": 31,
-      "z": 0,
-      "color": "#64FFFFFF"
-    },
-    {
-      "regionId": 4405,
-      "regionX": 43,
-      "regionY": 30,
+      "regionY": 29,
       "z": 0,
       "color": "#64FFFFFF"
     },
     {
       "regionId": 4405,
       "regionX": 39,
-      "regionY": 30,
-      "z": 0,
-      "color": "#64FFFFFF"
-    },
-    {
-      "regionId": 4405,
-      "regionX": 45,
       "regionY": 28,
       "z": 0,
       "color": "#64FFFFFF"
     },
     {
       "regionId": 4405,
-      "regionX": 45,
-      "regionY": 24,
-      "z": 0,
-      "color": "#64FFFFFF"
-    },
-    {
-      "regionId": 4405,
-      "regionX": 46,
+      "regionX": 38,
       "regionY": 26,
       "z": 0,
       "color": "#64FFFFFF"
@@ -70,21 +42,21 @@
     {
       "regionId": 4405,
       "regionX": 39,
-      "regionY": 22,
-      "z": 0,
-      "color": "#64FFFFFF"
-    },
-    {
-      "regionId": 4405,
-      "regionX": 43,
-      "regionY": 22,
+      "regionY": 24,
       "z": 0,
       "color": "#64FFFFFF"
     },
     {
       "regionId": 4405,
       "regionX": 41,
-      "regionY": 21,
+      "regionY": 23,
+      "z": 0,
+      "color": "#64FFFFFF"
+    },
+    {
+      "regionId": 4405,
+      "regionX": 43,
+      "regionY": 24,
       "z": 0,
       "color": "#64FFFFFF"
     }
