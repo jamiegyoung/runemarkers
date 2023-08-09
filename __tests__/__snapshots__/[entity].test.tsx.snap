@@ -26,6 +26,9 @@ exports[`Entity should render correctly 1`] = `
             arkers
           </span>
         </span>
+        <span>
+          .net
+        </span>
       </header>
     </a>
   </div>

@@ -30,6 +30,9 @@ exports[`Home should search correctly 1`] = `
                 arkers
               </span>
             </span>
+            <span>
+              .net
+            </span>
           </header>
         </a>
       </div>
