@@ -10,3 +10,5 @@ README.md
 .env.local
 .env.development
 .env.production
+.yarn/cache
+.yarn/install-state.gz

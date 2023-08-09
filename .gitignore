@@ -51,3 +51,13 @@ yarn-error.log*
 .not.env.test.local
 .not.env.production.local
 .not.env.production
+
+
+# Yarn 3 files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

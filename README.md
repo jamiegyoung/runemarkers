@@ -25,6 +25,22 @@ If you wish to contribute to tiles, follow the instructions below.
 
 ## Development
 
+### Using Docker (recommended)
+
+To start the project locally using Docker, run:
+
+```bash
+docker-compose up
+# or
+docker compose up
+# or if you want to run in the background
+docker compose up -d
+```
+
+This will run a development server at `http://localhost:3000` with hot reloading enabled.
+
+### Locally
+
 To start the project locally, run:
 
 ```bash
@@ -33,10 +49,11 @@ yarn dev
 
 Open `http://localhost:3000` with your browser to see the result.
 
+
 ### Requirements
 
 - Node.js >= 12.22.0
-- Yarn 1 (Classic)
+- Yarn 3
 
 ### Scripts
 
