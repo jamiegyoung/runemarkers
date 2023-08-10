@@ -9,6 +9,7 @@ export default function Title() {
         <span className={styles.titleAlt}>
           M<span>arkers</span>
         </span>
+        <span>.net</span>
       </header>
     </Link>
   );
