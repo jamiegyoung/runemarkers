@@ -1577,21 +1577,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/parser@npm:6.0.0"
+"@typescript-eslint/parser@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@typescript-eslint/parser@npm:6.4.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 6.0.0
-    "@typescript-eslint/types": 6.0.0
-    "@typescript-eslint/typescript-estree": 6.0.0
-    "@typescript-eslint/visitor-keys": 6.0.0
+    "@typescript-eslint/scope-manager": 6.4.0
+    "@typescript-eslint/types": 6.4.0
+    "@typescript-eslint/typescript-estree": 6.4.0
+    "@typescript-eslint/visitor-keys": 6.4.0
     debug: ^4.3.4
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a22f0c8f67eb244134f9d79d78faf1b6e2c0965495d78eef94a5680868f3d0fd9446a3ce5dc1e36dde02587da5d962944f3d83679c712d0b819ac99cdb9f7143
+  checksum: 36c8dbeacfc03af9c5a4a0f065861ac6f3747fc64be582a32b0b084de5b5247cef086a0c0052291b97145e0ea8f82acbec452dd927b7b7a1917d56381d59a17c
   languageName: node
   linkType: hard
 
@@ -1632,6 +1632,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/scope-manager@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@typescript-eslint/scope-manager@npm:6.4.0"
+  dependencies:
+    "@typescript-eslint/types": 6.4.0
+    "@typescript-eslint/visitor-keys": 6.4.0
+  checksum: 19406eac3a1899f77eb7c3aa52577e2146075e1318c6eb34d220678afa167832b89c90860714f33b99e107544b48f6970594ca4bcf48c5ede8f2a14a0795ba33
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/type-utils@npm:6.0.0":
   version: 6.0.0
   resolution: "@typescript-eslint/type-utils@npm:6.0.0"
@@ -1660,6 +1670,13 @@ __metadata:
   version: 6.0.0
   resolution: "@typescript-eslint/types@npm:6.0.0"
   checksum: a2e232b66b0b057152f4a94d7e0be75f32e389c9c1ec9ed9901ed5aab6e5df08c07bde9865710e315d835e4400ec2232f9c3c525b6edf8a85675ebfbfb69d3a5
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@typescript-eslint/types@npm:6.4.0"
+  checksum: 85b293ad1559dbf8103b2c4cfd0db11c3d9c970d502e2c13d4b1d35e420567042d7077a716d2b4e5113286314d5260f378f242a6dd22ad4b94b4aa69c5f79223
   languageName: node
   linkType: hard
 
@@ -1699,6 +1716,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@typescript-eslint/typescript-estree@npm:6.4.0"
+  dependencies:
+    "@typescript-eslint/types": 6.4.0
+    "@typescript-eslint/visitor-keys": 6.4.0
+    debug: ^4.3.4
+    globby: ^11.1.0
+    is-glob: ^4.0.3
+    semver: ^7.5.4
+    ts-api-utils: ^1.0.1
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: a8db3896550515d0adf140ee115527b409916c4a14ac1f45b5623d130a27ae2d08a1ac906ceda440b01167c88846e2b91ca2025f3d718bff389948f66990c1e7
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/utils@npm:6.0.0":
   version: 6.0.0
   resolution: "@typescript-eslint/utils@npm:6.0.0"
@@ -1734,6 +1769,16 @@ __metadata:
     "@typescript-eslint/types": 6.0.0
     eslint-visitor-keys: ^3.4.1
   checksum: b0d9848a4490174db1d25b5f336548bb11dde4e0ce664c3dc341bed89fb3a3ada091aeb7f5d2d371433815332d93339c6cb77f7a24469c329c3d055b15237bfa
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@typescript-eslint/visitor-keys@npm:6.4.0"
+  dependencies:
+    "@typescript-eslint/types": 6.4.0
+    eslint-visitor-keys: ^3.4.1
+  checksum: 42eb614b9c0a49b6929e093757d772fd27fe5dda9c75f4c7820d1710012c8257eea9bd4f1c4173e2265a8a9ad86cefc1a21869893e7304f3b29b94fa1f987554
   languageName: node
   linkType: hard
 
@@ -7844,7 +7889,7 @@ __metadata:
     "@types/react-dom": 18.2.7
     "@types/react-syntax-highlighter": 15.5.7
     "@typescript-eslint/eslint-plugin": 6.0.0
-    "@typescript-eslint/parser": 6.0.0
+    "@typescript-eslint/parser": 6.4.0
     commitizen: 4.3.0
     copy-to-clipboard: 3.3.3
     coveralls: ^3.1.1
