@@ -11,7 +11,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start -p 4911",
-    "test": "tsc && node ./bin/CheckThumbnails.mjs && jest",
+    "test": "tsc && jest && node ./bin/CheckThumbnails.mjs",
     "test:dev": "jest --watch --coverage",
     "test:update": "jest --updateSnapshot",
     "type-check": "tsc",
