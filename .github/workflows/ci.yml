@@ -1,6 +1,6 @@
 name: Check CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   run-ci:
@@ -16,22 +16,41 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Node
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          node-version: 16
 
-      - name: Install dependencies (with cache)
-        uses: bahmutov/npm-install@v1
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Check types
-        run: yarn type-check
+        run: pnpm type-check
 
       - name: Check linting
-        run: yarn lint
+        run: pnpm lint
 
       - name: Check tests
-        run: yarn test
+        run: pnpm test
 
       - name: Check commits messages
         uses: wagoid/commitlint-github-action@v4
