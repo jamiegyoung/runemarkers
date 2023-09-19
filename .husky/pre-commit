@@ -1,6 +1,6 @@
 #!/bin/sh
 chmod ug+x .husky/*
 
-yarn lint-staged
-yarn test
-yarn build
+pnpm lint-staged
+pnpm test
+pnpm build

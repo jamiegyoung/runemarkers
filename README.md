@@ -44,7 +44,7 @@ This will run a development server at `http://localhost:3000` with hot reloading
 To start the project locally, run:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open `http://localhost:3000` with your browser to see the result.
@@ -53,17 +53,17 @@ Open `http://localhost:3000` with your browser to see the result.
 ### Requirements
 
 - Node.js >= 12.22.0
-- Yarn 3
+- PNPM = ^8.0.0
 
 ### Scripts
 
-- `yarn dev` — Starts the application in development mode at `http://localhost:3000`.
-- `yarn build` — Creates an optimized production build of your application.
-- `yarn start` — Starts the application in production mode.
-- `yarn type-check` — Validate code using TypeScript compiler.
-- `yarn lint` — Runs ESLint for all files in the `src` directory.
-- `yarn format` — Runs Prettier for all files in the `src` directory.
-- `yarn commit` — Run commitizen. Alternative to `git commit`.
+- `pnpm dev` — Starts the application in development mode at `http://localhost:3000`.
+- `pnpm build` — Creates an optimized production build of your application.
+- `pnpm start` — Starts the application in production mode.
+- `pnpm type-check` — Validate code using TypeScript compiler.
+- `pnpm lint` — Runs ESLint for all files in the `src` directory.
+- `pnpm format` — Runs Prettier for all files in the `src` directory.
+- `pnpm commit` — Run commitizen. Alternative to `git commit`.
 
 ## License
 

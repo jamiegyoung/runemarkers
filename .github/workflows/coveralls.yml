@@ -30,4 +30,4 @@ jobs:
       - name: Update coveralls coverage
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: yarn coverage:coveralls
+        run: pnpm coverage:coveralls

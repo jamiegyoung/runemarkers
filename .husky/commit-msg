@@ -1,4 +1,4 @@
 #!/bin/sh
 chmod ug+x .husky/*
 
-yarn commitlint --edit $1
+pnpm commitlint --edit $1
