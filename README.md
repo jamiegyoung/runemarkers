@@ -12,7 +12,11 @@
 [![Check CI](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/jamiegyoung/runemarkers/badge.svg?branch=main)](https://coveralls.io/github/jamiegyoung/runemarkers?branch=main)
 
-## Tiles Contribution
+## Tiles
+
+You can either contribute tiles directly by following the guide below, or create an issue with the `Tiles Request` template
+
+### Tiles Contribution
 
 If you wish to contribute to tiles, follow the instructions below.
 
