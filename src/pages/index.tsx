@@ -7,7 +7,6 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { Analytics } from '@vercel/analytics/react';
 import TileEntities from '@/components/organisms/TileEntities';
 import NavBar from '@/components/molecules/NavBar';
 import styles from '@/styles/Home.module.css';
@@ -80,7 +79,6 @@ Made with \u2764 by jamgyo`,
           </SearchContext.Provider>
         </main>
       </div>
-      <Analytics />
     </>
   );
 }
