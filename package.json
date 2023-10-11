@@ -28,7 +28,6 @@
     ]
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.0",
     "copy-to-clipboard": "3.3.3",
     "eslint-plugin-import": "^2.28.1",
     "fuse.js": "6.6.2",
