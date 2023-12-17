@@ -1,37 +1,64 @@
 .tooltip {
+  display: inline-flex;
+  cursor: help;
+  align-items: flex-start;
+}
+
+.tooltipWrapper {
+  position: absolute;
+  margin-left: 124px;
+}
+
+.modifiedText {
   position: relative;
   cursor: help;
   color: white;
   margin: 0;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
+.tooltipText {
   background-color: var(--color-card);
-  color: white;
-  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   padding: 10px;
+  width: 150px;
   position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 0%;
-  margin-left: -80px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: fit-content;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+  margin-bottom: 10px;
 }
 
-.tooltip .tooltiptext::after {
+@media (prefers-reduced-motion) {
+  transition: none;
+}
+
+
+.tooltip:hover .tooltipText {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tooltipText:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tooltipText::after {
   content: '';
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -10px;
+  border-width: 10px;
+  padding-bottom: 20px;
   border-style: solid;
   border-color: var(--color-card) transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.modifiedText:hover .tooltipText {
   visibility: visible;
 }
