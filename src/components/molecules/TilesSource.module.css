@@ -2,6 +2,7 @@
   color: var(--color-primary);
   font-size: 1rem;
   margin: 10px 5px 10px 0;
+  display: inline;
 }
 
 .header {
@@ -14,7 +15,6 @@
 
 .tilesSourceParagraph {
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -24,3 +24,4 @@
     flex-direction: column;
   }
 }
+
