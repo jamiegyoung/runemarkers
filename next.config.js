@@ -1,7 +1,13 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['oldschool.runescape.wiki'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'oldschool.runescape.wiki',
+        pathname: '/images/**'
+      }
+    ]
   },
   swcMinify: true,
   output: 'standalone',
