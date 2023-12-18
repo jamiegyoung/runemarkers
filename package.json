@@ -39,7 +39,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lite-youtube-embed": "^2.4.0",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@commitlint/cli": "18.4.3",
