@@ -3,4 +3,3 @@ chmod ug+x .husky/*
 
 pnpm lint-staged
 pnpm test
-pnpm build
