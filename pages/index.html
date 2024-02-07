@@ -7,7 +7,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <h1>This is a test thing</h1>
+    {{ range .Entities }}
+      {{ template "entity" . }}
+    {{ end }}
     {{.Body}}
-
   </body>
 </html>

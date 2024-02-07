@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
+	"sync"
 )
 
 // Tile colour can be multiple types and we don't really care which one it is
@@ -46,7 +48,41 @@ func urlEncode(s string) string {
 	return url.QueryEscape(unspacedAndLowered)
 }
 
+func parseName(file string) string {
+	if !strings.HasSuffix(file, ".json") {
+		return filepath.Base(file)
+	}
+	return filepath.Base(file[:len(file)-len(filepath.Ext(file))])
+}
+
+func ReadAllEntities() ([]*Entity, error) {
+	files, err := filepath.Glob("entities/*.json")
+	if err != nil {
+		return nil, err
+	}
+
+	var wg sync.WaitGroup
+	entities := make([]*Entity, len(files))
+
+	for i, file := range files {
+		wg.Add(1)
+		go func(i int, file string) {
+			defer wg.Done()
+			entity_name := parseName(file)
+			entity, err := ReadEntityAndParse(entity_name)
+			if err != nil {
+				panic(err)
+			}
+			entities[i] = entity
+		}(i, file)
+	}
+
+	wg.Wait()
+	return entities, nil
+}
+
 func ReadEntityAndParse(name string) (*Entity, error) {
+	// only add json if it doesn't exist
 	data, err := os.ReadFile("entities/" + name + ".json")
 	if err != nil {
 		return nil, err

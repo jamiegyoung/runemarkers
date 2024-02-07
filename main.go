@@ -1,16 +1,15 @@
 package main
 
 import (
-	// "html/template"
 	"os"
 	"path/filepath"
 	"sync"
-	"text/template"
 )
 
 type Page struct {
-	Title string
-	Body  string
+	Title    string
+	Body     string
+	Entities []*Entity
 }
 
 func main() {
@@ -29,21 +28,31 @@ func main() {
 		go func(page_path string) {
 			defer wg.Done()
 
-			page_file, err := os.Open(page_path)
+			page_bytes, err := os.ReadFile(page_path)
 			if err != nil {
 				panic(err)
 			}
 
-			defer page_file.Close()
+			page_string := string(page_bytes)
+
+			entities, err := ReadAllEntities()
+
+			if err != nil {
+				panic(err)
+			}
 
 			pageData := Page{
-				Title: "Test",
-				Body:  "Test body",
+				Title:  "Test",
+				Body:   "Test body",
+				Entities: entities,
 			}
 
 			// create the output directory if it doesn't exist
 			if _, err := os.Stat(output_path); os.IsNotExist(err) {
-				os.Mkdir(output_path, 0755)
+				err := os.Mkdir(output_path, 0755)
+				if err != nil {
+					panic(err)
+				}
 			}
 
 			out_file, err := os.Create(output_path + "/" + filepath.Base(page_path))
@@ -52,12 +61,17 @@ func main() {
 			}
 			defer out_file.Close()
 
-			t, err := template.New("page").ParseFiles(page_path)
+			page_name := filepath.Base(page_path)
+
+			templ, err := TemplateWithComponents(page_name, page_string)
 			if err != nil {
 				panic(err)
 			}
 
-			err = t.ExecuteTemplate(out_file, filepath.Base(page_path), pageData)
+			err = templ.ExecuteTemplate(out_file, page_name, pageData)
+			if err != nil {
+				panic(err)
+			}
 		}(page_path)
 	}
 
