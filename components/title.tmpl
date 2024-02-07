@@ -1,7 +1,7 @@
 <a href="/" class="title link">
-  <header className="title header">
+  <header class="title header">
     R<span>une</span>
-    <span className="title alt">
+    <span class="title alt">
       M<span>arkers</span>
     </span>
     <span>.net</span>
@@ -27,15 +27,15 @@
   display: flex;
 }
 
-.title span:not(.titleAlt),
+.title.header span:not(.title.alt),
 .title.alt span {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .title.header span:not(.titleAlt),
+  .title.header span:not(.title.alt),
   .title.alt span {
-    display: flex;
+    display: flex !important;
   }
 }
 </style>
