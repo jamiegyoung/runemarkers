@@ -1,4 +1,4 @@
-package main
+package templating
 
 import (
 	"fmt"
@@ -6,10 +6,14 @@ import (
 	"os"
 	"path/filepath"
 	"sync"
+
+	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
+var log = logger.Logger("templating")
+
 func TemplateWithComponents(name string, text string) (*template.Template, error) {
-	fmt.Printf("Generating template with components for %s\n", name)
+	log("Generating template with components for " + name)
 	templ, err := template.New(name).Parse(text)
 	if err != nil {
 		return nil, err
@@ -32,7 +36,7 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 }
 
 func readComponents() ([]string, error) {
-	files, err := filepath.Glob("components/*.html")
+	files, err := filepath.Glob("components/*.tmpl")
 	if err != nil {
 		return nil, err
 	}
@@ -54,12 +58,13 @@ func readComponents() ([]string, error) {
 			// remove the directory from the file name extension
 			file_name := filepath.Base(file[:len(file)-len(filepath.Ext(file))])
 
+			log("Collected component " + file_name)
+
 			file_strings = append(file_strings, fmt.Sprintf("{{ define \"%s\" }}%s{{ end }}", file_name, string(file_bytes)))
 		}(file)
 	}
 
 	wg.Wait()
 
-	fmt.Println(file_strings)
 	return file_strings, nil
 }

@@ -1,8 +1,9 @@
-package main
+package entities
 
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/jamiegyoung/runemarkers-go/logger"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -42,6 +43,8 @@ type Entity struct {
 	FullAltName             string   `json:"fullAltName"`
 }
 
+var log = logger.Logger("entity")
+
 func urlEncode(s string) string {
 	lowered := strings.ToLower(s)
 	unspacedAndLowered := strings.ReplaceAll(lowered, " ", "-")
@@ -56,10 +59,13 @@ func parseName(file string) string {
 }
 
 func ReadAllEntities() ([]*Entity, error) {
+
 	files, err := filepath.Glob("entities/*.json")
 	if err != nil {
 		return nil, err
 	}
+
+	log("Found " + fmt.Sprint(len(files)) + " entity file(s)")
 
 	var wg sync.WaitGroup
 	entities := make([]*Entity, len(files))
@@ -74,6 +80,7 @@ func ReadAllEntities() ([]*Entity, error) {
 				panic(err)
 			}
 			entities[i] = entity
+			log("Read " + entity_name)
 		}(i, file)
 	}
 
