@@ -85,18 +85,18 @@ func TestParseEntity(t *testing.T) {
 	}
 }
 
-// func TestSafeURIGeneration(t *testing.T) {
-// 	unsafeName := "Test (Entity) & Another"
-// 	safeString := urlEncode(unsafeName)
-// 	print(safeString)
-// 	if safeString != "test-%28entity%29-%26-another" {
-// 		t.Errorf("Expected %v, got %v", "test-%28entity%29-%26-another", safeString)
-// 	}
-// }
+func TestUrlEncode(t *testing.T) {
+	unsafeName := "Test (Entity) & Another"
+	safeString := urlEncode(unsafeName)
 
-// func TestGetEntityFail(t *testing.T) {
-// 	_, err := ParseEntity("nonexistententity")
-// 	if err == nil {
-// 		t.Errorf("Expected err")
-// 	}
-// }
+	if safeString != "test-%28entity%29-%26-another" {
+		t.Errorf("Expected %v, got %v", "test-%28entity%29-%26-another", safeString)
+	}
+}
+
+func TestGetEntityFail(t *testing.T) {
+	_, err := parseEntity([]byte("{\"name\":2}"))
+	if err == nil {
+		t.Errorf("Expected err")
+	}
+}

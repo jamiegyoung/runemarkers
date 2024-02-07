@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/url"
 	"os"
@@ -55,12 +56,14 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 }
 
 func transformEntity(entity *Entity) {
-	entity.SafeURI = urlEncode(fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory))
+	entity.SafeURI = urlEncode(
+		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
+	)
 }
 
 func parseEntity(data []byte) (*Entity, error) {
 	var target *Entity
-	err := ParseJSON(data, &target)
+	err := json.Unmarshal(data, &target)
 
 	transformEntity(target)
 
