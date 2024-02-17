@@ -7,12 +7,14 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>This is a test thing</h1>
-    {{ template "title" }}
-    {{ range .Entities }}
-      {{- template "entity" . -}}
-    {{ end }}
-    {{.Body}}
+    {{ template "navbar" }}
+    <div class="main-container">
+      <p class="help-text">Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile" enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".</p>
+      {{ range .Entities }}
+        {{- template "entity_card" . -}}
+      {{ end }}
+      {{.Body}}
+    </div>
   </body>
 </html>
 
@@ -34,5 +36,22 @@ body {
   --color-card-hover-light: #55554a;
   background-color: var(--color-background);
   color: var(--color-text);
+}
+
+.main-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-text {
+  padding: 0;
+  color: rgb(199, 199, 199);
+  text-align: center;
+  min-width: 17rem;
+  margin-bottom: 1rem;
+  max-width: 40rem;
+  width: 80%;
 }
 </style>
