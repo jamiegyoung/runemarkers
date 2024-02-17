@@ -132,7 +132,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		log("Collected thumbnail for " + entity.Name)
 
 		if index < len(entities)-1 {
-			// sleep if not the last entity
+			// sleep if not the last entity to prevent spamming the server
 			time.Sleep(time.Millisecond * 200)
 		}
 	}
