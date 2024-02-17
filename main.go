@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/jamiegyoung/runemarkers-go/entities"
+	"github.com/jamiegyoung/runemarkers-go/libs"
 	"github.com/jamiegyoung/runemarkers-go/logger"
 	"github.com/jamiegyoung/runemarkers-go/templating"
 	"os"
@@ -17,9 +18,13 @@ type Page struct {
 
 var log = logger.Logger("main")
 
+const output_path = "public"
+const pages_glob = "pages/*.tmpl"
+
 func main() {
-	output_path := "public"
-	pages_paths, err := filepath.Glob("pages/*.tmpl")
+
+	pages_paths, err := filepath.Glob(pages_glob)
+
 	if err != nil {
 		panic(err)
 	}
@@ -29,14 +34,18 @@ func main() {
 	var wg sync.WaitGroup
 
 	log("Reading entities")
-	entities, err := entities.ReadAllEntities()
+	found_entities, err := entities.ReadAllEntities()
+	if err != nil {
+		panic(err)
+	}
 
+	err = entities.CollectThumbnails(found_entities, output_path)
 	if err != nil {
 		panic(err)
 	}
 
 	pageData := Page{
-		Entities: entities,
+		Entities: found_entities,
 	}
 
 	for _, page_path := range pages_paths {
@@ -57,11 +66,18 @@ func main() {
 			page_name := filepath.Base(page_path)
 
 			renderPage(page_name, page_string, out_file, pageData)
+
 		}(page_path)
 	}
 
 	wg.Wait()
-	log("Done")
+
+	err = libs.CopyLibs(output_path + "/js")
+	if err != nil {
+		panic(err)
+	}
+	log("Done!")
+
 }
 
 func renderPage(page_name string, page_string string, out_file *os.File, pageData Page) {

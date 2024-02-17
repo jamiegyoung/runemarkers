@@ -6,7 +6,6 @@ import (
 	"os"
 	"path/filepath"
 	"sync"
-
 	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
