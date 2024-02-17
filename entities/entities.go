@@ -3,12 +3,16 @@ package entities
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/jamiegyoung/runemarkers-go/logger"
+	"io"
+	"net/http"
 	"net/url"
 	"os"
 	"path/filepath"
 	"strings"
 	"sync"
+	"time"
+
+	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
 // Tile colour can be multiple types and we don't really care which one it is
@@ -59,7 +63,6 @@ func parseName(file string) string {
 }
 
 func ReadAllEntities() ([]*Entity, error) {
-
 	files, err := filepath.Glob("entities/*.json")
 	if err != nil {
 		return nil, err
@@ -72,20 +75,69 @@ func ReadAllEntities() ([]*Entity, error) {
 
 	for i, file := range files {
 		wg.Add(1)
-		go func(i int, file string) {
+		go func(i int, file_path string) {
 			defer wg.Done()
-			entity_name := parseName(file)
+			entity_name := parseName(file_path)
 			entity, err := ReadEntityAndParse(entity_name)
 			if err != nil {
 				panic(err)
 			}
+			log("Read " + file_path)
 			entities[i] = entity
-			log("Read " + entity_name)
 		}(i, file)
 	}
 
 	wg.Wait()
+
 	return entities, nil
+}
+
+func CollectThumbnails(entities []*Entity, output_path string) error {
+	for index, entity := range entities {
+		log("(" + fmt.Sprint(index+1) + "/" + fmt.Sprint(len(entities)) + ") Collecting thumbnail for " + entity.Name)
+
+		thumbnail_url := entity.Thumbnail
+
+		response, err := http.Get(thumbnail_url)
+		if err != nil {
+			log("Error getting thumbnail: " + err.Error())
+			return err
+		}
+		defer response.Body.Close()
+
+		// get thumbnail file type from the end of the thumbnail_url
+		thumbnail_file_type := filepath.Ext(thumbnail_url)
+
+		log("Found type " + thumbnail_file_type + " for " + entity.Name)
+
+		// create directory if it doesn't exist
+		thumbnail_output_path := output_path + "/thumbnails"
+
+		err = os.MkdirAll(thumbnail_output_path, 0755)
+		if err != nil {
+			return err
+		}
+
+		file, err := os.Create(thumbnail_output_path + "/" + entity.SafeURI + thumbnail_file_type)
+		if err != nil {
+			return err
+		}
+		defer file.Close()
+
+		_, err = io.Copy(file, response.Body)
+		if err != nil {
+			return err
+		}
+
+		log("Collected thumbnail for " + entity.Name)
+
+		if index < len(entities)-1 {
+			// sleep if not the last entity
+			time.Sleep(1 * time.Second)
+		}
+	}
+
+	return nil
 }
 
 func ReadEntityAndParse(name string) (*Entity, error) {
@@ -99,6 +151,11 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 }
 
 func transformEntity(entity *Entity) {
+	if entity.Subcategory == "" {
+		entity.SafeURI = urlEncode(entity.Name)
+    return
+	}
+
 	entity.SafeURI = urlEncode(
 		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
 	)
