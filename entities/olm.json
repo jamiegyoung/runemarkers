@@ -1,0 +1,82 @@
+{
+  "name": "Olm",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Great_Olm.png/120px-Great_Olm.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Great_Olm",
+  "tags": ["cox", "chambers of xeric", "raids"],
+  "source": {
+    "name": "WeDoRaids Discord - #bot-commands !coxtiles",
+    "link": "https://discord.gg/wdr"
+  },
+  "tiles": [
+    {
+      "regionId": 12889,
+      "regionX": 37,
+      "regionY": 43,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 37,
+      "regionY": 45,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 28,
+      "regionY": 45,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 28,
+      "regionY": 43,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 37,
+      "regionY": 38,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 28,
+      "regionY": 38,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 37,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -16777216, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 37,
+      "regionY": 50,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 28,
+      "regionY": 47,
+      "z": 0,
+      "color": { "value": -16777216, "falpha": 0 }
+    },
+    {
+      "regionId": 12889,
+      "regionX": 28,
+      "regionY": 50,
+      "z": 0,
+      "color": { "value": -1, "falpha": 0 }
+    }
+  ]
+}
