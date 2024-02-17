@@ -39,12 +39,25 @@ func main() {
 		panic(err)
 	}
 
-  errs := make(chan error, 1)
-	go func() {
-    errs <- entities.CollectThumbnails(found_entities, output_path)
-  }()
+	argsWithoutProg := os.Args[1:]
 
-	pageData := Page{
+	errs := make(chan error, 1)
+	// check if --collect-thumbs is passed
+	if hasArg(argsWithoutProg, "--collect-thumbs") {
+		go func() {
+			errs <- entities.CollectThumbnails(found_entities, output_path)
+		}()
+	} else {
+		log("Skipping thumbnail collection, use --collect-thumbs to collect thumbnails")
+		log("Updating thumbnail urls to safe url file names, assuming all are png")
+		for _, entity := range found_entities {
+			entity.Thumbnail = "thumbnails/" + entity.SafeURI + ".png"
+		}
+
+		close(errs)
+	}
+
+	page_data := Page{
 		Entities: found_entities,
 	}
 
@@ -65,7 +78,15 @@ func main() {
 
 			page_name := filepath.Base(page_path)
 
-			renderPage(page_name, page_string, out_file, pageData)
+			// listen for errors from the thumbnail collection
+			// thumbnail collection updates the page_data, therefore we render
+			// the pages after the thumbnail collection is done
+			if err := <-errs; err != nil {
+				panic(err)
+			}
+
+			print("Rendering page " + page_name)
+			renderPage(page_name, page_string, out_file, page_data)
 
 		}(page_path)
 	}
@@ -76,11 +97,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
-  // listen for errors from the thumbnail collection
-  if err := <-errs; err != nil {
-    panic(err)
-  }
 
 	log("Done!")
 
@@ -126,4 +142,13 @@ func createOutFile(output_path string, page_path string) *os.File {
 
 func replaceTmplWithHtml(tmp string) string {
 	return strings.Replace(tmp, ".tmpl", ".html", -1)
+}
+
+func hasArg(args []string, arg string) bool {
+	for _, a := range args {
+		if a == arg {
+			return true
+		}
+	}
+	return false
 }

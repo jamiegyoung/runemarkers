@@ -87,7 +87,7 @@ func TestParseEntity(t *testing.T) {
 
 func TestUrlEncode(t *testing.T) {
 	unsafeName := "Test (Entity) & Another"
-	safeString := urlEncode(unsafeName)
+	safeString := urlEncodeEntityName(unsafeName)
 
 	if safeString != "test-%28entity%29-%26-another" {
 		t.Errorf("Expected %v, got %v", "test-%28entity%29-%26-another", safeString)

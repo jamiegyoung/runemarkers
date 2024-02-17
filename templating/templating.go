@@ -2,11 +2,11 @@ package templating
 
 import (
 	"fmt"
+	"github.com/jamiegyoung/runemarkers-go/logger"
 	"html/template"
 	"os"
 	"path/filepath"
 	"sync"
-	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
 var log = logger.Logger("templating")
@@ -47,17 +47,17 @@ func readComponents() ([]string, error) {
 	for _, file := range files {
 		wg.Add(1)
 
-		go func(file string) {
+		go func(file_path string) {
 			defer wg.Done()
-			file_bytes, err := os.ReadFile(file)
+			log("Collecting component " + file_path)
+
+			file_bytes, err := os.ReadFile(file_path)
 			if err != nil {
 				panic(err)
 			}
 
 			// remove the directory from the file name extension
-			file_name := filepath.Base(file[:len(file)-len(filepath.Ext(file))])
-
-			log("Collected component " + file_name)
+			file_name := filepath.Base(file_path[:len(file_path)-len(filepath.Ext(file_path))])
 
 			file_strings = append(
 				file_strings,

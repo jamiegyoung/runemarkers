@@ -33,7 +33,7 @@ type Source struct {
 }
 
 type Entity struct {
-	SafeURI                 string   `json:"safeURI"`
+	SafeURI                 string
 	Name                    string   `json:"name"`
 	Subcategory             string   `json:"subcategory,omitempty"`
 	AltName                 string   `json:"altName,omitempty"`
@@ -48,19 +48,6 @@ type Entity struct {
 }
 
 var log = logger.Logger("entity")
-
-func urlEncode(s string) string {
-	lowered := strings.ToLower(s)
-	unspacedAndLowered := strings.ReplaceAll(lowered, " ", "-")
-	return url.QueryEscape(unspacedAndLowered)
-}
-
-func parseName(file string) string {
-	if !strings.HasSuffix(file, ".json") {
-		return filepath.Base(file)
-	}
-	return filepath.Base(file[:len(file)-len(filepath.Ext(file))])
-}
 
 func ReadAllEntities() ([]*Entity, error) {
 	files, err := filepath.Glob("entities/*.json")
@@ -77,12 +64,13 @@ func ReadAllEntities() ([]*Entity, error) {
 		wg.Add(1)
 		go func(i int, file_path string) {
 			defer wg.Done()
+			log("Reading " + file_path)
+
 			entity_name := parseName(file_path)
 			entity, err := ReadEntityAndParse(entity_name)
 			if err != nil {
 				panic(err)
 			}
-			log("Read " + file_path)
 			entities[i] = entity
 		}(i, file)
 	}
@@ -93,6 +81,24 @@ func ReadAllEntities() ([]*Entity, error) {
 }
 
 func CollectThumbnails(entities []*Entity, output_path string) error {
+
+	// create directory if it doesn't exist
+	thumbnail_output_path := output_path + "/thumbnails"
+
+	// remove previous files in directory
+	files, err := filepath.Glob(thumbnail_output_path + "/*")
+	if err != nil {
+		return err
+	}
+
+	log("Removing previous thumbnails")
+	for _, file := range files {
+		err = os.Remove(file)
+		if err != nil {
+			return err
+		}
+	}
+
 	for index, entity := range entities {
 		log("(" + fmt.Sprint(index+1) + "/" + fmt.Sprint(len(entities)) + ") Collecting thumbnail for " + entity.Name)
 
@@ -108,15 +114,17 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		// get thumbnail file type from the end of the thumbnail_url
 		thumbnail_file_type := filepath.Ext(thumbnail_url)
 
-		// create directory if it doesn't exist
-		thumbnail_output_path := output_path + "/thumbnails"
-
 		err = os.MkdirAll(thumbnail_output_path, 0755)
 		if err != nil {
 			return err
 		}
 
-		file, err := os.Create(thumbnail_output_path + "/" + entity.SafeURI + thumbnail_file_type)
+		unescaped, err := url.QueryUnescape(entity.SafeURI)
+		if err != nil {
+			return err
+		}
+
+		file, err := os.Create(thumbnail_output_path + "/" + unescaped + thumbnail_file_type)
 		if err != nil {
 			return err
 		}
@@ -127,12 +135,13 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 			return err
 		}
 
-		log("Collected thumbnail for " + entity.Name)
-
 		if index < len(entities)-1 {
 			// sleep if not the last entity to prevent spamming the server
 			time.Sleep(time.Millisecond * 200)
 		}
+
+		// update the thumbnail to the new path
+		entities[index].Thumbnail = "thumbnails/" + entity.SafeURI + thumbnail_file_type
 	}
 
 	return nil
@@ -148,15 +157,30 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 	return parseEntity(data)
 }
 
+func urlEncodeEntityName(s string) string {
+	lowered := strings.ToLower(s)
+	unspacedAndLowered := strings.ReplaceAll(lowered, " ", "-")
+	return url.QueryEscape(unspacedAndLowered)
+}
+
+func parseName(file string) string {
+	if !strings.HasSuffix(file, ".json") {
+		return filepath.Base(file)
+	}
+	return filepath.Base(file[:len(file)-len(filepath.Ext(file))])
+}
+
 func transformEntity(entity *Entity) {
 	if entity.Subcategory == "" {
-		entity.SafeURI = urlEncode(entity.Name)
+		entity.SafeURI = urlEncodeEntityName(entity.Name)
+		log("SafeURI: " + entity.SafeURI)
 		return
 	}
 
-	entity.SafeURI = urlEncode(
+	entity.SafeURI = urlEncodeEntityName(
 		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
 	)
+	log("SafeURI: " + entity.SafeURI)
 }
 
 func parseEntity(data []byte) (*Entity, error) {
