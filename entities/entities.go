@@ -108,8 +108,6 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		// get thumbnail file type from the end of the thumbnail_url
 		thumbnail_file_type := filepath.Ext(thumbnail_url)
 
-		log("Found type " + thumbnail_file_type + " for " + entity.Name)
-
 		// create directory if it doesn't exist
 		thumbnail_output_path := output_path + "/thumbnails"
 
@@ -153,7 +151,7 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 func transformEntity(entity *Entity) {
 	if entity.Subcategory == "" {
 		entity.SafeURI = urlEncode(entity.Name)
-    return
+		return
 	}
 
 	entity.SafeURI = urlEncode(
