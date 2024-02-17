@@ -1,0 +1,19 @@
+<script>
+const fuseOptions = {
+  // the keys of the objects to search
+  keys: [
+    { name: `fullName`, weight: 0.7 },
+    { name: `fullAltName`, weight: 0.5 },
+    { name: `tags`, weight: 0.3 },
+  ],
+  threshold: 0.4,
+};
+
+const tileData = [
+  { fullName: `John Doe`, fullAltName: `Doe, John`, tags: `` }
+]
+
+const fuse = new Fuse(tileData, fuseOptions);
+
+console.log("HI!", fuse.search(`John`));
+</script>
