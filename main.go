@@ -45,45 +45,61 @@ func main() {
 		go func(page_path string) {
 			defer wg.Done()
 
-			log("Reading " + page_path)
-			page_bytes, err := os.ReadFile(page_path)
+			page_string, err := readPageString(page_path)
 			if err != nil {
 				panic(err)
 			}
-
-			page_string := string(page_bytes)
 
 			// create the output directory if it doesn't exist
-			if _, err := os.Stat(output_path); os.IsNotExist(err) {
-				err := os.Mkdir(output_path, 0755)
-				if err != nil {
-					panic(err)
-				}
-			}
-
-			out_file, err := os.Create(output_path + "/" + replaceTmplWithHtml(filepath.Base(page_path)))
-			if err != nil {
-				panic(err)
-			}
+			out_file := createOutFile(output_path, page_path)
 			defer out_file.Close()
 
 			page_name := filepath.Base(page_path)
 
-			templ, err := templating.TemplateWithComponents(page_name, page_string)
-			if err != nil {
-				panic(err)
-			}
-
-			log("Rendering " + page_name + " to " + out_file.Name())
-			err = templ.ExecuteTemplate(out_file, page_name, pageData)
-			if err != nil {
-				panic(err)
-			}
+			renderPage(page_name, page_string, out_file, pageData)
 		}(page_path)
 	}
 
 	wg.Wait()
 	log("Done")
+}
+
+func renderPage(page_name string, page_string string, out_file *os.File, pageData Page) {
+	templ, err := templating.TemplateWithComponents(page_name, page_string)
+	if err != nil {
+		panic(err)
+	}
+
+	log("Rendering " + page_name + " to " + out_file.Name())
+	err = templ.ExecuteTemplate(out_file, page_name, pageData)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func readPageString(page_path string) (string, error) {
+	log("Reading " + page_path)
+	page_bytes, err := os.ReadFile(page_path)
+	if err != nil {
+		return "", err
+	}
+
+	return string(page_bytes), nil
+}
+
+func createOutFile(output_path string, page_path string) *os.File {
+	if _, err := os.Stat(output_path); os.IsNotExist(err) {
+		err := os.Mkdir(output_path, 0755)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	out_file, err := os.Create(output_path + "/" + replaceTmplWithHtml(filepath.Base(page_path)))
+	if err != nil {
+		panic(err)
+	}
+	return out_file
 }
 
 func replaceTmplWithHtml(tmp string) string {
