@@ -60,7 +60,11 @@ func readComponents() ([]string, error) {
 
 			log("Collected component " + file_name)
 
-			file_strings = append(file_strings, fmt.Sprintf("{{ define \"%s\" }}%s{{ end }}", file_name, string(file_bytes)))
+			file_strings = append(
+				file_strings,
+				fmt.Sprintf("{{ define \"%s\" }}%s{{ end }}",
+					file_name, string(file_bytes)),
+			)
 		}(file)
 	}
 
