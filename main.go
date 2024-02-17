@@ -12,10 +12,7 @@ import (
 )
 
 type Page struct {
-	Title       string
-	Body        string
-	Entities    []*entities.Entity
-	ButtonClass string
+	Entities []*entities.Entity
 }
 
 var log = logger.Logger("main")
@@ -39,10 +36,7 @@ func main() {
 	}
 
 	pageData := Page{
-		Title:       "Test",
-		Body:        "Test body",
-		Entities:    entities,
-		ButtonClass: "btn-primary",
+		Entities: entities,
 	}
 
 	for _, page_path := range pages_paths {
@@ -89,7 +83,7 @@ func main() {
 	}
 
 	wg.Wait()
-  log("Done")
+	log("Done")
 }
 
 func replaceTmplWithHtml(tmp string) string {
