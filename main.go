@@ -39,10 +39,10 @@ func main() {
 		panic(err)
 	}
 
-	err = entities.CollectThumbnails(found_entities, output_path)
-	if err != nil {
-		panic(err)
-	}
+  errs := make(chan error, 1)
+	go func() {
+    errs <- entities.CollectThumbnails(found_entities, output_path)
+  }()
 
 	pageData := Page{
 		Entities: found_entities,
@@ -76,6 +76,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+  // listen for errors from the thumbnail collection
+  if err := <-errs; err != nil {
+    panic(err)
+  }
+
 	log("Done!")
 
 }
