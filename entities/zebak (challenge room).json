@@ -1,0 +1,523 @@
+{
+  "name": "Zebak",
+  "altName": "Path of Crondis",
+  "subcategory": "Challenge Room",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Zebak.png/120px-Zebak.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies#Path_of_Crondis",
+  "tags": [
+    "raids 3",
+    "toa",
+    "tombs of amascut"
+  ],
+  "recommendedGuideVideoId": "eS6PsclMwKo",
+  "source": {
+    "name": "aatykon - ToA Raids 3: Solo Expert+ Walkthrough w/Insanity Warden",
+    "link": "https://pastebin.com/zsBgZXmB"
+  },
+  "tiles": [
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 20,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 20,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 9,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 9,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 44,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 44,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 55,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 55,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 45,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 45,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 47,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 47,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 49,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 49,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 51,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 51,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 53,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 53,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 18,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 18,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 16,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 16,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 14,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 14,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 12,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 12,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 10,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 10,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 19,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 19,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 17,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 17,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 15,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 15,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 13,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 13,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 11,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 11,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 46,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 46,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 48,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 48,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 50,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 50,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 52,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 52,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 54,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 54,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 21,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 21,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 43,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 43,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 41,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 41,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 42,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 42,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 23,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 23,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 22,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 22,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 8,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 8,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 7,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 7,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 56,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 56,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 37,
+      "regionY": 40,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 38,
+      "regionY": 40,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 24,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 24,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 27,
+      "regionY": 57,
+      "z": 0,
+      "color": "#8B565756"
+    },
+    {
+      "regionId": 15698,
+      "regionX": 26,
+      "regionY": 57,
+      "z": 0,
+      "color": "#8B565756"
+    }
+  ]
+}

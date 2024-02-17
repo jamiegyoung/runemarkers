@@ -1,0 +1,275 @@
+{
+  "name": "Akkha",
+  "altName": "Path of Het",
+  "subcategory": "Butterfly Tech",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Akkha.png/120px-Akkha.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Akkha/",
+  "tags": [
+    "raids 3",
+    "toa",
+    "tombs of amascut"
+  ],
+  "recommendedGuideVideoId": "dXg9T1PkP6Y",
+  "source": {
+    "name": "Molgoatkirby - How I do the Butterfly Method (quick guide)",
+    "link": "https://www.youtube.com/watch?v=dXg9T1PkP6Y"
+  },
+  "tiles": [
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 32,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 39,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 32,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 24,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 31,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 24,
+      "z": 1,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 22,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 22,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 42,
+      "regionY": 30,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 42,
+      "regionY": 33,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 34,
+      "regionY": 41,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 31,
+      "regionY": 41,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 23,
+      "regionY": 33,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 23,
+      "regionY": 30,
+      "z": 1,
+      "color": "#968D8D8D"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 28,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 28,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 36,
+      "regionY": 35,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 29,
+      "regionY": 35,
+      "z": 1,
+      "color": "#32FFFFFF",
+      "label": "lol"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 27,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 28,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 28,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 27,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 28,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 27,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 33,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 32,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 36,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 35,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 28,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    },
+    {
+      "regionId": 14676,
+      "regionX": 26,
+      "regionY": 27,
+      "z": 1,
+      "color": "#ABFFFFFF"
+    }
+  ]
+}

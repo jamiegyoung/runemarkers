@@ -1,0 +1,253 @@
+{
+  "name": "The Leviathan",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/The_Leviathan.png/120px-The_Leviathan.png",
+  "wiki": "https://oldschool.runescape.wiki/w/The_Leviathan",
+  "tags": [
+    "dt2",
+    "desert treasure",
+    "boss"
+  ],
+  "recommendedGuideVideoId": "DHaj1zUuE1M",
+  "source": {
+    "name": "TheEdB0ys - OSRS Leviathan Full Guide | How I Fight Leviathan OSRS",
+    "link": "https://www.youtube.com/watch?v=DHaj1zUuE1M",
+    "modified": "Added lightening and boulder tiles"
+  },
+  "tiles": [
+    {
+      "regionId": 8291,
+      "regionX": 38,
+      "regionY": 32,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 38,
+      "regionY": 40,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 28,
+      "regionY": 32,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 28,
+      "regionY": 40,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 43,
+      "regionY": 33,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 24,
+      "regionY": 28,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 26,
+      "regionY": 28,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 27,
+      "regionY": 28,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 28,
+      "regionY": 28,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 29,
+      "regionY": 28,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 43,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 42,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 41,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 40,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 27,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 29,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 30,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 31,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 32,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 39,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 38,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 37,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 36,
+      "regionY": 45,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 26,
+      "regionY": 34,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 26,
+      "regionY": 38,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 40,
+      "regionY": 34,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 40,
+      "regionY": 38,
+      "z": 0,
+      "color": "#61CCFF31"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 33,
+      "regionY": 43,
+      "z": 0,
+      "color": "#64FFFFFF",
+      "label": "Boulder"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 33,
+      "regionY": 29,
+      "z": 0,
+      "color": "#64FFFFFF",
+      "label": "Boulder"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 25,
+      "regionY": 36,
+      "z": 0,
+      "color": "#64FFFFFF",
+      "label": "Lightning"
+    },
+    {
+      "regionId": 8291,
+      "regionX": 41,
+      "regionY": 36,
+      "z": 0,
+      "color": "#64FFFFFF",
+      "label": "Lightning"
+    }
+  ]
+}

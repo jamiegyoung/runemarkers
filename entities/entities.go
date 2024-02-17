@@ -133,7 +133,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 
 		if index < len(entities)-1 {
 			// sleep if not the last entity
-			time.Sleep(1 * time.Second)
+			time.Sleep(time.Millisecond * 200)
 		}
 	}
 

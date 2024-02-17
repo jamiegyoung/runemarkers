@@ -1,0 +1,204 @@
+{
+  "name": "Commander Zilyana",
+  "altName": "Saradomin",
+  "subcategory": "Energy-efficient",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Commander_Zilyana.png/120px-Commander_Zilyana.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+  "tags": ["boss", "godwars", "gwd"],
+  "source": {
+    "name": "GeChallengeM - Solo Saradomin GWD for Crossbows/Tbow (Energy-efficient)",
+    "link": "https://www.youtube.com/watch?v=WUa4T1lRNKo"
+  },
+  "recommendedGuideVideoId": "WUa4T1lRNKo",
+  "tiles": [
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 12,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 19,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 18,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 14,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 19,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 20,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 18,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 19,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 23,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 24,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 17,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 16,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 18,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 27,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 22,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 17,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 11,
+      "regionY": 25,
+      "z": 0,
+      "color": "#63FFFF00"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 23,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 18,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 9,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 20,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 13,
+      "z": 0,
+      "color": "#63FF0000"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 17,
+      "regionY": 11,
+      "z": 0,
+      "color": "#630000FF"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 26,
+      "regionY": 10,
+      "z": 0,
+      "color": "#6300FFFF"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 27,
+      "regionY": 12,
+      "z": 0,
+      "color": "#6300FFFF"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 27,
+      "regionY": 11,
+      "z": 0,
+      "color": "#63FF00FF"
+    },
+    {
+      "regionId": 11602,
+      "regionX": 15,
+      "regionY": 10,
+      "z": 0,
+      "color": "#63FF0000"
+    }
+  ]
+}

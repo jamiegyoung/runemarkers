@@ -1,0 +1,178 @@
+{
+  "name": "Gem Mining",
+  "subcategory": "3-tick",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Gem_rocks.png/120px-Gem_rocks.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Pay-to-play_Mining_training#Levels_52%E2%80%9399:_Gem_rocks",
+  "tags": [
+    "skilling",
+    "mining"
+  ],
+  "recommendedGuideVideoId": "Xr1vZMm2JvI",
+  "source": {
+    "name": "Jcw - OSRS Easy 3-tick Gem Mining Guide (In-Depth)",
+    "link": "https://www.youtube.com/watch?v=Xr1vZMm2JvI"
+  },
+  "tiles": [
+    {
+      "regionId": 11410,
+      "regionX": 33,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "4"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 27,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "out"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 17,
+      "regionY": 47,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "3"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 10,
+      "regionY": 45,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "2"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 16,
+      "regionY": 55,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "2"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 14,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 14,
+      "regionY": 40,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 12,
+      "regionY": 44,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 15,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 18,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 23,
+      "regionY": 50,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 22,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 21,
+      "regionY": 37,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 30,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 15,
+      "regionY": 52,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "go back"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 13,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 12,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 32,
+      "regionY": 45,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 26,
+      "regionY": 39,
+      "z": 0,
+      "color": "#FFF1FF00"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 21,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "1"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 21,
+      "regionY": 53,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 11410,
+      "regionX": 20,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    }
+  ]
+}

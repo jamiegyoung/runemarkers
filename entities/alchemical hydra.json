@@ -1,0 +1,62 @@
+{
+  "name": "Alchemical Hydra",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Alchemical_Hydra_(serpentine).png/120px-Alchemical_Hydra_(serpentine).png",
+  "wiki": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
+  "tags": ["slayer", "boss"],
+  "recommendedGuideVideoId": "7ehTfsD--gM",
+  "source": {
+    "name": "Gnomonkey - Alchemical Hydra Guide 2021 (4-4.5M GP/HR) OSRS",
+    "link": "https://www.youtube.com/watch?v=7ehTfsD--gM"
+  },
+  "tiles": [
+    {
+      "regionId": 5536,
+      "regionX": 27,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 20,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 19,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 33,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 14,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 13,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FFFFFF00"
+    },
+    {
+      "regionId": 5536,
+      "regionX": 18,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FF747474"
+    }
+  ]
+}

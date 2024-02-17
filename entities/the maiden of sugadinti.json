@@ -1,0 +1,159 @@
+{
+  "name": "The Maiden of Sugadinti",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/The_Maiden_of_Sugadinti.png/120px-The_Maiden_of_Sugadinti.png",
+  "wiki": "https://oldschool.runescape.wiki/w/The_Maiden_of_Sugadinti",
+  "tags": ["theatre of blood", "tob", "raids"],
+  "source": {
+    "name": "WeDoRaids Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
+  "tiles": [
+    {
+      "regionId": 12613,
+      "regionX": 34,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 35,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 34,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 35,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 38,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 42,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 46,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 42,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 38,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 46,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 22,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 39,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 16,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 15,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 14,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    }
+  ]
+}

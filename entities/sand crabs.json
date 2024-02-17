@@ -1,0 +1,439 @@
+{
+  "name": "Sand Crabs",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sand_Crab.png/120px-Sand_Crab.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Sand_Crab",
+  "tags": ["afk", "combat"],
+  "recommendedGuideVideoId": "6l3HneL1WTk",
+  "source": {
+    "name": "github.com/csandman",
+    "link": "https://github.com/csandman"
+  },
+  "tiles": [
+    {
+      "regionId": 6710,
+      "regionX": 11,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6710,
+      "regionX": 10,
+      "regionY": 22,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6710,
+      "regionX": 11,
+      "regionY": 21,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6710,
+      "regionX": 12,
+      "regionY": 21,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 21,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 20,
+      "regionY": 14,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 22,
+      "regionY": 14,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 22,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 37,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 36,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 38,
+      "regionY": 13,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 38,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 38,
+      "regionY": 11,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 48,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 48,
+      "regionY": 13,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 47,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 49,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 45,
+      "regionY": 5,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 46,
+      "regionY": 6,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 44,
+      "regionY": 5,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6966,
+      "regionX": 45,
+      "regionY": 4,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 16,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 53,
+      "regionY": 16,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 51,
+      "regionY": 15,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 14,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 58,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 57,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 58,
+      "regionY": 11,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 59,
+      "regionY": 12,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 59,
+      "regionY": 13,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 40,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 41,
+      "regionY": 17,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 39,
+      "regionY": 17,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 40,
+      "regionY": 16,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 21,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 22,
+      "regionY": 21,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 21,
+      "regionY": 21,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 20,
+      "regionY": 20,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 21,
+      "regionY": 19,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 23,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 24,
+      "regionY": 33,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 23,
+      "regionY": 32,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 22,
+      "regionY": 33,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 23,
+      "regionY": 34,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 30,
+      "regionY": 47,
+      "z": 0,
+      "color": "#FFFAFF00",
+      "label": "3 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 29,
+      "regionY": 47,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 31,
+      "regionY": 47,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 30,
+      "regionY": 48,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 36,
+      "regionY": 53,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 36,
+      "regionY": 52,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 35,
+      "regionY": 53,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 36,
+      "regionY": 54,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 37,
+      "regionY": 54,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FF00C930",
+      "label": "4 Sand"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 53,
+      "regionY": 46,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 45,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 51,
+      "regionY": 46,
+      "z": 0,
+      "color": "#64FF0000"
+    },
+    {
+      "regionId": 6965,
+      "regionX": 52,
+      "regionY": 47,
+      "z": 0,
+      "color": "#64FF0000"
+    }
+  ]
+}

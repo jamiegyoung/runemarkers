@@ -1,0 +1,69 @@
+{
+  "name": "Drift Net Fishing",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Ceto.png/320px-Ceto.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Drift_net_fishing",
+  "tags": ["Fishing", "Skilling"],
+  "recommendedGuideVideoId": "YOA6p7hjmF8",
+  "source": {
+    "name": "OSRS Drift Net Fishing Guide (Efficient Method)",
+    "link": "https://www.youtube.com/watch?v=YOA6p7hjmF8"
+  },
+  "tiles": [
+    {
+      "regionId": 15008,
+      "regionX": 30,
+      "regionY": 58,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 30,
+      "regionY": 59,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 30,
+      "regionY": 60,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 26,
+      "regionY": 54,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 27,
+      "regionY": 54,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 27,
+      "regionY": 53,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 28,
+      "regionY": 53,
+      "z": 1,
+      "color": "#FFE80505"
+    },
+    {
+      "regionId": 15008,
+      "regionX": 29,
+      "regionY": 53,
+      "z": 1,
+      "color": "#FFE80505"
+    }
+  ]
+}

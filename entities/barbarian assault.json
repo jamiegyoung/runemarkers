@@ -1,0 +1,95 @@
+{
+  "name": "Barbarian Assault",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Penance_Queen.png/120px-Penance_Queen.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Barbarian_Assault",
+  "tags": ["minigame","defender","healer"],
+  "recommendedGuideVideoId": "Q_auOReO_2Y",
+  "source": {
+    "name": "Barbarian Assault for Beginners (OSRS)",
+    "link": "https://www.youtube.com/watch?v=Q_auOReO_2Y"
+  },
+  "tiles": [
+    {
+      "regionId": 7509,
+      "regionX": 29,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FF8E0F0F"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 28,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FF746464"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 27,
+      "regionY": 16,
+      "z": 0,
+      "color": "#FF746464"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 28,
+      "regionY": 16,
+      "z": 0,
+      "color": "#FF746464",
+      "label": "FILL VIAL"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 45,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FF8E0F0F",
+      "label": "2 Bad"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 45,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FF0F8E2C",
+      "label": "4 Good"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 35,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FF0F8E2C",
+      "label": "4 Good"
+    },
+    {
+      "regionId": 7509,
+      "regionX": 39,
+      "regionY": 39,
+      "z": 0,
+      "color": "#FF8E0F0F",
+      "label": "2 Bad"
+    },
+    {
+      "regionId": 7508,
+      "regionX": 44,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FF0F8E1E"
+    },
+    {
+      "regionId": 7508,
+      "regionX": 38,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF0F8E1E"
+    },
+    {
+      "regionId": 7508,
+      "regionX": 30,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FF746464"
+    }
+  ]
+}

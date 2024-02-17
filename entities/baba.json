@@ -1,0 +1,171 @@
+{
+  "name": "Ba-Ba",
+  "altName": "Path of Apmeken",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Ba-Ba.png/120px-Ba-Ba.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Ba-Ba/",
+  "tags": ["raids 3", "toa", "tombs of amascut"],
+  "recommendedGuideVideoId": "q3D2jeguGz8",
+  "tiles": [
+    {
+      "regionId": 15188,
+      "regionX": 41,
+      "regionY": 32,
+      "z": 0,
+      "color": "#A0FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 22,
+      "regionY": 29,
+      "z": 0,
+      "color": "#A0FD1C1C"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 42,
+      "regionY": 36,
+      "z": 0,
+      "color": "#A0FD1C1C"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 22,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 24,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 27,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 30,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 30,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 33,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 34,
+      "regionY": 34,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 34,
+      "regionY": 33,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 34,
+      "regionY": 32,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 34,
+      "regionY": 31,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 34,
+      "regionY": 30,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 33,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 27,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 24,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 37,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 40,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 42,
+      "regionY": 35,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 42,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 40,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    },
+    {
+      "regionId": 15188,
+      "regionX": 37,
+      "regionY": 29,
+      "z": 0,
+      "color": "#30FFFFFF"
+    }
+  ]
+}

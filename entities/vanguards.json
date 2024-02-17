@@ -1,0 +1,305 @@
+{
+  "name": "Vanguards",
+  "subcategory": "CM Safespots",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Vanguard_(melee).png/120px-Vanguard_(melee).png",
+  "wiki": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Strategies#Vanguards",
+  "tags": ["cox", "chambers of xeric", "raids", "challenge mode", "cms"],
+  "source": {
+    "name": "WeDoRaids Discord",
+    "link": "https://discord.gg/wdr"
+  },
+  "tiles": [
+    {
+      "regionId": 13139,
+      "regionX": 52,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 52,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 53,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 54,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 54,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 54,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 53,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 52,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 53,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 44,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 44,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 47,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 47,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 47,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 43,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF272424"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 44,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF272424"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 55,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF272424"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 52,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 53,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FFCACACA"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 53,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFCACACA"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 52,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 44,
+      "regionY": 27,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 46,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FFCACACA"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 50,
+      "regionY": 8,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "South East Initial Spawn"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 44,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FF999999"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 45,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FFFD0404"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 39,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFFFFFFF",
+      "label": "Melee SS - Start on Gray tile, move to White after vanguard moves close"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 37,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFFD0404",
+      "label": "Path to this tile every 2-3 Hits to prevent the melee from roaming."
+    },
+    {
+      "regionId": 13139,
+      "regionX": 38,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFFD0404",
+      "label": "West and North Spawns require the player to keep the melee vanguards attention"
+    },
+    {
+      "regionId": 13139,
+      "regionX": 40,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF272424",
+      "label": "Stand on Black"
+    }
+  ]
+}

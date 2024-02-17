@@ -1,0 +1,40 @@
+{
+  "name": "Nylocas Vasilias",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Nylocas_Vasilias_%28melee%29.png/120px-Nylocas_Vasilias_%28melee%29.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Nylocas_Vasilias",
+  "tags": ["theatre of blood", "tob", "raids"],
+  "source": {
+    "name": "WeDoRaids Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
+  "tiles": [
+    {
+      "regionId": 13122,
+      "regionX": 28,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13122,
+      "regionX": 35,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13122,
+      "regionX": 28,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13122,
+      "regionX": 35,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    }
+  ]
+}

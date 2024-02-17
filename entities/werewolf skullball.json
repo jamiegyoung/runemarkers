@@ -1,0 +1,221 @@
+{
+  "name": "Werewolf Skullball",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Skullball.png/120px-Skullball.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Werewolf_Skullball",
+  "tags": ["agility", "skilling"],
+  "recommendedGuideVideoId": "x3Dz3jd7Gps",
+  "source": {
+    "name": "RuneLite's Discord - #tile-markers",
+    "link": "https://runelite.net/discord"
+  },
+  "tiles": [
+    {
+      "regionId": 14234,
+      "regionX": 35,
+      "regionY": 6,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "1. Shoot North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 36,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "3. Kick North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 34,
+      "regionY": 16,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "2. Tap East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 36,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "4. Shoot North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 35,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "5. Tap East 2x"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 38,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "6. Shoot North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 39,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "7. Tap West"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 37,
+      "regionY": 37,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "8. Shoot North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 38,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "10. Shoot North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 36,
+      "regionY": 47,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "9. Tap East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 37,
+      "regionY": 53,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "11. Kick East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 42,
+      "regionY": 52,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "12. Tap North 2x"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 41,
+      "regionY": 55,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "13. Shoot East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 50,
+      "regionY": 55,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "14. Kick East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 55,
+      "regionY": 56,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "15. Shoot South"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 56,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "16. Tap West"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 54,
+      "regionY": 47,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "17. Shoot South"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 54,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "18. Shoot South"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 53,
+      "regionY": 28,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "19. Tap East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 55,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "20. Shoot South"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 55,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "21. Shoot South"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 56,
+      "regionY": 10,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "22. Kick West"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 51,
+      "regionY": 9,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "23. Kick North"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 50,
+      "regionY": 8,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "24. Tap East"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 53,
+      "regionY": 8,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "25. Shoot West"
+    },
+    {
+      "regionId": 14234,
+      "regionX": 43,
+      "regionY": 7,
+      "z": 0,
+      "color": "#FFFF001D",
+      "label": "26. Shoot/Kick North"
+    }
+  ]
+}

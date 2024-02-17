@@ -1,0 +1,36 @@
+{
+  "name": "Sarachnis",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sarachnis.png/120px-Sarachnis.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Sarachnis",
+  "tags": ["boss", "spider"],
+  "tiles": [
+    {
+      "regionId": 7322,
+      "regionX": 47,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 7322,
+      "regionX": 47,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 7322,
+      "regionX": 52,
+      "regionY": 48,
+      "z": 0,
+      "color": "#FFFAFF00"
+    },
+    {
+      "regionId": 7322,
+      "regionX": 52,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FFFAFF00"
+    }
+  ]
+}

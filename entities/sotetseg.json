@@ -1,0 +1,159 @@
+{
+  "name": "Sotetseg",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Sotetseg.png/120px-Sotetseg.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Sotetseg",
+  "tags": ["theatre of blood", "tob", "raids"],
+  "source": {
+    "name": "WeDoRaids Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
+  "tiles": [
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 37,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 18,
+      "regionY": 42,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 13,
+      "regionY": 43,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 12,
+      "regionY": 38,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 15,
+      "regionY": 37,
+      "z": 0,
+      "color": { "value": -65536 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    }
+  ]
+}

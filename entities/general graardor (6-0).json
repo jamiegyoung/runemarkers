@@ -1,0 +1,66 @@
+{
+  "name": "General Graardor",
+  "altName": "Bandos",
+  "subcategory": "6:0",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/120px-General_Graardor.png",
+  "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
+  "tags": ["boss", "godwars", "gwd", "bandos"],
+  "recommendedGuideVideoId": "oIWnXBqebTU",
+  "source": {
+    "name": "NoBankWicked - Bandos 6:0 Method (ranged)",
+    "link": "https://www.youtube.com/watch?v=oIWnXBqebTU",
+    "modified": "Added the label \"start\" to the starting tile"
+  },
+  "tiles": [
+    {
+      "regionId": 11347,
+      "regionX": 60,
+      "regionY": 39,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 48,
+      "regionY": 39,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 48,
+      "regionY": 57,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 60,
+      "regionY": 54,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 48,
+      "regionY": 49,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 60,
+      "regionY": 46,
+      "z": 2,
+      "color": "#FFF8EA09"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 57,
+      "regionY": 40,
+      "z": 2,
+      "color": "#FFF8EA09",
+      "label": "start"
+    }
+  ]
+}

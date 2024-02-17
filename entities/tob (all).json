@@ -1,0 +1,1047 @@
+{
+  "name": "Theatre of Blood",
+  "subcategory": "All Rooms",
+  "altName": "ToB (All Rooms)",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Theatre_of_Blood_logo.png/120px-Theatre_of_Blood_logo.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Theatre_of_Blood",
+  "source": {
+    "name": "WeDoRaids Discord - #bot-commands !tobtiles",
+    "link": "https://discord.gg/wdr"
+  },
+  "tags": [
+    "tob",
+    "verzik",
+    "verzik vitur",
+    "the maiden of sugadinti",
+    "maiden",
+    "pestilent bloat",
+    "bloat",
+    "nylocas vasilias",
+    "sotetseg",
+    "xarpus"
+  ],
+  "tiles": [
+    {
+      "regionId": 12613,
+      "regionX": 34,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 35,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 34,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 35,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 38,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 42,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 46,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 42,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 38,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 46,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 41,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 22,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 39,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 41,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 16,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 15,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12613,
+      "regionX": 50,
+      "regionY": 14,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 21,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 21,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 20,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 20,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 19,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 19,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 16,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 16,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 17,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 17,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 17,
+      "regionY": 32,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 17,
+      "regionY": 33,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 33,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13125,
+      "regionX": 18,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 37,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 18,
+      "regionY": 42,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 13,
+      "regionY": 43,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 12,
+      "regionY": 38,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 15,
+      "regionY": 37,
+      "z": 0,
+      "color": { "value": -65536 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 17,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 14,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 11,
+      "regionY": 34,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 13123,
+      "regionX": 20,
+      "regionY": 31,
+      "z": 0,
+      "color": { "value": -9934744 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 38,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 31,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 30,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 31,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 30,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 38,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 39,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 38,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 37,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 32,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 33,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 37,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 36,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 31,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 32,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 32,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 33,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 30,
+      "regionY": 31,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 38,
+      "regionY": 31,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 38,
+      "regionY": 39,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 38,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 37,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 30,
+      "regionY": 39,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 31,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 32,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 37,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 36,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 35,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 34,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 33,
+      "regionY": 40,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 36,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 35,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 34,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 33,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 34,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 35,
+      "regionY": 30,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 39,
+      "regionY": 34,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 31,
+      "regionY": 36,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 31,
+      "regionY": 34,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 33,
+      "regionY": 32,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 35,
+      "regionY": 32,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 37,
+      "regionY": 34,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 37,
+      "regionY": 36,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 35,
+      "regionY": 38,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 33,
+      "regionY": 38,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12612,
+      "regionX": 29,
+      "regionY": 39,
+      "z": 1,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 26,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 26,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 38,
+      "regionY": 30,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 38,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 40,
+      "regionY": 25,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 24,
+      "regionY": 25,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 40,
+      "regionY": 22,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 24,
+      "regionY": 22,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 25,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 39,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 29,
+      "regionY": 26,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 29,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 29,
+      "regionY": 25,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 29,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 30,
+      "regionY": 23,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 31,
+      "regionY": 23,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 32,
+      "regionY": 23,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 33,
+      "regionY": 23,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 34,
+      "regionY": 23,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 35,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 35,
+      "regionY": 25,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 35,
+      "regionY": 26,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 35,
+      "regionY": 27,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 35,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 34,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 33,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 32,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 31,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 30,
+      "regionY": 29,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 29,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 40,
+      "regionY": 18,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 38,
+      "regionY": 17,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 26,
+      "regionY": 17,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 24,
+      "regionY": 18,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 32,
+      "regionY": 20,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 36,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 28,
+      "regionY": 24,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    },
+    {
+      "regionId": 12611,
+      "regionX": 32,
+      "regionY": 28,
+      "z": 0,
+      "color": { "value": -2090309528 }
+    }
+  ]
+}
