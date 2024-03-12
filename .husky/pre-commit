@@ -1,5 +1,2 @@
-#!/bin/sh
-chmod ug+x .husky/*
-
 pnpm lint-staged
 pnpm test
