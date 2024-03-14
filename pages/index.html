@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/fuse.js"></script>
+</head>
+
+<body>
+  {{ template "navbar" }}
+  <div class="main-container">
+    <p class="help-text">Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile"
+      enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".
+    </p>
+    {{ template "search" . }}
+    <div class="inner-list-container">
+      {{ range .Entities }}
+      {{- template "entity_card" . -}}
+      {{ end }}
+    </div>
+  </div>
+</body>
+
+</html>
+
+{{ template "styles" .}}
+
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --color-primary: #e5e53a;
+    --color-primary-light: #f1f196;
+    --color-background: #20201f;
+    --color-foreground: #292927;
+    --color-text: #f5f3f5;
+    --color-subtle-text: #c9c9c9;
+    --color-card: #3b3b37;
+    --color-card-hover: #42423e;
+    --color-card-hover-light: #55554a;
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+  .main-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .help-text {
+    padding: 0;
+    color: rgb(199, 199, 199);
+    text-align: center;
+    min-width: 17rem;
+    margin-bottom: 1rem;
+    max-width: 40rem;
+    width: 80%;
+  }
+
+  .inner-list-container {
+    min-width: 17rem;
+    margin-bottom: 0.75rem;
+    max-width: 37rem;
+    width: 80%;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 0;
+    background-color: var(--color-foreground);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.25), 0 .25rem .75rem rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 900px) {
+    .inner-list-container {
+      width: 95%;
+      height: auto;
+    }
+  }
+</style>

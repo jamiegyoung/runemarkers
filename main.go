@@ -19,7 +19,7 @@ type Page struct {
 var log = logger.New("main")
 
 const output_path = "public"
-const pages_glob = "pages/*.tmpl"
+const pages_glob = "pages/*.html"
 
 func main() {
 
