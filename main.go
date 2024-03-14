@@ -16,7 +16,7 @@ type Page struct {
 	Entities []*entities.Entity
 }
 
-var log = logger.Logger("main")
+var log = logger.New("main")
 
 const output_path = "public"
 const pages_glob = "pages/*.tmpl"

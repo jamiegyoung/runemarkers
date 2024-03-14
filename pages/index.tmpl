@@ -10,6 +10,7 @@
     {{ template "navbar" }}
     <div class="main-container">
       <p class="help-text">Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile" enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".</p>
+      {{ template "search" }}
       <div class="inner-list-container">
         {{ range .Entities }}
           {{- template "entity_card" . -}}
@@ -18,6 +19,8 @@
     </div>
   </body>
 </html>
+
+{{ template "styles" .}}
 
 <style>
 html,

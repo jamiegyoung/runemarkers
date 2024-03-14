@@ -1,4 +1,4 @@
-<div class="entity-card">
+<div class="entity-card hidden">
   <img
     class="entity-thumbnail"
     loading="lazy"
@@ -13,43 +13,3 @@
   <p>{{ .Wiki }}</p>
 </div>
 
-<style>
-  .entity-thumbnail {
-    border-radius: 50%;
-    margin-right: 1.5rem;
-    object-fit: contain;
-  }
-
-
-  .entity-card {
-    width: 80%;
-    background-color: var(--color-card);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    display: flex;
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
-  }
-
-  .entity.btn-copy{
-    display: block;
-    padding: 0.75rem;
-    background: var(--color-primary);
-    border: none;
-    border-radius: 0.75rem;
-    color: var(--color-background);
-    font-size: 1.2rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    height: 2.5rem;
-    overflow: hidden;
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
-  }
-
-  .entity.btn-copy:hover {
-    background: var(--color-primary-light);
-    transform: translateY(-0.05rem);
-    box-shadow: 0 0.65rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.4rem 0.4rem rgba(0, 0, 0, 0.23);
-    color: black;
-  }
-</style>

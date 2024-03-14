@@ -1,0 +1,29 @@
+.title.header {
+  font-weight: bold;
+  padding: 0 1.25rem;
+  display: flex;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.title.link {
+  text-decoration: none;
+}
+
+.title.alt {
+  color: var(--color-primary);
+  display: flex;
+}
+
+.title.header span:not(.title.alt),
+.title.alt span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .title.header span:not(.title.alt),
+  .title.alt span {
+    display: flex !important;
+  }
+}

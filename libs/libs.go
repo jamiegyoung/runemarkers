@@ -10,7 +10,7 @@ import (
 
 const libs_glob = "libs/*.js"
 
-var log = logger.Logger("libs")
+var log = logger.New("libs")
 
 func CopyLibs(output_path string) error {
 	file_paths, err := filepath.Glob(libs_glob)

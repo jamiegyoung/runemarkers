@@ -47,7 +47,7 @@ type Entity struct {
 	FullAltName             string   `json:"fullAltName"`
 }
 
-var log = logger.Logger("entity")
+var log = logger.New("entity")
 
 func ReadAllEntities() ([]*Entity, error) {
 	files, err := filepath.Glob("entities/*.json")
@@ -81,7 +81,6 @@ func ReadAllEntities() ([]*Entity, error) {
 }
 
 func CollectThumbnails(entities []*Entity, output_path string) error {
-
 	// create directory if it doesn't exist
 	thumbnail_output_path := output_path + "/thumbnails"
 
