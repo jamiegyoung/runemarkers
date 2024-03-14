@@ -1,4 +1,9 @@
-.entity-search {
+.entity-search-container {
+  position: relative;
+  transform: translateY(15px);
+}
+
+#entity-search {
   font-size: 1.2rem;
   max-width: 165px;
   min-width: 50px;
@@ -15,43 +20,37 @@
   box-shadow:
     0 3px 6px rgba(0, 0, 0, 0.25),
     0 1px 3px rgba(0, 0, 0, 0.7);
-  display: inline-block;
-  position: relative;
-  transform: translateX(20px);
+  float: left;
 }
 
-.entity-search:focus {
+#entity-search:not(:placeholder-shown) {
   max-width: 225px;
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.2),
     0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.entity-search:focus::placeholder {
+#entity-search:focus::placeholder {
   content: "";
   opacity: 0;
   transition: all 0.3s ease-out;
 }
 
 @media (max-width: 270px) {
-  .entity-search::placeholder {
+  #entity-search::placeholder {
     content: "";
     opacity: 0;
   }
 }
 
 .clear-button {
-  visibility: hidden;
+  float: left;
   height: 40px;
-  position: relative;
-  right: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  right: 10px;
   border: none;
   background-color: transparent;
   transition: 0.1s ease-out;
-  margin: 0;
   border-radius: 0 10px 10px 0;
   opacity: 0;
   transform: scale(0);
@@ -59,8 +58,7 @@
 }
 
 /* when the input has text, show the clear button */
-.entity-search:not(:placeholder-shown) + .clear-button {
-  visibility: visible;
+#entity-search:not(:placeholder-shown) + .clear-button {
   opacity: 1;
   transform: scale(1);
 }
