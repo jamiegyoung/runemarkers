@@ -52,12 +52,11 @@ function addListItem(item) {
   innerListContainer.appendChild(listItem)
 }
 
-function updateList() {
+function updateList(items) {
   // clear the inner-list-container
   innerListContainer.innerHTML = ''
 
-  const listItems = searchResults.forEach(entity => {
-    const item = entity.item
+  const listItems = items.forEach(item=> {
     addListItem(item)
   })
 }

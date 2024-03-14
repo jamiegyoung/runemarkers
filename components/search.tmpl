@@ -40,10 +40,8 @@
 
   const entitySearch = document.getElementById("entity-search");
 
-  let searchResults = []
-
   function resetList() {
-      tileData.forEach((td) => addListItem(td))
+    updateList(tileData)
   }
 
   window.onload = resetList;
@@ -55,8 +53,8 @@
       return
     }
 
-    searchResults = fuse.search(entitySearch.value);
-    updateList(searchResults)
+    const searchResults = fuse.search(entitySearch.value);
+    updateList(searchResults.map(r => r.item))
   }
 
   function clearSearch() {
