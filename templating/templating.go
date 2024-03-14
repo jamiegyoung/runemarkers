@@ -79,8 +79,6 @@ func readComponentStyles() (string, error) {
 	joined_styles := strings.Join(file_strings, "\n")
 	styles_component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", joined_styles)
 
-	log("Styles component: " + styles_component)
-
 	return styles_component, nil
 }
 
