@@ -15,11 +15,7 @@
       enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".
     </p>
     {{ template "search" . }}
-    <div class="inner-list-container">
-      {{ range .Entities }}
-      {{- template "entity_card" . -}}
-      {{ end }}
-    </div>
+    {{ template "entity_list" . }}
   </div>
 </body>
 

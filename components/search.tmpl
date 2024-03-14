@@ -21,19 +21,36 @@
 
   const tileData = [
     {{ range .Entities -}}
-    {fullName: {{ .FullName }}, fullAltName: {{ .FullAltName }}, tags: ``},
+    {
+      safeUri: "{{ .SafeURI }}",
+      name: "{{ .Name }}",
+      subcategory: "{{ .Subcategory }}",
+      altName: "{{ .AltName }}",
+      tags: [{{ range .Tags }}"{{ . }}",{{ end }}],
+      thumbnail: "{{ .Thumbnail }}",
+      fullName: "{{ .FullName }}",
+      fullAltName: "{{ .FullAltName }}"
+    },
     {{ end }}
   ]
 
   fuse = new Fuse(tileData, fuseOptions);
 
+  const entitySearch = document.getElementById("entity-search");
+
+  let searchResults = []
   function search() {
-    const entitySearch = document.getElementById("entity-search");
-    console.log(fuse.search(entitySearch.value.trim()))
+    // if no search term, show all
+    if (!entitySearch.value) {
+      tileData.forEach((td) => addListItem(td))
+      return
+    }
+
+    searchResults = fuse.search(entitySearch.value);
+    updateList(searchResults)
   }
 
   function clearSearch() {
-
     entitySearch.value = ``;
     entitySearch.focus();
   }

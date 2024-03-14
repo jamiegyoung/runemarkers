@@ -1,0 +1,32 @@
+{{ template "entity_card" }}
+<div class="inner-list-container">
+</div>
+
+<script>
+const listItemTemplate = document.getElementById('entity-list-template')
+
+const innerListContainer = document.querySelector('.inner-list-container')
+
+function addListItem(item) {
+    // clone the list item template
+    const listItem = listItemTemplate.cloneNode(true)
+    // set the text content of the list item to the entity's name
+    listItem.querySelector('img').src = item.thumbnail
+    listItem.querySelector('.entity-name').textContent = item.name
+    listItem.querySelector('.entity-subcategory').textContent = item.subcategory
+    listItem.classList.remove('hidden')
+
+    // add to the inner-list-container
+    innerListContainer.appendChild(listItem)
+}
+
+function updateList() {
+  // clear the inner-list-container
+  innerListContainer.innerHTML = ''
+
+  const listItems = searchResults.forEach(entity => {
+    const item = entity.item
+    addListItem(item)
+  })
+}
+</script>

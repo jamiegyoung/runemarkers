@@ -83,7 +83,7 @@ func readComponentStyles() (string, error) {
 }
 
 func readComponents() ([]string, error) {
-	files, err := filepath.Glob("components/*.html")
+	files, err := filepath.Glob("components/*.tmpl")
 	if err != nil {
 		return nil, err
 	}
