@@ -1,12 +1,35 @@
 <div id="entity-list-template" class="entity-card hidden">
-  <img
-    class="entity-thumbnail"
-    loading="lazy"
-    decoding="async"
-    width="100"
-    height="100"
-  />
-  <h1 class="entity-name">{{ .Name }}</h1>
-  <p class="entity-subcategory">{{ .Subcategory }}</p>
+  <a class="entity-link" href="">
+    <img
+      onload="this.style.opacity = 1"
+      class="entity-thumbnail"
+      loading="lazy"
+      decoding="async"
+      width="100"
+      height="100"
+    />
+  </a>
+  <div class="entity-card-data">
+    <div>
+      <h2 class="entity-card-title">
+        <span class="entity-card-name"></span>
+        <span class="entity-card-subcategory"></span>
+      </h1>
+      <p class="entity-card-title-alt">
+        <span class="entity-card-name"></span>
+        <span class="entity-card-subcategory"></span>
+      </p>
+    </div>
+    <div>
+      <p><span class="entity-card-tile-count"></span> tile markers</p>
+      <div class="entity-interaction">
+      <button
+        class="entity-card-copy"
+        onclick="copy(this)"
+        data-tiles=""
+        >Copy</button>
+      </div>
+    </div>
+  </div>
 </div>
 

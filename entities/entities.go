@@ -43,6 +43,7 @@ type Entity struct {
 	Wiki                    string   `json:"wiki"`
 	Source                  *Source  `json:"source,omitempty"`
 	RecommendedGuideVideoId string   `json:"recommendedGuideVideoId,omitempty"`
+	TilesString             string
 	FullName                string
 	FullAltName             string
 }
@@ -69,8 +70,6 @@ func ReadAllEntities() ([]*Entity, error) {
 			entity_name := parseName(file_path)
 			entity, err := ReadEntityAndParse(entity_name)
 
-      entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
-      entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
 			if err != nil {
 				panic(err)
 			}
@@ -173,16 +172,25 @@ func parseName(file string) string {
 }
 
 func transformEntity(entity *Entity) {
+	tilesString, err := json.Marshal(entity.Tiles)
+  if err != nil {
+    panic(err)
+  }
+
+	entity.TilesString = string(tilesString)
+
+	entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
+	entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
+
 	if entity.Subcategory == "" {
 		entity.SafeURI = urlEncodeEntityName(entity.Name)
-		log("SafeURI: " + entity.SafeURI)
 		return
 	}
 
 	entity.SafeURI = urlEncodeEntityName(
 		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
 	)
-	log("SafeURI: " + entity.SafeURI)
+
 }
 
 func parseEntity(data []byte) (*Entity, error) {

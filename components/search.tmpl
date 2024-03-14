@@ -29,7 +29,9 @@
       tags: [{{ range .Tags }}"{{ . }}",{{ end }}],
       thumbnail: "{{ .Thumbnail }}",
       fullName: "{{ .FullName }}",
-      fullAltName: "{{ .FullAltName }}"
+      fullAltName: "{{ .FullAltName }}",
+      tileCount: {{ .Tiles | len }},
+      tilesString: {{ .TilesString }},
     },
     {{ end }}
   ]
@@ -39,10 +41,17 @@
   const entitySearch = document.getElementById("entity-search");
 
   let searchResults = []
+
+  function resetList() {
+      tileData.forEach((td) => addListItem(td))
+  }
+
+  window.onload = resetList;
+
   function search() {
     // if no search term, show all
     if (!entitySearch.value) {
-      tileData.forEach((td) => addListItem(td))
+      resetList()
       return
     }
 

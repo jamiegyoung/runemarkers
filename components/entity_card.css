@@ -8,6 +8,7 @@
   width: 80%;
   background-color: var(--color-card);
   padding: 1.5rem;
+  margin: 0.5rem auto;
   border-radius: 0.75rem;
   display: flex;
   box-shadow:
@@ -17,6 +18,39 @@
 
 .entity-card.hidden {
   display: none;
+}
+
+.entity-card-data .hidden {
+  display: none;
+}
+
+.entity-card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  text-align: end;
+}
+
+.entity-card-title {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  text-decoration: none;
+  margin: 0 0 2px 0;
+}
+
+.entity-card-title-alt {
+  margin: 0;
+}
+
+.entity-card-data p {
+  color: var(--color-subtle-text);
+}
+
+.entity-image-container > img {
+  transition: all 0.2s ease-out;
+  opacity: 0;
 }
 
 .entity.btn-copy {
