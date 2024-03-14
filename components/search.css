@@ -23,7 +23,7 @@
   float: left;
 }
 
-#entity-search:not(:placeholder-shown) {
+#entity-search:not(:placeholder-shown), #entity-search:focus {
   max-width: 225px;
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.2),
