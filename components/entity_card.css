@@ -41,6 +41,10 @@
   margin: 0 0 2px 0;
 }
 
+.entity-card-name, .entity-card-title-alt, .entity-card-subcategory {
+  display: inline-block;
+}
+
 .entity-card-title-alt {
   margin: 0;
 }
