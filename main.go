@@ -42,13 +42,14 @@ func main() {
 	argsWithoutProg := os.Args[1:]
 
 	errs := make(chan error, 1)
-	// check if --collect-thumbs is passed
-	if hasArg(argsWithoutProg, "--collect-thumbs") {
+	// check if --skip-thumbs is passed
+	if !hasArg(argsWithoutProg, "--skip-thumbs") {
 		go func() {
+			log("Collecting thumbnails, use --skip-thumbs to collect thumbnails")
 			errs <- entities.CollectThumbnails(found_entities, output_path)
 		}()
 	} else {
-		log("Skipping thumbnail collection, use --collect-thumbs to collect thumbnails")
+		log("Skipping thumbnail collection")
 		log("Updating thumbnail urls to safe url file names, assuming all are png")
 		for _, entity := range found_entities {
 			entity.Thumbnail = "thumbnails/" + entity.SafeURI + ".png"
