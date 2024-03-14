@@ -1,35 +1,40 @@
 <div class="entity-search-container">
-  <input id="entity-search" type="text" id="search" placeholder="type here to search"/>
+  <input oninput="search()" id="entity-search" type="text" id="search" placeholder="type here to search" />
   <button onclick="clearSearch()" class="clear-button">
     <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-      <path d="M6.4 19.45 4.55 17.6l5.6-5.6-5.6-5.6L6.4 4.55l5.6 5.6 5.6-5.6 1.85 1.85-5.6 5.6 5.6 5.6-1.85 1.85-5.6-5.6Z" />
+      <path
+        d="M6.4 19.45 4.55 17.6l5.6-5.6-5.6-5.6L6.4 4.55l5.6 5.6 5.6-5.6 1.85 1.85-5.6 5.6 5.6 5.6-1.85 1.85-5.6-5.6Z" />
     </svg>
   </button>
 </div>
 
 <script>
-function clearSearch() {
-  const entitySearch = document.getElementById("entity-search");
+  const fuseOptions = {
+    // the keys of the objects to search
+    keys: [
+      {name: `fullName`, weight: 0.7},
+      {name: `fullAltName`, weight: 0.5},
+      {name: `tags`, weight: 0.3},
+    ],
+    threshold: 0.4,
+  };
 
-  entitySearch.value = ``;
-  entitySearch.focus();
-}
+  const tileData = [
+    {{ range .Entities -}}
+    {fullName: {{ .FullName }}, fullAltName: {{ .FullAltName }}, tags: ``},
+    {{ end }}
+  ]
 
-const fuseOptions = {
-  // the keys of the objects to search
-  keys: [
-    { name: `fullName`, weight: 0.7 },
-    { name: `fullAltName`, weight: 0.5 },
-    { name: `tags`, weight: 0.3 },
-  ],
-  threshold: 0.4,
-};
+  fuse = new Fuse(tileData, fuseOptions);
 
-const tileData = [
-  { fullName: `John Doe`, fullAltName: `Doe, John`, tags: `` }
-]
+  function search() {
+    const entitySearch = document.getElementById("entity-search");
+    console.log(fuse.search(entitySearch.value.trim()))
+  }
 
-const fuse = new Fuse(tileData, fuseOptions);
+  function clearSearch() {
 
-console.log("HI!", fuse.search(`John`));
+    entitySearch.value = ``;
+    entitySearch.focus();
+  }
 </script>
