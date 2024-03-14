@@ -43,8 +43,8 @@ type Entity struct {
 	Wiki                    string   `json:"wiki"`
 	Source                  *Source  `json:"source,omitempty"`
 	RecommendedGuideVideoId string   `json:"recommendedGuideVideoId,omitempty"`
-	FullName                string   `json:"fullName"`
-	FullAltName             string   `json:"fullAltName"`
+	FullName                string
+	FullAltName             string
 }
 
 var log = logger.New("entity")
@@ -68,6 +68,9 @@ func ReadAllEntities() ([]*Entity, error) {
 
 			entity_name := parseName(file_path)
 			entity, err := ReadEntityAndParse(entity_name)
+
+      entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
+      entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
 			if err != nil {
 				panic(err)
 			}
