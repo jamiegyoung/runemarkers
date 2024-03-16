@@ -55,7 +55,7 @@ function addListItem(item) {
 
   const button = listItem.querySelector('.entity-card-copy')
 
-  button.setAttribute('hx-get', `/api/button_${item.safeUri}.html`)
+  button.setAttribute('hx-get', `./api/button_${item.safeUri}.html`)
 
   // add to the inner-list-container
   innerListContainer.appendChild(listItem)
