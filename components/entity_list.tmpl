@@ -6,7 +6,14 @@ const listItemTemplate = document.getElementById('entity-list-template')
 
 const innerListContainer = document.querySelector('.inner-list-container')
 
+document.body,addEventListener('htmx:load', (event) => {
+  if (event.target.matches('.entity-card-copy')) {
+    const button = event.target
+    copy(button)
+  }
+})
 function copy(e) {
+  console.log("copying")
   const text = e.getAttribute('data-tiles')
   const textArea = document.createElement('textarea')
   textArea.value = text
@@ -46,10 +53,14 @@ function addListItem(item) {
 
   listItem.querySelector('.entity-card-tile-count').textContent = item.tileCount
 
-  const button = listItem.querySelector('.entity-card-copy').setAttribute('data-tiles', item.tilesString)
+  const button = listItem.querySelector('.entity-card-copy')
+
+  button.setAttribute('hx-get', `/api/button_${item.safeUri}.html`)
 
   // add to the inner-list-container
   innerListContainer.appendChild(listItem)
+
+  htmx.process(listItem)
 }
 
 function updateList(items) {

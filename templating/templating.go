@@ -7,7 +7,6 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
-
 	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
@@ -119,3 +118,4 @@ func readComponents() ([]string, error) {
 
 	return file_strings, nil
 }
+

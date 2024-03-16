@@ -1,6 +1,7 @@
 package entities
 
 import (
+	"crypto/md5"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -33,6 +34,7 @@ type Source struct {
 }
 
 type Entity struct {
+	URI                     string
 	SafeURI                 string
 	Name                    string   `json:"name"`
 	Subcategory             string   `json:"subcategory,omitempty"`
@@ -120,7 +122,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 			return err
 		}
 
-		unescaped, err := url.QueryUnescape(entity.SafeURI)
+		unescaped, err := url.QueryUnescape(entity.URI)
 		if err != nil {
 			return err
 		}
@@ -142,7 +144,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		}
 
 		// update the thumbnail to the new path
-		entities[index].Thumbnail = "thumbnails/" + entity.SafeURI + thumbnail_file_type
+		entities[index].Thumbnail = "thumbnails/" + entity.URI + thumbnail_file_type
 	}
 
 	return nil
@@ -158,10 +160,17 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 	return parseEntity(data)
 }
 
-func urlEncodeEntityName(s string) string {
+func entityTilesHash(tilesString string) string {
+	// generate a hash based on the entity tiles
+	hash := md5.New()
+	hash.Write([]byte(tilesString))
+	// truncate hash to 8 characters
+	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
+}
+
+func transformToUrl(s string, tilesString string) string {
 	lowered := strings.ToLower(s)
-	unspacedAndLowered := strings.ReplaceAll(lowered, " ", "-")
-	return url.QueryEscape(unspacedAndLowered)
+	return strings.ReplaceAll(lowered, " ", "-") + "-" + entityTilesHash(tilesString)
 }
 
 func parseName(file string) string {
@@ -171,26 +180,30 @@ func parseName(file string) string {
 	return filepath.Base(file[:len(file)-len(filepath.Ext(file))])
 }
 
+func getEntityUri(entity Entity) string {
+	if entity.Subcategory == "" {
+		return transformToUrl(entity.Name, entity.TilesString)
+	}
+
+	return transformToUrl(
+		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
+		entity.TilesString,
+	)
+}
+
 func transformEntity(entity *Entity) {
 	tilesString, err := json.Marshal(entity.Tiles)
-  if err != nil {
-    panic(err)
-  }
+	if err != nil {
+		panic(err)
+	}
 
 	entity.TilesString = string(tilesString)
 
 	entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
 	entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
 
-	if entity.Subcategory == "" {
-		entity.SafeURI = urlEncodeEntityName(entity.Name)
-		return
-	}
-
-	entity.SafeURI = urlEncodeEntityName(
-		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
-	)
-
+	entity.URI = getEntityUri(*entity)
+	entity.SafeURI = url.QueryEscape(entity.URI)
 }
 
 func parseEntity(data []byte) (*Entity, error) {

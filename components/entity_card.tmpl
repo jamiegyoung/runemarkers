@@ -25,8 +25,10 @@
       <div class="entity-interaction">
       <button
         class="entity-card-copy"
+        hx-get="/api/button_tile"
+        hx-trigger="click"
+        hx-swap="outerHTML"
         onclick="copy(this)"
-        data-tiles=""
         >Copy</button>
       </div>
     </div>
