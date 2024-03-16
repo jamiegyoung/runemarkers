@@ -1,5 +1,7 @@
 <button
-  class="entity-card-copy"
-  onclick="copy(this)"
+  class="entity-card-copy animate"
+  onclick="copy(this);
+    this.classList.remove('animate');
+    window.setTimeout(() => this.classList.add('animate'), 1);"
   data-tiles="{{ . }}"
 >Copy</button>
