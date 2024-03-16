@@ -87,7 +87,10 @@
   box-shadow:
     0 0.65rem 1.25rem rgba(0, 0, 0, 0.19),
     0 0.4rem 0.4rem rgba(0, 0, 0, 0.23);
-  color: black;
+}
+
+.entity-card-copy.animate {
+  animation: clickAnim 0.2s ease-out;
 }
 
 .entity-card-copy.animate::after {
@@ -101,6 +104,23 @@
   left: 100%;
   transform: skewX(-20deg);
   animation: swipeBar 1.25s ease-out;
+}
+
+@keyframes clickAnim {
+  0% {
+    background: var(--color-primary);
+    transform: translateY(0);
+    box-shadow:
+      0 0.2rem 0.4rem rgba(0, 0, 0, 0.16),
+      0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+  }
+  100% {
+    background: var(--color-primary-light);
+    transform: translateY(-0.05rem);
+    box-shadow:
+      0 0.65rem 1.25rem rgba(0, 0, 0, 0.19),
+      0 0.4rem 0.4rem rgba(0, 0, 0, 0.23);
+  }
 }
 
 @keyframes swipeBar {
