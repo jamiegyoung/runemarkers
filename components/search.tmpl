@@ -19,22 +19,7 @@
     threshold: 0.4,
   };
 
-  const tileData = [
-    {{ range .Entities -}}
-    {
-      safeUri: "{{ .SafeURI }}",
-      name: "{{ .Name }}",
-      subcategory: "{{ .Subcategory }}",
-      altName: "{{ .AltName }}",
-      tags: [{{ range .Tags }}"{{ . }}",{{ end }}],
-      thumbnail: "{{ .Thumbnail }}",
-      fullName: "{{ .FullName }}",
-      fullAltName: "{{ .FullAltName }}",
-      tileCount: {{ .Tiles | len }},
-      tilesString: {{ .TilesString }},
-    },
-    {{ end }}
-  ]
+  {{ template "tile_data" . }}
 
   fuse = new Fuse(tileData, fuseOptions);
 

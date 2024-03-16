@@ -1,0 +1,15 @@
+const tileData = [
+  {{ range .Entities -}}
+  {
+    safeUri: "{{ .SafeURI }}",
+    name: "{{ .Name }}",
+    subcategory: "{{ .Subcategory }}",
+    altName: "{{ .AltName }}",
+    tags: [{{ range .Tags }}"{{ . }}",{{ end }}],
+    thumbnail: "{{ .Thumbnail }}",
+    fullName: "{{ .FullName }}",
+    fullAltName: "{{ .FullAltName }}",
+    tileCount: {{ .Tiles | len }},
+  },
+  {{ end }}
+]
