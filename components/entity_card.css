@@ -5,6 +5,11 @@
   opacity: 0;
 }
 
+.entity-link {
+  display: flex;
+  align-items: center;
+}
+
 .entity-card {
   width: 80%;
   background-color: var(--color-card);
