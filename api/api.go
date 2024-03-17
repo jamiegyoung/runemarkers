@@ -43,5 +43,4 @@ func GenerateButtons(found_entities []*entities.Entity) {
 			entity.TilesString,
 		)
 	}
-
 }
