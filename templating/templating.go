@@ -12,6 +12,9 @@ import (
 
 var log = logger.New("templating")
 
+var componentCache []string = nil;
+var styleCache string = "";
+
 func TemplateWithComponents(name string, text string) (*template.Template, error) {
 	log("Generating template with components for " + name)
 	templ, err := template.New(name).Parse(text)
@@ -51,8 +54,14 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 }
 
 func readComponentStyles() (string, error) {
+  if styleCache != "" {
+    log("Using cached styles")
+    return styleCache, nil
+  }
+
 	files, err := filepath.Glob("components/*.css")
 	if err != nil {
+    log("Error reading component styles")
 		return "", err
 	}
 
@@ -67,6 +76,7 @@ func readComponentStyles() (string, error) {
 			// log("Collecting component style " + file_path)
 			file_bytes, err := os.ReadFile(file_path)
 			if err != nil {
+        log("Error reading file")
 				panic(err)
 			}
 
@@ -83,12 +93,20 @@ func readComponentStyles() (string, error) {
 	joined_styles := strings.Join(file_strings, "\n")
 	styles_component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", joined_styles)
 
+  styleCache = styles_component
+
 	return styles_component, nil
 }
 
 func readComponents() ([]string, error) {
+  if componentCache != nil {
+    log("Using cached components")
+    return componentCache, nil
+  }
+
 	files, err := filepath.Glob("components/*.tmpl")
 	if err != nil {
+    log("Error reading components")
 		return nil, err
 	}
 
@@ -101,10 +119,11 @@ func readComponents() ([]string, error) {
 
 		go func(file_path string) {
 			defer wg.Done()
-			// log("Collecting component " + file_path)
+			log("Collecting component " + file_path)
 
 			file_bytes, err := os.ReadFile(file_path)
 			if err != nil {
+        log("Error reading file")
 				panic(err)
 			}
 
@@ -120,6 +139,8 @@ func readComponents() ([]string, error) {
 	}
 
 	wg.Wait()
+
+  componentCache = file_strings
 
 	return file_strings, nil
 }
