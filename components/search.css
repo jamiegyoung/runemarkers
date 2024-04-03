@@ -1,4 +1,5 @@
 .entity-search-container {
+  z-index: 1;
   position: relative;
   transform: translateY(15px);
 }
