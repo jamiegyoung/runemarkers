@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,22 +12,21 @@
 <body>
   {{ template "navbar" }}
   <div class="main-container">
-    <p class="help-text">Make sure the "Ground Markers" plugin is enabled on RuneLite with "Remember color per tile"
-      enabled. Copy the tile markers to your clipboard, right-click the world map button in-game and select "import".
-    </p>
-    {{ template "search" . }}
-    {{ template "entity_list" . }}
+    <div class="inner-container">
+    {{ template "entity_card" .Entity }}
+    </div>
   </div>
 </body>
 
 </html>
 
+{{ template "copy" }}
+
 <script>
   htmx.config.selfRequestsOnly = true;
 </script>
 
-{{ template "styles" .}}
-
+{{ template "styles" }}
 
 <style>
   html,
@@ -55,13 +55,29 @@
     align-items: center;
   }
 
-  .help-text {
-    padding: 0;
-    color: rgb(199, 199, 199);
-    text-align: center;
+  .inner-container {
     min-width: 17rem;
-    margin-bottom: 1rem;
-    max-width: 40rem;
+    margin: 4rem; 0 0.75rem 0;
+    max-width: 37rem;
     width: 80%;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 0;
+    background-color: var(--color-foreground);
+    box-shadow:
+      0 0.25rem 0.75rem rgba(0, 0, 0, 0.25),
+      0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100dvh - 300px);
+  }
+
+  @media (max-width: 900px), (max-height: 900px) {
+    .inner-list-container {
+      width: 95%;
+      height: auto;
+    }
   }
 </style>

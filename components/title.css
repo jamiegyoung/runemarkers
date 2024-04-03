@@ -21,7 +21,7 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 400px) {
   .title.header span:not(.title.alt),
   .title.alt span {
     display: flex !important;

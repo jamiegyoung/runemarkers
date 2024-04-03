@@ -1,27 +1,12 @@
 <div class="inner-list-container"></div>
-{{ template "entity_card" }}
+{{ template "entity_card" . }}
+
+{{ template "copy" }}
 
 <script>
 const listItemTemplate = document.getElementById('entity-list-template')
 
 const innerListContainer = document.querySelector('.inner-list-container')
-
-document.body,addEventListener('htmx:load', (event) => {
-  if (event.target.matches('.entity-card-copy')) {
-    const button = event.target
-    // simulate button click
-    button.click()
-  }
-})
-function copy(e) {
-  const text = e.getAttribute('data-tiles')
-  const textArea = document.createElement('textarea')
-  textArea.value = text
-  document.body.appendChild(textArea)
-  textArea.select()
-  document.execCommand('copy')
-  document.body.removeChild(textArea)
-}
 
 function addListItem(item) {
   // clone the list item template
@@ -53,9 +38,11 @@ function addListItem(item) {
 
   listItem.querySelector('.entity-card-tile-count').textContent = item.tileCount
 
+  Array.from(listItem.querySelectorAll('.entity-link')).forEach(e => e.href = item.link)
+
   const button = listItem.querySelector('.entity-card-copy')
 
-  button.setAttribute('hx-get', `./api/button_${item.safeUri}.html`)
+  button.setAttribute('hx-get', `./api/button_${item.apiUri}.html`)
 
   // add to the inner-list-container
   innerListContainer.appendChild(listItem)

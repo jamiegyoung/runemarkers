@@ -14,7 +14,18 @@ var log = logger.New("pages")
 
 const pages_glob = "pages/*.tmpl"
 
-func GeneratePages(output_path string, entities []*entities.Entity) {
+type IndexPage struct {
+	pageio.Page
+	Entities []*entities.Entity
+}
+
+func (p *IndexPage) Data() map[string]interface{} {
+	return map[string]interface{}{
+		"Entities": p.Entities,
+	}
+}
+
+func GeneratePages(output_path string, found_entities []*entities.Entity) {
 	pages_paths, err := filepath.Glob(pages_glob)
 	if err != nil {
 		panic(err)
@@ -22,8 +33,8 @@ func GeneratePages(output_path string, entities []*entities.Entity) {
 
 	log("Found " + fmt.Sprint(len(pages_paths)) + " page(s)")
 
-	page_data := pageio.Page{
-		Entities: entities,
+	page_data := IndexPage{
+		Entities: found_entities,
 	}
 
 	var wg sync.WaitGroup

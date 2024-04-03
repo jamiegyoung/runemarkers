@@ -15,7 +15,7 @@ func TestParseEntity(t *testing.T) {
 	}
 
 	correctData := Entity{
-		URI:                 "a-test-creature-%26-thing-%28what%21%29",
+		Uri:                 "a-test-creature-%26-thing-%28what%21%29",
 		Name:                    "a test creature & thing",
 		AltName:                 "A massive creature",
 		Subcategory:             "what!",
@@ -54,8 +54,8 @@ func TestParseEntity(t *testing.T) {
 
 	// compare the data
 	if !reflect.DeepEqual(*target, correctData) {
-		if target.URI != correctData.URI {
-			t.Errorf("Expected %v, got %v", correctData.URI, target.URI)
+		if target.Uri != correctData.Uri {
+			t.Errorf("Expected %v, got %v", correctData.Uri, target.Uri)
 		}
 		if target.Name != correctData.Name {
 			t.Errorf("Expected %v, got %v", correctData.Name, target.Name)

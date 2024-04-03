@@ -1,4 +1,4 @@
-<div id="entity-list-template" class="entity-card hidden">
+<div id="entity-list-template" class="entity-card">
   <a class="entity-link" href="">
     <img
       onload="this.style.opacity = 1"
@@ -7,27 +7,28 @@
       decoding="async"
       width="100"
       height="100"
+      src="{{ .Thumbnail }}"
     />
   </a>
   <div class="entity-card-data">
     <div>
       <h2 class="entity-card-title">
-        <span class="entity-card-name"></span>
-        <span class="entity-card-subcategory"></span>
+        <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
+        <span class="entity-card-subcategory">&#40;{{ if .Subcategory }}{{ .Subcategory }}{{ end }}&#41;</span>
       </h1>
       <p class="entity-card-title-alt">
-        <span class="entity-card-name"></span>
-        <span class="entity-card-subcategory"></span>
+        <span class="entity-card-name">{{ if .AltName }}{{ .AltName }}{{ end }}</span>
+        <span class="entity-card-subcategory">&#40;{{ if .Subcategory }}{{ .Subcategory }}{{ end }}&#41;</span>
       </p>
     </div>
     <div>
-      <p><span class="entity-card-tile-count"></span> tile markers</p>
+      <p><span class="entity-card-tile-count">{{ if .Tiles }}{{ .Tiles | len }}{{ end}}</span> tile markers</p>
       <div class="entity-interaction">
       <button
         class="entity-card-copy"
         hx-trigger="click"
-        hx-swap="outerHTML">Copy</button>
-      <a class="entity-link" href="">
+        hx-swap="outerHTML" {{ if .SafeApiUri }}hx-get="../api/button_{{ .SafeApiUri }}.html" {{ end }}>Copy</button>
+      <a class="entity-link" href="{{ if .SafeUri }}{{ .SafeUri }}{{ end }}">
         <svg
           class="entity-card-info-button"
           xmlns="http://www.w3.org/2000/svg"

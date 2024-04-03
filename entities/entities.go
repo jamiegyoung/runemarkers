@@ -34,18 +34,20 @@ type Source struct {
 }
 
 type Entity struct {
-	URI                     string
-	SafeURI                 string
+	Uri                     string
+	SafeUri                 string
+	ApiUri                  string
+	SafeApiUri              string
 	Name                    string   `json:"name"`
 	Subcategory             string   `json:"subcategory,omitempty"`
 	AltName                 string   `json:"altName,omitempty"`
 	Tags                    []string `json:"tags"`
 	Tiles                   []Tile   `json:"tiles"`
+  TilesString             string
 	Thumbnail               string   `json:"thumbnail"`
 	Wiki                    string   `json:"wiki"`
 	Source                  *Source  `json:"source,omitempty"`
 	RecommendedGuideVideoId string   `json:"recommendedGuideVideoId,omitempty"`
-	TilesString             string
 	FullName                string
 	FullAltName             string
 }
@@ -122,7 +124,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 			return err
 		}
 
-		unescaped, err := url.QueryUnescape(entity.URI)
+		unescaped, err := url.QueryUnescape(entity.Uri)
 		if err != nil {
 			return err
 		}
@@ -144,7 +146,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		}
 
 		// update the thumbnail to the new path
-		entities[index].Thumbnail = "thumbnails/" + entity.URI + thumbnail_file_type
+		entities[index].Thumbnail = "thumbnails/" + entity.Uri + thumbnail_file_type
 	}
 
 	return nil
@@ -160,17 +162,9 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 	return parseEntity(data)
 }
 
-func entityTilesHash(tilesString string) string {
-	// generate a hash based on the entity tiles
-	hash := md5.New()
-	hash.Write([]byte(tilesString))
-	// truncate hash to 8 characters
-	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
-}
-
 func transformToUrl(s string, tilesString string) string {
 	lowered := strings.ToLower(s)
-	return strings.ReplaceAll(lowered, " ", "-") + "-" + entityTilesHash(tilesString)
+	return strings.ReplaceAll(lowered, " ", "-")
 }
 
 func parseName(file string) string {
@@ -191,6 +185,14 @@ func getEntityUri(entity Entity) string {
 	)
 }
 
+func entityTilesHash(tilesString string) string {
+	// generate a hash based on the entity tiles
+	hash := md5.New()
+	hash.Write([]byte(tilesString))
+	// truncate hash to 8 characters
+	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
+}
+
 func transformEntity(entity *Entity) {
 	tilesString, err := json.Marshal(entity.Tiles)
 	if err != nil {
@@ -202,8 +204,13 @@ func transformEntity(entity *Entity) {
 	entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
 	entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
 
-	entity.URI = getEntityUri(*entity)
-	entity.SafeURI = url.QueryEscape(entity.URI)
+	hash := entityTilesHash(entity.TilesString)
+
+	entity.Uri = getEntityUri(*entity)
+	entity.SafeUri = url.QueryEscape(entity.Uri)
+
+	entity.ApiUri = entity.Uri + "-" + hash
+	entity.SafeApiUri = url.QueryEscape(entity.ApiUri)
 }
 
 func parseEntity(data []byte) (*Entity, error) {

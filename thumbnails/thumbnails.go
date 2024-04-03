@@ -18,14 +18,14 @@ func Collect(found_entities []*entities.Entity, output_path string) {
 	// check if --skip-thumbs is passed
 	if !args.HasArg(argsWithoutProg, "--skip-thumbs") {
 		go func() {
-			log("Collecting thumbnails, use --skip-thumbs to collect thumbnails")
+			log("Collecting thumbnails, use --skip-thumbs to skip collect thumbnails")
 			errs <- entities.CollectThumbnails(found_entities, output_path)
 		}()
 	} else {
 		log("Skipping thumbnail collection, Updating thumbnail urls to safe url file names, assuming all are png")
 
 		for _, entity := range found_entities {
-			entity.Thumbnail = "thumbnails/" + entity.URI + ".png"
+			entity.Thumbnail = "thumbnails/" + entity.Uri + ".png"
 		}
 
 		close(errs)

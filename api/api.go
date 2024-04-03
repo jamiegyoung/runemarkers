@@ -14,6 +14,19 @@ func Generate(found_entities []*entities.Entity) {
 	GenerateButtons(found_entities)
 }
 
+type ButtonPage struct {
+	pageio.Page
+	TilesString string
+}
+
+func (p ButtonPage) Data() map[string]interface{} {
+ return map[string]interface{}{
+  "Page": &p.Page,
+  "TilesString": p.TilesString,
+  }
+}
+
+
 func GenerateButtons(found_entities []*entities.Entity) {
 	log("Generating buttons api")
 
@@ -33,14 +46,22 @@ func GenerateButtons(found_entities []*entities.Entity) {
 	for _, entity := range found_entities {
 		out_file := pageio.CreateOutFile(
 			"public/api",
-			"api/button_"+entity.URI+".html",
+			"api/button_"+entity.ApiUri+".html",
 		)
+		defer out_file.Close()
+
+		page_data := ButtonPage{
+      TilesString: entity.TilesString,
+			Page: pageio.Page{
+				ShowInfoButton: false,
+			},
+		}
 
 		pageio.RenderPage(
-			"button_"+entity.URI,
+			"button_"+entity.ApiUri,
 			button_string,
 			out_file,
-			entity.TilesString,
+			page_data,
 		)
 	}
 }

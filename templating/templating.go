@@ -16,22 +16,26 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 	log("Generating template with components for " + name)
 	templ, err := template.New(name).Parse(text)
 	if err != nil {
+    log("Error parsing text")
 		return nil, err
 	}
 
 	style, err := readComponentStyles()
 	if err != nil {
+    log("Error reading styles")
 		return nil, err
 	}
 
 	log("Parsing colleted styles")
 	templ, err = templ.Parse(style)
 	if err != nil {
+    log("Error parsing styles")
 		return nil, err
 	}
 
 	components, err := readComponents()
 	if err != nil {
+    log("Error reading components")
 		return nil, err
 	}
 
@@ -39,6 +43,7 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 	for _, component := range components {
 		templ, err = templ.Parse(component)
 		if err != nil {
+      log("Error parsing component string: \n" + component)
 			return nil, err
 		}
 	}
@@ -59,7 +64,7 @@ func readComponentStyles() (string, error) {
 		wg.Add(1)
 		go func(file_path string) {
 			defer wg.Done()
-			log("Collecting component style " + file_path)
+			// log("Collecting component style " + file_path)
 			file_bytes, err := os.ReadFile(file_path)
 			if err != nil {
 				panic(err)
@@ -96,7 +101,7 @@ func readComponents() ([]string, error) {
 
 		go func(file_path string) {
 			defer wg.Done()
-			log("Collecting component " + file_path)
+			// log("Collecting component " + file_path)
 
 			file_bytes, err := os.ReadFile(file_path)
 			if err != nil {

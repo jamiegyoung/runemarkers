@@ -5,7 +5,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/jamiegyoung/runemarkers-go/entities"
 	"github.com/jamiegyoung/runemarkers-go/logger"
 	"github.com/jamiegyoung/runemarkers-go/templating"
 )
@@ -13,17 +12,27 @@ import (
 var log = logger.New("pageio")
 
 type Page struct {
-	Entities []*entities.Entity
+	ShowInfoButton bool
+	CardHidden     bool
 }
 
-func RenderPage(page_name string, page_string string, out_file *os.File, pageData interface{}) {
+type renderable interface {
+	Data() map[string]interface{}
+}
+
+func RenderPage[T renderable](
+	page_name string,
+	page_string string,
+	out_file *os.File,
+	page_data T) {
 	templ, err := templating.TemplateWithComponents(page_name, page_string)
 	if err != nil {
 		panic(err)
 	}
 
+	// create an interface containing both page_data and additional_data
 	log("Rendering " + page_name + " to " + out_file.Name())
-	err = templ.ExecuteTemplate(out_file, page_name, pageData)
+	err = templ.ExecuteTemplate(out_file, page_name, page_data.Data())
 	if err != nil {
 		panic(err)
 	}
@@ -47,7 +56,9 @@ func CreateOutFile(output_path string, page_path string) *os.File {
 		}
 	}
 
-	out_file, err := os.Create(output_path + "/" + replaceTmplWithHtml(filepath.Base(page_path)))
+	out_file, err := os.Create(
+		output_path + "/" + replaceTmplWithHtml(filepath.Base(page_path)),
+	)
 	if err != nil {
 		panic(err)
 	}

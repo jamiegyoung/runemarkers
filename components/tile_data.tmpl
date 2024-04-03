@@ -1,7 +1,8 @@
 const tileData = [
   {{ range .Entities -}}
   {
-    safeUri: "{{ .SafeURI }}",
+    link: "{{ .SafeUri }}",
+    apiUri: "{{ .SafeApiUri }}",
     name: "{{ .Name }}",
     subcategory: "{{ .Subcategory }}",
     altName: "{{ .AltName }}",
@@ -9,7 +10,9 @@ const tileData = [
     thumbnail: "{{ .Thumbnail }}",
     fullName: "{{ .FullName }}",
     fullAltName: "{{ .FullAltName }}",
+    {{ if .Tiles }}
     tileCount: {{ .Tiles | len }},
+    {{ end }}
   },
   {{ end }}
 ]
