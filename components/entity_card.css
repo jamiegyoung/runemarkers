@@ -59,9 +59,13 @@
 }
 
 .entity-card-title {
+  text-decoration: none;
+  display: block;
+}
+
+.entity-card-title h2 {
   font-size: 1.4rem;
   color: var(--color-text);
-  text-decoration: none;
   margin: 0 0 2px 0;
 }
 
@@ -73,9 +77,14 @@
 
 .entity-card-title-alt {
   margin: 0;
+  text-decoration: none;
 }
 
-.entity-card-data p {
+.entity-card-title-alt p {
+  margin: 0;
+}
+
+.entity-card-data a {
   color: var(--color-subtle-text);
 }
 
