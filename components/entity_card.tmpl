@@ -14,11 +14,11 @@
     <div>
       <h2 class="entity-card-title">
         <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
-        <span class="entity-card-subcategory">&#40;{{ if .Subcategory }}{{ .Subcategory }}{{ end }}&#41;</span>
+        <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
       </h1>
       <p class="entity-card-title-alt">
         <span class="entity-card-name">{{ if .AltName }}{{ .AltName }}{{ end }}</span>
-        <span class="entity-card-subcategory">&#40;{{ if .Subcategory }}{{ .Subcategory }}{{ end }}&#41;</span>
+        <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
       </p>
     </div>
     <div>
