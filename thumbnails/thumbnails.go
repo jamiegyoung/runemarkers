@@ -1,22 +1,17 @@
 package thumbnails
 
 import (
-	"os"
-
-	"github.com/jamiegyoung/runemarkers-go/args"
 	"github.com/jamiegyoung/runemarkers-go/entities"
 	"github.com/jamiegyoung/runemarkers-go/logger"
 )
 
 var log = logger.New("thumbnails")
 
-func Collect(found_entities []*entities.Entity, output_path string) {
-	argsWithoutProg := os.Args[1:]
-
+func Collect(found_entities []*entities.Entity, output_path string, skip bool) {
 	errs := make(chan error, 1)
 
 	// check if --skip-thumbs is passed
-	if !args.HasArg(argsWithoutProg, "--skip-thumbs") {
+	if !skip {
 		go func() {
 			log("Collecting thumbnails, use --skip-thumbs to skip collect thumbnails")
 			errs <- entities.CollectThumbnails(found_entities, output_path)

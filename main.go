@@ -3,35 +3,21 @@ package main
 import (
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/api"
-	"github.com/jamiegyoung/runemarkers-go/entities"
-	"github.com/jamiegyoung/runemarkers-go/entitypages"
-	"github.com/jamiegyoung/runemarkers-go/logger"
-	"github.com/jamiegyoung/runemarkers-go/pages"
-	"github.com/jamiegyoung/runemarkers-go/thumbnails"
+	"github.com/jamiegyoung/runemarkers-go/args"
+	"github.com/jamiegyoung/runemarkers-go/builder"
+	"github.com/jamiegyoung/runemarkers-go/devserver"
 )
 
-var log = logger.New("main")
-
-const output_path = "public"
-
-
 func main() {
-	if _, err := os.Stat(output_path); os.IsNotExist(err) {
-		err := os.Mkdir(output_path, 0755)
-		if err != nil {
-			panic(err)
-		}
-	}
 
-	log("Reading entities")
-	found_entities, err := entities.ReadAllEntities()
-	if err != nil {
-		panic(err)
-	}
+	argsWithoutProg := os.Args[1:]
+  skip_thumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
 
-	api.Generate(found_entities)
-	thumbnails.Collect(found_entities, output_path)
-	pages.GeneratePages(output_path, found_entities)
-	entitypages.GeneratePages(output_path, found_entities)
+	builder.Build(skip_thumbs)
+
+	if args.HasArg(argsWithoutProg, "-d") ||
+		args.HasArg(argsWithoutProg, "--dev-server") {
+
+		devserver.Start()
+	}
 }
