@@ -27,12 +27,6 @@ func Start() {
 		c.File("./public/" + c.Param("page") + ".html")
 	})
 
-	r.GET("/rebuild", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "rebuilding",
-		})
-	})
-
 	err := r.SetTrustedProxies([]string{"127.0.0.1"})
 	if err != nil {
 		panic(err)
