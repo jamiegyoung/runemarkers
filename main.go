@@ -15,8 +15,8 @@ func main() {
 
 	builder.Build(skip_thumbs)
 
-	if args.HasArg(argsWithoutProg, "-d") ||
-		args.HasArg(argsWithoutProg, "--dev-server") {
+	if args.HasArg(argsWithoutProg, "-s") ||
+		args.HasArg(argsWithoutProg, "--server") {
 
 		devserver.Start()
 	}
