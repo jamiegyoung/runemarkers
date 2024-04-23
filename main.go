@@ -11,7 +11,7 @@ import (
 func main() {
 
 	argsWithoutProg := os.Args[1:]
-  skip_thumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
+	skip_thumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
 
 	builder.Build(skip_thumbs)
 
