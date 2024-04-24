@@ -7,19 +7,19 @@ import (
 
 var log = logger.New("thumbnails")
 
-func Collect(found_entities []*entities.Entity, output_path string, skip bool) {
+func Collect(ents []*entities.Entity, destination string, skip bool) {
 	errs := make(chan error, 1)
 
 	// check if --skip-thumbs is passed
 	if !skip {
 		go func() {
 			log("Collecting thumbnails, use --skip-thumbs to skip collect thumbnails")
-			errs <- entities.CollectThumbnails(found_entities, output_path)
+			errs <- entities.CollectThumbnails(ents, destination)
 		}()
 	} else {
 		log("Skipping thumbnail collection, Updating thumbnail urls to safe url file names, assuming all are png")
 
-		for _, entity := range found_entities {
+		for _, entity := range ents {
 			entity.Thumbnail = "thumbnails/" + entity.Uri + ".png"
 		}
 

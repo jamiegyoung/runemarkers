@@ -8,47 +8,45 @@ import (
 	"sync"
 )
 
-const libs_glob = "libs/*.js"
-
 var log = logger.New("libs")
 
-func CopyLibs(output_path string) error {
-	file_paths, err := filepath.Glob(libs_glob)
+func CopyLibs(output string) error {
+	libs, err := filepath.Glob("libs/*.js")
 	if err != nil {
 		return err
 	}
 
-	err = os.MkdirAll(output_path, 0755)
+	err = os.MkdirAll(output, 0755)
 	if err != nil {
 		return err
 	}
 
 	var wg sync.WaitGroup
 
-	for _, file_path := range file_paths {
-		dest_path := output_path + "/" + filepath.Base(file_path)
+	for _, path := range libs {
+		dest := output + "/" + filepath.Base(path)
 		wg.Add(1)
-		go func(file_path string, dest_path string) {
+		go func(path string, dest string) {
 			defer wg.Done()
 
-			src, err := os.Open(file_path)
+			src, err := os.Open(path)
 			if err != nil {
 				panic(err)
 			}
 			defer src.Close()
 
-			dest_file, err := os.Create(dest_path)
+			output, err := os.Create(dest)
 			if err != nil {
 				panic(err)
 			}
-			defer dest_file.Close()
+			defer output.Close()
 
-			log("Copying " + file_path + " to " + dest_path)
-			_, err = io.Copy(dest_file, src)
+			log("copying " + path + " to " + dest)
+			_, err = io.Copy(output, src)
 			if err != nil {
 				panic(err)
 			}
-		}(file_path, dest_path)
+		}(path, dest)
 	}
 
 	wg.Wait()

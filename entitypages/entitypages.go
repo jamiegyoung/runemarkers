@@ -15,17 +15,17 @@ type EntityPage struct {
 }
 
 func (p *EntityPage) Data() map[string]interface{} {
-  return map[string]interface{}{
-    "Entity": p.Entity,
-  }
+	return map[string]interface{}{
+		"Entity": p.Entity,
+	}
 }
 
-func GeneratePages(output_path string, found_entities []*entities.Entity) {
+func GeneratePages(destination string, foundEntities []*entities.Entity) {
 	log("Generating entity pages")
 
-	page_path := "entitypages/entity.tmpl"
+	path := "entitypages/entity.tmpl"
 
-	page_string, err := pageio.ReadPageString(page_path)
+	page, err := pageio.ReadPageString(path)
 	if err != nil {
 		panic(err)
 	}
@@ -33,28 +33,22 @@ func GeneratePages(output_path string, found_entities []*entities.Entity) {
 	var wg sync.WaitGroup
 
 	// for each of the entities, generate an entity page
-	for _, entity := range found_entities {
+	for _, entity := range foundEntities {
 		wg.Add(1)
 		go func(entity *entities.Entity) {
 			defer wg.Done()
-			log("Rendering " + entity.Name + " to " + output_path + "/" + entity.Uri + ".html")
-			out_file := pageio.CreateOutFile(output_path, entity.Uri+".html")
-			defer out_file.Close()
+			log("Rendering " + entity.Name + " to " + destination + "/" + entity.Uri + ".html")
+			output := pageio.CreateOutFile(destination, entity.Uri+".html")
+			defer output.Close()
 
-			page_data := EntityPage{
+			data := EntityPage{
 				Entity: entity,
 			}
 
-			pageio.RenderPage(entity.Name, page_string, out_file, &page_data)
+			pageio.RenderPage(entity.Name, page, output, &data)
 		}(entity)
 	}
 
 	wg.Wait()
-
-	// err = libs.CopyLibs(output_path + "/js")
-	// if err != nil {
-	// 	panic(err)
-	// }
-
 	log("Done!")
 }

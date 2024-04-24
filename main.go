@@ -11,9 +11,9 @@ import (
 func main() {
 
 	argsWithoutProg := os.Args[1:]
-	skip_thumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
+	skipThumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
 
-	builder.Build(skip_thumbs)
+	builder.Build(skipThumbs)
 
 	if args.HasArg(argsWithoutProg, "-s") ||
 		args.HasArg(argsWithoutProg, "--server") {

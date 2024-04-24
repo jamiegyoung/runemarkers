@@ -43,11 +43,11 @@ type Entity struct {
 	AltName                 string   `json:"altName,omitempty"`
 	Tags                    []string `json:"tags"`
 	Tiles                   []Tile   `json:"tiles"`
-  TilesString             string
-	Thumbnail               string   `json:"thumbnail"`
-	Wiki                    string   `json:"wiki"`
-	Source                  *Source  `json:"source,omitempty"`
-	RecommendedGuideVideoId string   `json:"recommendedGuideVideoId,omitempty"`
+	TilesString             string
+	Thumbnail               string  `json:"thumbnail"`
+	Wiki                    string  `json:"wiki"`
+	Source                  *Source `json:"source,omitempty"`
+	RecommendedGuideVideoId string  `json:"recommendedGuideVideoId,omitempty"`
 	FullName                string
 	FullAltName             string
 }
@@ -63,35 +63,35 @@ func ReadAllEntities() ([]*Entity, error) {
 	log("Found " + fmt.Sprint(len(files)) + " entity file(s)")
 
 	var wg sync.WaitGroup
-	entities := make([]*Entity, len(files))
+	ents := make([]*Entity, len(files))
 
 	for i, file := range files {
 		wg.Add(1)
-		go func(i int, file_path string) {
+		go func(i int, path string) {
 			defer wg.Done()
-			log("Reading " + file_path)
+			log("Reading " + path)
 
-			entity_name := parseName(file_path)
-			entity, err := ReadEntityAndParse(entity_name)
+			name := parseName(path)
+			entity, err := ReadEntityAndParse(name)
 
 			if err != nil {
 				panic(err)
 			}
-			entities[i] = entity
+			ents[i] = entity
 		}(i, file)
 	}
 
 	wg.Wait()
 
-	return entities, nil
+	return ents, nil
 }
 
-func CollectThumbnails(entities []*Entity, output_path string) error {
+func CollectThumbnails(ents []*Entity, outputPath string) error {
 	// create directory if it doesn't exist
-	thumbnail_output_path := output_path + "/thumbnails"
+	destination := outputPath + "/thumbnails"
 
 	// remove previous files in directory
-	files, err := filepath.Glob(thumbnail_output_path + "/*")
+	files, err := filepath.Glob(destination + "/*")
 	if err != nil {
 		return err
 	}
@@ -104,22 +104,20 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 		}
 	}
 
-	for index, entity := range entities {
-		log("(" + fmt.Sprint(index+1) + "/" + fmt.Sprint(len(entities)) + ") Collecting thumbnail for " + entity.Name)
+	for index, entity := range ents {
+		log("(" + fmt.Sprint(index+1) + "/" + fmt.Sprint(len(ents)) + ") Collecting thumbnail for " + entity.Name)
 
-		thumbnail_url := entity.Thumbnail
-
-		response, err := http.Get(thumbnail_url)
+		response, err := http.Get(entity.Thumbnail)
 		if err != nil {
 			log("Error getting thumbnail: " + err.Error())
 			return err
 		}
 		defer response.Body.Close()
 
-		// get thumbnail file type from the end of the thumbnail_url
-		thumbnail_file_type := filepath.Ext(thumbnail_url)
+		// get thumbnail file type from the end of the thumbnail url
+		filetype := filepath.Ext(entity.Thumbnail)
 
-		err = os.MkdirAll(thumbnail_output_path, 0755)
+		err = os.MkdirAll(destination, 0755)
 		if err != nil {
 			return err
 		}
@@ -129,7 +127,7 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 			return err
 		}
 
-		file, err := os.Create(thumbnail_output_path + "/" + unescaped + thumbnail_file_type)
+		file, err := os.Create(destination + "/" + unescaped + filetype)
 		if err != nil {
 			return err
 		}
@@ -140,13 +138,13 @@ func CollectThumbnails(entities []*Entity, output_path string) error {
 			return err
 		}
 
-		if index < len(entities)-1 {
+		if index < len(ents)-1 {
 			// sleep if not the last entity to prevent spamming the server
 			time.Sleep(time.Millisecond * 200)
 		}
 
 		// update the thumbnail to the new path
-		entities[index].Thumbnail = "thumbnails/" + entity.Uri + thumbnail_file_type
+		ents[index].Thumbnail = "thumbnails/" + entity.Uri + filetype
 	}
 
 	return nil

@@ -67,32 +67,32 @@ func readComponentStyles() (string, error) {
 
 	var wg sync.WaitGroup
 
-	file_strings := make([]string, len(files))
+	fileStrings := make([]string, len(files))
 
 	for i, file := range files {
 		wg.Add(1)
-		go func(file_path string, index int) {
+		go func(filePath string, index int) {
 			defer wg.Done()
-			log("Collecting component style " + file_path)
-			file_bytes, err := os.ReadFile(file_path)
+			log("Collecting component style " + filePath)
+			fileBytes, err := os.ReadFile(filePath)
 			if err != nil {
 				log("Error reading file")
 				panic(err)
 			}
 
-			file_strings[index] = string(file_bytes);
+			fileStrings[index] = string(fileBytes)
 		}(file, i)
 	}
 
 	wg.Wait()
 
 	log("Creating styles component")
-	joined_styles := strings.Join(file_strings, "\n")
-	styles_component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", joined_styles)
+	styles := strings.Join(fileStrings, "\n")
+	component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", styles)
 
-	styleCache = styles_component
+	styleCache = component
 
-	return styles_component, nil
+	return component, nil
 }
 
 func readComponents() ([]string, error) {
@@ -109,35 +109,35 @@ func readComponents() ([]string, error) {
 
 	var wg sync.WaitGroup
 
-	file_strings := make([]string, len(files))
+	fileStrings := make([]string, len(files))
 
 	for _, file := range files {
 		wg.Add(1)
 
-		go func(file_path string) {
+		go func(path string) {
 			defer wg.Done()
-			log("Collecting component " + file_path)
+			log("Collecting component " + path)
 
-			file_bytes, err := os.ReadFile(file_path)
+			bytes, err := os.ReadFile(path)
 			if err != nil {
 				log("Error reading file")
 				panic(err)
 			}
 
 			// remove the directory from the file name extension
-			file_name := filepath.Base(file_path[:len(file_path)-len(filepath.Ext(file_path))])
+			name := filepath.Base(path[:len(path)-len(filepath.Ext(path))])
 
-			file_strings = append(
-				file_strings,
+			fileStrings = append(
+				fileStrings,
 				fmt.Sprintf("{{ define \"%s\" }}%s{{ end }}",
-					file_name, string(file_bytes)),
+					name, string(bytes)),
 			)
 		}(file)
 	}
 
 	wg.Wait()
 
-	componentCache = file_strings
+	componentCache = fileStrings
 
-	return file_strings, nil
+	return fileStrings, nil
 }

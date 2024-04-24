@@ -12,8 +12,6 @@ import (
 
 var log = logger.New("pages")
 
-const pages_glob = "pages/*.tmpl"
-
 type IndexPage struct {
 	pageio.Page
 	Entities []*entities.Entity
@@ -25,44 +23,44 @@ func (p *IndexPage) Data() map[string]interface{} {
 	}
 }
 
-func GeneratePages(output_path string, found_entities []*entities.Entity) {
-	pages_paths, err := filepath.Glob(pages_glob)
+func GeneratePages(destination string, entities []*entities.Entity) {
+	paths, err := filepath.Glob("pages/*.tmpl")
 	if err != nil {
 		panic(err)
 	}
 
-	log("Found " + fmt.Sprint(len(pages_paths)) + " page(s)")
+	log("Found " + fmt.Sprint(len(paths)) + " page(s)")
 
-	page_data := IndexPage{
-		Entities: found_entities,
+	data := IndexPage{
+		Entities: entities,
 	}
 
 	var wg sync.WaitGroup
 
-	for _, page_path := range pages_paths {
+	for _, path := range paths {
 		wg.Add(1)
 
-		go func(page_path string) {
+		go func(path string) {
 			defer wg.Done()
 
-			page_string, err := pageio.ReadPageString(page_path)
+			page, err := pageio.ReadPageString(path)
 			if err != nil {
 				panic(err)
 			}
 
 			// create the output directory if it doesn't exist
-			out_file := pageio.CreateOutFile(output_path, page_path)
-			defer out_file.Close()
+			output := pageio.CreateOutFile(destination, path)
+			defer output.Close()
 
-			page_name := filepath.Base(page_path)
+			name := filepath.Base(path)
 
-			pageio.RenderPage(page_name, page_string, out_file, &page_data)
-		}(page_path)
+			pageio.RenderPage(name, page, output, &data)
+		}(path)
 	}
 
 	wg.Wait()
 
-	err = libs.CopyLibs(output_path + "/js")
+	err = libs.CopyLibs(destination + "/js")
 	if err != nil {
 		panic(err)
 	}

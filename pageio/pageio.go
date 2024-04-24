@@ -21,48 +21,48 @@ type renderable interface {
 }
 
 func RenderPage[T renderable](
-	page_name string,
-	page_string string,
-	out_file *os.File,
-	page_data T) {
-	templ, err := templating.TemplateWithComponents(page_name, page_string)
+	name string,
+	page string,
+	output *os.File,
+	data T) {
+	templ, err := templating.TemplateWithComponents(name, page)
 	if err != nil {
 		panic(err)
 	}
 
-	// create an interface containing both page_data and additional_data
-	log("Rendering " + page_name + " to " + out_file.Name())
-	err = templ.ExecuteTemplate(out_file, page_name, page_data.Data())
+	// create an interface containing both the page and the data
+	log("Rendering " + name + " to " + output.Name())
+	err = templ.ExecuteTemplate(output, name, data.Data())
 	if err != nil {
 		panic(err)
 	}
 }
 
-func ReadPageString(page_path string) (string, error) {
-	log("Reading " + page_path)
-	page_bytes, err := os.ReadFile(page_path)
+func ReadPageString(path string) (string, error) {
+	log("Reading " + path)
+	bytes, err := os.ReadFile(path)
 	if err != nil {
 		return "", err
 	}
 
-	return string(page_bytes), nil
+	return string(bytes), nil
 }
 
-func CreateOutFile(output_path string, page_path string) *os.File {
-	if _, err := os.Stat(output_path); os.IsNotExist(err) {
-		err := os.Mkdir(output_path, 0755)
+func CreateOutFile(destination string, pagePath string) *os.File {
+	if _, err := os.Stat(destination); os.IsNotExist(err) {
+		err := os.Mkdir(destination, 0755)
 		if err != nil {
 			panic(err)
 		}
 	}
 
-	out_file, err := os.Create(
-		output_path + "/" + replaceTmplWithHtml(filepath.Base(page_path)),
+	output, err := os.Create(
+		destination + "/" + replaceTmplWithHtml(filepath.Base(pagePath)),
 	)
 	if err != nil {
 		panic(err)
 	}
-	return out_file
+	return output
 }
 
 func replaceTmplWithHtml(tmp string) string {
