@@ -9,6 +9,19 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/builder"
 )
 
+func watcherWriteHandler(path string) {
+	hash, err := NewHash(path)
+	if err != nil {
+		panic(err)
+	}
+
+	if fileHashes[path] != hash {
+		debug(fmt.Sprintf("modified file: %v, rebuilding", path))
+		fileHashes[path] = hash
+		builder.Build(true)
+	}
+}
+
 func watcher(watchlist []string) error {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
@@ -24,18 +37,7 @@ func watcher(watchlist []string) error {
 					return
 				}
 				if event.Has(fsnotify.Write) {
-					path := event.Name
-					hash, err := NewHash(path)
-					if err != nil {
-						panic(err)
-					}
-
-					if fileHashes[path] != hash {
-						debug(fmt.Sprintf("modified file: %v, rebuilding", path))
-						fileHashes[path] = hash
-						builder.Build(true)
-					}
-
+					watcherWriteHandler(event.Name)
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {
