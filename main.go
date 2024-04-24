@@ -5,7 +5,7 @@ import (
 
 	"github.com/jamiegyoung/runemarkers-go/args"
 	"github.com/jamiegyoung/runemarkers-go/builder"
-	"github.com/jamiegyoung/runemarkers-go/devserver"
+	"github.com/jamiegyoung/runemarkers-go/server"
 )
 
 func main() {
@@ -18,6 +18,6 @@ func main() {
 	if args.HasArg(argsWithoutProg, "-s") ||
 		args.HasArg(argsWithoutProg, "--server") {
 
-		devserver.Start()
+		server.Start()
 	}
 }
