@@ -53,6 +53,7 @@ func isSafeEntity(unsafeName string) bool {
 
 	return false
 }
+
 func Start() {
 	go func() {
 		err := startWatching()
