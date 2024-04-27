@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"slices"
+	"regexp"
+	"strings"
 
 	"github.com/fsnotify/fsnotify"
 )
@@ -39,7 +40,7 @@ func watcher(watchlist []string, action func(string)) error {
 
 	for _, item := range watchlist {
 		err := watcher.Add(item)
-		debug("Watching " + item)
+
 		if err != nil {
 			panic(err)
 		}
@@ -49,44 +50,44 @@ func watcher(watchlist []string, action func(string)) error {
 	return nil
 }
 
-func devFiles() ([]string, error) {
-	debug("getting dev files")
+// Takes a dir and provide all paths, ignoring any matched regex
+func allFilesRecursive(dir string, ignores []string) ([]string, error) {
+	files := []string{}
 
-	allFilepaths, err := filepath.Glob("**/*")
+	err := filepath.WalkDir(dir, func(path string, d os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+
+		for _, ignore := range ignores {
+			match, err := regexp.MatchString(fmt.Sprintf("^%v$", ignore), path)
+			if err != nil {
+				return err
+			}
+
+			if match {
+				return nil
+			}
+		}
+
+		if d.IsDir() {
+			return nil
+		}
+
+		debug("found file " + path)
+		files = append(files, path)
+		return nil
+	})
+
+	return files, err
+}
+
+func devFiles() ([]string, error) {
+	ignores := []string{"README.md", "public/.*", "LICENSE", "\\.git/.*", "\\.github/.*", "tmp/.*", "\\.gitignore"}
+	filepaths, err := allFilesRecursive("./", ignores)
+
 	if err != nil {
 		return nil, err
-	}
-
-	ignoreGlobs := []string{"README.md", "public/*", "LICENSE", ".git/*", ".github/*", "tmp/*"}
-
-	var ignores []string
-
-	for _, ignoreGlob := range ignoreGlobs {
-		paths, err := filepath.Glob(ignoreGlob)
-		if err != nil {
-			return nil, err
-		}
-		ignores = append(ignores, paths...)
-	}
-
-	var filepaths []string
-
-	for _, filepath := range allFilepaths {
-		if slices.Contains(ignores, filepath) {
-			continue
-		}
-
-		// check that it is not a dir
-		file, err := os.Stat(filepath)
-		if err != nil {
-			return nil, err
-		}
-
-		if file.Mode().IsDir() {
-			continue
-		}
-
-		filepaths = append(filepaths, filepath)
 	}
 
 	return filepaths, err
@@ -110,6 +111,8 @@ func watch(action func(string)) error {
 
 		fileHashes[filepath] = hash
 	}
+
+	debug(fmt.Sprintf("watching %v", strings.Join(watchlist, ", ")))
 
 	debug("starting watcher")
 	err = watcher(watchlist, action)
