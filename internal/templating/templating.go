@@ -2,7 +2,7 @@ package templating
 
 import (
 	"fmt"
-	"github.com/jamiegyoung/runemarkers-go/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"html/template"
 	"os"
 	"path/filepath"
@@ -59,7 +59,7 @@ func readComponentStyles() (string, error) {
 		return styleCache, nil
 	}
 
-	files, err := filepath.Glob("components/*.css")
+	files, err := filepath.Glob("templates/shared/*.css")
 	if err != nil {
 		log("Error reading component styles")
 		return "", err
@@ -101,7 +101,7 @@ func readComponents() ([]string, error) {
 		return componentCache, nil
 	}
 
-	files, err := filepath.Glob("components/*.tmpl")
+	files, err := filepath.Glob("templates/shared/*.tmpl")
 	if err != nil {
 		log("Error reading components")
 		return nil, err

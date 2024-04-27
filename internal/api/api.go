@@ -3,9 +3,9 @@ package api
 import (
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/entities"
-	"github.com/jamiegyoung/runemarkers-go/logger"
-	"github.com/jamiegyoung/runemarkers-go/pageio"
+	"github.com/jamiegyoung/runemarkers-go/internal/entities"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
 )
 
 var log = logger.New("api")
@@ -29,7 +29,7 @@ func (p ButtonPage) Data() map[string]interface{} {
 func GenerateButtons(ents []*entities.Entity) {
 	log("Generating buttons api")
 
-	button, err := pageio.ReadPageString("./api/button.tmpl")
+	button, err := pageio.ReadPageString("templates/api/button.tmpl")
 	if err != nil {
 		panic(err)
 	}

@@ -15,7 +15,7 @@ func TestParseEntity(t *testing.T) {
 	}
 
 	correctData := Entity{
-		Uri:                 "a-test-creature-%26-thing-%28what%21%29",
+		Uri:                     "a-test-creature-%26-thing-%28what%21%29",
 		Name:                    "a test creature & thing",
 		AltName:                 "A massive creature",
 		Subcategory:             "what!",

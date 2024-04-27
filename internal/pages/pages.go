@@ -2,10 +2,10 @@ package pages
 
 import (
 	"fmt"
-	"github.com/jamiegyoung/runemarkers-go/entities"
-	"github.com/jamiegyoung/runemarkers-go/libs"
-	"github.com/jamiegyoung/runemarkers-go/logger"
-	"github.com/jamiegyoung/runemarkers-go/pageio"
+	"github.com/jamiegyoung/runemarkers-go/internal/entities"
+	"github.com/jamiegyoung/runemarkers-go/internal/libs"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
 	"path/filepath"
 	"sync"
 )
@@ -24,7 +24,7 @@ func (p *IndexPage) Data() map[string]interface{} {
 }
 
 func GeneratePages(destination string, entities []*entities.Entity) {
-	paths, err := filepath.Glob("pages/*.tmpl")
+	paths, err := filepath.Glob("templates/pages/*.tmpl")
 	if err != nil {
 		panic(err)
 	}

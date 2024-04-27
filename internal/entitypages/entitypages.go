@@ -3,9 +3,9 @@ package entitypages
 import (
 	"sync"
 
-	"github.com/jamiegyoung/runemarkers-go/entities"
-	"github.com/jamiegyoung/runemarkers-go/logger"
-	"github.com/jamiegyoung/runemarkers-go/pageio"
+	"github.com/jamiegyoung/runemarkers-go/internal/entities"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
 )
 
 var log = logger.New("entitypages")
@@ -23,7 +23,7 @@ func (p *EntityPage) Data() map[string]interface{} {
 func GeneratePages(destination string, foundEntities []*entities.Entity) {
 	log("Generating entity pages")
 
-	path := "entitypages/entity.tmpl"
+	path := "templates/entitypages/entity.tmpl"
 
 	page, err := pageio.ReadPageString(path)
 	if err != nil {

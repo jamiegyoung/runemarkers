@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/args"
-	"github.com/jamiegyoung/runemarkers-go/builder"
-	"github.com/jamiegyoung/runemarkers-go/server"
+	"github.com/jamiegyoung/runemarkers-go/internal/args"
+	"github.com/jamiegyoung/runemarkers-go/internal/builder"
+	"github.com/jamiegyoung/runemarkers-go/internal/server"
 )
 
 func main() {

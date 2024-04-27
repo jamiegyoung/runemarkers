@@ -3,12 +3,12 @@ package builder
 import (
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/api"
-	"github.com/jamiegyoung/runemarkers-go/entities"
-	"github.com/jamiegyoung/runemarkers-go/entitypages"
-	"github.com/jamiegyoung/runemarkers-go/logger"
-	"github.com/jamiegyoung/runemarkers-go/pages"
-	"github.com/jamiegyoung/runemarkers-go/thumbnails"
+	"github.com/jamiegyoung/runemarkers-go/internal/api"
+	"github.com/jamiegyoung/runemarkers-go/internal/entities"
+	"github.com/jamiegyoung/runemarkers-go/internal/entitypages"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/pages"
+	"github.com/jamiegyoung/runemarkers-go/internal/thumbnails"
 )
 
 const destination = "public"

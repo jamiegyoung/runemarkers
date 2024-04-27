@@ -6,8 +6,10 @@ import (
 	"slices"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/jamiegyoung/runemarkers-go/builder"
+	"github.com/jamiegyoung/runemarkers-go/internal/builder"
 )
+
+var hashes map[string]uint32 = make(map[string]uint32)
 
 func watcherWriteHandler(path string) {
 	hash, err := NewHash(path)
@@ -15,9 +17,9 @@ func watcherWriteHandler(path string) {
 		panic(err)
 	}
 
-	if fileHashes[path] != hash {
+	if hashes[path] != hash {
 		debug(fmt.Sprintf("modified file: %v, rebuilding", path))
-		fileHashes[path] = hash
+		hashes[path] = hash
 		builder.Build(true)
 	}
 }
@@ -62,7 +64,7 @@ func watcher(watchlist []string) error {
 func devFiles() ([]string, error) {
 	debug("getting dev files")
 
-	allFilepaths, err := filepath.Glob("**/*")
+	allFilepaths, err := filepath.Glob("**/*.*")
 	if err != nil {
 		return nil, err
 	}
@@ -107,7 +109,7 @@ func startWatching() error {
 			return err
 		}
 
-		fileHashes[filepath] = hash
+		hashes[filepath] = hash
 	}
 
 	debug("starting watcher")

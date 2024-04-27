@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jamiegyoung/runemarkers-go/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 )
 
 // Tile colour can be multiple types and we don't really care which one it is

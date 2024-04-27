@@ -1,7 +1,7 @@
 package libs
 
 import (
-	"github.com/jamiegyoung/runemarkers-go/logger"
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"io"
 	"os"
 	"path/filepath"

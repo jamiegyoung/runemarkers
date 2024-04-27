@@ -5,10 +5,6 @@ import (
 	"os"
 )
 
-type FileHashes map[string]uint32
-
-var fileHashes FileHashes = make(FileHashes)
-
 func NewHash(path string) (uint32, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
