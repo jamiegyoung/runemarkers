@@ -25,7 +25,7 @@ func handleIndex(w http.ResponseWriter, r *http.Request) {
 
 func handleEntity(w http.ResponseWriter, r *http.Request) {
 	entity := r.PathValue("entity")
-	if isSafeEntity(entity) {
+	if validateEntitiy(entity) {
 		debug("serving ./public/" + entity + ".html")
 		http.ServeFile(w, r, "./public/"+entity+".html")
 		return
