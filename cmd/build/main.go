@@ -5,7 +5,6 @@ import (
 
 	"github.com/jamiegyoung/runemarkers-go/internal/args"
 	"github.com/jamiegyoung/runemarkers-go/internal/builder"
-	"github.com/jamiegyoung/runemarkers-go/internal/server"
 )
 
 func main() {
@@ -14,10 +13,4 @@ func main() {
 	skipThumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
 
 	builder.Build(skipThumbs)
-
-	if args.HasArg(argsWithoutProg, "-s") ||
-		args.HasArg(argsWithoutProg, "--server") {
-
-		server.Start()
-	}
 }
