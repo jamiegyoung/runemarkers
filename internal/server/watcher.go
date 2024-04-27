@@ -2,13 +2,14 @@ package server
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 	"slices"
 
 	"github.com/fsnotify/fsnotify"
 )
 
-var hashes map[string]uint32 = make(map[string]uint32)
+var fileHashes map[string]uint32 = make(map[string]uint32)
 
 func watcher(watchlist []string, action func(string)) error {
 	watcher, err := fsnotify.NewWatcher()
@@ -38,6 +39,7 @@ func watcher(watchlist []string, action func(string)) error {
 
 	for _, item := range watchlist {
 		err := watcher.Add(item)
+		debug("Watching " + item)
 		if err != nil {
 			panic(err)
 		}
@@ -50,7 +52,7 @@ func watcher(watchlist []string, action func(string)) error {
 func devFiles() ([]string, error) {
 	debug("getting dev files")
 
-	allFilepaths, err := filepath.Glob("**/*.*")
+	allFilepaths, err := filepath.Glob("**/*")
 	if err != nil {
 		return nil, err
 	}
@@ -73,6 +75,17 @@ func devFiles() ([]string, error) {
 		if slices.Contains(ignores, filepath) {
 			continue
 		}
+
+		// check that it is not a dir
+		file, err := os.Stat(filepath)
+		if err != nil {
+			return nil, err
+		}
+
+		if file.Mode().IsDir() {
+			continue
+		}
+
 		filepaths = append(filepaths, filepath)
 	}
 
@@ -95,7 +108,7 @@ func watch(action func(string)) error {
 			return err
 		}
 
-		hashes[filepath] = hash
+		fileHashes[filepath] = hash
 	}
 
 	debug("starting watcher")

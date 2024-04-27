@@ -12,9 +12,9 @@ func rebuild(path string) {
 		panic(err)
 	}
 
-	if hashes[path] != hash {
+	if fileHashes[path] != hash {
 		debug(fmt.Sprintf("modified file: %v, rebuilding", path))
-		hashes[path] = hash
+		fileHashes[path] = hash
 		builder.Build(true)
 	}
 }

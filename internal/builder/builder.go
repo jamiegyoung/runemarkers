@@ -22,7 +22,6 @@ func Build(skipThumbs bool) {
 			panic(err)
 		}
 	}
-
 	log("Reading entities")
 	ents, err := entities.ReadAllEntities()
 	if err != nil {
