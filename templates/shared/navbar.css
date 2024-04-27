@@ -2,11 +2,41 @@
   display: flex;
   z-index: 100;
   width: calc(100%);
-  height: 4rem;
+  height: 3.5rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   background-color: var(--color-card);
   box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.16), 0 0.2rem 0.4rem rgba(0,0,0,0.23);
+}
+
+.title.header {
+  font-weight: bold;
+  padding: 0 1.5rem 0.1rem 1.5rem;
+  display: flex;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.title.link {
+  text-decoration: none;
+}
+
+.title.alt {
+  color: var(--color-primary);
+  display: flex;
+}
+
+.title.header span:not(.title.alt),
+.title.alt span {
+  display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .title.header span:not(.title.alt),
+  .title.alt span {
+    display: flex !important;
+  }
 }
