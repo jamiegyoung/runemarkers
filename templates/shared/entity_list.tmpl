@@ -8,6 +8,30 @@ const listItemTemplate = document.getElementById('entity-list-template')
 
 const innerListContainer = document.querySelector('.inner-list-container')
 
+function setTitle(ctx, name) {
+  const title = ctx.querySelector('.entity-card-title')
+  if (!title) return
+  title.querySelector('.entity-card-name').textContent = name
+  addSubcategory(title)
+  return title
+}
+
+function setAltTitle(ctx, text) {
+  const altTitle = ctx.querySelector('.entity-card-title-alt')
+  if (!altTitle) return
+  altTitle.querySelector('.entity-card-name').textContent = text
+  return altTitle
+}
+
+function addSubcategory(elem, text) {
+  if (!text) {
+    elem.querySelector('.entity-card-subcategory').classList.add('hidden')
+    return
+  }
+  elem.querySelector('.entity-card-subcategory').textContent = `(${text})`
+  return elem
+}
+
 function addListItem(item) {
   // clone the list item template
   const listItem = listItemTemplate.cloneNode(true)
@@ -18,29 +42,17 @@ function addListItem(item) {
   img.src = item.thumbnail
   img.alt = `${item.name} thumbnail`
 
+  const title = setTitle(listItem, item.name)
+  if (title) addSubcategory(title, item.subcategory)
 
-  const title = listItem.querySelector('.entity-card-title')
-  const altTitle = listItem.querySelector('.entity-card-title-alt')
-
-  function addSubcategory(elem) {
-    if (!item.subcategory) {
-      elem.querySelector('.entity-card-subcategory').classList.add('hidden')
-      return
-    }
-    elem.querySelector('.entity-card-subcategory').textContent = `(${item.subcategory})`
-  }
-
-  title.querySelector('.entity-card-name').textContent = item.name
-  addSubcategory(title)
-
-  altTitle.querySelector('.entity-card-name').textContent = item.altName
-  addSubcategory(altTitle)
+  const altTitle = setAltTitle(listItem, item.altName)
+  if (altTitle) addSubcategory(altTitle, item.subcategory)
 
   listItem.querySelector('.entity-card-tile-count').textContent = item.tileCount
 
   Array.from(listItem.querySelectorAll('.entity-link')).forEach(e => e.href = item.link)
 
-  const button = listItem.querySelector('.entity-card-copy')
+  const button = listItem.querySelector('.card-copy')
 
   button.setAttribute('hx-get', `./api/button_${item.apiUri}.html`)
 
