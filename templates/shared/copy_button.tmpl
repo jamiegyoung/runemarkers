@@ -1,0 +1,5 @@
+<button
+  class="card-copy"
+  hx-trigger="click"
+  hx-swap="outerHTML" {{ if .SafeApiUri }}hx-get="./api/button_{{ .SafeApiUri }}.html" {{ end }}>Copy</button>
+<a class="entity-link" href="{{ if .SafeUri }}{{ .SafeUri }}{{ end }}">

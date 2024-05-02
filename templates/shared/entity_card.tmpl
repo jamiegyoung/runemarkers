@@ -28,10 +28,7 @@
     <div>
       <p><span class="entity-card-tile-count">{{ if .Tiles }}{{ .Tiles | len }}{{ end}}</span> tile markers</p>
       <div class="entity-interaction">
-      <button
-        class="entity-card-copy"
-        hx-trigger="click"
-        hx-swap="outerHTML" {{ if .SafeApiUri }}hx-get="./api/button_{{ .SafeApiUri }}.html" {{ end }}>Copy</button>
+      {{ template "copy_button" . }}
       <a class="entity-link" href="{{ if .SafeUri }}{{ .SafeUri }}{{ end }}">
         <svg
           class="entity-card-info-button"
