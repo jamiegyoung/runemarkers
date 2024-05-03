@@ -23,7 +23,6 @@ function setAltTitle(ctx, text) {
 }
 
 function addSubcategory(elem, text) {
-  console.log("asd", text)
   if (!text) {
     elem.querySelector('.entity-card-subcategory').classList.add('hidden')
     return
@@ -43,7 +42,6 @@ function addListItem(item) {
   img.alt = `${item.name} thumbnail`
 
   const title = setTitle(listItem, item.name)
-  console.log("item", item)
   if (title) addSubcategory(title, item.subcategory)
 
   // const altTitle = setAltTitle(listItem, item.altName)
