@@ -44,10 +44,10 @@ function addListItem(item) {
   const title = setTitle(listItem, item.name)
   if (title) addSubcategory(title, item.subcategory)
 
-  // const altTitle = setAltTitle(listItem, item.altName)
-  // if (altTitle) addSubcategory(altTitle, item.subcategory)
+  const altTitle = setAltTitle(listItem, item.altName)
+  if (altTitle) addSubcategory(altTitle, item.subcategory)
 
-  listItem.querySelector('.entity-card-tile-count').textContent = item.tileCount
+  listItem.querySelector('.entity-card-tile-count').textContent = `${item.tileCount} tile marker${item.tileCount > 1 ? 's' : ''}`
 
   Array.from(listItem.querySelectorAll('.entity-link')).forEach(e => e.href = item.link)
 
