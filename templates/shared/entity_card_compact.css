@@ -5,7 +5,7 @@
   justify-content: center;
   height: 17rem;
   background-color: var(--color-card);
-  padding: 1rem;
+  padding: 0.25rem 1rem 1rem 1rem;
   margin: 0.5rem;
   border-radius: 0.75rem;
   display: flex;
@@ -18,6 +18,11 @@
   display: none;
 }
 
+.entity-card p {
+  margin: .5rem 0 .5rem 0;
+  color: var(--color-subtle-text);
+}
+
 .entity-card.grid .entity-card-data {
   align-items: center;
   text-align: center;
@@ -25,7 +30,7 @@
 
 
 .entity-card.grid .entity-card-title {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .entity-card.grid h2 {
   font-size: 1.2rem;
