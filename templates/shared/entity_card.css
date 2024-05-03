@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.entity-card {
+.entity-card.row {
   width: 80%;
   background-color: var(--color-card);
   padding: 1.5rem;

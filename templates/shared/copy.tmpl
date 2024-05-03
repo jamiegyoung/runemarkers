@@ -10,7 +10,7 @@ function copy(e) {
 }
 
 document.body.addEventListener('htmx:load', (event) => {
-  if (event.target.matches('.entity-card-copy')) {
+  if (event.target.matches('.copy-button')) {
     const button = event.target
     // simulate button click
     button.click()

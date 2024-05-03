@@ -1,13 +1,16 @@
 .inner-list-container {
   min-width: 17rem;
   margin-bottom: 0.75rem;
-  max-width: 37rem;
+  max-width: 80rem;
   width: 80%;
   border-radius: 0.75rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  /* might need to only for a smaller size */
+  flex-wrap: wrap;
   align-items: center;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0.75rem;
   background-color: var(--color-foreground);
   box-shadow:
     0 0.25rem 0.75rem rgba(0, 0, 0, 0.25),
@@ -19,7 +22,8 @@
 
 @media (max-width: 900px), (max-height: 900px) {
   .inner-list-container {
-    width: 95%;
+    /* width: 95%; */
     height: auto;
   }
 }
+

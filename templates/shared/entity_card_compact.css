@@ -1,0 +1,36 @@
+.entity-card.grid {
+  flex-direction: column;
+  width: 12rem;
+  align-items: center;
+  justify-content: center;
+  height: 17rem;
+  background-color: var(--color-card);
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  box-shadow:
+    0 0.2rem 0.4rem rgba(0, 0, 0, 0.16),
+    0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+}
+
+.entity-card.grid.hidden {
+  display: none;
+}
+
+.entity-card.grid .entity-card-data {
+  align-items: center;
+  text-align: center;
+}
+
+
+.entity-card.grid .entity-card-title {
+  margin-top: 1rem;
+}
+.entity-card.grid h2 {
+  font-size: 1.2rem;
+}
+
+.entity-card.grid .entity-thumbnail {
+  margin-right: 0
+}

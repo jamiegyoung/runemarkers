@@ -1,0 +1,30 @@
+<div id="entity-list-template" class="grid entity-card{{ if not .Name}} hidden{{end}}">
+  <a class="entity-link" href="./">
+    <img
+      onload="this.style.opacity = 1"
+      class="entity-thumbnail"
+      loading="lazy"
+      decoding="async"
+      width="100"
+      height="100"
+      src="{{ .Thumbnail }}"
+    />
+  </a>
+  <div class="entity-card-data">
+    <div>
+      <a class="entity-link entity-card-title" href="./">
+        <h2>
+          <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
+          <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
+        </h2>
+      </a>
+    </div>
+    <div>
+      <p><span class="entity-card-tile-count">{{ if .Tiles }}{{ .Tiles | len }}{{ end}}</span> tile markers</p>
+      <div class="entity-interaction">
+        {{ template "copy_button" . }}
+      </div>
+    </div>
+  </div>
+</div>
+

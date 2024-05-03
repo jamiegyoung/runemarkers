@@ -1,5 +1,5 @@
 <div class="inner-list-container"></div>
-{{ template "entity_card" . }}
+{{ template "entity_card_compact" . }}
 
 {{ template "copy" }}
 
@@ -12,7 +12,6 @@ function setTitle(ctx, name) {
   const title = ctx.querySelector('.entity-card-title')
   if (!title) return
   title.querySelector('.entity-card-name').textContent = name
-  addSubcategory(title)
   return title
 }
 
@@ -24,6 +23,7 @@ function setAltTitle(ctx, text) {
 }
 
 function addSubcategory(elem, text) {
+  console.log("asd", text)
   if (!text) {
     elem.querySelector('.entity-card-subcategory').classList.add('hidden')
     return
@@ -43,16 +43,17 @@ function addListItem(item) {
   img.alt = `${item.name} thumbnail`
 
   const title = setTitle(listItem, item.name)
+  console.log("item", item)
   if (title) addSubcategory(title, item.subcategory)
 
-  const altTitle = setAltTitle(listItem, item.altName)
-  if (altTitle) addSubcategory(altTitle, item.subcategory)
+  // const altTitle = setAltTitle(listItem, item.altName)
+  // if (altTitle) addSubcategory(altTitle, item.subcategory)
 
   listItem.querySelector('.entity-card-tile-count').textContent = item.tileCount
 
   Array.from(listItem.querySelectorAll('.entity-link')).forEach(e => e.href = item.link)
 
-  const button = listItem.querySelector('.card-copy')
+  const button = listItem.querySelector('.copy-button')
 
   button.setAttribute('hx-get', `./api/button_${item.apiUri}.html`)
 

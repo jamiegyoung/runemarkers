@@ -1,4 +1,4 @@
-.card-copy {
+.copy-button {
   display: block;
   position: relative;
   padding: 0.75rem;
@@ -19,7 +19,7 @@
     0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
 }
 
-.card-copy:hover {
+.copy-button:hover {
   background: var(--color-primary-light);
   transform: translateY(-0.05rem);
   box-shadow:
@@ -27,16 +27,16 @@
     0 0.4rem 0.4rem rgba(0, 0, 0, 0.23);
 }
 
-.card-copy.animate {
+.copy-button.animate {
   animation: clickAnim 0.2s ease-out;
 }
 
-.card-copy.animate::after {
+.copy-button.animate::after {
   content: "";
   display: inline-block;
   width: 40px;
   height: 100px;
-  background: #ffffff48;
+  background: #ffffff28;
   position: absolute;
   top: 0;
   left: 100%;
