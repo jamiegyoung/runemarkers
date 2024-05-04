@@ -1,6 +1,7 @@
 package builder
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/jamiegyoung/runemarkers-go/internal/api"
@@ -16,23 +17,51 @@ const destination = "public"
 
 var log = logger.New("build")
 
+func logErr(ctx string, err error) {
+	if err != nil {
+		log(fmt.Sprintf("An error occured when %v!", ctx))
+		log(err.Error())
+	}
+}
+
 func Build(skipThumbs bool) {
 	templating.ClearCache()
 
 	if _, err := os.Stat(destination); os.IsNotExist(err) {
 		err := os.Mkdir(destination, 0755)
 		if err != nil {
-			panic(err)
+			logErr("making destination file", err)
+			return
 		}
 	}
 	log("Reading entities")
+
 	ents, err := entities.ReadAllEntities()
 	if err != nil {
-		panic(err)
+		logErr("reading entities", err)
+		return
 	}
 
-	api.Generate(ents)
+	log("Generating entities")
+	err = api.Generate(ents)
+	if err != nil {
+		logErr("generating entities", err)
+		return
+	}
+
+	log("Collecting thumbnails")
 	thumbnails.Collect(ents, destination, skipThumbs)
-	pages.GeneratePages(destination, ents)
-	entitypages.GeneratePages(destination, ents)
+
+	log("Generating pages")
+	err = pages.GeneratePages(destination, ents)
+	if err != nil {
+		logErr("generating pages", err)
+		return
+	}
+
+	err = entitypages.GeneratePages(destination, ents)
+	if err != nil {
+		logErr("generating entity pages", err)
+		return
+	}
 }

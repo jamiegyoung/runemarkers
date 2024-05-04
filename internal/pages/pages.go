@@ -23,10 +23,10 @@ func (p *IndexPage) Data() map[string]interface{} {
 	}
 }
 
-func GeneratePages(destination string, entities []*entities.Entity) {
+func GeneratePages(destination string, entities []*entities.Entity) error {
 	paths, err := filepath.Glob("templates/pages/*.tmpl")
 	if err != nil {
-		panic(err)
+		return err
 	}
 
 	log("Found " + fmt.Sprint(len(paths)) + " page(s)")
@@ -36,6 +36,7 @@ func GeneratePages(destination string, entities []*entities.Entity) {
 	}
 
 	var wg sync.WaitGroup
+	errc := make(chan error, len(paths))
 
 	for _, path := range paths {
 		wg.Add(1)
@@ -45,25 +46,38 @@ func GeneratePages(destination string, entities []*entities.Entity) {
 
 			page, err := pageio.ReadPageString(path)
 			if err != nil {
-				panic(err)
+				errc <- err
+				return
 			}
 
 			// create the output directory if it doesn't exist
-			output := pageio.CreateOutFile(destination, path)
+			output, err := pageio.CreateOutFile(destination, path)
 			defer output.Close()
+			if err != nil {
+				errc <- err
+				return
+			}
 
 			name := filepath.Base(path)
 
-			pageio.RenderPage(name, page, output, &data)
+			err = pageio.RenderPage(name, page, output, &data)
+			errc <- err
 		}(path)
 	}
 
 	wg.Wait()
+	close(errc)
+
+	for err := range errc {
+		if err != nil {
+			return err
+		}
+	}
 
 	err = libs.CopyLibs(destination + "/js")
 	if err != nil {
-		panic(err)
+		return err
 	}
 
-	log("Done!")
+	return nil
 }

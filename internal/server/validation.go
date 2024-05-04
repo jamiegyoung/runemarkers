@@ -13,7 +13,7 @@ var allowedEntites, allowedEntitesErr = existingEntities()
 
 func validateEntitiy(unsafeName string) bool {
 	if allowedEntitesErr != nil {
-		panic(allowedEntitesErr)
+		return false
 	}
 
 	if slices.Contains(allowedEntites, unsafeName) {

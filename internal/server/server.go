@@ -9,7 +9,7 @@ func Start() {
 	go func() {
 		err := watch(rebuild)
 		if err != nil {
-			panic(err)
+			debug("A watcher error occured")
 		}
 	}()
 

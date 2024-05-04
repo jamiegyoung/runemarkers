@@ -10,8 +10,8 @@ import (
 
 var log = logger.New("api")
 
-func Generate(ents []*entities.Entity) {
-	GenerateButtons(ents)
+func Generate(ents []*entities.Entity) error {
+	return GenerateButtons(ents)
 }
 
 type ButtonPage struct {
@@ -26,27 +26,31 @@ func (p ButtonPage) Data() map[string]interface{} {
 	}
 }
 
-func GenerateButtons(ents []*entities.Entity) {
+func GenerateButtons(ents []*entities.Entity) error {
 	log("Generating buttons api")
 
 	button, err := pageio.ReadPageString("templates/api/button.tmpl")
 	if err != nil {
-		panic(err)
+		return err
 	}
 
 	// create the api folder if it doesn't exist
 	if _, err := os.Stat("public/api"); os.IsNotExist(err) {
-		mkdirerr := os.Mkdir("public/api", 0755)
-		if mkdirerr != nil {
-			panic(mkdirerr)
+		err = os.Mkdir("public/api", 0755)
+		if err != nil {
+			return err
 		}
 	}
 
 	for _, entity := range ents {
-		output := pageio.CreateOutFile(
+		output, err := pageio.CreateOutFile(
 			"public/api",
 			"api/button_"+entity.ApiUri+".html",
 		)
+		if err != nil {
+			return err
+		}
+
 		defer output.Close()
 
 		data := ButtonPage{
@@ -56,11 +60,15 @@ func GenerateButtons(ents []*entities.Entity) {
 			},
 		}
 
-		pageio.RenderPage(
+		err = pageio.RenderPage(
 			"button_"+entity.ApiUri,
 			button,
 			output,
 			data,
 		)
+		if err != nil {
+			return err
+		}
 	}
+	return nil
 }

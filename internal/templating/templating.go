@@ -2,12 +2,13 @@ package templating
 
 import (
 	"fmt"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"html/template"
 	"os"
 	"path/filepath"
 	"strings"
 	"sync"
+
+	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 )
 
 var log = logger.New("templating")
@@ -58,6 +59,15 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 	return templ, nil
 }
 
+func createStyleComponent(fileStrings []string) string {
+	log("Creating styles component")
+	styles := strings.Join(fileStrings, "\n")
+	component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", styles)
+
+	styleCache = component
+	return component
+}
+
 func readComponentStyles() (string, error) {
 	if styleCache != "" {
 		log("Using cached styles")
@@ -70,9 +80,11 @@ func readComponentStyles() (string, error) {
 		return "", err
 	}
 
+	fileStrings := make([]string, len(files))
+
 	var wg sync.WaitGroup
 
-	fileStrings := make([]string, len(files))
+	errc := make(chan error, len(files))
 
 	for i, file := range files {
 		wg.Add(1)
@@ -81,23 +93,21 @@ func readComponentStyles() (string, error) {
 			log("Collecting component style " + filePath)
 			fileBytes, err := os.ReadFile(filePath)
 			if err != nil {
-				log("Error reading file")
-				panic(err)
+				log(fmt.Sprintf("Error reading style file %v", filePath))
+				errc <- err
 			}
-
 			fileStrings[index] = string(fileBytes)
 		}(file, i)
 	}
 
 	wg.Wait()
+	close(errc)
 
-	log("Creating styles component")
-	styles := strings.Join(fileStrings, "\n")
-	component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", styles)
+	for err := range errc {
+		return "", err
+	}
 
-	styleCache = component
-
-	return component, nil
+	return createStyleComponent(fileStrings), nil
 }
 
 func readComponents() ([]string, error) {
@@ -116,6 +126,9 @@ func readComponents() ([]string, error) {
 
 	fileStrings := make([]string, len(files))
 
+	errc := make(chan error, len(files))
+	resc := make(chan string, len(files))
+
 	for _, file := range files {
 		wg.Add(1)
 
@@ -125,23 +138,35 @@ func readComponents() ([]string, error) {
 
 			bytes, err := os.ReadFile(path)
 			if err != nil {
-				log("Error reading file")
-				panic(err)
+				log(fmt.Sprintf("Error reading file %v", path))
+				errc <- err
+				return
 			}
 
 			// remove the directory from the file name extension
 			name := filepath.Base(path[:len(path)-len(filepath.Ext(path))])
 
-			fileStrings = append(
-				fileStrings,
-				fmt.Sprintf("{{ define \"%s\" }}%s{{ end }}",
-					name, string(bytes)),
+			resc <- fmt.Sprintf(
+				"{{ define \"%s\" }}%s{{ end }}",
+				name,
+				string(bytes),
 			)
 		}(file)
 	}
 
 	wg.Wait()
+	close(errc)
+	close(resc)
 
+	for res := range resc {
+		fileStrings = append(fileStrings, res)
+	}
+
+	for err := range errc {
+		return fileStrings, err
+	}
+
+	// update cache
 	componentCache = fileStrings
 
 	return fileStrings, nil

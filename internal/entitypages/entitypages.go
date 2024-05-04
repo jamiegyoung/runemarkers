@@ -20,17 +20,18 @@ func (p *EntityPage) Data() map[string]interface{} {
 	}
 }
 
-func GeneratePages(destination string, foundEntities []*entities.Entity) {
+func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 	log("Generating entity pages")
 
 	path := "templates/entitypages/entity.tmpl"
 
 	page, err := pageio.ReadPageString(path)
 	if err != nil {
-		panic(err)
+		return err
 	}
 
 	var wg sync.WaitGroup
+	errc := make(chan error)
 
 	// for each of the entities, generate an entity page
 	for _, entity := range foundEntities {
@@ -38,17 +39,26 @@ func GeneratePages(destination string, foundEntities []*entities.Entity) {
 		go func(entity *entities.Entity) {
 			defer wg.Done()
 			log("Rendering " + entity.Name + " to " + destination + "/" + entity.Uri + ".html")
-			output := pageio.CreateOutFile(destination, entity.Uri+".html")
+			output, err := pageio.CreateOutFile(destination, entity.Uri+".html")
 			defer output.Close()
+			if err != nil {
+				errc <- err
+				return
+			}
 
 			data := EntityPage{
 				Entity: entity,
 			}
 
-			pageio.RenderPage(entity.Name, page, output, &data)
+			err = pageio.RenderPage(entity.Name, page, output, &data)
+			if err != nil {
+				errc <- err
+			}
 		}(entity)
 	}
 
 	wg.Wait()
-	log("Done!")
+	close(errc)
+
+	return <-errc
 }

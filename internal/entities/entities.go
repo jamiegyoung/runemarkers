@@ -64,6 +64,7 @@ func ReadAllEntities() ([]*Entity, error) {
 
 	var wg sync.WaitGroup
 	ents := make([]*Entity, len(files))
+	errc := make(chan error)
 
 	for i, file := range files {
 		wg.Add(1)
@@ -73,17 +74,20 @@ func ReadAllEntities() ([]*Entity, error) {
 
 			name := parseName(path)
 			entity, err := ReadEntityAndParse(name)
-
 			if err != nil {
-				panic(err)
+				errc <- err
 			}
+
 			ents[i] = entity
 		}(i, file)
 	}
 
 	wg.Wait()
+	close(errc)
 
-	return ents, nil
+	err = <-errc
+
+	return ents, err
 }
 
 func CollectThumbnails(ents []*Entity, outputPath string) error {
@@ -191,10 +195,10 @@ func entityTilesHash(tilesString string) string {
 	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
 }
 
-func transformEntity(entity *Entity) {
+func transformEntity(entity *Entity) error {
 	tilesString, err := json.Marshal(entity.Tiles)
 	if err != nil {
-		panic(err)
+		return err
 	}
 
 	entity.TilesString = string(tilesString)
@@ -209,13 +213,17 @@ func transformEntity(entity *Entity) {
 
 	entity.ApiUri = entity.Uri + "-" + hash
 	entity.SafeApiUri = url.QueryEscape(entity.ApiUri)
+
+	return nil
 }
 
 func parseEntity(data []byte) (*Entity, error) {
 	var target *Entity
 	err := json.Unmarshal(data, &target)
+	if err != nil {
+		return target, err
+	}
 
-	transformEntity(target)
-
+	err = transformEntity(target)
 	return target, err
 }

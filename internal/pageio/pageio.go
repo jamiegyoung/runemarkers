@@ -21,11 +21,11 @@ func ReadPageString(path string) (string, error) {
 	return string(bytes), nil
 }
 
-func CreateOutFile(destination string, pagePath string) *os.File {
+func CreateOutFile(destination string, pagePath string) (*os.File, error) {
 	if _, err := os.Stat(destination); os.IsNotExist(err) {
 		err := os.Mkdir(destination, 0755)
 		if err != nil {
-			panic(err)
+			return nil, err
 		}
 	}
 
@@ -33,9 +33,9 @@ func CreateOutFile(destination string, pagePath string) *os.File {
 		destination + "/" + replaceTmplWithHtml(filepath.Base(pagePath)),
 	)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
-	return output
+	return output, nil
 }
 
 func replaceTmplWithHtml(tmp string) string {
