@@ -25,7 +25,6 @@ func watcher(watchlist []string, action func(string)) error {
 			select {
 			case event, ok := <-watcher.Events:
 				if !ok {
-					fmt.Println("not ok")
 					return
 				}
 				if event.Has(fsnotify.Write) {
@@ -33,7 +32,6 @@ func watcher(watchlist []string, action func(string)) error {
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {
-					fmt.Println("not ok")
 					return
 				}
 				debug(fmt.Sprintf("error: %v", err))
