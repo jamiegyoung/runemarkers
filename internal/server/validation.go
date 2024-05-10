@@ -11,7 +11,7 @@ import (
 // every time a request is made
 var allowedEntites, allowedEntitesErr = existingEntities()
 
-func validateEntitiy(unsafeName string) bool {
+func validateEntity(unsafeName string) bool {
 	if allowedEntitesErr != nil {
 		return false
 	}

@@ -40,7 +40,7 @@ func handleIndex(w http.ResponseWriter, r *http.Request) {
 func handleEntity(w http.ResponseWriter, r *http.Request) {
 	entity := r.PathValue("entity")
 	// assume invalid if errors
-	valid := validateEntitiy(entity)
+	valid := validateEntity(entity)
 
 	if valid {
 		debug("serving ./public/" + entity + ".html")
