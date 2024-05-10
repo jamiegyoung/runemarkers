@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	builder.Build(true)
+	builder.Build(false)
 	server.Start()
 }
