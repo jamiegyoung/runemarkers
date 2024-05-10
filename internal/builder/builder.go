@@ -24,14 +24,14 @@ func logErr(ctx string, err error) {
 	}
 }
 
-func Build(skipThumbs bool) {
+func Build(skipThumbs bool) error {
 	templating.ClearCache()
 
 	if _, err := os.Stat(destination); os.IsNotExist(err) {
 		err := os.Mkdir(destination, 0755)
 		if err != nil {
 			logErr("making destination file", err)
-			return
+			return err
 		}
 	}
 	log("Reading entities")
@@ -39,14 +39,14 @@ func Build(skipThumbs bool) {
 	ents, err := entities.ReadAllEntities()
 	if err != nil {
 		logErr("reading entities", err)
-		return
+		return err
 	}
 
 	log("Generating entities")
 	err = api.Generate(ents)
 	if err != nil {
 		logErr("generating entities", err)
-		return
+		return err
 	}
 
 	log("Collecting thumbnails")
@@ -56,12 +56,14 @@ func Build(skipThumbs bool) {
 	err = pages.GeneratePages(destination, ents)
 	if err != nil {
 		logErr("generating pages", err)
-		return
+		return err
 	}
 
 	err = entitypages.GeneratePages(destination, ents)
 	if err != nil {
 		logErr("generating entity pages", err)
-		return
+		return err
 	}
+
+	return nil
 }

@@ -12,7 +12,7 @@ import (
 
 var fileHashes map[string]uint32 = make(map[string]uint32)
 
-func watcher(watchlist []string, action func(string)) error {
+func watcher(watchlist []string, action func(string) error) error {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
 		return err
@@ -28,7 +28,7 @@ func watcher(watchlist []string, action func(string)) error {
 					return
 				}
 				if event.Has(fsnotify.Write) {
-					action(event.Name)
+					buildError = action(event.Name)
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {
@@ -94,7 +94,7 @@ func devFiles() ([]string, error) {
 	return filepaths, err
 }
 
-func watch(action func(string)) error {
+func watch(action func(string) error) error {
 	filepaths, err := devFiles()
 	if err != nil {
 		return err

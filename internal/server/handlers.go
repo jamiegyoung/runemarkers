@@ -5,6 +5,20 @@ import (
 	"net/http"
 )
 
+// modified by the watcher on rebuild
+var buildError error = nil
+
+func errorMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if buildError != nil {
+			w.WriteHeader(500)
+			fmt.Fprintf(w, "500 Internal Server Error: %s", buildError)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func handleStatic(mux *http.ServeMux) {
 	fs := http.FileServer(http.Dir("public"))
 

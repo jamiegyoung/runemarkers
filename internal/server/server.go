@@ -5,6 +5,14 @@ import (
 	"net/http"
 )
 
+func addHandler(mux *http.ServeMux, pattern string, handler http.Handler) {
+	mux.Handle(pattern, errorMiddleware(handler))
+}
+
+func addHandlerFunc(mux *http.ServeMux, pattern string, next func(w http.ResponseWriter, r *http.Request)) {
+	addHandler(mux, pattern, http.HandlerFunc(next))
+}
+
 func Start() {
 	go func() {
 		err := watch(rebuild)
@@ -18,10 +26,10 @@ func Start() {
 	handleStatic(mux)
 
 	debug("registering GET / handler")
-	mux.HandleFunc("GET /", handleIndex)
+	addHandlerFunc(mux, "GET /", handleIndex)
 
 	debug("registering GET /{entity} handler")
-	mux.HandleFunc("GET /{entity}", handleEntity)
+	addHandlerFunc(mux, "GET /{entity}", handleEntity)
 
 	s := &http.Server{
 		Handler: mux,
