@@ -14,18 +14,6 @@ func Generate(ents []*entities.Entity) error {
 	return GenerateButtons(ents)
 }
 
-type ButtonPage struct {
-	pageio.Page
-	TilesString string
-}
-
-func (p ButtonPage) Data() map[string]interface{} {
-	return map[string]interface{}{
-		"Page":        &p.Page,
-		"TilesString": p.TilesString,
-	}
-}
-
 func GenerateButtons(ents []*entities.Entity) error {
 	log("Generating buttons api")
 

@@ -8,30 +8,6 @@ import (
 // modified by the watcher on rebuild
 var buildError error = nil
 
-func errorMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if buildError != nil {
-			w.WriteHeader(500)
-			fmt.Fprintf(w, "500 Internal Server Error: %s", buildError)
-			return
-		}
-		next.ServeHTTP(w, r)
-	})
-}
-
-func handleStatic(mux *http.ServeMux) {
-	fs := http.FileServer(http.Dir("public"))
-
-	debug("registering GET /api/ handler")
-	mux.Handle("GET /api/", fs)
-	debug("registering GET /css/ handler")
-	mux.Handle("GET /css/", fs)
-	debug("registering GET /js/ handler")
-	mux.Handle("GET /js/", fs)
-	debug("registering GET /thumbnails/ handler")
-	mux.Handle("GET /thumbnails/", fs)
-}
-
 func handleIndex(w http.ResponseWriter, r *http.Request) {
 	debug("serving public/index.html")
 	http.ServeFile(w, r, "public/index.html")
@@ -52,4 +28,28 @@ func handleEntity(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(404)
 	fmt.Fprintf(w, "404 Entity not found")
 	return
+}
+
+func handleStatic(mux *http.ServeMux) {
+	fs := http.FileServer(http.Dir("public"))
+
+	debug("registering GET /api/ handler")
+	mux.Handle("GET /api/", fs)
+	debug("registering GET /css/ handler")
+	mux.Handle("GET /css/", fs)
+	debug("registering GET /js/ handler")
+	mux.Handle("GET /js/", fs)
+	debug("registering GET /thumbnails/ handler")
+	mux.Handle("GET /thumbnails/", fs)
+}
+
+func errorMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if buildError != nil {
+			w.WriteHeader(500)
+			fmt.Fprintf(w, "500 Internal Server Error: %s", buildError)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }

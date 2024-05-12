@@ -5,14 +5,6 @@ import (
 	"net/http"
 )
 
-func addHandler(mux *http.ServeMux, pattern string, handler http.Handler) {
-	mux.Handle(pattern, errorMiddleware(handler))
-}
-
-func addHandlerFunc(mux *http.ServeMux, pattern string, next func(w http.ResponseWriter, r *http.Request)) {
-	addHandler(mux, pattern, http.HandlerFunc(next))
-}
-
 func Start() {
 	go func() {
 		err := watch(rebuild)
@@ -41,4 +33,8 @@ func Start() {
 	log.Fatal(s.ListenAndServe())
 
 	debug("server listening at port 8080")
+}
+
+func addHandlerFunc(mux *http.ServeMux, pattern string, next func(w http.ResponseWriter, r *http.Request)) {
+	mux.Handle(pattern, errorMiddleware(http.HandlerFunc(next)))
 }

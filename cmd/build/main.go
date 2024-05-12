@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-
 	argsWithoutProg := os.Args[1:]
 	skipThumbs := args.HasArg(argsWithoutProg, "--skip-thumbs") || args.HasArg(argsWithoutProg, "-st")
 

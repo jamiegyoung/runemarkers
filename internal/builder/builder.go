@@ -17,13 +17,6 @@ const destination = "public"
 
 var log = logger.New("build")
 
-func logErr(ctx string, err error) {
-	if err != nil {
-		log(fmt.Sprintf("An error occured when %v!", ctx))
-		log(err.Error())
-	}
-}
-
 func Build(skipThumbs bool) error {
 	templating.ClearCache()
 
@@ -66,4 +59,11 @@ func Build(skipThumbs bool) error {
 	}
 
 	return nil
+}
+
+func logErr(ctx string, err error) {
+	if err != nil {
+		log(fmt.Sprintf("An error occured when %v!", ctx))
+		log(err.Error())
+	}
 }

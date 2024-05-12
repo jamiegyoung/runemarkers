@@ -16,11 +16,6 @@ var log = logger.New("templating")
 var componentCache []string = nil
 var styleCache string = ""
 
-func ClearCache() {
-	componentCache = nil
-	styleCache = ""
-}
-
 func TemplateWithComponents(name string, text string) (*template.Template, error) {
 	log("Generating template with components for " + name)
 	templ, err := template.New(name).Parse(text)
@@ -57,6 +52,11 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 		}
 	}
 	return templ, nil
+}
+
+func ClearCache() {
+	componentCache = nil
+	styleCache = ""
 }
 
 func createStyleComponent(fileStrings []string) string {
