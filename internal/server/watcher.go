@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"time"
 
 	"github.com/fsnotify/fsnotify"
 )
@@ -27,14 +28,23 @@ func watcher(watchlist []string, action func(string) error) error {
 				if !ok {
 					return
 				}
-				if event.Has(fsnotify.Write) {
-					buildError = action(event.Name)
+				// Sleep for a very short time, this fixes any files
+				// missing issues
+				time.Sleep(200 * time.Millisecond)
+
+				buildError = action(event.Name)
+				if buildError != nil {
+					debug(fmt.Sprintf("A build error occured %v", buildError))
+					return
 				}
+
+				// add the file back into the watchlist
+				watcher.Add(event.Name)
 			case err, ok := <-watcher.Errors:
+				debug(fmt.Sprintf("error: %v", err))
 				if !ok {
 					return
 				}
-				debug(fmt.Sprintf("error: %v", err))
 			}
 		}
 	}()
@@ -48,6 +58,7 @@ func watcher(watchlist []string, action func(string) error) error {
 	}
 
 	<-make(chan struct{})
+	debug("Watcher ended, this is probably an issue")
 	return nil
 }
 

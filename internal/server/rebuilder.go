@@ -9,7 +9,8 @@ import (
 func rebuild(path string) error {
 	hash, err := newHash(path)
 	if err != nil {
-		panic(err)
+		debug("Unable to generate new hash, file likely doesn't exist anymore")
+		return err
 	}
 
 	if fileHashes[path] != hash {
