@@ -7,7 +7,7 @@ import (
 )
 
 func rebuild(path string) error {
-	hash, err := NewHash(path)
+	hash, err := newHash(path)
 	if err != nil {
 		panic(err)
 	}

@@ -105,7 +105,7 @@ func watch(action func(string) error) error {
 	for _, filepath := range filepaths {
 		watchlist = append(watchlist, filepath)
 
-		hash, err := NewHash(filepath)
+		hash, err := newHash(filepath)
 		if err != nil {
 			return err
 		}
