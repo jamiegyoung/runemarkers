@@ -95,7 +95,17 @@ func allFilesRecursive(dir string, ignores []string) ([]string, error) {
 }
 
 func devFiles() ([]string, error) {
-	ignores := []string{"README.md", "public/.*", "LICENSE", "\\.git/.*", "\\.github/.*", "tmp/.*", "\\.gitignore"}
+	ignores := []string{
+		"README.md",
+		"public/.*",
+		"LICENSE",
+		"\\.git/.*",
+		"\\.github/.*",
+		"tmp/.*",
+		"\\.gitignore",
+		"Dockerfile",
+		"compose.yml",
+	}
 	filepaths, err := allFilesRecursive("./", ignores)
 
 	if err != nil {
