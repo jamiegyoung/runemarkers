@@ -74,7 +74,7 @@ func ReadAllEntities() ([]*Entity, error) {
 			defer wg.Done()
 			log("Reading " + path)
 
-			name := parseName(path)
+			name := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
 			entity, err := ReadEntityAndParse(name)
 			if err != nil {
 				errc <- err
@@ -169,13 +169,6 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 func transformToUrl(s string, tilesString string) string {
 	lowered := strings.ToLower(s)
 	return strings.ReplaceAll(lowered, " ", "-")
-}
-
-func parseName(file string) string {
-	if !strings.HasSuffix(file, ".json") {
-		return filepath.Base(file)
-	}
-	return filepath.Base(file[:len(file)-len(filepath.Ext(file))])
 }
 
 func getEntityUri(entity Entity) string {
