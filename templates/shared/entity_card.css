@@ -11,10 +11,9 @@
 }
 
 .entity-card.row {
-  width: 80%;
+  width: 100%;
   background-color: var(--color-card);
   padding: 1.5rem;
-  margin: 0.5rem auto;
   border-radius: 1rem;
   display: flex;
   box-shadow:
