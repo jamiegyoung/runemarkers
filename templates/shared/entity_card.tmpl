@@ -19,12 +19,14 @@
           <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
         </h2>
       </a>
+      {{ if .AltName }}
       <a class="entity-link entity-card-title-alt" href="./">
         <p>
-          <span class="entity-card-name">{{ if .AltName }}{{ .AltName }}{{ end }}</span>
+          <span class="entity-card-name">{{ .AltName }}</span>
           <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
         </p>
       </a>
+      {{ end }}
     </div>
     <div>
       <p><span class="entity-card-tile-count">{{ if .Tiles }}{{ .Tiles | len }}{{ end}}</span> tile markers</p>
