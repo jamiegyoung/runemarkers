@@ -9,7 +9,6 @@
   flex-direction: row;
   /* might need to only for a smaller size */
   flex-wrap: wrap;
-  align-items: center;
   padding: 1.25rem 0.75rem;
   background-color: var(--color-foreground);
   box-shadow:
