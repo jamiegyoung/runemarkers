@@ -10,7 +10,7 @@
   min-width: 50px;
   padding: 0.5rem 30px 0.5rem 30px;
   width: 90%;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   border: none;
   background-color: var(--color-text);
   color: var(--color-background);

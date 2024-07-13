@@ -15,7 +15,7 @@
   background-color: var(--color-card);
   padding: 1.5rem;
   margin: 0.5rem auto;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   display: flex;
   box-shadow:
     0 0.2rem 0.4rem rgba(0, 0, 0, 0.16),
