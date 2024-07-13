@@ -21,16 +21,13 @@
     <div class="section">
       <h2>Recommended Guide</h2>
       <iframe
-        title="Recommended Guide"
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
-        frameborder="0"
-        loading="lazy"
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen>
-        </iframe>
-      </div>
+      title="Recommended Guide"
+      src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
+      frameborder="0"
+      loading="lazy"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+      </iframe>
     </div>
   </div>
 </body>
@@ -102,7 +99,6 @@
       0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100dvh - 300px);
   }
 
   .inner-container > .section {
@@ -120,6 +116,11 @@
   .inner-container > .section > iframe {
     border-radius: 0.75rem;
     box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+  }
+
+  .iframe-container {
+    position: relative;
+    height: 100%;
   }
 
   @media (max-width: 900px), (max-height: 900px) {
