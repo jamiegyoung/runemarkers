@@ -216,8 +216,8 @@ func transformEntity(entity *Entity) error {
 
 	entity.MapLink = mapLink(tilesString)
 
-	entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
-	entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
+	entity.FullName = fmt.Sprintf("%v (%v)", entity.Name, entity.Subcategory)
+	entity.FullAltName = fmt.Sprintf("%v (%v)", entity.AltName, entity.Subcategory)
 
 	hash := entityTilesHash(entity.TilesString)
 
