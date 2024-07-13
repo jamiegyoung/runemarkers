@@ -6,7 +6,7 @@
   height: 17rem;
   background-color: var(--color-card);
   padding: 0.25rem 1rem 1rem 1rem;
-  margin: 0.5rem;
+  margin: 0.6rem;
   border-radius: 0.75rem;
   display: flex;
   box-shadow:
@@ -18,8 +18,14 @@
   display: none;
 }
 
+.entity-card-image {
+  margin: .4rem 0 auto 0;
+  height: 100%;
+  align-items: flex-end;
+}
+
 .entity-card p {
-  margin: .5rem 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
   color: var(--color-subtle-text);
 }
 

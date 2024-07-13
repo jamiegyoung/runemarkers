@@ -1,12 +1,12 @@
 <div id="entity-list-template" class="grid entity-card{{ if not .Name}} hidden{{end}}">
-  <a class="entity-link" href="./">
+  <a class="entity-link entity-card-image" href="./">
     <img
       onload="this.style.opacity = 1"
       class="entity-thumbnail"
       loading="lazy"
       decoding="async"
-      width="100"
-      height="100"
+      width="140"
+      height="140"
       src="{{ .Thumbnail }}"
     />
   </a>
