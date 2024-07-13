@@ -41,6 +41,8 @@ func handleStatic(mux *http.ServeMux) {
 	mux.Handle("GET /js/", fs)
 	debug("registering GET /thumbnails/ handler")
 	mux.Handle("GET /thumbnails/", fs)
+	debug("registering GET /assets/ handler")
+	mux.Handle("GET /assets/", fs)
 }
 
 func errorMiddleware(next http.Handler) http.Handler {

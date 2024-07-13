@@ -3,7 +3,6 @@ package pages
 import (
 	"fmt"
 	"github.com/jamiegyoung/runemarkers-go/internal/entities"
-	"github.com/jamiegyoung/runemarkers-go/internal/libs"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
 	"path/filepath"
@@ -73,11 +72,6 @@ func GeneratePages(destination string, entities []*entities.Entity) error {
 		if err != nil {
 			return err
 		}
-	}
-
-	err = libs.CopyLibs(destination + "/js")
-	if err != nil {
-		return err
 	}
 
 	return nil

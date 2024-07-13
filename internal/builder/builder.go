@@ -5,8 +5,10 @@ import (
 	"os"
 
 	"github.com/jamiegyoung/runemarkers-go/internal/api"
+	"github.com/jamiegyoung/runemarkers-go/internal/assets"
 	"github.com/jamiegyoung/runemarkers-go/internal/entities"
 	"github.com/jamiegyoung/runemarkers-go/internal/entitypages"
+	"github.com/jamiegyoung/runemarkers-go/internal/libs"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pages"
 	"github.com/jamiegyoung/runemarkers-go/internal/templating"
@@ -55,6 +57,18 @@ func Build(skipThumbs bool) error {
 	err = entitypages.GeneratePages(destination, ents)
 	if err != nil {
 		logErr("generating entity pages", err)
+		return err
+	}
+
+	err = libs.Copy(destination + "/js")
+	if err != nil {
+		logErr("copying libraries", err)
+		return err
+	}
+
+	err = assets.Copy(destination + "/assets")
+	if err != nil {
+		logErr("copying assets", err)
 		return err
 	}
 
