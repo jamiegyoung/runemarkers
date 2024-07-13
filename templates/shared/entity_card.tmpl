@@ -15,21 +15,21 @@
     <div>
       <a class="entity-link entity-card-title" href="./">
         <h2>
-          <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
-          <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
+          {{ if .Name }}<span class="entity-card-name">{{ .Name }}</span>{{ end }}
+          {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
         </h2>
       </a>
       {{ if .AltName }}
       <a class="entity-link entity-card-title-alt" href="./">
         <p>
           <span class="entity-card-name">{{ .AltName }}</span>
-          <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
+          {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
         </p>
       </a>
       {{ end }}
     </div>
     <div>
-      <p><span class="entity-card-tile-count">{{ if .Tiles }}{{ .Tiles | len }}{{ end}}</span> tile markers</p>
+      {{ if .Tiles }}<p><span class="entity-card-tile-count">{{ .Tiles | len }}</span> tile markers</p>{{ end}}
       <div class="entity-interaction">
       {{ template "copy_button" . }}
       </div>
