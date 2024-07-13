@@ -86,3 +86,12 @@
 .entity-card-data a {
   color: var(--color-subtle-text);
 }
+
+.entity-card p {
+  margin: 0 0 0.25rem 0;
+  color: var(--color-subtle-text);
+}
+
+.entity-card-bottom {
+  margin-top: 1rem;
+}

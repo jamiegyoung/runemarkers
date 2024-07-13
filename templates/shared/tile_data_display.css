@@ -1,3 +1,21 @@
+.data-display-container .tiles-data {
+  font-family: monospace;
+  border-radius: 10px;
+  background-color: var(--color-card);
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  padding: 20px;
+  word-break: break-all;
+  color: #ddd;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: normal;
+}
+
+.data-display-container .tiles-data.pretty {
+  white-space: pre;
+}
+
 .data-display-container {
   width: 100%;
   display: flex;
@@ -6,7 +24,7 @@
 
 .data-display-container .controls {
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 .5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -14,11 +32,16 @@
 }
 
 .data-display-container .controls button {
+  font-family: monospace;
   border: none;
   background-color: transparent;
   color: var(--color-subtle-text);
   text-transform: lowercase;
   transition: color .2s ease-out;
+}
+
+.data-display-container .controls button.enabled {
+  color:  var(--color-primary);
 }
 
 .data-display-container .controls button:hover {

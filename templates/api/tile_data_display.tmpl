@@ -1,0 +1,17 @@
+<div class="data-display-container">
+  <div class="controls">
+    <button
+      class="enabled"
+      hx-target=".data-display-container"
+      hx-get="/api/tile_data_display_truncated_{{ .SafeApiUri }}.html"
+      hx-swap="outerHTML">Show less</button>
+    <button
+      hx-target=".data-display-container"
+      hx-get="/api/tile_data_display_pretty_{{ .SafeApiUri }}.html"
+      hx-swap="outerHTML">Pretty print</button>
+  </div>
+  <code class="tiles-data">
+    {{ .TilesString }}
+  </code>
+</div>
+

@@ -24,7 +24,7 @@
   align-items: flex-end;
 }
 
-.entity-card p {
+.entity-card.grid p {
   margin: 0 0 0.5rem 0;
   color: var(--color-subtle-text);
 }

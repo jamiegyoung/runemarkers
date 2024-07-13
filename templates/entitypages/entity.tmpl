@@ -29,7 +29,18 @@
     </iframe>
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
-    <h2>Source</h2>
+    {{ if .Entity.Source}}
+      <h2>Source</h2>
+      <span><a href="{{ .Entity.Source.Link }}">{{ .Entity.Source.Name }}</a>
+      {{ if .Entity.Source.Modified }}
+        <span class="modified-wrapper">(modified)
+          <span class="tooltip-wrapper">
+            <span class="tooltip">{{ .Entity.Source.Modified }}</span>
+          </span>
+        </span>
+      {{ end }}
+      </span>
+    {{ end }}
   </main>
 </body>
 </html>
@@ -76,13 +87,56 @@
     text-decoration: underline;
   }
 
-  .entity-links a {
+  a {
     color: var(--color-primary);
     transition: color .2s ease-out;
   }
 
-  .entity-links a:hover {
+  a:hover {
     color: var(--color-primary-light);
+  }
+
+  .modified-wrapper {
+    display: inline-block;
+    cursor: help;
+  }
+
+  .modified-wrapper .tooltip-wrapper {
+    position: absolute;
+    margin-left: 60px;
+  }
+
+  .modified-wrapper:hover .tooltip-wrapper .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modified-wrapper .tooltip-wrapper .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  padding-bottom: 20px;
+  border-style: solid;
+  border-color: var(--color-card) transparent transparent transparent;
+}
+
+  .modified-wrapper .tooltip-wrapper .tooltip {
+    background-color: var(--color-card);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 6px;
+    padding: 10px;
+    width: 12rem;
+    position: absolute;
+    height: fit-content;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .1s ease-in-out;
+    margin-bottom: 10px;
   }
 
   .main-container {

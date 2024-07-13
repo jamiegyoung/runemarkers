@@ -9,9 +9,10 @@ import (
 
 // I would rather store this in ram than read the directory
 // every time a request is made
-var allowedEntites, allowedEntitesErr = existingEntities()
 
 func validateEntity(unsafeName string) bool {
+	debug("Validating entity:" + unsafeName)
+	allowedEntites, allowedEntitesErr := existingEntities()
 	if allowedEntitesErr != nil {
 		return false
 	}

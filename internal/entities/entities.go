@@ -45,11 +45,12 @@ type Entity struct {
 	Tags                    []string `json:"tags"`
 	Tiles                   []Tile   `json:"tiles"`
 	TilesString             string
+	TilesStringPretty       string
 	MapLink                 string
-	Thumbnail               string  `json:"thumbnail"`
-	Wiki                    string  `json:"wiki"`
-	Source                  *Source `json:"source,omitempty"`
-	RecommendedGuideVideoId string  `json:"recommendedGuideVideoId,omitempty"`
+	Thumbnail               string `json:"thumbnail"`
+	Wiki                    string `json:"wiki"`
+	Source                  Source `json:"source,omitempty"`
+	RecommendedGuideVideoId string `json:"recommendedGuideVideoId,omitempty"`
 	FullName                string
 	FullAltName             string
 }
@@ -178,14 +179,15 @@ func parseEntity(data []byte) (*Entity, error) {
 
 func transformEntity(entity *Entity) error {
 	tilesString, err := json.Marshal(entity.Tiles)
+	tilesStringPretty, err := json.MarshalIndent(entity.Tiles, "", "\t")
 	if err != nil {
 		return err
 	}
+	entity.TilesString = string(tilesString)
+	entity.TilesStringPretty = string(tilesStringPretty)
 
 	entity.FullName = formatName(entity.Name, entity.Subcategory)
 	entity.FullAltName = formatName(entity.AltName, entity.Subcategory)
-
-	entity.TilesString = string(tilesString)
 
 	entity.MapLink = mapLink(tilesString)
 

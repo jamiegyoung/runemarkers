@@ -16,9 +16,37 @@ var log = logger.New("templating")
 var componentCache []string = nil
 var styleCache string = ""
 
+func countNewlines(s string) int {
+	return strings.Count(s, "\n")
+}
+
+func truncateCharacters(s string, n int) string {
+	if len(s) < n {
+		return s
+	}
+	return s[:n-3] + "..."
+}
+
+func truncateLines(s string, n int) string {
+	lines := strings.Split(s, "\n")
+	if len(lines) < n {
+		return s
+	}
+	return strings.Join(lines[:n-1], "\n") + "\n..."
+}
+
+func parseWithFuncs(tmpl *template.Template, text string) (*template.Template, error) {
+	return tmpl.Funcs(template.FuncMap{
+		"countNewlines":      countNewlines,
+		"truncateLines":      truncateLines,
+		"truncateCharacters": truncateCharacters,
+	}).Parse(text)
+}
+
 func TemplateWithComponents(name string, text string) (*template.Template, error) {
 	log("Generating template with components for " + name)
-	templ, err := template.New(name).Parse(text)
+	templ, err := parseWithFuncs(template.New(name), text)
+
 	if err != nil {
 		log("Error parsing text")
 		return nil, err
@@ -31,7 +59,7 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 	}
 
 	log("Parsing colleted styles")
-	templ, err = templ.Parse(style)
+	templ, err = parseWithFuncs(templ, style)
 	if err != nil {
 		log("Error parsing styles")
 		return nil, err
@@ -45,7 +73,7 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 
 	// Load all components and return the template
 	for _, component := range components {
-		templ, err = templ.Parse(component)
+		templ, err = parseWithFuncs(templ, component)
 		if err != nil {
 			log("Error parsing component string: \n" + component)
 			return nil, err
@@ -111,10 +139,10 @@ func readComponentStyles() (string, error) {
 }
 
 func readComponents() ([]string, error) {
-	if componentCache != nil {
-		log("Using cached components")
-		return componentCache, nil
-	}
+	// if componentCache != nil {
+	// 	log("Using cached components")
+	// 	return componentCache, nil
+	// }
 
 	files, err := filepath.Glob("templates/shared/*.tmpl")
 	if err != nil {

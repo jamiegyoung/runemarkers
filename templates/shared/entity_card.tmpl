@@ -28,7 +28,7 @@
       </a>
       {{ end }}
     </div>
-    <div>
+    <div class="entity-card-bottom">
       {{ if .Tiles }}<p><span class="entity-card-tile-count">{{ .Tiles | len }}</span> tile markers</p>{{ end}}
       <div class="entity-interaction">
       {{ template "copy_button" . }}
