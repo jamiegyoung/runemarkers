@@ -13,6 +13,10 @@
   <div class="main-container">
     <div class="inner-container">
     {{ template "entity_card" .Entity }}
+    <div class="entity-links">
+    <a href="{{.Entity.MapLink}}">View map on RuneLite</a>
+    <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
+    </div>
     </div>
   </div>
 </body>
@@ -47,6 +51,20 @@
     color: var(--color-text);
   }
 
+  .entity-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+    text-decoration: underline;
+  }
+
+  .entity-links a {
+    color: var(--color-primary);
+
+  }
+
   .main-container {
     margin-top: 4rem;
     display: flex;
@@ -56,7 +74,7 @@
 
   .inner-container {
     min-width: 17rem;
-    margin: 4rem; 0 0.75rem 0;
+    margin: 2rem; 0 0.75rem 0;
     max-width: 37rem;
     width: 80%;
     border-radius: 0.75rem;

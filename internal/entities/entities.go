@@ -2,6 +2,7 @@ package entities
 
 import (
 	"crypto/md5"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -44,6 +45,7 @@ type Entity struct {
 	Tags                    []string `json:"tags"`
 	Tiles                   []Tile   `json:"tiles"`
 	TilesString             string
+	MapLink                 string
 	Thumbnail               string  `json:"thumbnail"`
 	Wiki                    string  `json:"wiki"`
 	Source                  *Source `json:"source,omitempty"`
@@ -187,12 +189,21 @@ func getEntityUri(entity Entity) string {
 	)
 }
 
-func entityTilesHash(tilesString string) string {
+// Tiles must be provided as a string
+func entityTilesHash(str string) string {
 	// generate a hash based on the entity tiles
 	hash := md5.New()
-	hash.Write([]byte(tilesString))
+	hash.Write([]byte(str))
 	// truncate hash to 8 characters
 	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
+}
+
+func mapLink(d []byte) string {
+	return "https://runelite.net/tile/show/" + strings.ReplaceAll(
+		base64.StdEncoding.EncodeToString(d),
+		"=",
+		"",
+	)
 }
 
 func transformEntity(entity *Entity) error {
@@ -202,6 +213,8 @@ func transformEntity(entity *Entity) error {
 	}
 
 	entity.TilesString = string(tilesString)
+
+	entity.MapLink = mapLink(tilesString)
 
 	entity.FullName = fmt.Sprintf("%s %s", entity.Name, entity.Subcategory)
 	entity.FullAltName = fmt.Sprintf("%s %s", entity.AltName, entity.Subcategory)
