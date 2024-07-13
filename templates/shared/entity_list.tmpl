@@ -39,7 +39,7 @@ function addListItem(item) {
   // set the text content of the list item to the entity's name
   const img = listItem.querySelector('img')
   img.src = item.thumbnail
-  img.alt = `${item.name} thumbnail`
+  img.alt = `${item.name} from Old School RuneScape`
 
   const title = setTitle(listItem, item.name)
   if (title) addSubcategory(title, item.subcategory)
