@@ -4,15 +4,15 @@
   transform: translateY(15px);
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 20rem;
 }
 
 #entity-search {
+  width: 100%;
   font-size: 1.2rem;
   max-width: 16rem;
   min-width: 100px;
   padding: 0.5rem 30px 0.5rem 30px;
-  width: 90%;
   border-radius: 0.5rem;
   border: none;
   background-color: var(--color-text);
@@ -28,10 +28,14 @@
 }
 
 #entity-search:not(:placeholder-shown), #entity-search:focus {
-  max-width: 20rem;
   box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.2),
     0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#entity-search:not(:placeholder-shown) {
+  max-width: 20rem;
+  padding: 0.5rem 2rem 0.5rem 0.1rem;
 }
 
 #entity-search:focus::placeholder {
@@ -51,7 +55,7 @@
   float: left;
   height: 48px;
   position: absolute;
-  right: 10px;
+  right: 13px;
   border: none;
   background-color: transparent;
   transition: 0.1s ease-out;
