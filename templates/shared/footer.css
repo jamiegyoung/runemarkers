@@ -6,8 +6,10 @@ footer {
   margin: 2rem 0;
 }
 
-footer p {
+footer .footer-item {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 footer a {
@@ -17,6 +19,10 @@ footer a {
   gap: .25rem;
   height: 100%;
   margin-left: .25rem;
+}
+
+footer img {
+  margin-top: 0.25rem;
 }
 
 @media (max-width: 375px) {
