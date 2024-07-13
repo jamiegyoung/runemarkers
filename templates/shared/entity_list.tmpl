@@ -1,4 +1,8 @@
-<div class="inner-list-container"></div>
+<div class="inner-list-container">
+{{ range .Entities }}
+<a class="hidden-link" src="{{ .SafeUri }}">{{ .FullName }}</a>
+{{ end }}
+</div>
 {{ template "entity_card_compact" . }}
 
 {{ template "copy" }}

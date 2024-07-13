@@ -45,3 +45,7 @@
 .entity-card.grid .entity-thumbnail {
   margin-right: 0
 }
+
+.hidden-link {
+  visibility: hidden;
+}
