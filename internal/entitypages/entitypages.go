@@ -6,19 +6,10 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/internal/entities"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
+	"github.com/jamiegyoung/runemarkers-go/internal/pages"
 )
 
 var log = logger.New("entitypages")
-
-type EntityPage struct {
-	Entity *entities.Entity
-}
-
-func (p *EntityPage) Data() map[string]interface{} {
-	return map[string]interface{}{
-		"Entity": p.Entity,
-	}
-}
 
 func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 	log("Generating entity pages")
@@ -46,9 +37,7 @@ func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 				return
 			}
 
-			data := EntityPage{
-				Entity: entity,
-			}
+			data := pages.NewPage(map[string]interface{}{"Entity": entity})
 
 			err = pageio.RenderPage(entity.Name, page, output, &data)
 			if err != nil {

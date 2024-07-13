@@ -6,6 +6,7 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/internal/entities"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
+	"github.com/jamiegyoung/runemarkers-go/internal/pages"
 )
 
 var log = logger.New("api")
@@ -41,12 +42,9 @@ func GenerateButtons(ents []*entities.Entity) error {
 
 		defer output.Close()
 
-		data := ButtonPage{
-			TilesString: entity.TilesString,
-			Page: pageio.Page{
-				ShowInfoButton: false,
-			},
-		}
+		data := pages.NewPage(
+			map[string]interface{}{"TilesString": entity.TilesString},
+		)
 
 		err = pageio.RenderPage(
 			"button_"+entity.ApiUri,

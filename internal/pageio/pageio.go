@@ -6,11 +6,6 @@ import (
 	"strings"
 )
 
-type Page struct {
-	ShowInfoButton bool
-	CardHidden     bool
-}
-
 func ReadPageString(path string) (string, error) {
 	log("Reading " + path)
 	bytes, err := os.ReadFile(path)

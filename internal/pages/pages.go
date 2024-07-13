@@ -12,14 +12,17 @@ import (
 
 var log = logger.New("pages")
 
-type IndexPage struct {
-	pageio.Page
-	Entities []*entities.Entity
+type Page struct {
+	data map[string]interface{}
 }
 
-func (p *IndexPage) Data() map[string]interface{} {
-	return map[string]interface{}{
-		"Entities": p.Entities,
+func (p Page) Data() map[string]interface{} {
+	return p.data
+}
+
+func NewPage(data map[string]interface{}) Page {
+	return Page{
+		data: data,
 	}
 }
 
@@ -31,9 +34,7 @@ func GeneratePages(destination string, entities []*entities.Entity) error {
 
 	log("Found " + fmt.Sprint(len(paths)) + " page(s)")
 
-	data := IndexPage{
-		Entities: entities,
-	}
+	data := NewPage(map[string]interface{}{"Entities": entities})
 
 	var wg sync.WaitGroup
 	errc := make(chan error, len(paths))
