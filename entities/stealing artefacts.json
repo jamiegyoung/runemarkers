@@ -1,0 +1,340 @@
+{
+  "name": "Stealing Artefacts",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Captain_Khaled_chathead.png/120px-Captain_Khaled_chathead.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Stealing_artefacts",
+  "tags": [
+    "thieving",
+    "minigame",
+    "skilling"
+  ],
+  "recommendedGuideVideoId": "StgC4H2eN6s",
+  "source": {
+    "name": "he box jonge - Stealing Artefacts + Multiskill Guide 2023/2024",
+    "link": "https://youtu.be/StgC4H2eN6s"
+  },
+  "tiles": [
+    {
+      "regionId": 6970,
+      "regionX": 20,
+      "regionY": 37,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 21,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 22,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 34,
+      "regionY": 43,
+      "z": 0,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 40,
+      "regionY": 46,
+      "z": 0,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 50,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 43,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FFFF0000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 23,
+      "regionY": 45,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 24,
+      "regionY": 38,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 39,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 50,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 45,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 53,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FF050000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 44,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FF050000"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 36,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 36,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 50,
+      "regionY": 25,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 34,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 35,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 46,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 24,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 16,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 16,
+      "regionY": 26,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 47,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 43,
+      "regionY": 44,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 47,
+      "regionY": 40,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 41,
+      "regionY": 39,
+      "z": 0,
+      "color": "#FFF88E04"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 44,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 48,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 41,
+      "regionY": 25,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 49,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 44,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 40,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 46,
+      "regionY": 40,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 29,
+      "regionY": 41,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 27,
+      "regionY": 41,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 25,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 24,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 26,
+      "regionY": 24,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 39,
+      "regionY": 50,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 51,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF43FF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 32,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FFF88E04",
+      "label": "safe"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 43,
+      "regionY": 34,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6971,
+      "regionX": 38,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6971,
+      "regionX": 33,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFFFFFFF"
+    },
+    {
+      "regionId": 6971,
+      "regionX": 31,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF050000"
+    }
+  ]
+}
