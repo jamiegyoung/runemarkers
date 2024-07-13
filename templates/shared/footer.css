@@ -10,6 +10,7 @@ footer .footer-item {
   margin: 0;
   display: flex;
   justify-content: center;
+  gap: 0.25rem;
 }
 
 footer a {
@@ -18,7 +19,7 @@ footer a {
   align-items: center;
   gap: .25rem;
   height: 100%;
-  margin-left: .25rem;
+  margin-left: 0.25rem;
 }
 
 footer img {
