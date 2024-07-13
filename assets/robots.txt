@@ -1,3 +1,4 @@
+# TODO this is currently unused
 # *
 User-agent: *
 Allow: /
