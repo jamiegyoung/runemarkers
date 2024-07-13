@@ -57,6 +57,25 @@
   text-align: end;
 }
 
+@media (max-width: 450px) {
+  .entity-card.row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .entity-thumbnail {
+    margin-right: 0;
+    width: 4rem;
+  }
+
+  .entity-card-data {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
 .entity-card-title {
   text-decoration: none;
   display: block;

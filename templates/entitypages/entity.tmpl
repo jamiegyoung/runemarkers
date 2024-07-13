@@ -89,6 +89,14 @@
     text-decoration: underline;
   }
 
+  @media (max-width: 450px) {
+    .entity-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
   a {
     color: var(--color-primary);
     transition: color .2s ease-out;
