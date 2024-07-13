@@ -32,7 +32,7 @@
     {{ template "tile_data_display" .Entity }}
     {{ if .Entity.Source}}
       <h2>Source</h2>
-      <span><a href="{{ .Entity.Source.Link }}">{{ .Entity.Source.Name }}</a>
+      <span class="source"><a href="{{ .Entity.Source.Link }}">{{ .Entity.Source.Name }}</a>
       {{ if .Entity.Source.Modified }}
         <span class="modified-wrapper">(modified)
           <span class="tooltip-wrapper">
@@ -96,6 +96,10 @@
 
   a:hover {
     color: var(--color-primary-light);
+  }
+
+  .source {
+    text-align: center;
   }
 
   .modified-wrapper {
