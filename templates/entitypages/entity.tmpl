@@ -43,6 +43,7 @@
 <style>
   html,
   body {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -58,6 +59,10 @@
     --color-card-hover-light: #55554a;
     background-color: var(--color-background);
     color: var(--color-text);
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
   }
 
   .entity-links {
