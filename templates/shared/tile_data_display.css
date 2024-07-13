@@ -1,0 +1,27 @@
+.data-display-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-display-container .controls {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.data-display-container .controls button {
+  border: none;
+  background-color: transparent;
+  color: var(--color-subtle-text);
+  text-transform: lowercase;
+  transition: color .2s ease-out;
+}
+
+.data-display-container .controls button:hover {
+  color: var(--color-primary-light);
+  cursor: pointer;
+}
