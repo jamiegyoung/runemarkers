@@ -183,7 +183,7 @@ func transformEntity(entity *Entity) error {
 	}
 
 	entity.FullName = formatName(entity.Name, entity.Subcategory)
-	entity.FullName = formatName(entity.AltName, entity.Subcategory)
+	entity.FullAltName = formatName(entity.AltName, entity.Subcategory)
 
 	entity.TilesString = string(tilesString)
 
