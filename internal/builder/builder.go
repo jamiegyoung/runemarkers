@@ -11,6 +11,7 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/internal/libs"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pages"
+	"github.com/jamiegyoung/runemarkers-go/internal/robots"
 	"github.com/jamiegyoung/runemarkers-go/internal/templating"
 	"github.com/jamiegyoung/runemarkers-go/internal/thumbnails"
 )
@@ -69,6 +70,12 @@ func Build(skipThumbs bool) error {
 	err = assets.Copy(destination + "/assets")
 	if err != nil {
 		logErr("copying assets", err)
+		return err
+	}
+
+	err = robots.Copy(destination)
+	if err != nil {
+		logErr("copying robots.txt", err)
 		return err
 	}
 
