@@ -16,7 +16,7 @@
       <a class="entity-link entity-card-title" href="./">
         <h2>
           <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
-          <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
+          {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
         </h2>
       </a>
     </div>
