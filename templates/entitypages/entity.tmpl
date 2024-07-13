@@ -18,6 +18,19 @@
     <a href="{{.Entity.MapLink}}">View map on RuneLite</a>
     <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
     </div>
+    <div class="section">
+      <h2>Recommended Guide</h2>
+      <iframe
+        title="Recommended Guide"
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
+        frameborder="0"
+        loading="lazy"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </div>
 </body>
@@ -76,7 +89,7 @@
   .inner-container {
     min-width: 17rem;
     margin: 2rem; 0 0.75rem 0;
-    max-width: 37rem;
+    max-width: 40rem;
     width: 80%;
     border-radius: 0.75rem;
     display: flex;
@@ -90,6 +103,23 @@
     overflow-y: auto;
     overflow-x: hidden;
     height: calc(100dvh - 300px);
+  }
+
+  .inner-container > .section {
+    width: 85%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inner-container > .section > h2 {
+    width: 100%;
+  }
+
+  .inner-container > .section > iframe {
+    border-radius: 0.75rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
   }
 
   @media (max-width: 900px), (max-height: 900px) {
