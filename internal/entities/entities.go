@@ -86,7 +86,6 @@ func ReadAllEntities() ([]*Entity, error) {
 
 	wg.Wait()
 	close(errc)
-
 	err = <-errc
 
 	return ents, err
@@ -166,9 +165,63 @@ func ReadEntityAndParse(name string) (*Entity, error) {
 	return parseEntity(data)
 }
 
-func transformToUrl(s string, tilesString string) string {
-	lowered := strings.ToLower(s)
-	return strings.ReplaceAll(lowered, " ", "-")
+func parseEntity(data []byte) (*Entity, error) {
+	var target *Entity
+	err := json.Unmarshal(data, &target)
+	if err != nil {
+		return target, err
+	}
+
+	err = transformEntity(target)
+	return target, err
+}
+
+func transformEntity(entity *Entity) error {
+	tilesString, err := json.Marshal(entity.Tiles)
+	if err != nil {
+		return err
+	}
+
+	entity.FullName = formatName(entity.Name, entity.Subcategory)
+	entity.FullName = formatName(entity.AltName, entity.Subcategory)
+
+	entity.TilesString = string(tilesString)
+
+	entity.MapLink = mapLink(tilesString)
+
+	hash := entityTilesHash(entity.TilesString)
+
+	entity.Uri = getEntityUri(*entity)
+	entity.SafeUri = url.QueryEscape(entity.Uri)
+
+	entity.ApiUri = entity.Uri + "-" + hash
+	entity.SafeApiUri = url.QueryEscape(entity.ApiUri)
+
+	return nil
+}
+
+// Returns the FullName and the FullAltName if AltName exists, else ""
+func formatName(name string, subcategory string) string {
+	if subcategory != "" {
+		return fmt.Sprintf("%v (%v)", name, subcategory)
+	}
+	return fmt.Sprintf("%v", name)
+}
+
+func mapLink(d []byte) string {
+	return "https://runelite.net/tile/show/" + strings.ReplaceAll(
+		base64.StdEncoding.EncodeToString(d),
+		"=",
+		"",
+	)
+}
+
+func entityTilesHash(str string) string {
+	// generate a hash based on the entity tiles
+	hash := md5.New()
+	hash.Write([]byte(str))
+	// truncate hash to 8 characters
+	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
 }
 
 func getEntityUri(entity Entity) string {
@@ -182,54 +235,7 @@ func getEntityUri(entity Entity) string {
 	)
 }
 
-// Tiles must be provided as a string
-func entityTilesHash(str string) string {
-	// generate a hash based on the entity tiles
-	hash := md5.New()
-	hash.Write([]byte(str))
-	// truncate hash to 8 characters
-	return fmt.Sprintf("%x", hash.Sum(nil))[:8]
-}
-
-func mapLink(d []byte) string {
-	return "https://runelite.net/tile/show/" + strings.ReplaceAll(
-		base64.StdEncoding.EncodeToString(d),
-		"=",
-		"",
-	)
-}
-
-func transformEntity(entity *Entity) error {
-	tilesString, err := json.Marshal(entity.Tiles)
-	if err != nil {
-		return err
-	}
-
-	entity.TilesString = string(tilesString)
-
-	entity.MapLink = mapLink(tilesString)
-
-	entity.FullName = fmt.Sprintf("%v (%v)", entity.Name, entity.Subcategory)
-	entity.FullAltName = fmt.Sprintf("%v (%v)", entity.AltName, entity.Subcategory)
-
-	hash := entityTilesHash(entity.TilesString)
-
-	entity.Uri = getEntityUri(*entity)
-	entity.SafeUri = url.QueryEscape(entity.Uri)
-
-	entity.ApiUri = entity.Uri + "-" + hash
-	entity.SafeApiUri = url.QueryEscape(entity.ApiUri)
-
-	return nil
-}
-
-func parseEntity(data []byte) (*Entity, error) {
-	var target *Entity
-	err := json.Unmarshal(data, &target)
-	if err != nil {
-		return target, err
-	}
-
-	err = transformEntity(target)
-	return target, err
+func transformToUrl(s string, tilesString string) string {
+	lowered := strings.ToLower(s)
+	return strings.ReplaceAll(lowered, " ", "-")
 }
