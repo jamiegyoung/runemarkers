@@ -64,9 +64,8 @@
     gap: 1rem;
   }
 
-  .entity-thumbnail {
+  .entity-card.row .entity-thumbnail {
     margin-right: 0;
-    width: 4rem;
   }
 
   .entity-card-data {
