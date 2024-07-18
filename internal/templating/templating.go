@@ -13,8 +13,8 @@ import (
 
 var log = logger.New("templating")
 
-var componentCache []string = nil
-var styleCache string = ""
+// var componentCache []string = nil
+// var styleCache string = ""
 
 func countNewlines(s string) int {
 	return strings.Count(s, "\n")
@@ -83,8 +83,8 @@ func TemplateWithComponents(name string, text string) (*template.Template, error
 }
 
 func ClearCache() {
-	componentCache = nil
-	styleCache = ""
+	// componentCache = nil
+	// styleCache = ""
 }
 
 func createStyleComponent(fileStrings []string) string {
@@ -92,15 +92,15 @@ func createStyleComponent(fileStrings []string) string {
 	styles := strings.Join(fileStrings, "\n")
 	component := fmt.Sprintf("{{define \"styles\"}}<style>%s</style>{{ end }}", styles)
 
-	styleCache = component
+	// styleCache = component
 	return component
 }
 
 func readComponentStyles() (string, error) {
-	if styleCache != "" {
-		log("Using cached styles")
-		return styleCache, nil
-	}
+	// if styleCache != "" {
+	// 	log("Using cached styles")
+	// 	return styleCache, nil
+	// }
 
 	files, err := filepath.Glob("templates/shared/*.css")
 	if err != nil {
@@ -195,7 +195,7 @@ func readComponents() ([]string, error) {
 	}
 
 	// update cache
-	componentCache = fileStrings
+	// componentCache = fileStrings
 
 	return fileStrings, nil
 }
