@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
+	"github.com/jamiegyoung/runemarkers-go/internal/hashing"
 )
 
 var fileHashes map[string]uint32 = make(map[string]uint32)
@@ -126,7 +127,7 @@ func watch(action func(string) error) error {
 	for _, filepath := range filepaths {
 		watchlist = append(watchlist, filepath)
 
-		hash, err := newHash(filepath)
+		hash, err := hashing.HashFile(filepath)
 		if err != nil {
 			return err
 		}

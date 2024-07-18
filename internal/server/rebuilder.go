@@ -4,10 +4,11 @@ import (
 	"fmt"
 
 	"github.com/jamiegyoung/runemarkers-go/internal/builder"
+	"github.com/jamiegyoung/runemarkers-go/internal/hashing"
 )
 
 func rebuild(path string) error {
-	hash, err := newHash(path)
+	hash, err := hashing.HashFile(path)
 	if err != nil {
 		debug("Unable to generate new hash, file likely doesn't exist anymore")
 		return err
