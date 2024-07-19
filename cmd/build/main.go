@@ -17,8 +17,8 @@ func main() {
 
 	err := builder.Build(skipThumbs)
 	if err != nil {
-		log(fmt.Sprintf("An error occured: %v", err))
-		log(err.Error())
+		// FIXME: doesn't show stack trace
+		log(fmt.Sprintf("An error occured: %+v", err))
 	}
 
 }

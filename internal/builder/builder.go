@@ -11,6 +11,7 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pages"
 	"github.com/jamiegyoung/runemarkers-go/internal/robots"
+	"github.com/jamiegyoung/runemarkers-go/internal/sitemap"
 	"github.com/jamiegyoung/runemarkers-go/internal/templating"
 	"github.com/jamiegyoung/runemarkers-go/internal/thumbnails"
 )
@@ -28,9 +29,15 @@ func Build(skipThumbs bool) error {
 			return err
 		}
 	}
-	log("Reading entities")
 
+	log("Reading entities")
 	ents, err := entities.ReadAllEntities()
+	if err != nil {
+		return err
+	}
+
+	log("Generating sitemap")
+	err = sitemap.Generate(ents)
 	if err != nil {
 		return err
 	}

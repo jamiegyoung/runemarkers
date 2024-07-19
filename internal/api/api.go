@@ -60,7 +60,6 @@ func GenerateEntitySpecific(ents []*entities.Entity, tmpl_path string) error {
 		if err != nil {
 			return err
 		}
-
 		defer output.Close()
 
 		data := pages.NewPage(

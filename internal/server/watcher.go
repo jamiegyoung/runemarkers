@@ -106,6 +106,7 @@ func devFiles() ([]string, error) {
 		"\\.gitignore",
 		"Dockerfile",
 		"compose.yml",
+		"lastmod.db",
 	}
 	filepaths, err := allFilesRecursive("./", ignores)
 
