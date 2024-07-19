@@ -64,7 +64,6 @@ func Copy(input_glob string, output string) error {
 			}
 			defer output.Close()
 
-			log("copying " + path + " to " + dest)
 			_, err = io.Copy(output, src)
 			if err != nil {
 				log("Error copying file: " + dest + err.Error())
