@@ -12,7 +12,6 @@ import (
 	"github.com/jamiegyoung/runemarkers-go/internal/pages"
 	"github.com/jamiegyoung/runemarkers-go/internal/robots"
 	"github.com/jamiegyoung/runemarkers-go/internal/sitemap"
-	"github.com/jamiegyoung/runemarkers-go/internal/templating"
 	"github.com/jamiegyoung/runemarkers-go/internal/thumbnails"
 )
 
@@ -21,8 +20,6 @@ const destination = "public"
 var log = logger.New("build")
 
 func Build(skipThumbs bool) error {
-	templating.ClearCache()
-
 	if _, err := os.Stat(destination); os.IsNotExist(err) {
 		err := os.Mkdir(destination, 0755)
 		if err != nil {

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://runemarkers.net/</loc>
+    <lastmod>{{ .ModTimeString }}</lastmod>
+    <priority>1.0</priority>
+  </url>
   {{ range .EntityMods -}}
   <url>
     <loc>https://runemarkers.net/{{ .Entity.SafeUri }}</loc>
-    <lastmod>{{ .ModTime }}</lastmod>
+    <lastmod>{{ .ModTimeString }}</lastmod>
+    <priority>0.8</priority>
   </url>
   {{ end }}
 </urlset>

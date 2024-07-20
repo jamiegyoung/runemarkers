@@ -60,7 +60,7 @@ func GeneratePages(destination string, entities []*entities.Entity) error {
 
 			name := filepath.Base(path)
 
-			err = pageio.RenderPage(name, page, output, &data)
+			err = pageio.RenderHtml(name, page, output, &data)
 			errc <- err
 		}(path)
 	}

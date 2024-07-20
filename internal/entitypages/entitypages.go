@@ -39,7 +39,7 @@ func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 
 			data := pages.NewPage(map[string]interface{}{"Entity": entity})
 
-			err = pageio.RenderPage(entity.Name, page, output, &data)
+			err = pageio.RenderHtml(entity.Name, page, output, &data)
 			if err != nil {
 				errc <- err
 			}

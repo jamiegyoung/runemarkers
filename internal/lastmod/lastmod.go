@@ -15,8 +15,9 @@ import (
 )
 
 type EntityMod struct {
-	Entity  entities.Entity
-	ModTime string
+	Entity        entities.Entity
+	ModTimeString string
+	ModTime       time.Time
 }
 
 const bucketName string = "lastmod"
@@ -59,7 +60,15 @@ func UpdateEntities(entity_arr []*entities.Entity) error {
 			var buf bytes.Buffer
 			enc := gob.NewEncoder(&buf)
 
-			err = enc.Encode(EntityMod{Entity: *e, ModTime: time.Now().UTC().Format(time.RFC3339)})
+			modTime := time.Now().UTC()
+
+			err = enc.Encode(
+				EntityMod{
+					Entity:        *e,
+					ModTime:       modTime,
+					ModTimeString: Format(modTime),
+				},
+			)
 			if err != nil {
 				return err
 			}
@@ -111,11 +120,9 @@ func EntitiesDiff(entities_arr []*entities.Entity) ([]*entities.Entity, error) {
 			isDiff := reflect.DeepEqual(e, decEntity.Entity)
 			log("Checking " + e.SafeUri + " diff " + strconv.FormatBool(isDiff))
 			if isDiff {
-				continue
+				log(fmt.Sprintf("Adding %v to modded list", e.SafeUri))
+				modded = append(modded, e)
 			}
-
-			log(fmt.Sprintf("Adding %v to modded list", e.SafeUri))
-			modded = append(modded, e)
 		}
 		return err
 	})
@@ -156,6 +163,21 @@ func GetEntites() ([]*EntityMod, error) {
 	})
 
 	return entitiesArr, err
+}
+
+func FindLastMod(entMods []*EntityMod) time.Time {
+	lastmod := entMods[0].ModTime
+	for _, entMod := range entMods {
+		if entMod.ModTime.After(lastmod) {
+			lastmod = entMod.ModTime
+		}
+	}
+
+	return lastmod
+}
+
+func Format(t time.Time) string {
+	return t.Format(time.RFC3339)
 }
 
 func db() (*bolt.DB, error) {

@@ -70,7 +70,7 @@ func GenerateEntitySpecific(ents []*entities.Entity, tmpl_path string) error {
 			},
 		)
 
-		err = pageio.RenderPage(
+		err = pageio.RenderHtml(
 			api_name+"_"+entity.ApiUri,
 			api_page,
 			output,

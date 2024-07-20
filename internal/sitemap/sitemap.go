@@ -54,13 +54,16 @@ func processTemplate(entMods []*lastmod.EntityMod) error {
 	}
 	defer output.Close()
 
+	// Set the last modified as the most recently modified entity
+	// for the homepage
 	data := pages.NewPage(
 		map[string]interface{}{
-			"EntityMods": entMods,
+			"ModTimeString": lastmod.Format(lastmod.FindLastMod(entMods)),
+			"EntityMods":    entMods,
 		},
 	)
 
-	err = pageio.RenderPage(
+	err = pageio.RenderText(
 		"sitemap",
 		sitemap_page,
 		output,

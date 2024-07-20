@@ -45,6 +45,9 @@ func existingEntities() ([]string, error) {
 		names = append(names, name)
 	}
 
+	// append sitemap
+	names = append(names, "sitemap.xml")
+
 	debug("Allowed entities found: " + strings.Join(names, ", "))
 	return names, nil
 }
