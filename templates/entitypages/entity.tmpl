@@ -48,12 +48,13 @@
     </div>
     <h2>Recommended Guide</h2>
     <iframe
-    title="Recommended Guide"
-    src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
-    frameborder="0"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture"
-    allowfullscreen>
+      title="Recommended Guide"
+      src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
+      frameborder="0"
+      loading="lazy"
+      async
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
     </iframe>
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
