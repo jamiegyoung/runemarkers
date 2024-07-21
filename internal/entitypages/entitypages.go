@@ -1,8 +1,6 @@
 package entitypages
 
 import (
-	"sync"
-
 	"github.com/jamiegyoung/runemarkers-go/internal/entities"
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
 	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
@@ -21,33 +19,22 @@ func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 		return err
 	}
 
-	var wg sync.WaitGroup
-	errc := make(chan error)
-
 	// for each of the entities, generate an entity page
 	for _, entity := range foundEntities {
-		wg.Add(1)
-		go func(entity *entities.Entity) {
-			defer wg.Done()
-			log("Rendering " + entity.Name + " to " + destination + "/" + entity.Uri + ".html")
-			output, err := pageio.CreateOutFile(destination, entity.Uri+".html")
-			defer output.Close()
-			if err != nil {
-				errc <- err
-				return
-			}
+		log("Rendering " + entity.Name + " to " + destination + "/" + entity.Uri + ".html")
+		output, err := pageio.CreateOutFile(destination, entity.Uri+".html")
+		defer output.Close()
 
-			data := pages.NewPage(map[string]interface{}{"Entity": entity})
+		if err != nil {
+			return err
+		}
 
-			err = pageio.RenderHtml(entity.Name, page, output, &data)
-			if err != nil {
-				errc <- err
-			}
-		}(entity)
+		data := pages.NewPage(map[string]interface{}{"Entity": entity})
+
+		err = pageio.RenderHtml(entity.Name, page, output, &data)
+		if err != nil {
+			return err
+		}
 	}
-
-	wg.Wait()
-	close(errc)
-
-	return <-errc
+	return nil
 }
