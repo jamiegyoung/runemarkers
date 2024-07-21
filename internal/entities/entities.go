@@ -11,10 +11,10 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers-go/ytthumbnail"
 )
 
 // Tile colour can be multiple types and we don't really care which one it is
@@ -51,6 +51,7 @@ type Entity struct {
 	Wiki                    string `json:"wiki"`
 	Source                  Source `json:"source,omitempty"`
 	RecommendedGuideVideoId string `json:"recommendedGuideVideoId,omitempty"`
+	YouTubeThumbnailUrl     string
 	FullName                string
 	FullAltName             string
 }
@@ -65,29 +66,19 @@ func ReadAllEntities() ([]*Entity, error) {
 
 	log("Found " + fmt.Sprint(len(files)) + " entity file(s)")
 
-	var wg sync.WaitGroup
 	ents := make([]*Entity, len(files))
-	errc := make(chan error)
 
-	for i, file := range files {
-		wg.Add(1)
-		go func(i int, path string) {
-			defer wg.Done()
-			log("Reading " + path)
+	for i, path := range files {
+		log("Reading " + path)
 
-			name := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
-			entity, err := ReadEntityAndParse(name)
-			if err != nil {
-				errc <- err
-			}
+		name := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
+		entity, err := ReadEntityAndParse(name)
+		if err != nil {
+			return nil, err
+		}
 
-			ents[i] = entity
-		}(i, file)
+		ents[i] = entity
 	}
-
-	wg.Wait()
-	close(errc)
-	err = <-errc
 
 	return ents, err
 }
@@ -199,7 +190,11 @@ func transformEntity(entity *Entity) error {
 	entity.ApiUri = entity.Uri + "-" + hash
 	entity.SafeApiUri = url.QueryEscape(entity.ApiUri)
 
-	return nil
+	if entity.RecommendedGuideVideoId != "" {
+		entity.YouTubeThumbnailUrl, err = ytthumbnail.Get(entity.RecommendedGuideVideoId)
+	}
+
+	return err
 }
 
 // Returns the FullName and the FullAltName if AltName exists, else ""
