@@ -136,52 +136,56 @@
     color: var(--color-primary-light);
   }
 
-  .source {
-    text-align: center;
-  }
+  {{ if .Entity.Source }}
+    .source {
+      text-align: center;
+    }
 
-  .modified-wrapper {
-    display: inline-block;
-    cursor: help;
-  }
+    {{ if .Entity.Source.Modified }}
+      .modified-wrapper {
+        display: inline-block;
+        cursor: help;
+      }
 
-  .modified-wrapper .tooltip-wrapper {
-    position: absolute;
-    margin-left: 60px;
-  }
+      .modified-wrapper .tooltip-wrapper {
+        position: absolute;
+        margin-left: 60px;
+      }
 
-  .modified-wrapper:hover .tooltip-wrapper .tooltip {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modified-wrapper .tooltip-wrapper .tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  padding-bottom: 20px;
-  border-style: solid;
-  border-color: var(--color-card) transparent transparent transparent;
-}
+      .modified-wrapper:hover .tooltip-wrapper .tooltip {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .modified-wrapper .tooltip-wrapper .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      padding-bottom: 20px;
+      border-style: solid;
+      border-color: var(--color-card) transparent transparent transparent;
+    }
 
-  .modified-wrapper .tooltip-wrapper .tooltip {
-    background-color: var(--color-card);
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    border-radius: 6px;
-    padding: 10px;
-    width: 12rem;
-    position: absolute;
-    height: fit-content;
-    text-align: center;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .1s ease-in-out;
-    margin-bottom: 10px;
-  }
+      .modified-wrapper .tooltip-wrapper .tooltip {
+        background-color: var(--color-card);
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        border-radius: 6px;
+        padding: 10px;
+        width: 12rem;
+        position: absolute;
+        height: fit-content;
+        text-align: center;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .1s ease-in-out;
+        margin-bottom: 10px;
+      }
+    {{ end }}
+  {{ end }}
 
   .main-container {
     margin-top: 4rem;
@@ -225,46 +229,48 @@
     height: 100%;
   }
 
-  .yt-placeholder {
-    background: transparent;
-    border: none;
-    position: relative;
-    aspect-ratio: 16/9;
-    width: 100%;
-    background-image: url("https://i.ytimg.com/vi_webp/{{ .Entity.RecommendedGuideVideoId }}/sddefault.webp");
-    background-size: cover;
-    background-position: center;
-    border-radius: 1rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-  }
+  {{ if .Entity.RecommendedGuideVideoId }}
+    .yt-placeholder {
+      background: transparent;
+      border: none;
+      position: relative;
+      aspect-ratio: 16/9;
+      width: 100%;
+      background-image: url("https://i.ytimg.com/vi_webp/{{ .Entity.RecommendedGuideVideoId }}/sddefault.webp");
+      background-size: cover;
+      background-position: center;
+      border-radius: 1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    }
 
-  .yt-placeholder::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 4.375rem;
-    height: 3rem;
-    background: red;
-    border-radius: .8rem;
-    z-index: 1;
-    cursor: pointer;
-  }
+    .yt-placeholder::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4.375rem;
+      height: 3rem;
+      background: red;
+      border-radius: .8rem;
+      z-index: 1;
+      cursor: pointer;
+    }
 
-  .yt-placeholder::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    width: 0;
-    height: 0;
-    background: transparent;
-    border-top: .8rem solid transparent;
-    border-left: 1.25rem solid white;
-    border-bottom: .8rem solid transparent;
-    z-index: 2;
-    cursor: pointer;
-  }
+    .yt-placeholder::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      width: 0;
+      height: 0;
+      background: transparent;
+      border-top: .8rem solid transparent;
+      border-left: 1.25rem solid white;
+      border-bottom: .8rem solid transparent;
+      z-index: 2;
+      cursor: pointer;
+    }
+  {{ end }}
 </style>
