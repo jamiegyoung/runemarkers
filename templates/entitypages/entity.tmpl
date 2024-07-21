@@ -48,10 +48,6 @@
     </div>
     <h2>Recommended Guide</h2>
     <button class="yt-placeholder" hx-get="/api/youtube_{{.Entity.SafeApiUri}}.html" hx-swap="outerHTML" hx-trigger="click">
-      <img
-        width="100%"
-        src="https://i.ytimg.com/vi/{{ .Entity.RecommendedGuideVideoId }}/sddefault.jpg"
-        alt="{{ .Entity.FullName }} Recommended Guide Thumbnail">
     </button>
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
@@ -224,6 +220,13 @@
     background: transparent;
     border: none;
     position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-image: url("https://i.ytimg.com/vi_webp/{{ .Entity.RecommendedGuideVideoId }}/sddefault.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
   }
 
   .yt-placeholder::before {
@@ -253,15 +256,6 @@
     border-left: 1.25rem solid white;
     border-bottom: .8rem solid transparent;
     z-index: 2;
-    cursor: pointer;
-  }
-
-  .yt-placeholder img {
-    position: relative;
-    border-radius: 1rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-    aspect-ratio: 16/9;
-    width: 100%;
     cursor: pointer;
   }
 </style>
