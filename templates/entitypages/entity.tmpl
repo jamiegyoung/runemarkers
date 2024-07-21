@@ -49,7 +49,7 @@
     <h2>Recommended Guide</h2>
     <iframe
       title="Recommended Guide"
-      src=""
+      src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
       frameborder="0"
       loading="lazy"
       allow="autoplay; encrypted-media; picture-in-picture"
@@ -78,11 +78,6 @@
 
 <script>
   htmx.config.selfRequestsOnly = true;
-
-  window.onload = () => {
-    const iframe = document.querySelector('iframe');
-    iframe.src = 'https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}';
-  }
 </script>
 
 {{ template "styles" }}
