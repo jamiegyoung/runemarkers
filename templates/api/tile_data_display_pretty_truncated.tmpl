@@ -2,14 +2,14 @@
   <div class="controls">
     <button
       hx-target=".data-display-container"
-      hx-get="/api/tile_data_display_pretty_{{ .SafeApiUri }}.html"
-      hx-swap="outerHTML">Show all ({{ countNewlines .TilesStringPretty }} lines)</button>
+      hx-get="/api/tile_data_display_pretty_{{ .Entity.SafeApiUri }}.html"
+      hx-swap="outerHTML">Show all ({{ countNewlines .Entity.TilesStringPretty }} lines)</button>
     <button
       class="enabled"
       hx-target=".data-display-container"
-      hx-get="/api/tile_data_display_truncated_{{ .SafeApiUri }}.html"
+      hx-get="/api/tile_data_display_truncated_{{ .Entity.SafeApiUri }}.html"
       hx-swap="outerHTML">Pretty print</button>
   </div>
-  <code class="tiles-data pretty">{{ truncateLines .TilesStringPretty 10 }}</code>
+  <code class="tiles-data pretty">{{ truncateLines .Entity.TilesStringPretty 10 }}</code>
 </div>
 

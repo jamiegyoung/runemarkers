@@ -47,14 +47,12 @@
     <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
     </div>
     <h2>Recommended Guide</h2>
-    <iframe
-      title="Recommended Guide"
-      src="https://www.youtube-nocookie.com/embed/{{.Entity.RecommendedGuideVideoId}}"
-      frameborder="0"
-      loading="lazy"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+    <button class="yt-placeholder" hx-get="/api/youtube_{{.Entity.SafeApiUri}}.html" hx-swap="outerHTML" hx-trigger="click">
+      <img
+        width="100%"
+        src="https://i.ytimg.com/vi/{{ .Entity.RecommendedGuideVideoId }}/maxresdefault.jpg"
+        alt="{{ .Entity.FullName }} Recommended Guide Thumbnail">
+    </button>
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
     {{ if .Entity.Source}}
@@ -220,5 +218,51 @@
   .iframe-container {
     position: relative;
     height: 100%;
+  }
+
+  .yt-placeholder {
+    background: transparent;
+    border: none;
+    position: relative;
+  }
+
+  .yt-placeholder::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.375rem;
+    height: 3rem;
+    background: red;
+    border-radius: .8rem;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    cursor: pointer;
+  }
+
+  .yt-placeholder::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-top: .8rem solid transparent;
+    border-left: 1.25rem solid white;
+    border-bottom: .8rem solid transparent;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .yt-placeholder img {
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    aspect-ratio: 16/9;
+    width: 100%;
+    cursor: pointer;
   }
 </style>

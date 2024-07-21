@@ -3,13 +3,13 @@
     <button
       class="enabled"
       hx-target=".data-display-container"
-      hx-get="/api/tile_data_display_truncated_{{ .SafeApiUri }}.html"
+      hx-get="/api/tile_data_display_truncated_{{ .Entity.SafeApiUri }}.html"
       hx-swap="outerHTML">Show less</button>
     <button
       hx-target=".data-display-container"
-      hx-get="/api/tile_data_display_pretty_{{ .SafeApiUri }}.html"
+      hx-get="/api/tile_data_display_pretty_{{ .Entity.SafeApiUri }}.html"
       hx-swap="outerHTML">Pretty print</button>
   </div>
-  <code class="tiles-data">{{ .TilesString }}</code>
+  <code class="tiles-data">{{ .Entity.TilesString }}</code>
 </div>
 

@@ -16,6 +16,7 @@ var log = logger.New("api")
 func Generate(ents []*entities.Entity) error {
 	api_templates := []string{
 		"templates/api/button.tmpl",
+		"templates/api/youtube.tmpl",
 		"templates/api/tile_data_display.tmpl",
 		"templates/api/tile_data_display_pretty.tmpl",
 		"templates/api/tile_data_display_truncated.tmpl",
@@ -64,9 +65,7 @@ func GenerateEntitySpecific(ents []*entities.Entity, tmpl_path string) error {
 
 		data := pages.NewPage(
 			map[string]interface{}{
-				"TilesString":       entity.TilesString,
-				"TilesStringPretty": entity.TilesStringPretty,
-				"SafeApiUri":        entity.SafeApiUri,
+				"Entity": entity,
 			},
 		)
 
