@@ -46,15 +46,17 @@
     <a href="{{.Entity.MapLink}}">View map on RuneLite</a>
     <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
     </div>
-    <h2>Recommended Guide</h2>
-    <button
-      class="yt-placeholder"
-      hx-get="/api/youtube_{{ .Entity.SafeApiUri }}.html"
-      hx-swap="outerHTML"
-      hx-trigger="click"
-      aria-label="Load recommended guide video"
-    >
-    </button>
+    {{ if .Entity.RecommendedGuideVideoId }}
+      <h2>Recommended Guide</h2>
+      <button
+        class="yt-placeholder"
+        hx-get="/api/youtube_{{ .Entity.SafeApiUri }}.html"
+        hx-swap="outerHTML"
+        hx-trigger="click"
+        aria-label="Load recommended guide video"
+      >
+      </button>
+    {{ end }}
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
     {{ if .Entity.Source}}
