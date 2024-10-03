@@ -10,7 +10,7 @@ exports[`ListOperations should render correctly with the grid format 1`] = `
     >
       <input
         class="input "
-        placeholder="type here to search"
+        placeholder="search tiles"
         type="text"
         value=""
       />
@@ -71,7 +71,7 @@ exports[`ListOperations should render correctly with the list format 1`] = `
     >
       <input
         class="input "
-        placeholder="type here to search"
+        placeholder="search tiles"
         type="text"
         value=""
       />

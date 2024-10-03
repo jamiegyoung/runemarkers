@@ -1,16 +1,38 @@
 import { SearchContext } from '@/pages';
 import styles from '@/components/atoms/Input.module.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import useDebounce from '@/hooks/useDebounce';
 
 export default function Input() {
   const [searching, setSearching] = useState(false);
   const [searchVal, setSearchVal] = useContext(SearchContext);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputWidth, setInputWidth] = useState(0);
+
+  const updateWidth = () => {
+    if (!inputRef.current) return;
+    setInputWidth(inputRef.current.offsetWidth);
+  };
+
+  const updateWidthDebounced = useDebounce(updateWidth, 100);
+
+  useEffect(() => {
+    updateWidth();
+    window.addEventListener(`resize`, updateWidthDebounced);
+  });
 
   return (
     <>
       <input
+        ref={inputRef}
         type="text"
-        placeholder={searching ? `` : `type here to search`}
+        placeholder={
+          searching
+            ? ``
+            : inputWidth > 230
+              ? `type here to search`
+              : `search tiles`
+        }
         className={[styles.input, searching ? styles.active : null].join(` `)}
         value={searchVal}
         onFocus={() => setSearching(true)}
