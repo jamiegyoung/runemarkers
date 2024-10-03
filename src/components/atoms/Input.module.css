@@ -1,6 +1,6 @@
 .input {
   font-size: 1.2rem;
-  max-width: 165px;
+  max-width: 11rem;
   min-width: 50px;
   padding: 0.5rem 30px 0.5rem 30px;
   width: 90%;
@@ -21,13 +21,6 @@
 .input.active {
   max-width: 225px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.5);
-}
-
-@media (max-width: 270px) {
-  .input::placeholder {
-    content: '';
-    opacity: 0;
-  }
 }
 
 .clearButton {

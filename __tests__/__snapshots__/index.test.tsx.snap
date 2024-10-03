@@ -52,7 +52,7 @@ exports[`Home should search correctly 1`] = `
           >
             <input
               class="input "
-              placeholder="type here to search"
+              placeholder="search tiles"
               type="text"
               value="abyssal sire"
             />

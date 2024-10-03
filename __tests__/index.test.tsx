@@ -9,7 +9,7 @@ describe(`Home`, () => {
     const { container, getByPlaceholderText } = render(
       <Home tileData={data} />,
     );
-    const input = getByPlaceholderText(`type here to search`);
+    const input = getByPlaceholderText(`search tiles`);
     act(() => {
       fireEvent.change(input, { target: { value: `abyssal sire` } });
     });

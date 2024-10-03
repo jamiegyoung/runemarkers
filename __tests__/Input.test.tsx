@@ -15,6 +15,7 @@ const testInputWithContext = (
     </div>
   </SearchContext.Provider>
 );
+
 describe(`Input`, () => {
   it(`should render correctly`, () => {
     const { container } = render(<Input />);
@@ -44,6 +45,48 @@ describe(`Input`, () => {
     expect(input.placeholder).toBe(``);
   });
 
+  it('should show the full placeholder when it is a sufficient width', async () => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 250, // Set this to a value greater than 230
+    });
+
+    const { container } = render(testInputWithContext(``, mockSetSearchVal));
+
+    const input = container.querySelector(`input`);
+    if (!input) {
+      throw new Error(`No input found`);
+    }
+
+    await act(async () => {
+      // Trigger the event
+      window.dispatchEvent(new Event(`resize`));
+    })
+
+    expect(input.placeholder).toBe(`type here to search`);
+  });
+
+  it('should show the partial placeholder when it is a insufficient width', async () => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 200, // Set this to a value greater than 230
+    });
+
+    const { container } = render(testInputWithContext(``, mockSetSearchVal));
+
+    const input = container.querySelector(`input`);
+    if (!input) {
+      throw new Error(`No input found`);
+    }
+
+    await act(async () => {
+      // Trigger the event
+      window.dispatchEvent(new Event(`resize`));
+    })
+
+    expect(input.placeholder).toBe(`search tiles`);
+  });
+
   it(`should shrink on blur`, () => {
     const { container } = render(testInputWithContext(``, mockSetSearchVal));
 
@@ -51,6 +94,7 @@ describe(`Input`, () => {
     if (!input) {
       throw new Error(`No input found`);
     }
+
     act(() => {
       fireEvent.focus(input);
     });
@@ -59,7 +103,7 @@ describe(`Input`, () => {
       input.value = ``;
       fireEvent.blur(input);
     });
-    expect(input.placeholder).toBe(`type here to search`);
+    expect(input.placeholder).toBe(`search tiles`);
   });
 
   it(`should update the search value on change`, () => {
