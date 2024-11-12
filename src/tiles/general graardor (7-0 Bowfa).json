@@ -1,0 +1,88 @@
+{
+  "name": "General Graardor",
+  "altName": "Bandos",
+  "subcategory": "7:0 Bowfa",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/General_Graardor.png/120px-General_Graardor.png",
+  "wiki": "https://oldschool.runescape.wiki/w/General_Graardor",
+  "tags": ["boss", "godwars", "gwd", "bandos"],
+  "recommendedGuideVideoId": "H_6OZhaNd64",
+  "source": {
+    "name": "MrHaroto -  Quick 7:0 Bandos Guide",
+    "link": "https://www.youtube.com/watch?v=H_6OZhaNd64",
+    "modified": "Different colours and labels as well as a cannon tile"
+  },
+  "tiles": [
+    {
+      "regionId": 11347,
+      "regionX": 57,
+      "regionY": 57,
+      "z": 2,
+      "color": "#FF474744",
+      "label": "start here"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 51,
+      "regionY": 53,
+      "z": 2,
+      "color": "#FF474744",
+      "label": "1"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 51,
+      "regionY": 47,
+      "z": 2,
+      "color": "#FFECE8F0",
+      "label": "2"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 49,
+      "regionY": 40,
+      "z": 2,
+      "color": "#FF474744",
+      "label": "4"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 54,
+      "regionY": 43,
+      "z": 2,
+      "color": "#FFECE8F0",
+      "label": "3"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 57,
+      "regionY": 48,
+      "z": 2,
+      "color": "#FFECE8F0",
+      "label": "5"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 57,
+      "regionY": 53,
+      "z": 2,
+      "color": "#FF474744",
+      "label": "6"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 59,
+      "regionY": 51,
+      "z": 2,
+      "color": "#9EFF0000",
+      "label": "Cannon"
+    },
+    {
+      "regionId": 11347,
+      "regionX": 60,
+      "regionY": 51,
+      "z": 2,
+      "color": "#FFFF0000",
+      "label": "Item"
+    }
+  ]
+}
