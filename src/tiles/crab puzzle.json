@@ -5,9 +5,10 @@
   "tags": ["cox", "chambers of xeric", "raids"],
   "recommendedGuideVideoId": "YplIdCg1qJs",
   "source": {
-    "name": "Chymistry - How to Do the Crab Room Puzzle",
-    "link": "https://www.youtube.com/watch?v=YplIdCg1qJs"
+    "name": "WeDoRaids Discord & @caerulescens on GitHub",
+    "link": "https://discord.gg/wdr"
   },
+  "modified": "Missing tiles added by @caerulescens",
   "tiles": [
     {
       "regionId": 13395,
