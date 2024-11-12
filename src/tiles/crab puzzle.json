@@ -6,9 +6,9 @@
   "recommendedGuideVideoId": "YplIdCg1qJs",
   "source": {
     "name": "WeDoRaids Discord & @caerulescens on GitHub",
-    "link": "https://discord.gg/wdr"
+    "link": "https://discord.gg/wdr",
+    "modified": "Missing tiles added by @caerulescens"
   },
-  "modified": "Missing tiles added by @caerulescens",
   "tiles": [
     {
       "regionId": 13395,
