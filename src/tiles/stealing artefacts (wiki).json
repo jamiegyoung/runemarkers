@@ -1,0 +1,137 @@
+{
+  "name": "Stealing Artefacts",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Lockpick_detail.png/530px-Lockpick_detail.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Stealing_artefacts",
+  "tags": ["skilling", "thieving"],
+  "source": {
+    "name": "OSRS Wiki",
+    "link": "https://oldschool.runescape.wiki/w/Stealing_artefacts#Ground_Markers"
+  },
+  "tiles": [
+    {
+      "regionId": 6970,
+      "regionX": 41,
+      "regionY": 25,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 44,
+      "regionY": 30,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 45,
+      "regionY": 36,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 45,
+      "regionY": 41,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 44,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 28,
+      "regionY": 50,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 30,
+      "regionY": 55,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 27,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 25,
+      "regionY": 56,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 40,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "North House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 23,
+      "regionY": 45,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "North West House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 25,
+      "regionY": 37,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "West House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 24,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "South West House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 49,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "South East House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 39,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFFFCC31",
+      "label": "South House"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 20,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FF0AFF00"
+    },
+    {
+      "regionId": 6970,
+      "regionX": 34,
+      "regionY": 42,
+      "z": 0,
+      "color": "#FF0AFF00"
+    }
+  ]
+}
