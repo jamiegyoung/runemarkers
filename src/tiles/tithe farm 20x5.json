@@ -1,8 +1,12 @@
 {
   "name": "Tithe Farm (20x5)",
-  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Logavano_fruit_detail.png/383px-Logavano_fruit_detail.png",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Logavano_fruit_detail.png/120px-Logavano_fruit_detail.png",
   "wiki": "https://oldschool.runescape.wiki/w/Tithe_Farm",
-  "tags": ["skilling", "farming", "minigame"]
+  "tags": ["skilling", "farming", "minigame"],
+  "recommendedGuideVideoId": "q_FwaUJ9Gko",
+  "source": {
+    "name": "yzzyx",
+    "link": "https://github.com/yzzyx-network"
   },
   "tiles": [
     {
