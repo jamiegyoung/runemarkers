@@ -10,13 +10,6 @@
   },
   "tiles": [
     {
-      "regionId": 6966,
-      "regionX": 21,
-      "regionY": 13,
-      "z": 0,
-      "color": "#5DA400FF"
-    },
-    {
       "regionId": 7222,
       "regionX": 21,
       "regionY": 34,
