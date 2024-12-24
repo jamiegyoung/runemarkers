@@ -10,7 +10,6 @@
 </p>
 
 [![Check CI](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/jamiegyoung/runemarkers/badge.svg?branch=main)](https://coveralls.io/github/jamiegyoung/runemarkers?branch=main)
 
 ## Tiles
 
