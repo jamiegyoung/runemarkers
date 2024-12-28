@@ -1,0 +1,533 @@
+{
+  "name": "MTA Telekinetic Puzzle Tiles",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Telekinetic_Guardian.png/156px-Telekinetic_Guardian.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Mage_Training_Arena/Telekinetic_Theatre",
+  "tags": ["skilling", "magic", "mta", "mage training arena"],
+  "recommendedGuideVideoId": "",
+  "source": {
+    "name": "",
+    "link": ""
+  },
+  "tiles": [
+    {
+      "regionId": 13463,
+      "regionX": 10,
+      "regionY": 10,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "2,6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 10,
+      "regionY": 19,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "4,8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 11,
+      "regionY": 9,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "3,7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 20,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 20,
+      "regionY": 11,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 10,
+      "regionY": 40,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 20,
+      "regionY": 50,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "4,10"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 57,
+      "regionY": 23,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 47,
+      "regionY": 13,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "4"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 13,
+      "regionY": 43,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "1,5,7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 12,
+      "regionY": 53,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 13,
+      "regionY": 54,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 12,
+      "regionY": 44,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "4,6,8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 51,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 48,
+      "regionY": 56,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "2,6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 37,
+      "regionY": 56,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "4,8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 11,
+      "regionY": 20,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "1,5,9"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 55,
+      "regionY": 59,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "1,5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 56,
+      "regionY": 49,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "2,6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 55,
+      "regionY": 48,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "3,7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 9,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 10,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "4"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 57,
+      "regionY": 12,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 58,
+      "regionY": 13,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 58,
+      "regionY": 22,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 38,
+      "regionY": 57,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 43,
+      "regionY": 57,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "3,5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 47,
+      "regionY": 57,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 49,
+      "regionY": 23,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 52,
+      "regionY": 12,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 51,
+      "regionY": 9,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "4"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 50,
+      "regionY": 8,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 40,
+      "regionY": 9,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 40,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "10"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 19,
+      "regionY": 15,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 28,
+      "regionY": 16,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "4,8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 18,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 16,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 10,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 9,
+      "regionY": 49,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 9,
+      "regionY": 50,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 9,
+      "regionY": 45,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 11,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "9"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 42,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "7,9"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 50,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 25,
+      "regionY": 45,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "4"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 24,
+      "regionY": 44,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 25,
+      "regionY": 49,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 23,
+      "regionY": 55,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "7"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 14,
+      "regionY": 54,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "8"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 15,
+      "regionY": 55,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "9"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 14,
+      "regionY": 45,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 13,
+      "regionY": 10,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 9,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 16,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 56,
+      "regionY": 58,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "4"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 17,
+      "regionY": 44,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "3"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 15,
+      "regionY": 44,
+      "z": 2,
+      "color": "#FF94F0C8",
+      "label": "1"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 26,
+      "regionY": 26,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 17,
+      "regionY": 19,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 51,
+      "regionY": 12,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "2"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 44,
+      "regionY": 8,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 13,
+      "regionY": 51,
+      "z": 0,
+      "color": "#FF94F0C8",
+      "label": "5"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 17,
+      "regionY": 23,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "6"
+    },
+    {
+      "regionId": 13463,
+      "regionX": 21,
+      "regionY": 15,
+      "z": 1,
+      "color": "#FF94F0C8",
+      "label": "7"
+    }
+  ]
+}
