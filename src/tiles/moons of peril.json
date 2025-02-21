@@ -7,6 +7,64 @@
   ],
   "tiles": [
     {
+      "regionId": 5526,
+      "regionX": 51,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 45,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 45,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 47,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 47,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFDB2867",
+      "label": "JAGUAR"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 49,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 51,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FFDB2867"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 49,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFDB2867",
+      "label": "BLOOD"
+    },
+    {
       "regionId": 5782,
       "regionX": 59,
       "regionY": 32,
@@ -29,14 +87,6 @@
       "z": 0,
       "color": "#FFDB2867",
       "label": "SLASH"
-    },
-    {
-      "regionId": 5783,
-      "regionX": 31,
-      "regionY": 13,
-      "z": 0,
-      "color": "#FFA0E0F8",
-      "label": "STORM"
     },
     {
       "regionId": 5783,
@@ -87,12 +137,54 @@
       "label": "SAFE"
     },
     {
-      "regionId": 6038,
-      "regionX": 18,
-      "regionY": 35,
+      "regionId": 5783,
+      "regionX": 31,
+      "regionY": 13,
       "z": 0,
-      "color": "#FFEA8B33",
-      "label": "CLONES"
+      "color": "#FFA0E0F8",
+      "label": "STORM"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 29,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FFA0E0F8"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 29,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FFA0E0F8"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 31,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFA0E0F8"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 35,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FFA0E0F8"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 35,
+      "regionY": 15,
+      "z": 0,
+      "color": "#FFA0E0F8"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 33,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FFA0E0F8"
     },
     {
       "regionId": 6038,
@@ -103,20 +195,76 @@
       "label": "ORB"
     },
     {
-      "regionId": 5526,
-      "regionX": 50,
+      "regionId": 6038,
+      "regionX": 17,
       "regionY": 35,
       "z": 0,
-      "color": "#FFDB2867",
-      "label": "BLOOD"
+      "color": "#FFEA8B33",
+      "label": "CLONES"
     },
     {
-      "regionId": 5526,
-      "regionX": 46,
+      "regionId": 6038,
+      "regionX": 15,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 13,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 13,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 17,
       "regionY": 29,
       "z": 0,
-      "color": "#FFDB2867",
-      "label": "JAGUAR"
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 19,
+      "regionY": 31,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 19,
+      "regionY": 33,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 11,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 13,
+      "regionY": 37,
+      "z": 0,
+      "color": "#FFEA8B33"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 21,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFEA8B33",
+      "label": "TO ORB"
     }
   ]
 }
