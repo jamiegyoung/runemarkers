@@ -1,0 +1,122 @@
+{
+  "name": "Moons of Peril",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Blood_Moon.png/120px-Blood_Moon.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
+  "tags": [
+    "boss"
+  ],
+  "tiles": [
+    {
+      "regionId": 5782,
+      "regionX": 59,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FFEA8B33",
+      "label": "STAB"
+    },
+    {
+      "regionId": 5782,
+      "regionX": 32,
+      "regionY": 59,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "CRUSH"
+    },
+    {
+      "regionId": 5782,
+      "regionX": 4,
+      "regionY": 32,
+      "z": 0,
+      "color": "#FFDB2867",
+      "label": "SLASH"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 31,
+      "regionY": 13,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "STORM"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 33,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "SAFE"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 34,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "ICE"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 45,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "SAFE"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 45,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "SAFE"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 19,
+      "regionY": 18,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "SAFE"
+    },
+    {
+      "regionId": 5783,
+      "regionX": 19,
+      "regionY": 14,
+      "z": 0,
+      "color": "#FFA0E0F8",
+      "label": "SAFE"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 18,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFEA8B33",
+      "label": "CLONES"
+    },
+    {
+      "regionId": 6038,
+      "regionX": 15,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFEA8B33",
+      "label": "ORB"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 50,
+      "regionY": 35,
+      "z": 0,
+      "color": "#FFDB2867",
+      "label": "BLOOD"
+    },
+    {
+      "regionId": 5526,
+      "regionX": 46,
+      "regionY": 29,
+      "z": 0,
+      "color": "#FFDB2867",
+      "label": "JAGUAR"
+    }
+  ]
+}

@@ -1,12 +1,13 @@
 {
   "name": "Crab Puzzle",
-  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Jewelled_Crab.png/120px-Jewelled_Crab.png",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Jewelled_Crab.png/120px-Jewelled_Crab.png?5c8ba",
   "wiki": "https://oldschool.runescape.wiki/w/Jewelled_Crab",
   "tags": ["cox", "chambers of xeric", "raids"],
   "recommendedGuideVideoId": "YplIdCg1qJs",
   "source": {
-    "name": "Chymistry - How to Do the Crab Room Puzzle",
-    "link": "https://www.youtube.com/watch?v=YplIdCg1qJs"
+    "name": "WeDoRaids Discord & @caerulescens on GitHub",
+    "link": "https://discord.gg/wdr",
+    "modified": "Missing tiles added by @caerulescens"
   },
   "tiles": [
     {
@@ -103,6 +104,68 @@
       "z":2,
       "color":"#FF000000",
       "label":"Anchor"
+    },
+    {
+      "regionId":13139,
+      "regionX":54,
+      "regionY":42,
+      "z":2,
+      "color":"#FFFF0000"
+    },
+    {
+      "regionId":13139,
+      "regionX":40,
+      "regionY":43,
+      "z":2,
+      "color":"#FFFF0000"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":54,
+      "regionY":43,
+      "z":2,
+      "color":"#FFFFFFFF"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":51,
+      "regionY":47,
+      "z":2,
+      "color":"#FF0000FF"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":52,
+      "regionY":49,
+      "z":2,
+      "color":"#FF0000FF"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":54,
+      "regionY":46,
+      "z":2,
+      "color":"#FF0000FF"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":54,
+      "regionY":47,
+      "z":2,
+      "color":"#FF00FF00"
+    },
+    {
+
+      "regionId":13139,
+      "regionX":41,
+      "regionY":48,
+      "z":2,
+      "color":"#FF00FF00"
     }
   ]
 }
