@@ -3,14 +3,20 @@ footer {
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  align-items: center;
 }
 
 .footnote {
   display: flex;
   justify-content: center;
-  margin: 0 4rem;
+  max-width: 50rem;
+  width: 85vw;
   text-align: center;
   color: var(--color-subtle-text);
+}
+
+.footnote p {
+  margin: 0;
 }
 
 .footer-container {
