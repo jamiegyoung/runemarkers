@@ -16,6 +16,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   height: calc(100dvh - 300px);
+  align-content: start;
 }
 
 @media (max-width: 900px), (max-height: 900px) {
