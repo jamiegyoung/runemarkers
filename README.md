@@ -42,10 +42,22 @@ This will run a development server at `http://localhost:8080` with hot reloading
 
 ### Locally
 
-To start the project locally, run:
+To install the dependencies, run:
 
 ```bash
-pnpm dev
+go mod download
+```
+
+To start the project locally for development, run:
+
+```bash
+go run ./cmd/server/
+```
+
+To build the project, run:
+
+```bash
+go run ./cmd/build/
 ```
 
 Open `http://localhost:8080` with your browser to see the result.
