@@ -38,7 +38,7 @@ docker compose up
 docker compose up -d
 ```
 
-This will run a development server at `http://localhost:3000` with hot reloading enabled.
+This will run a development server at `http://localhost:8080` with hot reloading enabled.
 
 ### Locally
 
@@ -48,7 +48,7 @@ To start the project locally, run:
 pnpm dev
 ```
 
-Open `http://localhost:3000` with your browser to see the result.
+Open `http://localhost:8080` with your browser to see the result.
 
 
 ### Requirements
