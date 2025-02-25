@@ -53,8 +53,7 @@ Open `http://localhost:8080` with your browser to see the result.
 
 ### Requirements
 
-- Node.js >= 12.22.0
-- PNPM = ^8.0.0
+- Go >= 1.22
 
 ### Scripts
 
