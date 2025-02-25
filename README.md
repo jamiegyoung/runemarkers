@@ -9,8 +9,6 @@
 <a href="https://runemarkers.net">https://runemarkers.net</a>
 </p>
 
-[![Check CI](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/jamiegyoung/runemarkers/actions/workflows/ci.yml)
-
 ## Tiles
 
 You can either contribute tiles directly by following the guide below, or create an issue with the `Tiles Request` template
