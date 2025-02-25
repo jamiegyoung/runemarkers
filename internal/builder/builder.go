@@ -77,5 +77,7 @@ func Build(skipThumbs bool) error {
 		return err
 	}
 
+	log("Build complete")
+
 	return nil
 }

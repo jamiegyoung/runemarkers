@@ -28,11 +28,9 @@ func Start() {
 		Addr:    ":8080",
 	}
 
-	debug("starting server")
-
+	debug("starting server at port 8080")
 	log.Fatal(s.ListenAndServe())
-
-	debug("server listening at port 8080")
+	debug("server stopped")
 }
 
 func addHandlerFunc(mux *http.ServeMux, pattern string, next func(w http.ResponseWriter, r *http.Request)) {

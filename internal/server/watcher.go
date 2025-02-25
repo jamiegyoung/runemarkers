@@ -51,7 +51,9 @@ func watcher(watchlist []string, action func(string) error) error {
 	}()
 
 	for _, item := range watchlist {
+		debug(fmt.Sprintf("initializing watcher for %v", item))
 		err := watcher.Add(item)
+		debug(fmt.Sprintf("watching %v", item))
 
 		if err != nil {
 			panic(err)
