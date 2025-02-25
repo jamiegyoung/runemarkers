@@ -1,10 +1,25 @@
 footer {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.footnote {
+  display: flex;
+  justify-content: center;
+  margin: 0 4rem;
+  text-align: center;
+  color: var(--color-subtle-text);
+}
+
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 2rem 0;
 }
+
 
 footer .footer-item {
   margin: 0;
