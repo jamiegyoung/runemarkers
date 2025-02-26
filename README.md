@@ -84,23 +84,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Made with [contrib.rocks](https://contrib.rocks).
 
-
-
-
-
-# runemarkers-go
-A rewrite of RuneMarkers using a custom SSG in go
-
-## Development
-
-To start the development server run the following:
-
-`go run ./cmd/server`
-
-This will start a server on port `8080` and rebuild when any changes are made
-
-## Build
-
-To build the project run the following:
-
-`go run ./cmd/build`
