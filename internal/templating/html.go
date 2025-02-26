@@ -17,6 +17,10 @@ func HtmlTemplateWithComponents(name string, text string) (*template.Template, e
 	}
 
 	tmpl, err = tmpl.Funcs(funcMap).Parse(style)
+	if err != nil {
+		log("Error parsing style string: \n" + style)
+		return nil, err
+	}
 
 	components, err := readComponents()
 	if err != nil {
