@@ -146,7 +146,7 @@ func GetEntites() ([]*EntityMod, error) {
 			return errors.New("Bucket does not exist")
 		}
 
-		b.ForEach(func(k, v []byte) error {
+		err = b.ForEach(func(k, v []byte) error {
 			log(fmt.Sprintf("%v found", string(k[:])))
 			dec := gob.NewDecoder(bytes.NewReader(v))
 			var decEntity EntityMod
@@ -159,7 +159,8 @@ func GetEntites() ([]*EntityMod, error) {
 
 			return nil
 		})
-		return nil
+
+		return err
 	})
 
 	return entitiesArr, err
