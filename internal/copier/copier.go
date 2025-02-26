@@ -20,7 +20,11 @@ func Copy(input_glob string, output string) error {
 	var wg sync.WaitGroup
 
 	if os.IsNotExist(err) {
-		os.MkdirAll(filepath.Dir(output), 0755)
+		err = os.MkdirAll(filepath.Dir(output), 0755)
+		if err != nil {
+			log("Error creating directory: " + output)
+			return err
+		}
 	}
 
 	errc := make(chan error)
@@ -47,6 +51,11 @@ func Copy(input_glob string, output string) error {
 			}
 
 			err = os.MkdirAll(filepath.Dir(dest), 0755)
+			if err != nil {
+				log("Error creating directory: " + dest)
+				errc <- err
+				return
+			}
 
 			src, err := os.Open(path)
 			if err != nil {
