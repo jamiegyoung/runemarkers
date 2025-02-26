@@ -170,6 +170,10 @@ func parseEntity(data []byte) (*Entity, error) {
 
 func transformEntity(entity *Entity) error {
 	tilesString, err := json.Marshal(entity.Tiles)
+	if err != nil {
+		return err
+	}
+
 	tilesStringPretty, err := json.MarshalIndent(entity.Tiles, "", "\t")
 	if err != nil {
 		return err
