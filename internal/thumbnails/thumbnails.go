@@ -1,8 +1,8 @@
 package thumbnails
 
 import (
-	"github.com/jamiegyoung/runemarkers-go/internal/entities"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/entities"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
 )
 
 var log = logger.New("thumbnails")

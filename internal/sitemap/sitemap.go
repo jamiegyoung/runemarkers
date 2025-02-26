@@ -3,11 +3,11 @@ package sitemap
 import (
 	"fmt"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/entities"
-	"github.com/jamiegyoung/runemarkers-go/internal/lastmod"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
-	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
-	"github.com/jamiegyoung/runemarkers-go/internal/pages"
+	"github.com/jamiegyoung/runemarkers/internal/entities"
+	"github.com/jamiegyoung/runemarkers/internal/lastmod"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/pageio"
+	"github.com/jamiegyoung/runemarkers/internal/pages"
 )
 
 var log = logger.New("sitemap")

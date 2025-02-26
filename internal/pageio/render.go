@@ -3,7 +3,7 @@ package pageio
 import (
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/templating"
+	"github.com/jamiegyoung/runemarkers/internal/templating"
 )
 
 type renderable interface {

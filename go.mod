@@ -1,4 +1,4 @@
-module github.com/jamiegyoung/runemarkers-go
+module github.com/jamiegyoung/runemarkers
 
 go 1.22.2
 

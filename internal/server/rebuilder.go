@@ -3,8 +3,8 @@ package server
 import (
 	"fmt"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/builder"
-	"github.com/jamiegyoung/runemarkers-go/internal/hashing"
+	"github.com/jamiegyoung/runemarkers/internal/builder"
+	"github.com/jamiegyoung/runemarkers/internal/hashing"
 )
 
 func rebuild(path string) error {

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/args"
-	"github.com/jamiegyoung/runemarkers-go/internal/builder"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/args"
+	"github.com/jamiegyoung/runemarkers/internal/builder"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
 )
 
 var log = logger.New("build")

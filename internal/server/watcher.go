@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/jamiegyoung/runemarkers-go/internal/hashing"
+	"github.com/jamiegyoung/runemarkers/internal/hashing"
 )
 
 var fileHashes map[string]uint32 = make(map[string]uint32)

@@ -7,7 +7,7 @@ import (
 	"strings"
 	textTemplate "text/template"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
 )
 
 var log = logger.New("templating")

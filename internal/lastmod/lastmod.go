@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/entities"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/entities"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
 	bolt "go.etcd.io/bbolt"
 )
 

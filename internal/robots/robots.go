@@ -1,8 +1,8 @@
 package robots
 
 import (
-	"github.com/jamiegyoung/runemarkers-go/internal/copier"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/copier"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
 )
 
 var log = logger.New("robots.txt")

@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
-	"github.com/jamiegyoung/runemarkers-go/ytthumbnail"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
+	"github.com/jamiegyoung/runemarkers/ytthumbnail"
 )
 
 // Tile colour can be multiple types and we don't really care which one it is
