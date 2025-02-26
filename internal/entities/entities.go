@@ -223,16 +223,15 @@ func entityTilesHash(str string) string {
 
 func getEntityUri(entity Entity) string {
 	if entity.Subcategory == "" {
-		return transformToUrl(entity.Name, entity.TilesString)
+		return transformToUrl(entity.Name)
 	}
 
 	return transformToUrl(
 		fmt.Sprintf("%s (%s)", entity.Name, entity.Subcategory),
-		entity.TilesString,
 	)
 }
 
-func transformToUrl(s string, tilesString string) string {
+func transformToUrl(s string) string {
 	lowered := strings.ToLower(s)
 	return strings.ReplaceAll(lowered, " ", "-")
 }
