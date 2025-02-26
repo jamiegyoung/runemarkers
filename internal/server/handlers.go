@@ -27,7 +27,6 @@ func handleEntity(w http.ResponseWriter, r *http.Request) {
 	debug("unsafe entity in " + r.URL.Path + ", serving 404")
 	w.WriteHeader(404)
 	fmt.Fprintf(w, "404 Entity not found")
-	return
 }
 
 func handleStatic(mux *http.ServeMux) {
