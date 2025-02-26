@@ -23,11 +23,12 @@ func GeneratePages(destination string, foundEntities []*entities.Entity) error {
 	for _, entity := range foundEntities {
 		log("Rendering " + entity.Name + " to " + destination + "/" + entity.Uri + ".html")
 		output, err := pageio.CreateOutFile(destination, entity.Uri+".html")
-		defer output.Close()
-
 		if err != nil {
 			return err
 		}
+
+		defer output.Close()
+
 
 		data := pages.NewPage(map[string]interface{}{"Entity": entity})
 
