@@ -5,7 +5,6 @@ import "text/template"
 func TextTemplateWithComponents(name string, text string) (*template.Template, error) {
 	log("Generating html template with components for " + name)
 	tmpl, err := template.New(name).Funcs(funcMap).Parse(text)
-
 	if err != nil {
 		return nil, err
 	}
@@ -17,6 +16,10 @@ func TextTemplateWithComponents(name string, text string) (*template.Template, e
 	}
 
 	tmpl, err = tmpl.Funcs(funcMap).Parse(style)
+	if err != nil {
+		log("Error parsing style string: \n" + style)
+		return nil, err
+	}
 
 	components, err := readComponents()
 	if err != nil {
