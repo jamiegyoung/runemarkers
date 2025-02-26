@@ -31,12 +31,12 @@ func GenerateDb() error {
 	}
 	defer db.Close()
 
-	db.Update(func(tx *bolt.Tx) error {
+	err = db.Update(func(tx *bolt.Tx) error {
 		_, err := tx.CreateBucketIfNotExists([]byte(bucketName))
 		return err
 	})
 
-	return nil
+	return err
 }
 
 // Updates or inserts a directory's last modified time into the database
