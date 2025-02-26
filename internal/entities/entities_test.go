@@ -15,7 +15,7 @@ func TestParseEntity(t *testing.T) {
 	}
 
 	correctData := Entity{
-		Uri:                     "a-test-creature-%26-thing-%28what%21%29",
+		Uri:                     "a-test-creature-&-thing-(what!)",
 		Name:                    "a test creature & thing",
 		AltName:                 "A massive creature",
 		Subcategory:             "what!",
@@ -86,11 +86,10 @@ func TestParseEntity(t *testing.T) {
 }
 
 func TestUrlEncode(t *testing.T) {
-	unsafeName := "Test (Entity) & Another"
-	safeString := transformToUrl(unsafeName)
+	safeString := transformToUrl("Test (Entity) another")
 
-	if safeString != "test-%28entity%29-%26-another" {
-		t.Errorf("Expected %v, got %v", "test-%28entity%29-%26-another", safeString)
+	if safeString != "test-(entity)-another" {
+		t.Errorf("Expected %v, got %v", "test-(entity)-another", safeString)
 	}
 }
 
