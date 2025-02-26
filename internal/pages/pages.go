@@ -52,11 +52,12 @@ func GeneratePages(destination string, entities []*entities.Entity) error {
 
 			// create the output directory if it doesn't exist
 			output, err := pageio.CreateOutFile(destination, path)
-			defer output.Close()
 			if err != nil {
 				errc <- err
 				return
 			}
+
+			defer output.Close()
 
 			name := filepath.Base(path)
 
