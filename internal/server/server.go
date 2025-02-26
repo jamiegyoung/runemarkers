@@ -1,6 +1,7 @@
 package server
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
@@ -9,7 +10,7 @@ func Start() {
 	go func() {
 		err := watch(rebuild)
 		if err != nil {
-			debug("A watcher error occured")
+			debug(fmt.Sprintf("error watching files: %v", err))
 		}
 	}()
 

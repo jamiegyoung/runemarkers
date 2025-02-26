@@ -2,9 +2,9 @@ package pages
 
 import (
 	"fmt"
-	"github.com/jamiegyoung/runemarkers-go/internal/entities"
-	"github.com/jamiegyoung/runemarkers-go/internal/logger"
-	"github.com/jamiegyoung/runemarkers-go/internal/pageio"
+	"github.com/jamiegyoung/runemarkers/internal/entities"
+	"github.com/jamiegyoung/runemarkers/internal/logger"
+	"github.com/jamiegyoung/runemarkers/internal/pageio"
 	"path/filepath"
 	"sync"
 )
