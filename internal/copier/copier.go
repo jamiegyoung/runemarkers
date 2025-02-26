@@ -46,7 +46,10 @@ func Copy(input_glob string, output string) error {
 			}
 
 			if fileInfo.IsDir() {
-				Copy(path+"/*", dest)
+				err = Copy(path+"/*", dest)
+				if err != nil {
+					errc <- err
+				}
 				return
 			}
 
