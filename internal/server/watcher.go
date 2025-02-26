@@ -40,7 +40,11 @@ func watcher(watchlist []string, action func(string) error) error {
 				}
 
 				// add the file back into the watchlist
-				watcher.Add(event.Name)
+				err = watcher.Add(event.Name)
+				if err != nil {
+					debug(fmt.Sprintf("error adding %v to watcher", event.Name))
+					return
+				}
 			case err, ok := <-watcher.Errors:
 				debug(fmt.Sprintf("error: %v", err))
 				if !ok {
