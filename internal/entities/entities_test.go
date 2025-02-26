@@ -23,7 +23,7 @@ func TestParseEntity(t *testing.T) {
 		RecommendedGuideVideoId: "dQw4w9WgXcQ",
 		Wiki:                    "wikiurl",
 		Tags:                    []string{"cox", "chambers of xeric", "raids"},
-		Source: &Source{
+		Source: Source{
 			Name:     "sourcename",
 			Link:     "sourcelink",
 			Modified: "amodification",
