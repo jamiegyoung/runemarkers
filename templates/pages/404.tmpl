@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/fuse.min.js"></script>
+  <script src="js/htmx.min.js"></script>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <title>RuneMarkers - A Collection of RuneLite Tile Markers</title>
+  <meta name="description" content="A collection of tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@runemarkers">
+  <meta name="twitter:creator" content="@jamgyo">
+  <meta property="og:title" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:description" content="A collection of tile markers for RuneLite. Find and import tile markers for different Oldschool RuneScape activities.">
+  <meta property="og:url" content="https://runemarkers.net">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="RuneMarkers">
+  <meta name="author" content="RuneMarkers">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta name="theme-color" content="#262624">
+  <meta name="robots" content="index,follow">
+  <meta property="og:image" content="/assets/logo1024-background.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image" content="/assets/logo512-background.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image" content="/assets/logo256-background.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  <meta property="og:image" content="/assets/logo128-background.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="128">
+  <meta property="og:image:height" content="128">
+  <meta property="og:image" content="/assets/android-chrome-192x192.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="192">
+  <meta property="og:image:height" content="192">
+  <meta property="og:image" content="/assets/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="RuneMarkers - A Collection of RuneLite Tile Markers">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="next-head-count" content="40">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+</head>
+
+<body>
+  {{ template "navbar" }}
+  <main class="main-container">
+    <h1><span style="color: var(--color-primary);">404</span> - Page Not Found</h1>
+    <a href="/">Go back to the homepage</a>
+  </main>
+</body>
+
+</html>
+
+{{ template "styles" .}}
+
+<style>
+  html,
+  body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --color-primary: #e5e53a;
+    --color-primary-light: #f1f196;
+    --color-background: #20201f;
+    --color-foreground: #292927;
+    --color-text: #f5f3f5;
+    --color-subtle-text: #cccccc;
+    --color-card: #3b3b37;
+    --color-card-hover: #42423e;
+    --color-card-hover-light: #55554a;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    height: calc(100% - 4rem);
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  a {
+    color: var(--color-primary);
+    transition: color .2s ease-out;
+  }
+
+  a:hover {
+    color: var(--color-primary-light);
+  }
+
+  .main-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+</style>
+
