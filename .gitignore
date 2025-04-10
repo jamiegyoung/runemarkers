@@ -21,6 +21,10 @@
 go.work
 
 # Public directory
+
 public/
+!public/_headers
+!public/_redirects
+
 tmp
 *.log
