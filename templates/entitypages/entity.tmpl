@@ -59,7 +59,7 @@
     {{ end }}
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
-    {{ if .Entity.Source}}
+    {{ if .Entity.Source.Link }}
       <h2>Source</h2>
       <span class="source"><a href="{{ .Entity.Source.Link }}">{{ .Entity.Source.Name }}</a>
       {{ if .Entity.Source.Modified }}
