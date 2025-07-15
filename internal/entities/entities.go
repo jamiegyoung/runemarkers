@@ -169,6 +169,10 @@ func parseEntity(data []byte) (*Entity, error) {
 }
 
 func transformEntity(entity *Entity) error {
+	if entity.Source.Modified != "" && entity.Source.Link == "" {
+		return fmt.Errorf("entity '%s' has a modified source but no link - source modifications require a link for attribution", entity.Name)
+	}
+
 	tilesString, err := json.Marshal(entity.Tiles)
 	if err != nil {
 		return err
