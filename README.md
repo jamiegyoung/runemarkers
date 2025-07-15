@@ -84,3 +84,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Made with [contrib.rocks](https://contrib.rocks).
 
+Thank you to these contributors also, who contributed before the Go rewrite:
+
+<img width="317" height="97" alt="image" src="https://github.com/user-attachments/assets/6cf1b9c6-7cfc-4d6f-ae09-6323c198eed9" />
+
