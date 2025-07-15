@@ -1,36 +1,30 @@
 <div id="entity-list-template" class="row entity-card{{ if not .Name}} hidden{{end}}">
-  <a class="entity-link" href="./">
-    <img
-      onload="this.style.opacity = 1"
-      class="entity-thumbnail"
-      alt="{{ .Name }} from Old School RuneScape"
-      loading="lazy"
-      decoding="async"
-      width="120"
-      height="120"
-      src="{{ .Thumbnail }}"
-    />
-  </a>
+  <img
+    onload="this.style.opacity = 1"
+    class="entity-thumbnail"
+    alt="{{ .Name }} from Old School RuneScape"
+    loading="lazy"
+    decoding="async"
+    width="120"
+    height="120"
+    src="{{ .Thumbnail }}"
+  />
   <div class="entity-card-data">
     <div>
-      <a class="entity-link entity-card-title" href="./">
-        <h2>
-          {{ if .Name }}<span class="entity-card-name">{{ .Name }}</span>{{ end }}
-          {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
-        </h2>
-      </a>
+      <h2 class="entity-card-title">
+        {{ if .Name }}<span class="entity-card-name">{{ .Name }}</span>{{ end }}
+        {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
+      </h2>
       {{ if .AltName }}
-      <a class="entity-link entity-card-title-alt" href="./">
         <p>
           <span class="entity-card-name">{{ .AltName }}</span>
           {{ if .Subcategory }}<span class="entity-card-subcategory">&#40;{{ .Subcategory }}&#41;</span>{{ end }}
         </p>
-      </a>
       {{ end }}
     </div>
     <div class="entity-card-bottom">
-      {{ if .Tiles }}<p><span class="entity-card-tile-count">{{ .Tiles | len }}</span> tile markers</p>{{ end}}
-      <div class="entity-interaction">
+      {{ if .Tiles }}<p><span class="entity-card-tile-count">{{ .Tiles | len }}</span> tile marker{{ if gt (len .Tiles) 1 }}s{{ end }}</p>{{ end }}
+      <div class="entity-interaction jsonly">
       {{ template "copy_button" . }}
       </div>
     </div>

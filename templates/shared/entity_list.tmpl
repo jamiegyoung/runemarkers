@@ -1,6 +1,6 @@
 <div class="inner-list-container">
 {{ range .Entities }}
-<a class="hidden-link" href="{{ .SafeUri }}">{{ .FullName }}</a>
+  {{ template "entity_card_compact" . }}
 {{ end }}
 </div>
 {{ template "entity_card_compact" . }}

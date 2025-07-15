@@ -40,6 +40,14 @@
   transition: color .2s ease-out;
 }
 
+.data-display-container .controls button:nth-child(1) {
+  text-align: start;
+}
+
+.data-display-container .controls button:nth-child(2) {
+  text-align: end;
+}
+
 .data-display-container .controls button.enabled {
   color:  var(--color-primary);
 }

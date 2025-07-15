@@ -21,7 +21,7 @@
 .entity-card-image {
   margin: .4rem 0 auto 0;
   height: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .entity-card.grid p {
@@ -44,8 +44,4 @@
 
 .entity-card.grid .entity-thumbnail {
   margin-right: 0
-}
-
-.hidden-link {
-  opacity: 0;
 }

@@ -1,9 +1,9 @@
-<div id="entity-list-template" class="grid entity-card{{ if not .Name}} hidden{{end}}">
-  <a class="entity-link entity-card-image" href="./">
+<div {{ if not .Name}}id="entity-list-template"{{ end }} class="grid entity-card{{ if not .Name}} hidden{{ end }}">
+  <a class="entity-link entity-card-image" href="./{{ .SafeUri }}" aria-hidden="true" tabindex="-1">
     <img
       onload="this.style.opacity = 1"
       class="entity-thumbnail"
-      alt="{{ .Name }} from Old School RuneScape"
+      alt=""
       loading="lazy"
       decoding="async"
       width="140"
@@ -13,7 +13,7 @@
   </a>
   <div class="entity-card-data">
     <div>
-      <a class="entity-link entity-card-title" href="./">
+      <a class="entity-link entity-card-title" href="./{{ .SafeUri }}">
         <h2>
           <span class="entity-card-name">{{ if .Name }}{{ .Name }}{{ end }}</span>
           <span class="entity-card-subcategory">{{ if .Subcategory }}&#40;{{ .Subcategory }}&#41;{{ end }}</span>
@@ -22,9 +22,12 @@
     </div>
     <div>
       <p class="entity-card-tile-count"></p>
-      <div class="entity-interaction">
+      <div class="entity-interaction jsonly">
         {{ template "copy_button" . }}
       </div>
+      <noscript>
+        {{ if .Tiles }}{{ .Tiles | len }} tile marker{{ if gt (len .Tiles) 1 }}s{{ end }}{{ end }}
+      </noscript>
     </div>
   </div>
 </div>

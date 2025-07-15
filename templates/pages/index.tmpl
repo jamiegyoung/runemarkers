@@ -46,9 +46,63 @@
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
   <meta name="next-head-count" content="40">
+  {{ template "noscript"}}
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  {{ template "styles" .}}
+
+  <style>
+    html,
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      --color-primary: #e5e53a;
+      --color-primary-light: #f1f196;
+      --color-background: #20201f;
+      --color-foreground: #292927;
+      --color-text: #f5f3f5;
+      --color-subtle-text: #cccccc;
+      --color-card: #3b3b37;
+      --color-card-hover: #42423e;
+      --color-card-hover-light: #55554a;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    a {
+      color: var(--color-primary);
+      transition: color .2s ease-out;
+    }
+
+    a:hover {
+      color: var(--color-primary-light);
+    }
+
+    .main-container {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .help-text {
+      padding: 0;
+      color: var(--color-subtle-text);
+      text-align: center;
+      min-width: 17rem;
+      margin: 1rem 0 1rem 0;
+      max-width: 40rem;
+      width: 80%;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,58 +118,4 @@
 </body>
 
 </html>
-
-{{ template "styles" .}}
-
-<style>
-  html,
-  body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    --color-primary: #e5e53a;
-    --color-primary-light: #f1f196;
-    --color-background: #20201f;
-    --color-foreground: #292927;
-    --color-text: #f5f3f5;
-    --color-subtle-text: #cccccc;
-    --color-card: #3b3b37;
-    --color-card-hover: #42423e;
-    --color-card-hover-light: #55554a;
-    background-color: var(--color-background);
-    color: var(--color-text);
-  }
-
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-
-  a {
-    color: var(--color-primary);
-    transition: color .2s ease-out;
-  }
-
-  a:hover {
-    color: var(--color-primary-light);
-  }
-
-  .main-container {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .help-text {
-    padding: 0;
-    color: var(--color-subtle-text);
-    text-align: center;
-    min-width: 17rem;
-    margin: 1rem 0 0 0;
-    max-width: 40rem;
-    width: 80%;
-  }
-</style>
 

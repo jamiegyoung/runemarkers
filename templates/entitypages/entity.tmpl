@@ -33,8 +33,209 @@
   <meta name="next-head-count" content="42">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  {{ template "noscript" }}
   <script src="js/fuse.min.js"></script>
   <script src="js/htmx.min.js"></script>
+
+  {{ template "styles" }}
+
+  <style>
+    html,
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      --color-primary: #e5e53a;
+      --color-primary-light: #f1f196;
+      --color-background: #20201f;
+      --color-foreground: #292927;
+      --color-text: #f5f3f5;
+      --color-subtle-text: #cccccc;
+      --color-card: #3b3b37;
+      --color-card-hover: #42423e;
+      --color-card-hover-light: #55554a;
+      background-color: var(--color-background);
+      color: var(--color-text);
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    .entity-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+      width: 100%;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    @media (max-width: 450px) {
+      .entity-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    a {
+      color: var(--color-primary);
+      transition: color .2s ease-out;
+    }
+
+    a:hover {
+      color: var(--color-primary-light);
+    }
+
+    {{ if .Entity.Source }}
+      .source {
+        text-align: center;
+      }
+
+      {{ if .Entity.Source.Modified }}
+        .modified-wrapper {
+          display: inline-block;
+          cursor: help;
+        }
+
+        .modified-wrapper .tooltip-wrapper {
+          position: absolute;
+          margin-left: 60px;
+        }
+
+        .modified-wrapper:hover .tooltip-wrapper .tooltip {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .modified-wrapper .tooltip-wrapper .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        padding-bottom: 20px;
+        border-style: solid;
+        border-color: var(--color-card) transparent transparent transparent;
+      }
+
+        .modified-wrapper .tooltip-wrapper .tooltip {
+          background-color: var(--color-card);
+          box-shadow: 0 0 10px rgba(0,0,0,.5);
+          border-radius: 6px;
+          padding: 10px;
+          width: 12rem;
+          position: absolute;
+          height: fit-content;
+          text-align: center;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity .1s ease-in-out;
+          margin-bottom: 10px;
+        }
+      {{ end }}
+    {{ end }}
+
+    .main-container {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .inner-container {
+      min-width: 17rem;
+      margin-top: 2rem;
+      max-width: 40rem;
+      width: 80%;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      background-color: var(--color-foreground);
+      box-shadow:
+        0 0.25rem 0.75rem rgba(0, 0, 0, 0.25),
+        0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .inner-container > h2 {
+      width: 100%;
+      margin: 2rem 0 1rem 2rem;
+    }
+
+    .inner-container > iframe {
+      border-radius: 1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+      aspect-ratio: 16/9;
+      width: 100%;
+    }
+
+    .iframe-container {
+      position: relative;
+      height: 100%;
+    }
+
+    {{ if .Entity.RecommendedGuideVideoId }}
+      .yt-placeholder {
+        display: block;
+        color: transparent;
+        background: transparent;
+        border: none;
+        position: relative;
+        aspect-ratio: 16/9;
+        width: 100%;
+        background-image: url("{{ .Entity.YouTubeThumbnailUrl }}");
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+      }
+
+      .yt-placeholder:hover {
+        color: transparent;
+      }
+
+      .yt-placeholder::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4.375rem;
+        height: 3rem;
+        background: red;
+        border-radius: .8rem;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .yt-placeholder::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 0;
+        height: 0;
+        background: transparent;
+        border-top: .8rem solid transparent;
+        border-left: 1.25rem solid white;
+        border-bottom: .8rem solid transparent;
+        z-index: 2;
+        cursor: pointer;
+      }
+    {{ end }}
+  </style>
+
 </head>
 
 <body>
@@ -49,13 +250,16 @@
     {{ if .Entity.RecommendedGuideVideoId }}
       <h2>Recommended Guide</h2>
       <button
-        class="yt-placeholder"
+        class="yt-placeholder jsonly"
         hx-get="/api/youtube_{{ .Entity.SafeApiUri }}.html"
         hx-swap="outerHTML"
         hx-trigger="click"
         aria-label="Load recommended guide video"
       >
       </button>
+      <noscript style="width: 100%;">
+        <a class="yt-placeholder" href="https://www.youtube.com/watch?v={{ .Entity.RecommendedGuideVideoId }}" target="_blank" rel="noopener noreferrer">Open recommended guide video</a>
+      </noscript>
     {{ end }}
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
@@ -73,200 +277,7 @@
     {{ end }}
   </main>
   {{ template "footer" }}
+
+  {{ template "copy" }}
 </body>
 </html>
-
-{{ template "copy" }}
-
-{{ template "styles" }}
-
-<style>
-  html,
-  body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    --color-primary: #e5e53a;
-    --color-primary-light: #f1f196;
-    --color-background: #20201f;
-    --color-foreground: #292927;
-    --color-text: #f5f3f5;
-    --color-subtle-text: #cccccc;
-    --color-card: #3b3b37;
-    --color-card-hover: #42423e;
-    --color-card-hover-light: #55554a;
-    background-color: var(--color-background);
-    color: var(--color-text);
-  }
-
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-
-  .entity-links {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    max-width: 300px;
-    width: 100%;
-    text-decoration: underline;
-    text-align: center;
-  }
-
-  @media (max-width: 450px) {
-    .entity-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  }
-
-  a {
-    color: var(--color-primary);
-    transition: color .2s ease-out;
-  }
-
-  a:hover {
-    color: var(--color-primary-light);
-  }
-
-  {{ if .Entity.Source }}
-    .source {
-      text-align: center;
-    }
-
-    {{ if .Entity.Source.Modified }}
-      .modified-wrapper {
-        display: inline-block;
-        cursor: help;
-      }
-
-      .modified-wrapper .tooltip-wrapper {
-        position: absolute;
-        margin-left: 60px;
-      }
-
-      .modified-wrapper:hover .tooltip-wrapper .tooltip {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .modified-wrapper .tooltip-wrapper .tooltip::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -10px;
-      border-width: 10px;
-      padding-bottom: 20px;
-      border-style: solid;
-      border-color: var(--color-card) transparent transparent transparent;
-    }
-
-      .modified-wrapper .tooltip-wrapper .tooltip {
-        background-color: var(--color-card);
-        box-shadow: 0 0 10px rgba(0,0,0,.5);
-        border-radius: 6px;
-        padding: 10px;
-        width: 12rem;
-        position: absolute;
-        height: fit-content;
-        text-align: center;
-        bottom: 0;
-        right: 0;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .1s ease-in-out;
-        margin-bottom: 10px;
-      }
-    {{ end }}
-  {{ end }}
-
-  .main-container {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .inner-container {
-    min-width: 17rem;
-    margin-top: 2rem;
-    max-width: 40rem;
-    width: 80%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: var(--color-foreground);
-    box-shadow:
-      0 0.25rem 0.75rem rgba(0, 0, 0, 0.25),
-      0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .inner-container > h2 {
-    width: 100%;
-    margin: 2rem 0 1rem 2rem;
-  }
-
-  .inner-container > iframe {
-    border-radius: 1rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-    aspect-ratio: 16/9;
-    width: 100%;
-  }
-
-  .iframe-container {
-    position: relative;
-    height: 100%;
-  }
-
-  {{ if .Entity.RecommendedGuideVideoId }}
-    .yt-placeholder {
-      background: transparent;
-      border: none;
-      position: relative;
-      aspect-ratio: 16/9;
-      width: 100%;
-      background-image: url("{{ .Entity.YouTubeThumbnailUrl }}");
-      background-size: cover;
-      background-position: center;
-      border-radius: 1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-    }
-
-    .yt-placeholder::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 4.375rem;
-      height: 3rem;
-      background: red;
-      border-radius: .8rem;
-      z-index: 1;
-      cursor: pointer;
-    }
-
-    .yt-placeholder::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-40%, -50%);
-      width: 0;
-      height: 0;
-      background: transparent;
-      border-top: .8rem solid transparent;
-      border-left: 1.25rem solid white;
-      border-bottom: .8rem solid transparent;
-      z-index: 2;
-      cursor: pointer;
-    }
-  {{ end }}
-</style>
