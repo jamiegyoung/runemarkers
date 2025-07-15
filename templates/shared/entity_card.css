@@ -78,6 +78,7 @@
 .entity-card-title {
   text-decoration: none;
   display: block;
+  margin: 0;
 }
 
 .entity-card-title h2 {
@@ -87,18 +88,8 @@
 }
 
 .entity-card-name,
-.entity-card-title-alt,
 .entity-card-subcategory {
   display: inline-block;
-}
-
-.entity-card-title-alt {
-  margin: 0;
-  text-decoration: none;
-}
-
-.entity-card-title-alt p {
-  margin: 0;
 }
 
 .entity-card-data a {
