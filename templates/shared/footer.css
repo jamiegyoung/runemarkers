@@ -1,22 +1,10 @@
 footer {
   margin: 1rem 0;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: column;
   align-items: center;
-}
-
-.footnote {
-  display: flex;
-  justify-content: center;
-  max-width: 50rem;
-  width: 85vw;
   text-align: center;
-  color: var(--color-subtle-text);
-}
-
-.footnote p {
-  margin: 0;
 }
 
 .footer-container {
@@ -43,8 +31,18 @@ footer a {
   margin-left: 0.25rem;
 }
 
+footer p {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+footer p a {
+  margin-left: 0;
+}
+
 footer img {
   margin-top: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (max-width: 375px) {
