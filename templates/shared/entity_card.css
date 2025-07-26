@@ -16,6 +16,7 @@
   padding: 1.5rem;
   border-radius: 1rem;
   display: flex;
+  align-items: center;
   box-shadow:
     0 0.2rem 0.4rem rgba(0, 0, 0, 0.16),
     0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
