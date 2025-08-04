@@ -31,10 +31,23 @@ func GenerateDb() error {
 	}
 	defer db.Close()
 
-	err = db.Update(func(tx *bolt.Tx) error {
-		_, err := tx.CreateBucketIfNotExists([]byte(bucketName))
-		return err
+	// Check if bucket already exists before attempting to modify
+	err = db.View(func(tx *bolt.Tx) error {
+		b := tx.Bucket([]byte(bucketName))
+		if b != nil {
+			return nil // Bucket exists, no need to create
+		}
+		return errors.New("bucket does not exist")
 	})
+
+	// Only create bucket if it doesn't exist. Despite what this function says
+	// it will update the binary data of the db file resulting in a diff
+	if err != nil {
+		err = db.Update(func(tx *bolt.Tx) error {
+			_, err := tx.CreateBucketIfNotExists([]byte(bucketName))
+			return err
+		})
+	}
 
 	return err
 }

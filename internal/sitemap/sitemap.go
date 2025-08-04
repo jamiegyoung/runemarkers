@@ -25,9 +25,11 @@ func Generate(ents []*entities.Entity) error {
 
 	log(fmt.Sprintf("%v modded files found", len(modded)))
 
-	err = lastmod.UpdateEntities(modded)
-	if err != nil {
-		return err
+	if len(modded) > 0 {
+		err = lastmod.UpdateEntities(modded)
+		if err != nil {
+			return err
+		}
 	}
 
 	entMods, err := lastmod.GetEntites()
