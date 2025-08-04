@@ -117,7 +117,7 @@ func EntitiesDiff(entities_arr []*entities.Entity) ([]*entities.Entity, error) {
 			}
 
 			// Compare decoded entity to current entity
-			isDiff := reflect.DeepEqual(e, decEntity.Entity)
+			isDiff := !reflect.DeepEqual(*e, decEntity.Entity)
 			log("Checking " + e.SafeUri + " diff " + strconv.FormatBool(isDiff))
 			if isDiff {
 				log(fmt.Sprintf("Adding %v to modded list", e.SafeUri))
