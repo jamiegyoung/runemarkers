@@ -36,7 +36,7 @@ func watcher(watchlist []string, action func(string) error) error {
 				buildError = action(event.Name)
 				if buildError != nil {
 					debug(fmt.Sprintf("A build error occured %v", buildError))
-					return
+					// keep watching for changes, don't return
 				}
 
 				// add the file back into the watchlist
