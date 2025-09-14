@@ -32,6 +32,11 @@ func Generate(ents []*entities.Entity) error {
 		}
 	}
 
+	err = lastmod.DeleteMissing(ents)
+	if err != nil {
+		return err
+	}
+
 	entMods, err := lastmod.GetEntites()
 	if err != nil {
 		return err

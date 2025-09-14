@@ -142,6 +142,50 @@ func EntitiesDiff(entities_arr []*entities.Entity) ([]*entities.Entity, error) {
 	return modded, err
 }
 
+func DeleteMissing(currentEntities []*entities.Entity) error {
+	db, err := db()
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	currentUris := make(map[string]bool)
+	for _, e := range currentEntities {
+		currentUris[e.SafeUri] = true
+	}
+
+	err = db.Update(func(tx *bolt.Tx) error {
+		b := tx.Bucket([]byte(bucketName))
+		if b == nil {
+			return errors.New("Bucket does not exist")
+		}
+
+		keysToDelete := [][]byte{}
+		err = b.ForEach(func(k, v []byte) error {
+			uri := string(k)
+			if !currentUris[uri] {
+				log(fmt.Sprintf("Deleting removed entity: %v", uri))
+				keysToDelete = append(keysToDelete, k)
+			}
+			return nil
+		})
+		if err != nil {
+			return err
+		}
+
+		for _, key := range keysToDelete {
+			err = b.Delete(key)
+			if err != nil {
+				return err
+			}
+		}
+
+		return nil
+	})
+
+	return err
+}
+
 func GetEntites() ([]*EntityMod, error) {
 	db, err := db()
 	if err != nil {
