@@ -32,8 +32,10 @@ footer a {
 }
 
 footer p {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 0.875rem;
+  max-width: 40rem;
+  width: 80vw;
 }
 
 footer p a {

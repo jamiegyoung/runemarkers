@@ -3,12 +3,20 @@
   z-index: 100;
   width: calc(100%);
   height: 3.5rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   top: 0;
   background-color: var(--color-card);
   box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.16), 0 0.2rem 0.4rem rgba(0,0,0,0.23);
+}
+
+.title {
+  margin: 0 auto 0 0;
+}
+
+.navbar-item {
+  margin: 0 2rem 0 0;
 }
 
 .title.header {
@@ -34,7 +42,7 @@
   display: none;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 432px) {
   .title.header span:not(.title.alt),
   .title.alt span {
     display: flex !important;
