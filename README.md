@@ -31,8 +31,6 @@ If you wish to contribute to tiles, follow the instructions below.
 To start the project locally using Docker, run:
 
 ```bash
-docker-compose up
-# or
 docker compose up
 # or if you want to run in the background
 docker compose up -d
@@ -40,7 +38,28 @@ docker compose up -d
 
 This will run a development server at `http://localhost:8080` with hot reloading enabled.
 
-### Locally
+### Local HTTPS (Optional)
+
+For HTTPS, use Caddy as a reverse proxy:
+
+```bash
+# install Caddy
+brew install caddy  # macOS
+sudo apt install caddy  # Linux
+
+# start the dev server
+docker compose up -d
+
+# start Caddy
+caddy run
+# or
+caddy start # to run it in the background
+
+# access: https://localhost
+# restart browser if you see "Not Secure"
+```
+
+### Locally (without Docker)
 
 To install the dependencies, run:
 
