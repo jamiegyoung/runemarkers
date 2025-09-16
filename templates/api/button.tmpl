@@ -1,7 +1,7 @@
 <button
   class="copy-button animate"
-  onclick="copy(this);
-    this.classList.remove('animate');
-    window.setTimeout(() => this.classList.add('animate'), 1);"
   data-tiles="{{ .Entity.TilesString }}"
->Copy</button>
+  aria-label="Copy or append tiles"
+>
+  Copy
+</button>

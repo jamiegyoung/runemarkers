@@ -1,19 +1,14 @@
 <script>
-function copy(e) {
-  const text = e.getAttribute('data-tiles')
-  const textArea = document.createElement('textarea')
-  textArea.value = text
-  document.body.appendChild(textArea)
-  textArea.select()
-  document.execCommand('copy')
-  document.body.removeChild(textArea)
-}
-
-document.body.addEventListener('htmx:load', (event) => {
-  if (event.target.matches('.copy-button')) {
-    const button = event.target
-    // simulate button click
-    button.click()
+async function copy(e) {
+  try {
+    const tiles = e.getAttribute('data-tiles')
+    await navigator.clipboard.writeText(tiles)
+    e.classList.remove('animate')
+    void e.offsetWidth
+    e.classList.add('animate')
+  } catch (err) {
+    console.error('copy failed', err)
+    alert('Copy failed: ' + err)
   }
-})
+}
 </script>

@@ -69,3 +69,34 @@
     left: -80%;
   }
 }
+
+.copy-append-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.copy-append-toggle select {
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.mode-help {
+  font-size: 0.85rem;
+  color: var(--color-muted, #999);
+}
+.copy-append-mode-message {
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: #b00020; 
+  font-size: 0.95rem;
+}
+
+.copy-append-mode-message.error {
+  color: #b00020;
+}
+
+.copy-append-mode-message.success {
+  color: #2ecc71; 
+}

@@ -6,11 +6,154 @@
 {{ template "entity_card_compact" . }}
 
 {{ template "copy" }}
+{{ template "append" }}
 
 <script>
+
+
 const listItemTemplate = document.getElementById('entity-list-template')
 
 const innerListContainer = document.querySelector('.inner-list-container')
+
+// Create and insert mode toggle UI (Copy vs Append)
+const modeToggleHtml = `
+<div class="copy-append-toggle">
+  <label for="copyModeToggle">Mode:</label>
+  <select id="copyModeToggle" aria-label="Copy or Append mode">
+    <option value="copy">Copy</option>
+    <option value="append">Append</option>
+  </select>
+  <span id="modeHelp" class="mode-help">Copy will overwrite clipboard; Append will merge into existing JSON array when possible.</span>
+</div>
+<div id="modeMessage" class="copy-append-mode-message" aria-live="polite" role="status" style="display:none"></div>
+`
+
+const firstContainer = document.querySelector('.inner-list-container')
+if (firstContainer) {
+  firstContainer.insertAdjacentHTML('beforebegin', modeToggleHtml)
+}
+
+const modeSelect = document.getElementById('copyModeToggle')
+const MODE_KEY = 'runemarkers:copyMode'
+function loadMode() {
+  const m = window.localStorage.getItem(MODE_KEY) || 'copy'
+  if (modeSelect) modeSelect.value = m
+  return m
+}
+function saveMode(m) {
+  window.localStorage.setItem(MODE_KEY, m)
+}
+loadMode()
+
+// Central click handler for copy-button elements
+document.body.addEventListener('click', function (ev) {
+  const btn = ev.target.closest('.copy-button')
+  if (!btn) return
+  // If the button is a placeholder that will be swapped by HTMX (has hx-get)
+  // but doesn't yet have the data-tiles attribute, allow HTMX to fetch the
+  // real button and then auto-run the action after the swap.
+  if (!btn.getAttribute('data-tiles') && btn.hasAttribute('hx-get')) {
+    // store pending action (mode) for afterSwap processing
+    window._pendingCopyAction = {
+      mode: modeSelect ? modeSelect.value : (window.localStorage.getItem(MODE_KEY) || 'copy'),
+      timestamp: Date.now()
+    }
+    // allow HTMX to proceed
+    return
+  }
+
+  ev.preventDefault()
+  const mode = modeSelect ? modeSelect.value : (window.localStorage.getItem(MODE_KEY) || 'copy')
+  if (mode === 'append') {
+    append(btn)
+  } else {
+    copy(btn)
+  }
+})
+
+// all of this exists so that we don't have to worry about HTMX swaps breaking click handlers...
+
+document.body.addEventListener('htmx:afterSwap', function (event) {
+  try {
+    const pending = window._pendingCopyAction
+    if (!pending) return
+    // expire pending actions after 5s
+    if (Date.now() - pending.timestamp > 5000) {
+      window._pendingCopyAction = null
+      return
+    }
+
+    const candidates = []
+    if (event.target) candidates.push(event.target)
+    if (event.detail) {
+      if (event.detail.target) candidates.push(event.detail.target)
+      if (event.detail.elt) candidates.push(event.detail.elt)
+      if (event.detail.elements) candidates.push(...event.detail.elements)
+    }
+
+    let newBtn = null
+    for (const c of candidates) {
+      if (!c) continue
+      if (c.matches && c.matches('.copy-button')) {
+        newBtn = c
+        break
+      }
+      if (c.querySelector) {
+        const found = c.querySelector('.copy-button')
+        if (found) {
+          newBtn = found
+          break
+        }
+      }
+    }
+
+    if (newBtn && newBtn.getAttribute && newBtn.getAttribute('data-tiles')) {
+      // run the action in the next tick to ensure listeners are attached
+      setTimeout(() => {
+        try {
+          newBtn.click()
+        } catch (e) {
+          // ignore
+        }
+      }, 0)
+      window._pendingCopyAction = null
+    }
+  } catch (err) {
+    console.error('afterSwap handler failed', err)
+  }
+})
+
+if (modeSelect) {
+  modeSelect.addEventListener('change', function () {
+    const newMode = modeSelect.value
+    saveMode(newMode)
+    if (newMode !== 'append') {
+      // clear append-active from any buttons when leaving append mode
+      document.querySelectorAll('.copy-button.append-active').forEach(b => b.classList.remove('append-active'))
+    }
+    window.clearModeMessage()
+  })
+}
+
+// show a message in the small box under the mode selector
+function showModeMessage(text, type) {
+  const el = document.getElementById('modeMessage')
+  if (!el) return
+  el.style.display = 'block'
+  el.textContent = text
+  el.classList.remove('error', 'success')
+  if (type === 'success') el.classList.add('success')
+  else el.classList.add('error')
+}
+
+function clearModeMessage() {
+  const el = document.getElementById('modeMessage')
+  if (!el) return
+  el.style.display = 'none'
+  el.textContent = ''
+  el.classList.remove('error', 'success')
+
+}
 
 function setTitle(ctx, name) {
   const title = ctx.querySelector('.entity-card-title')
@@ -74,3 +217,4 @@ function updateList(items) {
   })
 }
 </script>
+
