@@ -1,0 +1,25 @@
+<script>
+async function append(e) {
+  try {
+  const tiles = e.getAttribute('data-tiles') || ''
+    const currentClipboard = await navigator.clipboard.readText()
+    if (currentClipboard.startsWith('[{') && currentClipboard.endsWith('}]')) {
+      const merged = currentClipboard.slice(0, -1) + ',' + tiles.substring(1) 
+      await navigator.clipboard.writeText(merged)
+      window.showModeMessage('Appended to existing tile data in clipboard.', 'success')
+    } else {
+      await navigator.clipboard.writeText(tiles)
+      window.showModeMessage('Clipboard did not contain valid tile data. Replaced with new data.', 'error')
+
+    }
+
+    e.classList.remove('animate')
+    void e.offsetWidth
+    e.classList.add('animate')
+  } catch (err) {
+    console.error('append failed', err)
+    window.showModeMessage('Append failed: ' + err, 'error')
+  }
+}
+
+</script>
