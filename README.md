@@ -36,6 +36,11 @@ docker compose up
 docker compose up -d
 ```
 
+To stop the background local dev server, run:
+```
+docker compose down
+```
+
 This will run a development server at `http://localhost:8080` with hot reloading enabled.
 
 ### Local HTTPS (Optional)
@@ -48,15 +53,23 @@ brew install caddy  # macOS
 sudo apt install caddy  # Linux
 
 # start the dev server
-docker compose up -d
+docker compose up -d  # to run it in the background
+# or
+docker compose up # to run it in the active terminal
 
 # start Caddy
-caddy run
-# or
 caddy start # to run it in the background
+# or
+caddy run # run in the active terminal
 
 # access: https://localhost
 # restart browser if you see "Not Secure"
+```
+
+To stop the background local dev server with HTTPS, run:
+```
+docker compose down
+caddy stop
 ```
 
 ### Locally (without Docker)
