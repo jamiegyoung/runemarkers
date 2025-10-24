@@ -227,15 +227,19 @@
 
     .tilemap-wrapper {
       width: 100%;
+      position: relative;
+      padding-bottom: 100%;
     }
 
     .tilemap-container {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 400px;
+      height: 100%;
       background-color: #000;
       border-radius: 1rem;
       overflow: hidden;
-      position: relative;
       z-index: 1;
       image-rendering: pixelated;
       image-rendering: -moz-crisp-edges;
