@@ -1,0 +1,193 @@
+{
+  "name": "Tithe Farm (25x4)",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Logavano_fruit_detail.png/120px-Logavano_fruit_detail.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Tithe_Farm",
+  "tags": [
+    "skilling",
+    "farming",
+    "minigame"
+  ],
+  "recommendedGuideVideoId": "-1AQ27FEabY",
+  "source": {
+    "name": " Recommended by Amb (RuneMarkers Discord), tiles by ThePerfectG",
+    "link": "https://www.youtube.com/watch?v=zueRKTM8v-M",
+    "modified": "Removed tiles that were not relevant to this activity and updated the colours."
+  },
+  "tiles": [
+    {
+      "regionId": 7222,
+      "regionX": 28,
+      "regionY": 29,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 33,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 34,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 35,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 37,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 38,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 40,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 41,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 43,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 47,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 49,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 50,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 52,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 53,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 55,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 26,
+      "regionY": 56,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 27,
+      "regionY": 58,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 56,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 54,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 52,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 48,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 42,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 40,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 36,
+      "z": 0,
+      "color": "#5EA8A504"
+    },
+    {
+      "regionId": 7222,
+      "regionX": 32,
+      "regionY": 34,
+      "z": 0,
+      "color": "#5EA8A504"
+    }
+  ]
+}
