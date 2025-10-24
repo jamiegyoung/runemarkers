@@ -23,6 +23,9 @@
   {{ template "noscript" }}
   <script src="js/fuse.min.js"></script>
   <script src="js/htmx.min.js"></script>
+  <script src="js/leaflet.min.js" defer></script>
+  <script src="js/tile-map.js" defer></script>
+  <link rel="stylesheet" href="css/leaflet.css">
 
   {{ template "styles" }}
 
@@ -221,6 +224,33 @@
         cursor: pointer;
       }
     {{ end }}
+
+    .tilemap-wrapper {
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .tilemap-container {
+      width: 100%;
+      height: 400px;
+      background-color: #000;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      position: relative;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    .leaflet-container {
+      background: #000;
+    }
+
+    .leaflet-tile {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
   </style>
 
 </head>
@@ -248,6 +278,8 @@
         <a class="yt-placeholder" href="https://www.youtube.com/watch?v={{ .Entity.RecommendedGuideVideoId }}" target="_blank" rel="noopener noreferrer">Open recommended guide video</a>
       </noscript>
     {{ end }}
+    <h2>Tile Map</h2>
+    {{ template "tile_map" .Entity }}
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
     {{ if .Entity.Source.Link }}
