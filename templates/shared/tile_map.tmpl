@@ -1,0 +1,11 @@
+<div class="tilemap-wrapper">
+	<div id="tilemap-{{ .SafeApiUri }}" class="tilemap-container"></div>
+</div>
+<script>
+	window.addEventListener('load', function() {
+		const tileData = {{ .TilesString }};
+		if (window.initTileMap) {
+			window.initTileMap('tilemap-{{ .SafeApiUri }}', tileData);
+		}
+	});
+</script>
