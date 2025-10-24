@@ -57,7 +57,7 @@
     .entity-links {
       margin-top: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       max-width: 300px;
       width: 100%;
       text-decoration: underline;
@@ -227,19 +227,19 @@
 
     .tilemap-wrapper {
       width: 100%;
-      margin: 2rem 0;
     }
 
     .tilemap-container {
       width: 100%;
       height: 400px;
       background-color: #000;
-      border-radius: 0.5rem;
+      border-radius: 1rem;
       overflow: hidden;
       position: relative;
       image-rendering: pixelated;
       image-rendering: -moz-crisp-edges;
       image-rendering: crisp-edges;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     }
 
     .leaflet-container {
@@ -251,6 +251,62 @@
       image-rendering: -moz-crisp-edges;
       image-rendering: crisp-edges;
     }
+
+    .tilemap-controls {
+      background: transparent;
+      border: none;
+    }
+
+    .tilemap-control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tilemap-btn {
+      background: var(--color-card);
+      color: var(--color-text);
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+      min-width: 2rem;
+      opacity: 0.85;
+    }
+
+    .tilemap-btn:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    .tilemap-btn:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .tilemap-btn:hover {
+      background: var(--color-card-hover);
+      opacity: 0.9;
+    }
+
+    .tilemap-btn:active {
+      background: var(--color-card-hover-light);
+      opacity: 0.9;
+    }
+
+    .tilemap-plane-label {
+      background: var(--color-card);
+      color: var(--color-text);
+      padding: 0.25rem 0.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+    }
   </style>
 
 </head>
@@ -261,9 +317,10 @@
     <div class="inner-container">
     {{ template "entity_card" .Entity }}
     <div class="entity-links">
-    <a href="{{.Entity.MapLink}}">View map on RuneLite</a>
     <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
     </div>
+    <h2>Tile Map</h2>
+    {{ template "tile_map" .Entity }}
     {{ if .Entity.RecommendedGuideVideoId }}
       <h2>Recommended Guide</h2>
       <button
@@ -278,8 +335,6 @@
         <a class="yt-placeholder" href="https://www.youtube.com/watch?v={{ .Entity.RecommendedGuideVideoId }}" target="_blank" rel="noopener noreferrer">Open recommended guide video</a>
       </noscript>
     {{ end }}
-    <h2>Tile Map</h2>
-    {{ template "tile_map" .Entity }}
     <h2>Tile Data</h2>
     {{ template "tile_data_display" .Entity }}
     {{ if .Entity.Source.Link }}

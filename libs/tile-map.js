@@ -102,6 +102,7 @@ class TileMap {
 		const transformedTiles = transformMarkers(this.tiles);
 		this.markers = transformedTiles;
 		this.initialBounds = this.calculateBounds(transformedTiles);
+		this.currentPlane = this.getMostCommonPlane();
 
 		this.map = L.map(this.containerId, {
 			crs: L.CRS.Simple,
@@ -285,6 +286,8 @@ class TileMap {
 	}
 
 	getMostCommonPlane() {
+		if (!this.markers || this.markers.length === 0) return 0;
+
 		const planeCounts = {};
 		this.markers.forEach(m => {
 			planeCounts[m.z] = (planeCounts[m.z] || 0) + 1;
