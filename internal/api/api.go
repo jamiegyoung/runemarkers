@@ -32,6 +32,18 @@ func Generate(ents []*entities.Entity) error {
 			break
 		}
 	}
+
+	if err == nil {
+		optionalMapEnts := []*entities.Entity{}
+		for _, ent := range ents {
+			if ent.OptionalMap {
+				optionalMapEnts = append(optionalMapEnts, ent)
+			}
+		}
+		log("Generating tile_map api for entities with optionalMap")
+		err = GenerateEntitySpecific(optionalMapEnts, "templates/api/tile_map.tmpl")
+	}
+
 	return err
 }
 
