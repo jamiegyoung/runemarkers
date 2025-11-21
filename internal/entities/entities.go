@@ -50,6 +50,7 @@ type Entity struct {
 	Thumbnail               string `json:"thumbnail"`
 	Wiki                    string `json:"wiki"`
 	Source                  Source `json:"source,omitempty"`
+	OptionalMap             bool   `json:"optionalMap,omitempty"`
 	RecommendedGuideVideoId string `json:"recommendedGuideVideoId,omitempty"`
 	YouTubeThumbnailUrl     string
 	FullName                string

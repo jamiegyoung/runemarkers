@@ -58,10 +58,13 @@
       margin-top: 1rem;
       display: flex;
       justify-content: center;
-      max-width: 300px;
+      align-items: center;
+      gap: 1rem;
+      max-width: 600px;
       width: 100%;
       text-decoration: underline;
       text-align: center;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 450px) {
@@ -312,6 +315,23 @@
       justify-content: center;
       opacity: 0.85;
     }
+
+    .map-load-btn-inline {
+      background: transparent;
+      color: var(--color-primary);
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      text-decoration: underline;
+      text-align: center;
+      transition: color 0.2s ease-out;
+      padding: 0;
+    }
+
+    .map-load-btn-inline:hover {
+      color: var(--color-primary-light);
+    }
   </style>
 
 </head>
@@ -322,10 +342,27 @@
     <div class="inner-container">
     {{ template "entity_card" .Entity }}
     <div class="entity-links">
-    <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
+      <a href="{{.Entity.Wiki}}">OSRS Wiki page</a>
+      {{ if .Entity.OptionalMap }}
+        <button
+          id="map-load-btn-{{ .Entity.SafeApiUri }}"
+          class="map-load-btn-inline jsonly"
+          hx-get="/api/tile_map_{{ .Entity.SafeApiUri }}.html"
+          hx-swap="outerHTML"
+          hx-target="#map-placeholder-{{ .Entity.SafeApiUri }}"
+          hx-trigger="click"
+          onclick="this.style.display='none';"
+          aria-label="Load tile map">
+          Load map (May cause significant lag)
+        </button>
+      {{ end }}
     </div>
-    <h2>Tile Map</h2>
-    {{ template "tile_map" .Entity }}
+    {{ if not .Entity.OptionalMap }}
+      <h2>Tile Map</h2>
+      {{ template "tile_map" .Entity }}
+    {{ else }}
+      <div id="map-placeholder-{{ .Entity.SafeApiUri }}"></div>
+    {{ end }}
     {{ if .Entity.RecommendedGuideVideoId }}
       <h2>Recommended Guide</h2>
       <button
