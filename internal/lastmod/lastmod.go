@@ -2,232 +2,110 @@ package lastmod
 
 import (
 	"bytes"
-	"encoding/gob"
-	"errors"
 	"fmt"
-	"reflect"
-	"strconv"
+	"os/exec"
+	"strings"
 	"time"
 
 	"github.com/jamiegyoung/runemarkers/internal/entities"
 	"github.com/jamiegyoung/runemarkers/internal/logger"
-	bolt "go.etcd.io/bbolt"
 )
 
 type EntityMod struct {
 	Entity        entities.Entity
-	ModTimeString string
 	ModTime       time.Time
+	ModTimeString string
 }
-
-const bucketName string = "lastmod"
 
 var log = logger.New("lastmod")
 
-func GenerateDb() error {
-	db, err := db()
-	if err != nil {
-		return err
-	}
-	defer db.Close()
-
-	// Check if bucket already exists before attempting to modify
-	err = db.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(bucketName))
-		if b != nil {
-			return nil // Bucket exists, no need to create
-		}
-		return errors.New("bucket does not exist")
-	})
-
-	// Only create bucket if it doesn't exist. Despite what this function says
-	// it will update the binary data of the db file resulting in a diff
-	if err != nil {
-		err = db.Update(func(tx *bolt.Tx) error {
-			_, err := tx.CreateBucketIfNotExists([]byte(bucketName))
-			return err
-		})
-	}
-
-	return err
-}
-
-// Updates or inserts a directory's last modified time into the database
-func UpdateEntities(entity_arr []*entities.Entity) error {
-	db, err := db()
-	if err != nil {
-		return err
-	}
-	defer db.Close()
-
-	gob.Register(map[string]interface{}{})
-
-	err = db.Batch(func(tx *bolt.Tx) error {
-		for _, e := range entity_arr {
-			log(fmt.Sprintf("Updating 1 %v", e.SafeUri))
-			b, err := tx.CreateBucketIfNotExists([]byte(bucketName))
-			if err != nil {
-				return err
-			}
-
-			var buf bytes.Buffer
-			enc := gob.NewEncoder(&buf)
-
-			modTime := time.Now().UTC()
-
-			err = enc.Encode(
-				EntityMod{
-					Entity:        *e,
-					ModTime:       modTime,
-					ModTimeString: Format(modTime),
-				},
-			)
-			if err != nil {
-				return err
-			}
-
-			log("Updating " + e.SafeUri)
-			err = b.Put([]byte(e.SafeUri), buf.Bytes())
-			if err != nil {
-				return err
-			}
-		}
-		return nil
-	})
-	return err
-}
-
-// Returns a subset of the entities provided that have been modified since the last time they were updated
-func EntitiesDiff(entities_arr []*entities.Entity) ([]*entities.Entity, error) {
-	db, err := db()
-	modded := []*entities.Entity{}
+func BuildEntityMods(entities []*entities.Entity) ([]*EntityMod, error) {
+	modTimes, err := gitLastModified()
 	if err != nil {
 		return nil, err
 	}
-	defer db.Close()
 
-	gob.Register(map[string]interface{}{})
+	now := time.Now().UTC()
+	mods := make([]*EntityMod, len(entities))
+	for i, ent := range entities {
+		modTime, ok := modTimes[ent.SourcePath]
+		if !ok {
+			log(fmt.Sprintf(
+				"no git history for %v, using current time",
+				ent.SourcePath,
+			))
+			modTime = now
+		}
+		mods[i] = &EntityMod{
+			Entity:        *ent,
+			ModTime:       modTime,
+			ModTimeString: Format(modTime),
+		}
+	}
 
-	err = db.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(bucketName))
-		if b == nil {
-			return errors.New("Bucket does not exist")
+	return mods, nil
+}
+
+// Output is NUL-separated per commit, e.g.:
+//
+//	\02026-07-23T10:12:49+01:00
+//	entities/doom (sidewalk).json
+//
+//	\02024-07-13T19:39:54+01:00
+//	entities/vorkath.json
+//	entities/zulrah.json
+func gitLastModified() (map[string]time.Time, error) {
+	cmd := exec.Command(
+		"git", "log", "--name-only", "--no-merges",
+		"--format=format:%x00%aI",
+		"--", "entities/*.json",
+	)
+
+	out, err := cmd.Output()
+	if err != nil {
+		return nil, fmt.Errorf("git log failed: %w", err)
+	}
+
+	return parseGitLog(out), nil
+}
+
+func parseGitLog(out []byte) map[string]time.Time {
+	modTimes := make(map[string]time.Time)
+
+	for _, block := range bytes.Split(out, []byte{0}) {
+		lines := strings.Split(strings.TrimSpace(string(block)), "\n")
+		if len(lines) == 0 || lines[0] == "" {
+			continue
 		}
 
-		for _, e := range entities_arr {
-			res := b.Get([]byte(e.SafeUri))
-			dec := gob.NewDecoder(bytes.NewReader(res))
-			if len(res) == 0 {
-				log(fmt.Sprintf("Adding %v to modded list", e.SafeUri))
-				modded = append(modded, e)
+		commitTime, err := time.Parse(time.RFC3339, lines[0])
+		if err != nil {
+			continue
+		}
+
+		for _, path := range lines[1:] {
+			path = strings.TrimSpace(path)
+			if path == "" {
 				continue
 			}
-
-			var decEntity EntityMod
-			err = dec.Decode(&decEntity)
-			if err != nil {
-				return err
-			}
-
-			// Compare decoded entity to current entity
-			isDiff := !reflect.DeepEqual(*e, decEntity.Entity)
-			log("Checking " + e.SafeUri + " diff " + strconv.FormatBool(isDiff))
-			if isDiff {
-				log(fmt.Sprintf("Adding %v to modded list", e.SafeUri))
-				modded = append(modded, e)
+			if _, exists := modTimes[path]; !exists {
+				modTimes[path] = commitTime
 			}
 		}
-		return err
-	})
-	return modded, err
-}
-
-func DeleteMissing(currentEntities []*entities.Entity) error {
-	db, err := db()
-	if err != nil {
-		return err
-	}
-	defer db.Close()
-
-	currentUris := make(map[string]bool)
-	for _, e := range currentEntities {
-		currentUris[e.SafeUri] = true
 	}
 
-	err = db.Update(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(bucketName))
-		if b == nil {
-			return errors.New("Bucket does not exist")
-		}
-
-		keysToDelete := [][]byte{}
-		err = b.ForEach(func(k, v []byte) error {
-			uri := string(k)
-			if !currentUris[uri] {
-				log(fmt.Sprintf("Deleting removed entity: %v", uri))
-				keysToDelete = append(keysToDelete, k)
-			}
-			return nil
-		})
-		if err != nil {
-			return err
-		}
-
-		for _, key := range keysToDelete {
-			err = b.Delete(key)
-			if err != nil {
-				return err
-			}
-		}
-
-		return nil
-	})
-
-	return err
+	return modTimes
 }
 
-func GetEntites() ([]*EntityMod, error) {
-	db, err := db()
-	if err != nil {
-		return nil, err
+func FindLastMod(mods []*EntityMod) time.Time {
+	if len(mods) == 0 {
+		return time.Now().UTC()
 	}
-	defer db.Close()
 
-	gob.Register(map[string]interface{}{})
-
-	var entitiesArr []*EntityMod
-
-	err = db.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(bucketName))
-		if b == nil {
-			return errors.New("Bucket does not exist")
-		}
-
-		err = b.ForEach(func(k, v []byte) error {
-			log(fmt.Sprintf("%v found", string(k[:])))
-			dec := gob.NewDecoder(bytes.NewReader(v))
-			var decEntity EntityMod
-			err = dec.Decode(&decEntity)
-			if err != nil {
-				return err
-			}
-
-			entitiesArr = append(entitiesArr, &decEntity)
-
-			return nil
-		})
-
-		return err
-	})
-
-	return entitiesArr, err
-}
-
-func FindLastMod(entMods []*EntityMod) time.Time {
-	lastmod := entMods[0].ModTime
-	for _, entMod := range entMods {
-		if entMod.ModTime.After(lastmod) {
-			lastmod = entMod.ModTime
+	lastmod := mods[0].ModTime
+	for _, mod := range mods {
+		if mod.ModTime.After(lastmod) {
+			lastmod = mod.ModTime
 		}
 	}
 
@@ -236,8 +114,4 @@ func FindLastMod(entMods []*EntityMod) time.Time {
 
 func Format(t time.Time) string {
 	return t.Format(time.RFC3339)
-}
-
-func db() (*bolt.DB, error) {
-	return bolt.Open("lastmod.db", 0600, nil)
 }
