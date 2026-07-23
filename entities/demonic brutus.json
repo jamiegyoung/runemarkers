@@ -1,0 +1,87 @@
+{
+  "name": "Demonic Brutus",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Demonic_Brutus.png/120px-Demonic_Brutus.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Demonic_Brutus",
+  "tags": [
+    "boss",
+    "cow"
+  ],
+  "recommendedGuideVideoId": "YmZ4Buqgq6w",
+  "source": {
+    "name": "Gnomonkey - Hardmode Cow Boss Guide (OSRS)",
+    "link": "https://www.youtube.com/watch?v=YmZ4Buqgq6w"
+  },
+  "tiles": [
+    {
+      "regionId": 12851,
+      "regionX": 56,
+      "regionY": 21,
+      "z": 0,
+      "color": "#FFA2A2A2"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 58,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FF4765B8",
+      "label": "1"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 57,
+      "regionY": 17,
+      "z": 0,
+      "color": "#FF4765B8",
+      "label": "2"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 54,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FF4765B8",
+      "label": "3"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 55,
+      "regionY": 25,
+      "z": 0,
+      "color": "#FF4765B8",
+      "label": "4"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 58,
+      "regionY": 23,
+      "z": 0,
+      "color": "#FFFC8686",
+      "label": "1"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 60,
+      "regionY": 22,
+      "z": 0,
+      "color": "#FFFC8686",
+      "label": "2"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 54,
+      "regionY": 19,
+      "z": 0,
+      "color": "#FFFC8686",
+      "label": "3"
+    },
+    {
+      "regionId": 12851,
+      "regionX": 52,
+      "regionY": 20,
+      "z": 0,
+      "color": "#FFFC8686",
+      "label": "4"
+    }
+  ]
+}
