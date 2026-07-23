@@ -39,6 +39,7 @@ type Entity struct {
 	SafeUri                 string
 	ApiUri                  string
 	SafeApiUri              string
+	SourcePath              string
 	Name                    string   `json:"name"`
 	Subcategory             string   `json:"subcategory,omitempty"`
 	AltName                 string   `json:"altName,omitempty"`
@@ -77,6 +78,7 @@ func ReadAllEntities() ([]*Entity, error) {
 		if err != nil {
 			return nil, err
 		}
+		entity.SourcePath = path
 
 		ents[i] = entity
 	}

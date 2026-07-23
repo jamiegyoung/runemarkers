@@ -13,31 +13,7 @@ import (
 var log = logger.New("sitemap")
 
 func Generate(ents []*entities.Entity) error {
-	err := lastmod.GenerateDb()
-	if err != nil {
-		return err
-	}
-
-	modded, err := lastmod.EntitiesDiff(ents)
-	if err != nil {
-		return err
-	}
-
-	log(fmt.Sprintf("%v modded files found", len(modded)))
-
-	if len(modded) > 0 {
-		err = lastmod.UpdateEntities(modded)
-		if err != nil {
-			return err
-		}
-	}
-
-	err = lastmod.DeleteMissing(ents)
-	if err != nil {
-		return err
-	}
-
-	entMods, err := lastmod.GetEntites()
+	entMods, err := lastmod.BuildEntityMods(ents)
 	if err != nil {
 		return err
 	}
