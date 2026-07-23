@@ -9,6 +9,10 @@
 <a href="https://runemarkers.net">https://runemarkers.net</a>
 </p>
 
+<p align="center">
+<a href="https://discord.gg/ZE65DBGjXF">Discord</a>
+</p>
+
 ## Tiles
 
 You can either contribute tiles directly by following the guide below, or create an issue with the `Tiles Request` template
