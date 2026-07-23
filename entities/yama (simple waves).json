@@ -1,0 +1,11 @@
+{
+  "name": "Yama",
+  "subcategory": "Simple Waves",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Yama.png/120px-Yama.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Yama",
+  "tags": ["boss", "demon"],
+  "tiles": [
+    { "regionId": 6045, "regionX": 30, "regionY": 37, "z": 0, "color": "#AAFFFFFF", "label": "1" },
+    { "regionId": 6045, "regionX": 30, "regionY": 35, "z": 0, "color": "#AAFFFFFF", "label": "2" }
+  ]
+}

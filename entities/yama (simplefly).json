@@ -1,0 +1,203 @@
+{
+  "name": "Yama",
+  "subcategory": "Simplefly",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Yama.png/120px-Yama.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Yama",
+  "tags": ["boss", "demon"],
+  "recommendedGuideVideoId": "jQhK99clzaA",
+  "source": {
+    "name": "red eye jedi - the godfly + simplefly - yama melee p3 guide OSRS",
+    "link": "https://youtu.be/jQhK99clzaA?si=oOBgAlM44WjK6pRq&t=724"
+  },
+  "tiles": [
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 20,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 21,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 22,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 23,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 25,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 31,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 31,
+      "regionY": 38,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 27,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 28,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 30,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 32,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 29,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 24,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 26,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 36,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 29,
+      "regionY": 38,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 39,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 38,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 37,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 35,
+      "z": 0,
+      "color": "#19FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 33,
+      "z": 0,
+      "color": "#19FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 40,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 32,
+      "regionY": 35,
+      "z": 0,
+      "color": "#19FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 30,
+      "regionY": 34,
+      "z": 0,
+      "color": "#00FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 29,
+      "regionY": 33,
+      "z": 0,
+      "color": "#19FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 27,
+      "regionY": 32,
+      "z": 0,
+      "color": "#19FFFFFF"
+    },
+    {
+      "regionId": 6045,
+      "regionX": 28,
+      "regionY": 31,
+      "z": 0,
+      "color": "#19FFFFFF"
+    }
+  ]
+}
