@@ -1,0 +1,187 @@
+{
+  "name": "Maggot King",
+  "subcategory": "Arena Border",
+  "thumbnail": "https://oldschool.runescape.wiki/images/thumb/Maggot_King.png/120px-Maggot_King.png",
+  "wiki": "https://oldschool.runescape.wiki/w/Maggot_King",
+  "tags": [
+    "boss"
+  ],
+  "recommendedGuideVideoId": "qtoVJoewpoU",
+  "tiles": [
+    {
+      "regionId": 11645,
+      "regionX": 39,
+      "regionY": 36,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 39,
+      "regionY": 35,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 39,
+      "regionY": 34,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 39,
+      "regionY": 33,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 23,
+      "regionY": 36,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 23,
+      "regionY": 35,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 23,
+      "regionY": 34,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 23,
+      "regionY": 33,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 23,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 24,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 25,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 26,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 27,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 28,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 29,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 30,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 31,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 32,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 33,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 34,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 35,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 36,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 37,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 38,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    },
+    {
+      "regionId": 11645,
+      "regionX": 39,
+      "regionY": 32,
+      "z": 0,
+      "color": "#9EE2E2E2"
+    }
+  ]
+}
