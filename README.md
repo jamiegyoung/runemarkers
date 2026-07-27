@@ -98,6 +98,21 @@ go run ./cmd/build/
 
 Open `http://localhost:8080` with your browser to see the result.
 
+### Link Checking
+
+To check that the thumbnail, wiki, source and guide video links in the entities still work, run:
+
+```bash
+go test ./internal/links/ -count=1
+```
+
+To check a single entity, run:
+
+```bash
+go test ./internal/links/ -count=1 -run 'TestEntityLinks/vorkath'
+```
+
+This also runs in CI, and won't block a build.
 
 ### Requirements
 
