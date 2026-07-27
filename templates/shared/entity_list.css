@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  /* might need to only for a smaller size */
   flex-wrap: wrap;
   padding: 1.25rem 0.25rem;
   background-color: var(--color-foreground);
@@ -21,7 +20,6 @@
 
 @media (max-width: 900px), (max-height: 900px) {
   .inner-list-container {
-    /* width: 95%; */
     height: auto;
   }
 }
