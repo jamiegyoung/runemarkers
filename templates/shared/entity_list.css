@@ -14,7 +14,7 @@
     0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   overflow-x: hidden;
-  height: calc(100dvh - 235px);
+  height: calc(100dvh - 250px);
   align-content: start;
 }
 
